@@ -1,0 +1,24 @@
+{% extends "basis.html" %}
+
+{% block titel %}Hash-Test:{% endblock %}
+
+{% block inhalt %}
+<form method='post' action='.' enctype="multipart/form-data">
+    <table>
+        
+           {{ form }}
+        
+        <tr>
+            <td><input type='submit' name='submit' /></td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td>{{ hashvalue|escape|linebreaksbr }}</td>
+        </tr>
+    </table>
+    
+</form>
+
+{% endblock %}
+
