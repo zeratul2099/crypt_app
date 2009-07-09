@@ -26,6 +26,14 @@ def kezzak_f(state):
     return state
 
 def absorb(state, message):
+	message += '\x80'
+	d_enc = 0
+	for i in range(8):
+		if d % 2:
+			d_enc += 1
+		if i != 7:
+			d = d >> 1
+			d_enc = d_enc << 1
     num_p = (len(message)/rb)+1
     if len(message)%rb == 0:
         num_p -= 1

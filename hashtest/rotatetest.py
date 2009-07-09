@@ -2,25 +2,19 @@
 
 
         
-def mask(n):
-    if n >= 0:
-        return 2**n - 1
-    else:
-        return 0
- 
-def rol(n, rotations=1, width=32):
-    rotations %= width
-    if rotations < 1:
-        return n
-    n &= mask(width) ## Should it be an error to truncate here?
-    return ((n << rotations) & mask(width)) | (n >> (width - rotations))
-    
-    
-n=0x12345678
-print hex(n)
-n1 = rol(n, 14, 32)
-print hex(n1)
-print hex(rol(n1, 32-14, 32))
+d = 226
+d_enc = 0
+print d
+for i in range(8):
+	print "round %d: d mod 2:%d"%(i, d%2)
+	if d % 2 == 1:
+		d_enc+=1
+	d = d >> 1
+	if i != 7:
+		d_enc = d_enc << 1
 
+print d
+print str(hex(d_enc))
 
-
+for i in range(8):
+	print "round %d: d_enc mod 2:%d"%(i, (d_enc>>i)%2)
