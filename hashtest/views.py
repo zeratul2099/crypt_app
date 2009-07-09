@@ -2,6 +2,7 @@ from crypt_app.hashtest.models import HashForm
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render_to_response
 from django.template import Context, loader
+from KezzakHash import KezzakHash
 import hashlib
 
 
@@ -31,9 +32,12 @@ def hashtest(request):
         elif request.POST.get("algorithm", "") == 'sha384':
             output += "SHA-384-Hash:\n"
             output += hashlib.sha384(clear_text).hexdigest()
-        else:
+        elif request.POST.get("algorithm", "") == 'sha512':
             output += "SHA-512-Hash:\n"
             output += hashlib.sha512(clear_text).hexdigest()
+        elif request.POST.get("algorithm", "") == 'kezzak':
+            output += "Kezzak[800]-Hash:\n"
+            output += KezzakHash(repr(clear_text)).hexdigest()
     else:
         clear_text = ""
         output = 'Spam'

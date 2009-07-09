@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import sys, os
 import numpy as np
-from State import State
+from KezzakState import KezzakState as State
 #number of bytes per integer, on 32bit platforms this is 4
 num_b_i = 4
 r = 224
