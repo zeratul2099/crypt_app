@@ -26,17 +26,36 @@ def kezzak_f(state):
     return state
 
 def absorb(state, message):
-	message += '\x80'
-	d_enc = 0
-	for i in range(8):
-		if d % 2:
-			d_enc += 1
-		if i != 7:
-			d = d >> 1
-			d_enc = d_enc << 1
-    num_p = (len(message)/rb)+1
-    if len(message)%rb == 0:
-        num_p -= 1
+    message += '\x80'
+    d_dec = state.d
+    rb_dec = state.r / 8
+    d_enc = 0
+    rb_enc = 0
+    # adding diversifier and r to message
+    for i in range(8):
+        if d_dec % 2:
+            d_enc += 1
+        if rb_dec % 2:
+            rb_enc +=1
+        if i != 7:
+            d_dec = d_dec >> 1
+            d_enc = d_enc << 1
+            rb_dec = rb_dec >> 1
+            rb_enc = rb_enc << 1
+    
+    message += chr(d_enc)
+    message += chr(rb_enc)
+    # filling message to a multipy of r
+    to_fill = rb-(len(message)%rb)
+    if to_fill > 0:
+        message += '\x80'
+        # filling 1 one and 7 zeros
+        to_fill -= 1
+        for i in range(to_fill):
+            # filling 8 zeros
+            message += '\0'
+    num_p = (len(message)/rb)
+
     # iterate through message
     for p in range(num_p):
         # iterate through int in this block
@@ -64,7 +83,7 @@ def squeeze(state):
 state = State(r, c, d, num_b_i, num_rounds, hash_len)
 file = open(filename, "rb").read()
 message = "Hello World! This is an test-message with Spam & Eggs and many vikings"
-message ="\x01\x01"
+#message ="\x01\x01"
 #state.set_lane(3,3,0x12345678)
 absorb(state, file)
 squeeze(state)
