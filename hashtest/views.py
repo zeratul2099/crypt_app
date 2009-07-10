@@ -10,12 +10,15 @@ def hashtest(request):
     if request.method == 'POST':
         form = HashForm(request.POST, request.FILES)
         if request.FILES:
+            if request.FILES['file'].size > 50000:
+                form = HashForm()
+                return render_to_response("hash.html", {'hashvalue' : 'Datei zu gross',  'form' : form}) 
             clear_text = request.FILES['file'].read()
-            output = "Input file:\n%s (%s Bytes)\n" %(request.FILES['file'].name,
+            output = "Eingabedatei:\n%s (%s Bytes)\n" %(request.FILES['file'].name,
                                                       request.FILES['file'].size)
         else:
             clear_text = request.POST.get("clear", "")
-            output = "Input string:\n%s\n" %(clear_text)
+            output = "Eingabestring:\n%s\n" %(clear_text)
             
         if request.POST.get("algorithm", "") == 'md5':
             output += "MD5-Hash:\n"
@@ -40,7 +43,7 @@ def hashtest(request):
             output += KezzakHash(repr(clear_text)).hexdigest()
     else:
         clear_text = ""
-        output = 'Spam'
+        output = ''
         form = HashForm()
         #hashes = {'md5' : 'MD5', 'sha1' : 'SHA-1'}
         #form.algorithm(hashes)
