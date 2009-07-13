@@ -10,7 +10,7 @@ def hashtest(request):
     if request.method == 'POST':
         form = HashForm(request.POST, request.FILES)
         if request.FILES:
-            if request.FILES['file'].size > 50000:
+            if request.FILES['file'].size > 10000:
                 form = HashForm()
                 return render_to_response("hash.html", {'hashvalue' : 'Datei zu gross',  'form' : form}) 
             clear_text = request.FILES['file'].read()
@@ -39,7 +39,7 @@ def hashtest(request):
             output += "SHA-512-Hash:\n"
             output += hashlib.sha512(clear_text).hexdigest()
         elif request.POST.get("algorithm", "") == 'kezzak':
-            output += "Kezzak[800]-Hash:\n"
+            output += "Kezzak[800]-224-Hash:\n"
             output += KezzakHash(repr(clear_text)).hexdigest()
     else:
         clear_text = ""
