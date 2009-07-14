@@ -9,6 +9,7 @@ import hashlib, random, sys
 
 def hashtest(request):
     salt = 0
+    salt_str = ''
     if request.method == 'POST':
         
         if request.FILES:
@@ -25,9 +26,9 @@ def hashtest(request):
         if 'withSalt' in request.POST:
             rand = random.Random(datetime.now().strftime('%s'))
             salt = rand.randint(0, sys.maxint)
-            salt_str = ''
             for i in range(4):
-                clear_text += chr((salt%(1<<(8*(i+1))))>>((i*8)+1))
+                salt_str += chr((salt%(1<<(8*(i+1))))>>((i*8)+1))
+            clear_text += salt_str
             
         form = HashForm(request.POST, request.FILES)   
         if request.POST.get("algorithm", "") == 'md5':
@@ -59,7 +60,7 @@ def hashtest(request):
         #form.algorithm(hashes)
     return render_to_response("hash.html", {'hashvalue' : output,
                                             'clear_text' : clear_text,
-                                            'salt' : salt,
+                                            'salt' : repr(salt_str),
                                             'form' : form,})      
         
     
