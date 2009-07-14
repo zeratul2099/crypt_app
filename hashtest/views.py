@@ -52,6 +52,10 @@ def hashtest(request):
         elif request.POST.get("algorithm", "") == 'keccak':
             output += "Keccak[800]-224-Hash:\n"
             output += KeccakHash(repr(clear_text)).hexdigest()
+        
+        if 'withSalt' in request.POST:
+            output += "\nSalt:\n"
+            output += repr(salt_str)
     else:
         clear_text = ""
         output = ''
@@ -60,7 +64,6 @@ def hashtest(request):
         #form.algorithm(hashes)
     return render_to_response("hash.html", {'hashvalue' : output,
                                             'clear_text' : clear_text,
-                                            'salt' : repr(salt_str),
                                             'form' : form,})      
         
     
