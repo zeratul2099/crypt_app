@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 import sys, os
 import numpy as np
-from KezzakState import KezzakState as State
+from KeccakState import KeccakState as State
 
-class KezzakHash(object):
+class KeccakHash(object):
 
     #number of bytes per integer, on 32bit platforms this is 4
     num_b_i = 4

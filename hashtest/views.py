@@ -2,13 +2,15 @@ from crypt_app.hashtest.models import HashForm
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render_to_response
 from django.template import Context, loader
-from KezzakHash import KezzakHash
-import hashlib
+from KeccakHash import KeccakHash
+from datetime import datetime
+import hashlib, random, sys
 
 
 def hashtest(request):
+    salt = 0
     if request.method == 'POST':
-        form = HashForm(request.POST, request.FILES)
+        
         if request.FILES:
             if request.FILES['file'].size > 10000:
                 form = HashForm()
@@ -20,6 +22,14 @@ def hashtest(request):
             clear_text = request.POST.get("clear", "")
             output = "Eingabestring:\n%s\n" %(clear_text)
             
+        if 'withSalt' in request.POST:
+            rand = random.Random(datetime.now().strftime('%s'))
+            salt = rand.randint(0, sys.maxint)
+            salt_str = ''
+            for i in range(4):
+                clear_text += chr((salt%(1<<(8*(i+1))))>>((i*8)+1))
+            
+        form = HashForm(request.POST, request.FILES)   
         if request.POST.get("algorithm", "") == 'md5':
             output += "MD5-Hash:\n"
             output += hashlib.md5(clear_text).hexdigest()
@@ -38,15 +48,18 @@ def hashtest(request):
         elif request.POST.get("algorithm", "") == 'sha512':
             output += "SHA-512-Hash:\n"
             output += hashlib.sha512(clear_text).hexdigest()
-        elif request.POST.get("algorithm", "") == 'kezzak':
-            output += "Kezzak[800]-224-Hash:\n"
-            output += KezzakHash(repr(clear_text)).hexdigest()
+        elif request.POST.get("algorithm", "") == 'keccak':
+            output += "Keccak[800]-224-Hash:\n"
+            output += KeccakHash(repr(clear_text)).hexdigest()
     else:
         clear_text = ""
         output = ''
         form = HashForm()
         #hashes = {'md5' : 'MD5', 'sha1' : 'SHA-1'}
         #form.algorithm(hashes)
-    return render_to_response("hash.html", {'hashvalue' : output, 'clear_text' : clear_text, 'form' : form})      
+    return render_to_response("hash.html", {'hashvalue' : output,
+                                            'clear_text' : clear_text,
+                                            'salt' : salt,
+                                            'form' : form,})      
         
     

@@ -1,6 +1,6 @@
 import numpy as np
 
-class KezzakState(object):
+class KeccakState(object):
     
     def __init__(self, r, c, d, num_b_i, num_rounds, hash_len):
         self.r = r

@@ -7,7 +7,8 @@ class HashForm(forms.Form):
     hashes = (('md5', 'MD5'), ('sha1', 'SHA-1'),
               ('sha224', 'SHA-224'), ('sha256', 'SHA-256'),
               ('sha384', 'SHA-384'), ('sha512', 'SHA-512'),
-              ('kezzak', 'Kezzak'),
+              ('keccak', 'Keccak'),
              )
     algorithm = forms.ChoiceField(choices=hashes, label='Algorithmus')
+    withSalt = forms.BooleanField(label='Mit Salt', required=False)
 
