@@ -135,7 +135,7 @@ c
        </svg>
 <!-- p1 -->
 <use xlink:href="#bit" x='-140' y='75' >
-<animate attributeName="x" from="140" to="140" begin='0' dur="12s" repeatCount="1"/>
+<animate attributeName="x" from="140" to="140" begin='0' dur="9s" repeatCount="1"/>
 </use>
 <use xlink:href="#bit" x='-140' y='75' >
 <animate attributeName="x" from="140" to="190" begin='9' dur="4s" repeatCount="1"/>
@@ -180,18 +180,21 @@ fill="white" stroke="black" >
 f
 </text>
 </svg>
-<use xlink:href="#arrow1" x='-140' y='155' >
+<use xlink:href="#arrow0" x='-140' y='155' >
 <animate attributeName="x" begin='23' from='380' to='380' fill='freeze' />
 </use>
-<use xlink:href="#arrow1" x='-140' y='230' >
+<use xlink:href="#arrow0" x='-140' y='230' >
 <animate attributeName="x" begin='23' from='380' to='380' fill='freeze' />
 </use>
-
-
+<path d="M 405 110 l 0 200" stroke="black" stroke-dasharray="10,10" />
+<text fill='black' x='-430' y='100' style="font-size:18px;">
+squeezing
+<animate attributeName="x" begin='23' from='430' to='430' fill='freeze' />
+</text>
 
 <use xlink:href="#bit" x='160' y='75' />
 <use xlink:href="#bit" x='180' y='75' />
-<text fill='black' x='215' y='105' style=" font-size:18px;">
+<text fill='black' x='215' y='105' style="font-size:18px;">
 ...
 </text>
 <use xlink:href="#bit" x='240' y='75' />
