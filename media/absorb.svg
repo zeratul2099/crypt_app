@@ -9,8 +9,8 @@
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:xlink="http://www.w3.org/1999/xlink"
-   width="200mm"
-   height="220mm"
+   width="135mm"
+   height="130mm"
    id="svg2"
 >
   <defs
@@ -57,6 +57,7 @@
        style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1"
        id="g2383"
        >
+<rect x='0' y='0' width='530' height='500' fill='white' />
 <!-- Message block -->
 <text fill='black' x='5' y='95' style=" font-size:18px;">
 Message p:
@@ -70,7 +71,7 @@ Message p:
 <text fill='black' x='25' y='30'>
 0
 </text> 
-<rect x='19' y='50' width='20' height='100' fill='white' stroke='black' />
+<rect x='19' y='50' width='20' height='98' fill='white' stroke='black' />
 <text fill='black' x='25' y='105'>
 0
 </text>
@@ -108,7 +109,7 @@ c
 
 <svg  x='160' y='130' width='22' height='150'>
 <rect x='1' y='0' width='20' height='50' fill='white' stroke='black' />
-<rect x='1' y='50' width='20' height='100' fill='white' stroke='black' />
+<rect x='1' y='50' width='20' height='98' fill='white' stroke='black' />
 </svg>
 <use xlink:href="#arrow1" x='-140' y='155' >
 <animate attributeName="x" begin='8' from='140' to='140' fill='freeze' />
@@ -152,7 +153,7 @@ c
 </use>
 <svg  x='270' y='130' width='22' height='150'>
 <rect x='1' y='0' width='20' height='50' fill='white' stroke='black' />
-<rect x='1' y='50' width='20' height='100' fill='white' stroke='black' />
+<rect x='1' y='50' width='20' height='98' fill='white' stroke='black' />
 </svg>
 <use xlink:href="#arrow1" x='-140' y='155' >
 <animate attributeName="x" begin='18' from='290' to='290' fill='freeze' />

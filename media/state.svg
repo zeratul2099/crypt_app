@@ -10,7 +10,7 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:xlink="http://www.w3.org/1999/xlink"
    width="200mm"
-   height="320mm"
+   height="200mm"
    id="svg2"
 >
   <defs
@@ -158,11 +158,11 @@ Sheet:
 <svg x="480" y="220" width="100" height="100">
 <path d="M 10 90 l 0 -80 l -10 10 m 10 -10 l 10 10" stroke="black" />
 <text fill="black" x="0" y="10">
-x
+y
 </text>
 <path d="M 10 90 l 80 0 l -10 -10 m 10 10 l -10 10" stroke="black" />
 <text fill="black" x="92" y="95">
-y
+x
 </text>
 <path d="M 10 90 l 60 -60 l -10 0 m 10 0 l 0 10" stroke="black" />
 <text fill="black" x="75" y="30">
