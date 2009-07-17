@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   width="200mm"
+   height="220mm"
+   id="svg2"
+>
+  <defs
+     id="defs4">
+       <svg width="30" height="30" id="bit" >
+            <rect y="10" x="0.1" width="19.9" height="19.9" fill="white" stroke="black" />
+            <polygon fill="white" stroke="black" 
+                points="0.1 10, 10 0.1, 29.9 0.1, 20 10" />
+            <polygon fill="white" stroke="black" 
+                points="29.9 0.1, 29.9 20, 20 29.9, 20 10" />
+            
+       </svg>
+       <svg id='f' width="20" height="150">
+        <rect x='0.5' width="19" height="149" rx="10" ry="10"
+        fill="white" stroke="black" />
+        <text fill='black' x='8' y='75'>
+        f
+        </text>
+       </svg>
+       <path id='arrow0' d='m 0 0 l 50 0 -4 -4 m 4 4 l -4 4' stroke='black' />
+       <path id='arrow1' d='m 0 0 l 20 0 -4 -4 m 4 4 l -4 4' stroke='black' />
+       <svg id='xor' width="30" height="30" >
+       
+       <use xlink:href="#bit" x='0' y='0' />
+       <circle cx='15' cy='15' r='13' stroke='red' stroke-width='2' />
+       <path d="M 15 2 l 0 26 M 2 15 l 26 0" stroke='red' stroke-width='2' />
+        </svg>
+  </defs>
+
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+
+    <g
+       
+       style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1"
+       id="g2383"
+       >
+<!-- Message block -->
+<text fill='black' x='120' y='35' style=" font-size:18px;">
+Hashausgabe z:
+</text>
+
+
+
+<use xlink:href="#arrow0" x='-65' y='155' >
+    <animate attributeName="x" begin='1' from='65' to='65' fill='freeze' />
+</use>
+<use xlink:href="#arrow0" x='-65' y='230' >
+    <animate attributeName="x" begin='1' from='65' to='65' fill='freeze' />
+</use>
+
+<path d="M 90 110 l 0 200" stroke="black" stroke-dasharray="10,10" />
+<text fill='black' x='10' y='100' style="font-size:18px;">
+absorbing
+</text>
+
+<svg  x='115' y='130' width='22' height='150'>
+<rect x='1' y='0' width='20' height='50' fill='white' stroke='black' />
+<rect x='1' y='50' width='20' height='100' fill='white' stroke='black' />
+</svg>
+
+<use xlink:href="#arrow0" x='-135' y='155' >
+    <animate attributeName="x" begin='2' from='135' to='135' fill='freeze' />
+</use>
+<use xlink:href="#arrow0" x='-135' y='230' >
+    <animate attributeName="x" begin='2' from='135' to='135' fill='freeze' />
+</use>
+
+
+<use xlink:href="#bit" x='-145' y='140' >
+    <animate attributeName='x' begin='3' from='145' to='130' dur='2' fill='freeze' />
+    <animate attributeName='y' begin='3' from='140' to='50' dur='2' fill='freeze' />
+</use>
+
+<svg id='f0' x='185' y='130' width="20" height="150">
+        <rect x='0.5' width="19" height="149" rx="10" ry="10"
+                fill="white" stroke="black" >
+            <animateColor attributeName="fill" begin='6' dur='1' from='#ffffff' to='#ff0000' />
+            <animateColor attributeName="fill" begin='7' dur='1' from='#ff0000' to='#ffffff' />
+        </rect>
+        <text fill='black' x='8' y='75'>
+        f
+        </text>
+</svg>
+<use xlink:href="#arrow1" x='-135' y='155' >
+    <animate attributeName="x" begin='8' from='205' to='205' fill='freeze' />
+</use>
+<use xlink:href="#arrow1" x='-135' y='230' >
+    <animate attributeName="x" begin='8' from='205' to='205' fill='freeze' />
+</use>
+<svg  x='225' y='130' width='22' height='150'>
+    <rect x='1' y='0' width='20' height='50' fill='white' stroke='black' />
+    <rect x='1' y='50' width='20' height='100' fill='white' stroke='black' />
+</svg>
+
+<use xlink:href="#arrow0" x='-135' y='155' >
+    <animate attributeName="x" begin='9' from='245' to='245' fill='freeze' />
+</use>
+<use xlink:href="#arrow0" x='-135' y='230' >
+    <animate attributeName="x" begin='9' from='245' to='245' fill='freeze' />
+</use>
+<use xlink:href="#bit" x='-55' y='140' >
+    <animate attributeName='x' begin='10' from='255' to='150' dur='2' fill='freeze' />
+    <animate attributeName='y' begin='10' from='140' to='50' dur='2' fill='freeze' />
+</use>
+<svg id='f1' x='295' y='130' width="20" height="150">
+        <rect x='0.5' width="19" height="149" rx="10" ry="10"
+                fill="white" stroke="black" >
+            <animateColor attributeName="fill" begin='13' dur='1' from='#ffffff' to='#ff0000' />
+            <animateColor attributeName="fill" begin='14' dur='1' from='#ff0000' to='#ffffff' />
+        </rect>
+        <text fill='black' x='8' y='75'>
+        f
+        </text>
+</svg>
+<use xlink:href="#arrow1" x='-135' y='155' >
+    <animate attributeName="x" begin='15' from='315' to='315' fill='freeze' />
+</use>
+<use xlink:href="#arrow1" x='-135' y='230' >
+    <animate attributeName="x" begin='15' from='315' to='315' fill='freeze' />
+</use>
+<svg  x='335' y='130' width='22' height='150'>
+<rect x='1' y='0' width='20' height='50' fill='white' stroke='black' />
+<rect x='1' y='50' width='20' height='100' fill='white' stroke='black' />
+</svg>
+<use xlink:href="#arrow0" x='-135' y='155' >
+    <animate attributeName="x" begin='16' from='355' to='355' fill='freeze' />
+</use>
+<use xlink:href="#arrow0" x='-135' y='230' >
+    <animate attributeName="x" begin='16' from='355' to='355' fill='freeze' />
+</use>
+
+<use xlink:href="#bit" x='-55' y='140' >
+    <animate attributeName='x' begin='17' from='370' to='170' dur='2' fill='freeze' />
+    <animate attributeName='y' begin='17' from='140' to='50' dur='2' fill='freeze' />
+</use>
+<text fill='black' x='-420' y='200' style="font-size:18px;" >
+...
+<animate attributeName='x' from='420' to='420' begin='20' fill='freeze' />
+</text>
+
+<text fill='black' x='-210' y='70' style="font-size:18px;" >
+...
+<animate attributeName='x' from='210' to='210' begin='20' fill='freeze' />
+</text>
+<!-- Legend -->
+<text fill='black' x='30' y='350'>
+f = Keccak-Permutation
+</text> 
+<use xlink:href="#bit" x='30' y='370' />
+<text fill='black' x='70' y='385'>
+= Hash block of length r
+</text>
+<rect x='260' y='300' width='20' height='50' fill='white' stroke='black' />
+<rect x='260' y='350' width='20' height='100' fill='white' stroke='black' />
+<text fill='black' x='290' y='375'>
+= Keccak-State
+</text>       
+</g>
+</svg>

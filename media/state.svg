@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   width="200mm"
+   height="220mm"
+   id="svg2"
+>
+  <defs
+     id="defs4">
+       <svg width="30" height="30" id="bit" >
+            <rect y="10" x="0.1" width="19.9" height="19.9" fill="white" stroke="black" />
+            <polygon fill="white" stroke="black" 
+                points="0.1 10, 10 0.1, 29.9 0.1, 20 10" />
+            <polygon fill="white" stroke="black" 
+                points="29.9 0.1, 29.9 20, 20 29.9, 20 10" />
+       </svg>
+       <path id='arrow0' d='m 0 0 l 50 0 -4 -4 m 4 4 l -4 4' stroke='black' />
+       <path id='arrow1' d='m 0 0 l 20 0 -4 -4 m 4 4 l -4 4' stroke='black' />
+       
+  </defs>
+
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+
+    <g
+       
+       style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1"
+       id="g2383"
+       >
+<text fill='black' x='10' y='10' style="font-size:18px;">
+Single Bit:
+</text>
+<use xlink:href="#bit" x='50' y='10' />
+</g>
+</svg>
