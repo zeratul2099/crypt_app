@@ -22,9 +22,36 @@
             <polygon fill="white" stroke="black" 
                 points="29.9 0.1, 29.9 20, 20 29.9, 20 10" />
        </svg>
+       
        <path id='arrow0' d='m 0 0 l 50 0 -4 -4 m 4 4 l -4 4' stroke='black' />
        <path id='arrow1' d='m 0 0 l 20 0 -4 -4 m 4 4 l -4 4' stroke='black' />
        
+       <svg width="100" height="100" id="row" >
+        <use xlink:href="#bit" x='70' y='0' />
+        <use xlink:href="#bit" x='60' y='10' />
+        <use xlink:href="#bit" x='50' y='20' />
+        <use xlink:href="#bit" x='40' y='30' />
+        <use xlink:href="#bit" x='30' y='40' />
+        <use xlink:href="#bit" x='20' y='50' />
+        <use xlink:href="#bit" x='10' y='60' />
+        <use xlink:href="#bit" x='0' y='70' />
+       </svg>
+       
+       <svg width="180" height="100" id="plane">
+       <use xlink:href="#row" x='0' y='0' />
+       <use xlink:href="#row" x='20' y='0' />
+       <use xlink:href="#row" x='40' y='0' />
+       <use xlink:href="#row" x='60' y='0' />
+       <use xlink:href="#row" x='80' y='0' />
+       </svg>
+       
+       <svg width="180" height="180" id="state">
+       <use xlink:href="#plane" x='0' y='80' />
+       <use xlink:href="#plane" x='0' y='60' />
+       <use xlink:href="#plane" x='0' y='40' />
+       <use xlink:href="#plane" x='0' y='20' />
+       <use xlink:href="#plane" x='0' y='0' />
+       </svg>
   </defs>
 
   <metadata
@@ -44,9 +71,25 @@
        style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1"
        id="g2383"
        >
-<text fill='black' x='10' y='10' style="font-size:18px;">
+<text fill='black' x='10' y='30' style="font-size:18px;">
 Single Bit:
 </text>
-<use xlink:href="#bit" x='50' y='10' />
+<use xlink:href="#bit" x='100' y='10' />
+
+<text fill='black' x='10' y='80' style="font-size:18px;">
+Row:
+</text>
+<use xlink:href="#row" x='100' y='60' />
+
+<text fill='black' x='10' y='200' style="font-size:18px;">
+Plane:
+</text>
+<use xlink:href="#plane" x='100' y='180' />
+
+<text fill='black' x='280' y='140' style="font-size:18px;">
+State:
+</text>
+<use xlink:href="#state" x='350' y='40' />
+
 </g>
 </svg>
