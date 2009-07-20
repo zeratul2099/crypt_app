@@ -300,26 +300,26 @@
   <text fill='black' x='105' y='260' style="font-size:18px;" >
   z
   </text>
-  <use xlink:href="lane" x='300' y='20' />
+  <use xlink:href="#lane" x='300' y='20' />
   <text fill='black' x='400' y='80' style="font-size:18px;" >
   = Lane of w bits
   </text>
-  <use xlink:href="bit" x='300' y='130' />
+  <use xlink:href="#bit" x='300' y='130' />
    <text fill='red' x='303' y='158' style="font-size:38px;" >
   -
   </text> 
   <text fill='black' x='340' y='150' style="font-size:18px;" >
   = Bitwise NOT
   </text>
-  <use xlink:href="bit" x='300' y='170' />
+  <use xlink:href="#bit" x='300' y='170' />
   <text fill='red' x='303' y='196' style="font-size:18px;" >
   &amp;
   </text>
     <text fill='black' x='340' y='190' style="font-size:18px;" >
   = Bitwise AND
   </text>
-  <use xlink:href="bit" x='300' y='210' />
-  <use xlink:href="xor" x='300' y='220' />
+  <use xlink:href="#bit" x='300' y='210' />
+  <use xlink:href="#xor" x='300' y='220' />
     <text fill='black' x='340' y='230' style="font-size:18px;" >
   = Bitwise XOR
   </text>
