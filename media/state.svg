@@ -151,7 +151,7 @@ Sheet:
 0 &lt;= y &lt; 5
 </text>
 <text fill='black' x='0' y='60' style="font-size:18px;">
-0 &lt;= z &lt; l, mit l = |CPU-Wort|
+0 &lt;= z &lt; w, mit w = |CPU-Wort|
 </text>
 </svg>
 
