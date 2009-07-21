@@ -115,24 +115,108 @@
        id="g2383" transform="scale(1.5)"
        >
  <rect x='0' y='0' width='600' height='400' fill='white' />       
-       <!-- grey box -->
     <use xlink:href='#slice' x='50' y='50' />
     <use xlink:href='#slice' x='250' y='50' />
     <!-- phase 0 -->
     <use xlink:href='#bit2' x='50' y='50' >
-        <animate attributeName='x' from='50' to='330' fill='freeze' dur='4' />
+        <animate attributeName='x' from='50' to='330' fill='freeze' dur='4' begin='1' />
     </use>
     <use xlink:href='#bit2' x='70' y='70' >
-        <animate attributeName='x' from='70' to='310' fill='freeze' dur='4' />
+        <animate attributeName='x' from='70' to='310' fill='freeze' dur='4' begin='1' />
     </use>
     <use xlink:href='#bit2' x='90' y='90' >
-        <animate attributeName='x' from='90' to='290' fill='freeze' dur='4' />
+        <animate attributeName='x' from='90' to='290' fill='freeze' dur='4' begin='1' />
     </use>
     <use xlink:href='#bit2' x='110' y='110' >
-        <animate attributeName='x' from='110' to='270' fill='freeze' dur='4' />
+        <animate attributeName='x' from='110' to='270' fill='freeze' dur='4' begin='1' />
     </use>
     <use xlink:href='#bit2' x='130' y='130' >
-        <animate attributeName='x' from='130' to='250' fill='freeze' dur='4' />
+        <animate attributeName='x' from='130' to='250' fill='freeze' dur='4' begin='1' />
+    </use>
+    <!-- phase 1 -->
+    <use xlink:href='#bit2' x='130' y='50' >
+        <animate attributeName='x' from='130' to='330' fill='freeze' dur='4' begin='6' />
+        <animate attributeName='y' from='50' to='90' fill='freeze' dur='4' begin='6' />
+    </use>
+    <use xlink:href='#bit2' x='110' y='70' >
+        <animate attributeName='x' from='110' to='310' fill='freeze' dur='4' begin='6' />
+        <animate attributeName='y' from='70' to='90' fill='freeze' dur='4' begin='6' />
+    </use>
+    <use xlink:href='#bit2' x='70' y='110' >
+        <animate attributeName='x' from='70' to='270' fill='freeze' dur='4' begin='6' />
+        <animate attributeName='y' from='110' to='90' fill='freeze' dur='4' begin='6' />
+    </use>
+    <use xlink:href='#bit2' x='50' y='130' >
+        <animate attributeName='x' from='50' to='250' fill='freeze' dur='4' begin='6' />
+        <animate attributeName='y' from='130' to='90' fill='freeze' dur='4' begin='6' />
+    </use>
+    <!-- phase 2 -->
+    <use xlink:href='#bit2' x='50' y='90' >
+        <animate attributeName='x' from='50' to='290' fill='freeze' dur='4' begin='11' />
+        <animate attributeName='y' from='90' to='70' fill='freeze' dur='4' begin='11' />
+    </use>
+    <use xlink:href='#bit2' x='70' y='90' >
+        <animate attributeName='x' from='70' to='290' fill='freeze' dur='4' begin='11' />
+        <animate attributeName='y' from='90' to='130' fill='freeze' dur='4' begin='11' />
+    </use>
+    <use xlink:href='#bit2' x='110' y='90' >
+        <animate attributeName='x' from='110' to='290' fill='freeze' dur='4' begin='11' />
+        <animate attributeName='y' from='90' to='50' fill='freeze' dur='4' begin='11' />
+    </use>   
+    <use xlink:href='#bit2' x='130' y='90' >
+        <animate attributeName='x' from='130' to='290' fill='freeze' dur='4' begin='11' />
+        <animate attributeName='y' from='90' to='110' fill='freeze' dur='4' begin='11' />
+    </use> 
+    <!-- phase 3 -->
+    <use xlink:href='#bit2' x='90' y='50' >
+        <animate attributeName='x' from='90' to='330' fill='freeze' dur='4' begin='16' />
+        <animate attributeName='y' from='50' to='70' fill='freeze' dur='4' begin='16' />
+    </use> 
+    <use xlink:href='#bit2' x='90' y='70' >
+        <animate attributeName='x' from='90' to='310' fill='freeze' dur='4' begin='16' />
+        <animate attributeName='y' from='70' to='130' fill='freeze' dur='4' begin='16' />
+    </use>
+    <use xlink:href='#bit2' x='90' y='110' >
+        <animate attributeName='x' from='90' to='270' fill='freeze' dur='4' begin='16' />
+        <animate attributeName='y' from='110' to='50' fill='freeze' dur='4' begin='16' />
+    </use>
+    <use xlink:href='#bit2' x='90' y='130' >
+        <animate attributeName='x' from='90' to='250' fill='freeze' dur='4' begin='16' />
+        <animate attributeName='y' from='130' to='110' fill='freeze' dur='4' begin='16' />
+    </use>
+    <!-- phase 4 -->
+    <use xlink:href='#bit2' x='70' y='50' >
+        <animate attributeName='x' from='70' to='330' fill='freeze' dur='4' begin='21' />
+        <animate attributeName='y' from='50' to='110' fill='freeze' dur='4' begin='21' />
+    </use> 
+    <use xlink:href='#bit2' x='130' y='70' >
+        <animate attributeName='x' from='130' to='310' fill='freeze' dur='4' begin='21' />
+        <animate attributeName='y' from='70' to='50' fill='freeze' dur='4' begin='21' />
+    </use>
+    <use xlink:href='#bit2' x='50' y='110' >
+        <animate attributeName='x' from='50' to='270' fill='freeze' dur='4' begin='21' />
+        <animate attributeName='y' from='110' to='130' fill='freeze' dur='4' begin='21' />
+    </use>
+    <use xlink:href='#bit2' x='110' y='130' >
+        <animate attributeName='x' from='110' to='250' fill='freeze' dur='4' begin='21' />
+        <animate attributeName='y' from='130' to='70' fill='freeze' dur='4' begin='21' />
+    </use>
+    <!-- phase 5 -->
+    <use xlink:href='#bit2' x='110' y='50' >
+        <animate attributeName='x' from='110' to='330' fill='freeze' dur='4' begin='26' />
+        <animate attributeName='y' from='50' to='130' fill='freeze' dur='4' begin='26' />
+    </use>
+    <use xlink:href='#bit2' x='50' y='70' >
+        <animate attributeName='x' from='50' to='310' fill='freeze' dur='4' begin='26' />
+        <animate attributeName='y' from='70' to='110' fill='freeze' dur='4' begin='26' />
+    </use>
+    <use xlink:href='#bit2' x='130' y='110' >
+        <animate attributeName='x' from='130' to='270' fill='freeze' dur='4' begin='26' />
+        <animate attributeName='y' from='110' to='70' fill='freeze' dur='4' begin='26' />
+    </use>
+    <use xlink:href='#bit2' x='70' y='130' >
+        <animate attributeName='x' from='70' to='250' fill='freeze' dur='4' begin='26' />
+        <animate attributeName='y' from='130' to='50' fill='freeze' dur='4' begin='26' />
     </use>
 </g>
 </svg>
