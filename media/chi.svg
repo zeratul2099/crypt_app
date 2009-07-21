@@ -235,7 +235,7 @@
        </use>
        
        
-       <text fill='red' x='-73' y='159' style="font-size:38px;" >
+       <text fill='red' x='-73' y='159' style="font-size:38px;font-family:'serif';" >
        <!-- phase 1 -->
        -
        <animate attributeName='x' from='73' to='73' fill='freeze' begin='3' dur='0' />
@@ -257,7 +257,7 @@
        <animate attributeName='x' from='40' to='58' fill='freeze' dur='1' begin='76' />
        <animate attributeName='x' from='-40' to='-40' fill='freeze' begin='77' />
        </text>
-       <text fill='red' x='-73' y='155' style="font-size:18px;" >
+       <text fill='red' x='-73' y='155' style="font-size:18px;font-family:'serif';" >
        <!-- phase 1 -->
        &amp;
        <animate attributeName="x" begin='8' from='88' to='88' fill='freeze' />
@@ -310,34 +310,34 @@
   <!-- Legend -->     
 
   <path d="M 50 300 l 150 0 l -7 -7 m 7 7 l -7 7" stroke='black' />
-  <text fill='black' x='200' y='320' style="font-size:18px;" >
+  <text fill='black' x='200' y='320' style="font-size:18px;font-family:'serif';" >
   x
   </text>
   <path d="M 50 300 l 50 -50 l -7 0 m 7 0 l 0 7" stroke='black' />
-  <text fill='black' x='105' y='260' style="font-size:18px;" >
+  <text fill='black' x='105' y='260' style="font-size:18px;font-family:'serif';" >
   z
   </text>
   <use xlink:href="#lane" x='300' y='20' />
-  <text fill='black' x='400' y='80' style="font-size:18px;" >
+  <text fill='black' x='400' y='80' style="font-size:14px;font-family:'serif';" >
   = Lane of w bits
   </text>
   <use xlink:href="#bit" x='300' y='130' />
-   <text fill='red' x='303' y='158' style="font-size:38px;" >
+   <text fill='red' x='303' y='160' style="font-size:38px;font-family:'serif';" >
   -
   </text> 
-  <text fill='black' x='340' y='150' style="font-size:18px;" >
+  <text fill='black' x='340' y='150' style="font-size:14px;font-family:'serif';" >
   = Bitwise NOT
   </text>
   <use xlink:href="#bit" x='300' y='170' />
-  <text fill='red' x='303' y='196' style="font-size:18px;" >
+  <text fill='red' x='303' y='196' style="font-size:18px;font-family:'serif';" >
   &amp;
   </text>
-    <text fill='black' x='340' y='190' style="font-size:18px;" >
+    <text fill='black' x='340' y='190' style="font-size:14px;font-family:'serif';" >
   = Bitwise AND
   </text>
   <use xlink:href="#bit" x='300' y='210' />
   <use xlink:href="#xor" x='300' y='220' />
-    <text fill='black' x='340' y='230' style="font-size:18px;" >
+    <text fill='black' x='340' y='230' style="font-size:14px;font-family:'serif';" >
   = Bitwise XOR
   </text>
 </g>

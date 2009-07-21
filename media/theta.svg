@@ -242,11 +242,11 @@
     
     <svg x='250' y='50' width='250' height='150'>
         <use xlink:href='#bit' x='10' y='10' />
-        <text x='50' y='25' fill='black' style="font-size:12px;" >
+        <text x='50' y='25' fill='black' style="font-size:10px;font-family:'serif';" >
         = Bit to be manipulated
         </text>
         <use xlink:href='#xor' x='15' y='50'/>
-        <text x='50' y='65' fill='black' style="font-size:12px;" >
+        <text x='50' y='65' fill='black' style="font-size:10px;font-family:'serif';" >
         = Bitwise XOR-Operation
         </text>
     </svg> 
