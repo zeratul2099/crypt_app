@@ -10,7 +10,7 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:xlink="http://www.w3.org/1999/xlink"
    width="200mm"
-   height="200mm"
+   height="120mm"
    id="svg2"
 >
   <defs
@@ -116,7 +116,7 @@
        style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1"
        id="g2383" transform="scale(1.5)"
        >
-        
+ <rect x='0' y='0' width='600' height='400' fill='white' />       
        <!-- grey box -->
     <svg width='181' height='181' x='50' y='50'  >
     
