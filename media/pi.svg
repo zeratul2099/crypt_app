@@ -9,7 +9,7 @@
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:xlink="http://www.w3.org/1999/xlink"
-   width="200mm"
+   width="220mm"
    height="120mm"
    id="svg2"
 >
@@ -33,14 +33,14 @@
        <path id='arrow1' d='m 0 0 l 20 0 -4 -4 m 4 4 l -4 4' stroke='black' />
        
        <svg width="100" height="100" id="lane" >
-        <use xlink:href="#bit" x='70' y='0' />
-        <use xlink:href="#bit" x='60' y='10' />
-        <use xlink:href="#bit" x='50' y='20' />
-        <use xlink:href="#bit" x='40' y='30' />
-        <use xlink:href="#bit" x='30' y='40' />
-        <use xlink:href="#bit" x='20' y='50' />
-        <use xlink:href="#bit" x='10' y='60' />
-        <use xlink:href="#bit" x='0' y='70' />
+        <use xlink:href="#bit2" x='70' y='0' />
+        <use xlink:href="#bit2" x='60' y='10' />
+        <use xlink:href="#bit2" x='50' y='20' />
+        <use xlink:href="#bit2" x='40' y='30' />
+        <use xlink:href="#bit2" x='30' y='40' />
+        <use xlink:href="#bit2" x='20' y='50' />
+        <use xlink:href="#bit2" x='10' y='60' />
+        <use xlink:href="#bit2" x='0' y='70' />
        </svg>
        
        <svg width="180" height="100" id="plane">
@@ -114,8 +114,14 @@
        style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1"
        id="g2383" transform="scale(1.5)"
        >
- <rect x='0' y='0' width='600' height='400' fill='white' />       
+ <rect x='0' y='0' width='600' height='400' fill='white' /> 
+    <text fill="black" x="50" y="30" style="font-size:12px;font-family:'serif';" >
+    old lane positions
+    </text>
     <use xlink:href='#slice' x='50' y='50' />
+    <text fill="black" x="250" y="30" style="font-size:12px;font-family:'serif';" >
+    new lane positions
+    </text>
     <use xlink:href='#slice' x='250' y='50' />
     <!-- phase 0 -->
     <use xlink:href='#bit2' x='50' y='50' >
@@ -218,5 +224,26 @@
         <animate attributeName='x' from='70' to='250' fill='freeze' dur='4' begin='26' />
         <animate attributeName='y' from='130' to='50' fill='freeze' dur='4' begin='26' />
     </use>
+    
+<svg x="400" y="50" width="150" height="150">
+<path d="M 10 90 l 0 -80 l -10 10 m 10 -10 l 10 10" stroke="black" />
+<text fill="black" x="0" y="10" style="font-size:10px;font-family:'serif';">
+y
+</text>
+<path d="M 10 90 l 80 0 l -10 -10 m 10 10 l -10 10" stroke="black" />
+<text fill="black" x="92" y="95" style="font-size:10px;font-family:'serif';">
+x
+</text>
+<path d="M 10 90 l 60 -60 l -10 0 m 10 0 l 0 10" stroke="black" />
+<text fill="black" x="75" y="30" style="font-size:10px;font-family:'serif';">
+z
+</text>
+<use xlink:href='#bit2' x='5' y='110' />
+<text fill="black" x="50" y="130" style="font-size:10px;font-family:'serif';" >
+= single lane
+</text>
+</svg>
+    
+    
 </g>
 </svg>
