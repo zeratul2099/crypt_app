@@ -57,25 +57,25 @@ def info_keccak(request, step):
     svg = ''
 
     if step == 'absorb':
-        title = 'Absorb'
+        title = 'Absorb-Funktion'
         svg = 'absorb.svg'
     elif step == 'squeeze':
-        title = 'Squeeze'
+        title = 'Squeeze-Funktion'
         svg = 'squeeze.svg'
     elif step == 'chi':
-        title = 'Chi'
+        title = 'Chi-Permutation'
         svg = 'chi.svg'
     elif step == 'theta':
-        title = 'Theta'
+        title = 'Theta-Permutation'
         svg = 'theta.svg'
     elif step == 'pi':
-        title = 'Pi'
+        title = 'Pi-Permutation'
         svg = 'pi.svg'
     elif step == 'rho':
-        title = 'Rho'
+        title = 'Rho-Permutation'
         svg = 'rho.svg'
     elif step == 'iota':
-        title = 'Iota'
+        title = 'Iota-Permutation'
         svg = 'iota.svg'
     else:
         title = 'Keccak'
@@ -116,4 +116,5 @@ def info_keccak(request, step):
                                                 'svg' : svg,
                                                 'nav' : keccak_nav,
                                                 'algo' : 'keccak',
+                                                'name' : 'Keccak',
                                                 })
