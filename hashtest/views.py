@@ -62,7 +62,7 @@ def hashtest(request):
         form = HashForm()
         #hashes = {'md5' : 'MD5', 'sha1' : 'SHA-1'}
         #form.algorithm(hashes)
-    return render_to_response("hash.html", {'hashvalue' : output,
+    return render_to_response("hashtest.html", {'hashvalue' : output,
                                             'clear_text' : clear_text,
                                             'form' : form,})      
         

@@ -1,0 +1,17 @@
+{% extends "basis.html" %}
+
+{% block titleline %}{{ title }}{% endblock %}
+{% block titel %}{{ title }}{% endblock %}
+
+{% block inhalt %}
+<a href='/hash/algo/{{ algo }}/'>ausprobieren</a>
+<table width='100%'>
+    <tr>
+        <td width='30%'>{{ text|safe }}</td>
+        <td width='70%'><object data='/content/{{ svg }}' width="800" height="600"></object></td>
+    </tr>
+</table>
+<a href='/hash/'>zur&uuml;ck</a><br>
+{{ nav|safe }}
+{% endblock %}
+
