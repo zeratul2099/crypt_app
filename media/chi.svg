@@ -10,7 +10,7 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:xlink="http://www.w3.org/1999/xlink"
    width="160mm"
-   height="100mm"
+   height="120mm"
    id="svg2"
 >
   <defs
@@ -108,7 +108,8 @@
        style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1"
        id="g2383"
        >
-<rect x='0' y='0' width='750' height='400' fill='white' />
+<rect x='0' y='0' width='750' height='440' fill='white' />
+
        <!-- lane 0 -->
        <use xlink:href="#lane" x='40' y='20' >
        <!-- phase 1 -->
@@ -307,14 +308,27 @@
         <animate attributeName='x' from='-140' to='-140' fill='freeze' begin='86' />
        </use>
   
+         <!-- lanes -->
+        <use xlink:href="#lane" x='40' y='20' />
+        <use xlink:href="#lane" x='70' y='20' />
+        <use xlink:href="#lane" x='100' y='20' />
+        <use xlink:href="#lane" x='130' y='20' />
+        <use xlink:href="#lane" x='160' y='20' />
+  
   <!-- Legend -->     
+  <text fill='black' x='50' y='15' style="font-size:14px;font-family:'serif';" >
+  Old Plane
+  </text>
+  <text fill='black' x='50' y='240' style="font-size:14px;font-family:'serif';" >
+  New Plane
+  </text>
 
-  <path d="M 50 300 l 150 0 l -7 -7 m 7 7 l -7 7" stroke='black' />
-  <text fill='black' x='200' y='320' style="font-size:18px;font-family:'serif';" >
+  <path d="M 50 320 l 150 0 l -7 -7 m 7 7 l -7 7" stroke='black' />
+  <text fill='black' x='200' y='340' style="font-size:14px;font-family:'serif';" >
   x
   </text>
-  <path d="M 50 300 l 50 -50 l -7 0 m 7 0 l 0 7" stroke='black' />
-  <text fill='black' x='105' y='260' style="font-size:18px;font-family:'serif';" >
+  <path d="M 50 320 l 50 -50 l -7 0 m 7 0 l 0 7" stroke='black' />
+  <text fill='black' x='105' y='280' style="font-size:14px;font-family:'serif';" >
   z
   </text>
   <use xlink:href="#lane" x='300' y='20' />

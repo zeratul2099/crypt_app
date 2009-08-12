@@ -5,10 +5,11 @@
 
 {% block inhalt %}
 <a href='/hash/algo/{{ algo }}/'>{{ name }} ausprobieren</a>
+<p>
 <table width='100%'>
     <tr>
-        <td width='30%'>{{ text|safe }}</td>
-        <td width='70%'><object data='/content/{{ svg }}' width="800" height="600"></object></td>
+        <td width='40%' valign='top' >{{ text|safe }}</td>
+        <td width='60%' valign='top'><object data='/content/{{ svg }}' width="800" height="550"></object></td>
     </tr>
 </table>
 <a href='/hash/'>zur&uuml;ck</a><br>
