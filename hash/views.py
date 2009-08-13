@@ -65,8 +65,10 @@ def info_keccak(request, step):
         text += "mit 5 * 5 * 32 (Keccak[800]) oder 5 * 5 * 64 (Keccak[1600]) Nullbits erstellt. Nun "
         text += "werden die ersten r Bits der Nachricht mit den ersten "
         text += "r Bits des States XOR-verkn&uuml;pft und die f&uuml;nf Permutationsfunktionen "
-        text += "mehrfach auf den State angewendet. Dabei ist die Reihenfolge der Funktionen "
-        text += "egal, sie werden jedoch in 17 Runden bei Keccak[800] "
+        text += "mehrfach auf den State angewendet. Dabei wird immer mit der "
+        text += "<a href='/hash/info/keccak/theta/'>Theta</a>-Permutation begonnen. "
+        text += "Die Reihenfolge der restlichen Permutationen ist beliebig. "
+        text += "Alle Permutationen werden jedoch in 17 Runden bei Keccak[800] "
         text += "bzw. in 18 Runden bei Keccak[1600] wiederholt.<p>"
         text += "Daraufhin werden die n&auml;chsten r Bits der Nachricht "
         text += "mit dem State XOR-verkn&uuml;pft und wieder die Keccak-Permutationen "
@@ -139,11 +141,19 @@ def info_keccak(request, step):
         text += "</table>"
     elif step == 'iota':
         title = 'Iota-Permutation'
-        svg = 'iota.svg'
+        svg = 'lfsr.svg'
         text = "Die Iota-Permutation addiert eine Rundenkonstante auf "
         text += "die erste Lane (x=0, y=0). Diese Rundenkonstante &auml;ndert sich "
         text += "von Runde zu Runde und ist die Ausgabe eines "
         text += "linear r&uuml;ckgekoppeltes Schieberegisters (Linear Feedback Shift Register, LFSR).<p>"
+        text += "Ein LFSR ist ein Schieberegister der L&auml;nge n mit einer "
+        text += "beliebigen Initialbelegung. Vor jedem Rechtsshift werden "
+        text += "die Bits an zuvor festgelegten Positionen XOR-verkn&uuml;pft "
+        text += "und das Ergebnis links an das Register angef&uuml;gt. "
+        text += "Das Bit am rechten Ende des Registers wird aus Ausgabe "
+        text += "verwendet.<p> Mithilfe des LFSR werden Rundenkonstanten "
+        text += "berechnet und bei jeder Anwendung von Iota die entsprechende "
+        text += "Konstante auf die erste Lane addiert.<p>"
     else:
         title = 'Keccak'
         text = "Beim Keccak-Algorithmus handelt es sich um einen "
@@ -165,10 +175,13 @@ def info_keccak(request, step):
         text += "<a href='/hash/info/keccak/rho/'>Rho</a> und "
         text += "<a href='/hash/info/keccak/iota/'>Iota</a> an und "
         text += "wiederholt dies mehrere Runden.<br>Der State ist ein "
-        text += "Wert aus 5 x 5 x w Bits, wobei w die l&auml;nge eines "
+        text += "Wert aus 5 * 5 * w Bits, wobei w die l&auml;nge eines "
         text += "CPU-Wortes ist. Zur Visualisierung der Permutationen "
         text += "wird der State in einer dreidimensionalen Blockform "
-        text += "dargestellt."
+        text += "dargestellt.<p>"
+        text += "Die genaue Spezifikation von des Keccak-Algorithmus ist unter<p>"
+        text += "<a href='http://keccak.noekeon.org/'>keccak.noekeon.org</a><p>"
+        text += "zu finden."
         svg = 'state.svg'
         
     keccak_nav = "<a href='/hash/info/keccak/'>Keccak &Uuml;bersicht</a> | "
