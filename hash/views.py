@@ -195,7 +195,8 @@ def info_keccak(request, step):
     keccak_nav += "<a href='/hash/info/keccak/theta/'>Theta</a> | "
     keccak_nav += "<a href='/hash/info/keccak/pi/'>Pi</a> | "
     keccak_nav += "<a href='/hash/info/keccak/rho/'>Rho</a> | "
-    keccak_nav += "<a href='/hash/info/keccak/iota/'>Iota</a>"
+    keccak_nav += "<a href='/hash/info/keccak/iota/'>Iota</a><p>"
+    keccak_nav += "You are using "+user_agent
     return render_to_response("hash_info.html", {'title' : title,
                                                 'text' : text,
                                                 'svg' : svg,
