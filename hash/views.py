@@ -55,10 +55,14 @@ def info_keccak(request, step):
     title = ''
     text = ''
     svg = ''
-
+    user_agent = request.META['HTTP_USER_AGENT']
+    if user_agent.find('WebKit') != -1 or user_agent.find('Presto') != -1:
+        pictype = "svg"
+    else:
+        pictype = "gif"
     if step == 'absorb':
         title = 'Absorb-Funktion'
-        svg = 'absorb.svg'
+        svg = 'absorb.'+pictype
         text = "Die Absorb-Funktion schreibt die Nachricht blockweise in einen "
         text += "State und wendet die Permutationsfunktionen auf diesen "
         text += "an.<p>Je nach Keccak-Variante wird ein initialer State "
@@ -78,7 +82,7 @@ def info_keccak(request, step):
         text += "angewendet, um den Hashwert zu erzeugen."
     elif step == 'squeeze':
         title = 'Squeeze-Funktion'
-        svg = 'squeeze.svg'
+        svg = 'squeeze.'+pictype
         text = "Die Squeeze-Funktion erzeugt aus dem durch die "
         text += "<a href='/hash/info/keccak/absorb/'>Absorb</a>-Funktion "
         text += "produziertem State einen beliebig langen Hashwert.<p>"
@@ -91,7 +95,7 @@ def info_keccak(request, step):
         text += "ist dabei auch ein unendlich langer Hashstrom."
     elif step == 'chi':
         title = 'Chi-Permutation'
-        svg = 'chi.svg'
+        svg = 'chi.'+pictype
         text = "Die Chi-Permutation wird Plane-weise auf den State angewendet, "
         text += "es werden also immer f&uuml;nf 32- oder 64-bit Werte betrachtet.<p>"
         text += "Jede einzelne Lane, also jeder 32- oder 64-bit Wert wird "
@@ -105,7 +109,7 @@ def info_keccak(request, step):
         text += "von sich selbst XOR-verkn&uuml;pft.<p>"
     elif step == 'theta':
         title = 'Theta-Permutation'
-        svg = 'theta.svg'
+        svg = 'theta.'+pictype
         text = "Die Theta-Permutation wird auf jedes Bit des States "
         text += "einzeln angewendet.<p>"
         text += "Hierzu werden die Columns links des Bits (x-1) und rechts vorne (x+1, z-1) "
@@ -118,7 +122,7 @@ def info_keccak(request, step):
         text += "mit einer einzelnen Operation manipuliert."
     elif step == 'pi':
         title = 'Pi-Permutation'
-        svg = 'pi.svg'
+        svg = 'pi.'+pictype
         text = "Die Pi-Permutation vertauscht die Positionen der Lanes "
         text += "innerhalb des States nach einem bestimmten Schema<p>"
         text += "Die neue Position jeder Lane wird nach<p>"
@@ -127,7 +131,7 @@ def info_keccak(request, step):
         text += "X und Y die neue Position bestimmen."
     elif step == 'rho':
         title = 'Rho-Permutation'
-        svg = 'rho.svg'
+        svg = 'rho.'+pictype
         text = "Die Rho-Permutation f&uuml;hrt eine bestimmte Anzahl "
         text += "von Rechtsshifts auf jede Lane durch. Die Offsets des "
         text += "Shifts sind folgende:<p>"
@@ -141,7 +145,7 @@ def info_keccak(request, step):
         text += "</table>"
     elif step == 'iota':
         title = 'Iota-Permutation'
-        svg = 'lfsr.svg'
+        svg = 'lfsr.'+pictype
         text = "Die Iota-Permutation addiert eine Rundenkonstante auf "
         text += "die erste Lane (x=0, y=0). Diese Rundenkonstante &auml;ndert sich "
         text += "von Runde zu Runde und ist die Ausgabe eines "
@@ -182,7 +186,7 @@ def info_keccak(request, step):
         text += "Die genaue Spezifikation von des Keccak-Algorithmus ist unter<p>"
         text += "<a href='http://keccak.noekeon.org/'>keccak.noekeon.org</a><p>"
         text += "zu finden."
-        svg = 'state.svg'
+        svg = 'state.'+pictype
         
     keccak_nav = "<a href='/hash/info/keccak/'>Keccak &Uuml;bersicht</a> | "
     keccak_nav += "<a href='/hash/info/keccak/absorb/'>Absorb</a> | "
