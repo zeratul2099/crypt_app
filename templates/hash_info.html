@@ -8,11 +8,13 @@
 <p>
 <table width='100%'>
     <tr>
-        <td width='40%' valign='top' >{{ text|safe }}</td>
-        <td width='60%' valign='top'><object data='/content/{{ svg }}' width="800" height="550"></object></td>
+        <th width='25%' rowspan='2' valign='top' align='left' >{{ nav|safe }}<p><a href='/hash/'>zur&uuml;ck</a><br></th>
+        <td width='75%' valign='top' ><object data='/content/{{ svg }}' width="800" height="600"></object></td>
+    </tr><tr>
+        <td width='75%' valign='top'>{{ text|safe }}</td>
     </tr>
 </table>
-<a href='/hash/'>zur&uuml;ck</a><br>
-{{ nav|safe }}
+<p>You are using {{ user_agent }}</p>
+
 {% endblock %}
 

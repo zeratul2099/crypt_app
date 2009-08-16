@@ -161,11 +161,11 @@ def info_keccak(request, step):
     else:
         title = 'Keccak'
         text = "Beim Keccak-Algorithmus handelt es sich um einen "
-        text += "einen Hash-Algorithmus und SHA-3-Kandidaten. Der"
+        text += "Hash-Algorithmus und SHA-3-Kandidaten. Der"
         text += " Algorithmus verwendet drei grundlegende Funktionen:<p>"
         text += "Die <a href='/hash/info/keccak/absorb/'>Absorb</a>-Funktion, "
         text += "die <a href='/hash/info/keccak/squeeze/'>Squeeze</a>-Funktion sowie die "
-        text += "eigentliche Permutations-Funktion, welche nocheinmal "
+        text += "eigentliche Permutations-Funktion, welche noch einmal "
         text += "in f&uuml;nf Unterfunktionen aufgeteilt ist.<p>Die "
         text += "<a href='/hash/info/keccak/absorb/'>Absorb</a>-Funktion schreibt blockweise die Nachricht "
         text += "in einen State und wendet dazwischen immer wieder "
@@ -179,28 +179,29 @@ def info_keccak(request, step):
         text += "<a href='/hash/info/keccak/rho/'>Rho</a> und "
         text += "<a href='/hash/info/keccak/iota/'>Iota</a> an und "
         text += "wiederholt dies mehrere Runden.<br>Der State ist ein "
-        text += "Wert aus 5 * 5 * w Bits, wobei w die l&auml;nge eines "
+        text += "Wert aus 5 * 5 * w Bits, wobei w die L&auml;nge eines "
         text += "CPU-Wortes ist. Zur Visualisierung der Permutationen "
         text += "wird der State in einer dreidimensionalen Blockform "
         text += "dargestellt.<p>"
-        text += "Die genaue Spezifikation von des Keccak-Algorithmus ist unter<p>"
+        text += "Die genaue Spezifikation des Keccak-Algorithmus ist unter<p>"
         text += "<a href='http://keccak.noekeon.org/'>keccak.noekeon.org</a><p>"
         text += "zu finden."
         svg = 'state.'+pictype
         
-    keccak_nav = "<a href='/hash/info/keccak/'>Keccak &Uuml;bersicht</a> | "
-    keccak_nav += "<a href='/hash/info/keccak/absorb/'>Absorb</a> | "
-    keccak_nav += "<a href='/hash/info/keccak/squeeze/'>Squeeze</a> | "
-    keccak_nav += "<a href='/hash/info/keccak/chi/'>Chi</a> | "
-    keccak_nav += "<a href='/hash/info/keccak/theta/'>Theta</a> | "
-    keccak_nav += "<a href='/hash/info/keccak/pi/'>Pi</a> | "
-    keccak_nav += "<a href='/hash/info/keccak/rho/'>Rho</a> | "
-    keccak_nav += "<a href='/hash/info/keccak/iota/'>Iota</a><p>"
-    keccak_nav += "You are using "+user_agent
+    keccak_nav = "<ul><li><a href='/hash/info/keccak/'>Keccak &Uuml;bersicht</a></li>"
+    keccak_nav += "<ul><li><a href='/hash/info/keccak/absorb/'>Absorb</a></li>"
+    keccak_nav += "<li><a href='/hash/info/keccak/squeeze/'>Squeeze</a></li>"
+    keccak_nav += "<li>Keccak-Permutationen</li>"
+    keccak_nav += "<ul><li><a href='/hash/info/keccak/chi/'>Chi</a></li>"
+    keccak_nav += "<li><a href='/hash/info/keccak/theta/'>Theta</a></li>"
+    keccak_nav += "<li><a href='/hash/info/keccak/pi/'>Pi</a></li>"
+    keccak_nav += "<li><a href='/hash/info/keccak/rho/'>Rho</a></li>"
+    keccak_nav += "<li><a href='/hash/info/keccak/iota/'>Iota</a></ul></ul></ul>"
     return render_to_response("hash_info.html", {'title' : title,
                                                 'text' : text,
                                                 'svg' : svg,
                                                 'nav' : keccak_nav,
                                                 'algo' : 'keccak',
                                                 'name' : 'Keccak',
+                                                'user_agent' : user_agent,
                                                 })
