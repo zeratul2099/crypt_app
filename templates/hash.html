@@ -7,10 +7,6 @@
 {% block inhalt %}
 <table>
     <tr>
-        <td>MD5</td>
-        <td>(Was ist das?)</td>
-    </tr>
-    <tr>
         <td>SHA-1</td>
         <td>(Was ist das?)</td>
     </tr>
@@ -18,10 +14,14 @@
         <td>SHA-2</td>
         <td>(Was ist das?)</td>
     </tr>
+    {% for a in algos %}
+    
     <tr>
-        <td><a href='./algo/keccak/'>Keccak</a></td>
-        <td>(<a href='./info/keccak/'>Was ist das?</a>)</td>
+        <td><a href='./algo/{{ a.shortTitle }}/'>{{ a.name }}</a></td>
+        <td>(<a href='./info/{{ a.shortTitle }}/overview/'>Was ist das?</a>)</td>
     </tr>
+    
+    {% endfor %}
 </table>
 <a href='/crypt_app/'>zur&uuml;ck</a>
 {% endblock %}
