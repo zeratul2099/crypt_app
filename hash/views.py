@@ -156,7 +156,7 @@ def info(request, algo, page):
     if user_agent.find('WebKit') != -1 or user_agent.find('Presto') != -1:
         pictype = "svg"
     else:
-        pictype = "gif"
+        pictype = "svg"
     algo_object = get_object_or_404(Algo, shortTitle=algo)
     info_page = get_object_or_404(InfoPage, algo=algo_object, shortTitle=page)
     svg = info_page.image+"."+pictype

@@ -4,12 +4,14 @@
 {% block titel %}{{ title }}{% endblock %}
 
 {% block inhalt %}
+<!-- still doesn't work -->
+<script type="text/ecmascript" xlink:href="/content/smil.user.js" ></script>
 <a href='/hash/algo/{{ algo }}/'>{{ name }} ausprobieren</a>
 <p>
 <table width='100%'>
     <tr>
         <th width='25%' rowspan='2' valign='top' align='left' >{{ nav|safe }}<p><a href='/hash/'>zur&uuml;ck</a><br></th>
-        <td width='75%' valign='top' ><object data='/content/{{ svg }}' width="800" height="600"></object></td>
+        <td width='75%' valign='top' ><object data='/content/{{ svg }}' width="820" height="600"></object></td>
     </tr><tr>
         <td width='75%' valign='top'>{{ text|safe }}</td>
     </tr>
