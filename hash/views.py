@@ -153,10 +153,10 @@ def info(request, algo, page):
     text = ''
     svg = ''
     user_agent = request.META['HTTP_USER_AGENT']
-    if user_agent.find('WebKit') != -1 or user_agent.find('Presto') != -1:
+    if user_agent.find('WebKit') != -1 or user_agent.find('Presto') != -1 or user_agent.find('Gecko') != -1:
         pictype = "svg"
     else:
-        pictype = "svg"
+        pictype = "gif"
     algo_object = get_object_or_404(Algo, shortTitle=algo)
     info_page = get_object_or_404(InfoPage, algo=algo_object, shortTitle=page)
     svg = info_page.image+"."+pictype

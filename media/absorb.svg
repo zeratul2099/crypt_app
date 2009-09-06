@@ -13,6 +13,7 @@
    height="135mm"
    id="svg2"
 >
+<script type="text/ecmascript" xlink:href="/content/smil.user.js" />
   <defs
      id="defs4">
        <svg width="30" height="30" id="bit" >
@@ -88,7 +89,7 @@ c
         <rect x='0.5' width="19" height="149" rx="10" ry="10"
         fill="white" stroke="black" >
         <animateColor attributeName="fill" begin='6' dur='1' from='#ffffff' to='#ff0000' />
-        <animateColor attributeName="fill" begin='7' dur='1' from='#ff0000' to='#ffffff' />
+        <animateColor attributeName="fill" begin='7' dur='1' from='#ff0000' to='#ffffff' fill='freeze' />
         </rect>
         <text fill='black' x='8' y='75'>
         f
@@ -112,23 +113,24 @@ c
 <rect x='1' y='50' width='20' height='98' fill='white' stroke='black' />
 </svg>
 <use xlink:href="#arrow1" x='-140' y='155' >
-<animate attributeName="x" begin='8' from='140' to='140' fill='freeze' />
+<!--<animate attributeName="x" begin='8' from='140' to='140' fill='freeze' />-->
+<set attributeName="x" begin='8' to='140' />
 </use>
 <use xlink:href="#arrow1" x='-140' y='230' >
-<animate attributeName="x" begin='8' from='140' to='140' fill='freeze' />
+<set attributeName="x" begin='8' to='140' />
 </use>
 <use xlink:href="#arrow0" x='-180' y='155' >
-<animate attributeName="x" begin='9' from='180' to='180' fill='freeze' />
+<set attributeName="x" begin='9' to='180' />
 </use>
 <use xlink:href="#arrow0" x='-180' y='230' >
-<animate attributeName="x" begin='9' from='180' to='180' fill='freeze' />
+<set attributeName="x" begin='9' to='180' />
 </use>
 <!-- Keccak 2 -->
 <svg id='f2' x='230' y='130' width="20" height="150">
         <rect x='0.5' width="19" height="149" rx="10" ry="10"
         fill="white" stroke="black" >
         <animateColor attributeName="fill" begin='15' dur='1' from='#ffffff' to='#ff0000' />
-        <animateColor attributeName="fill" begin='16' dur='1' from='#ff0000' to='#ffffff' />
+        <animateColor attributeName="fill" begin='16' dur='1' from='#ff0000' to='#ffffff' fill='freeze' />
         </rect>
         <text fill='black' x='8' y='75'>
         f
@@ -146,51 +148,51 @@ c
 <animate attributeName="x" from="190" to="225" begin="13" dur="2s" repeatCount="1"/>
 </use>
 <use xlink:href="#arrow1" x='-140' y='155' >
-<animate attributeName="x" begin='17' from='250' to='250' fill='freeze' />
+<set attributeName="x" begin='17' to='250' />
 </use>
 <use xlink:href="#arrow1" x='-140' y='230' >
-<animate attributeName="x" begin='17' from='250' to='250' fill='freeze' />
+<set attributeName="x" begin='17' to='250' />
 </use>
 <svg  x='270' y='130' width='22' height='150'>
 <rect x='1' y='0' width='20' height='50' fill='white' stroke='black' />
 <rect x='1' y='50' width='20' height='98' fill='white' stroke='black' />
 </svg>
 <use xlink:href="#arrow1" x='-140' y='155' >
-<animate attributeName="x" begin='18' from='290' to='290' fill='freeze' />
+<set attributeName="x" begin='18' to='290' />
 </use>
 <use xlink:href="#arrow1" x='-140' y='230' >
-<animate attributeName="x" begin='18' from='290' to='290' fill='freeze' />
+<set attributeName="x" begin='18' to='290' />
 </use>
 <text fill='black' x='320' y='210' style=" font-size:18px;">
 ...
 </text>
 <use xlink:href="#arrow1" x='-140' y='155' >
-<animate attributeName="x" begin='20' from='340' to='340' fill='freeze' />
+<set attributeName="x" begin='20' to='340' />
 </use>
 <use xlink:href="#arrow1" x='-140' y='230' >
-<animate attributeName="x" begin='20' from='340' to='340' fill='freeze' />
+<set attributeName="x" begin='20' to='340' />
 </use>
 <!-- Keccak n -->
 <svg id='fn' x='360' y='130' width="20" height="150">
 <rect x='0.5' width="19" height="149" rx="10" ry="10"
 fill="white" stroke="black" >
 <animateColor attributeName="fill" begin='21' dur='1' from='#ffffff' to='#ff0000' />
-<animateColor attributeName="fill" begin='22' dur='1' from='#ff0000' to='#ffffff' />
+<animateColor attributeName="fill" begin='22' dur='1' from='#ff0000' to='#ffffff' fill='freeze' />
 </rect>
 <text fill='black' x='8' y='75'>
 f
 </text>
 </svg>
 <use xlink:href="#arrow0" x='-140' y='155' >
-<animate attributeName="x" begin='23' from='380' to='380' fill='freeze' />
+<set attributeName="x" begin='23' to='380' />
 </use>
 <use xlink:href="#arrow0" x='-140' y='230' >
-<animate attributeName="x" begin='23' from='380' to='380' fill='freeze' />
+<set attributeName="x" begin='23' to='380' />
 </use>
 <path d="M 405 110 l 0 200" stroke="black" stroke-dasharray="10,10" />
-<text fill='black' x='-430' y='100' style="font-size:18px;">
+<text fill='black' x='-430' y='100' style="font-size:14px;">
 squeezing
-<animate attributeName="x" begin='23' from='430' to='430' fill='freeze' />
+<set attributeName="x" begin='23' to='430' />
 </text>
 
 <use xlink:href="#bit" x='160' y='75' />
@@ -200,20 +202,20 @@ squeezing
 </text>
 <use xlink:href="#bit" x='240' y='75' />
 <use xlink:href="#bit" x='260' y='75' /> 
-<text fill='black' x='30' y='320'>
+<text fill='black' x='30' y='320' style="font-size:14px;">
 f = Keccak-Permutation
 </text> 
 <use xlink:href="#bit" x='30' y='340' />
-<text fill='black' x='70' y='355'>
+<text fill='black' x='70' y='355' style="font-size:14px;">
 = Message block of length r
 </text>
 <use xlink:href="#xor" x='30' y='380' />
-<text fill='black' x='70' y='400'>
+<text fill='black' x='70' y='400' style="font-size:14px;">
 = XOR-Operation
 </text> 
 <rect x='260' y='300' width='20' height='50' fill='white' stroke='black' />
 <rect x='260' y='350' width='20' height='100' fill='white' stroke='black' />
-<text fill='black' x='290' y='375'>
+<text fill='black' x='290' y='375' style="font-size:14px;">
 = Keccak-State
 </text>       
 </g>

@@ -13,6 +13,7 @@
    height="120mm"
    id="svg2"
 >
+<script type="text/ecmascript" xlink:href="/content/smil.user.js" />
   <defs
      id="defs4">
        <svg width="30" height="30" id="bit" fill='black' fill-opacity='0.3' >
@@ -129,7 +130,7 @@
             <polygon stroke="black" 
                 points="29.9 0.1, 29.9 20, 20 29.9, 20 10" />
                 <animateColor attributeName='fill' from='#000000' to='#ff0000' begin='33' dur='2' />
-                <animateColor attributeName='fill' from='#ff0000' to='#000000' begin='35' dur='2' />
+                <animateColor attributeName='fill' from='#ff0000' to='#000000' begin='35' dur='2' fill='freeze' />
        </svg>
  
  
@@ -138,19 +139,19 @@
   <!--     <use xlink:href='#column' x='50' y='40' />-->
           <use xlink:href="#bit2" x='50' y='120' >
             <animate attributeName='y' from='120' to='100' fill='freeze' dur='1' begin='15'/>
-            <animate attributeName='y' from='-130' to='-130' fill='freeze' begin='16' />          
+            <animate attributeName='y' from='-130' to='-130' fill='freeze' begin='16' dur='0' />          
           </use>
         <use xlink:href="#bit2" x='50' y='100' >
             <animate attributeName='y' from='100' to='80' fill='freeze' dur='1' begin='18'/>
-            <animate attributeName='y' from='-130' to='-130' fill='freeze' begin='19' />          
+            <animate attributeName='y' from='-130' to='-130' fill='freeze' begin='19' dur='0' />          
           </use>
         <use xlink:href="#bit2" x='50' y='80' >
             <animate attributeName='y' from='80' to='60' fill='freeze' dur='1' begin='21'/>
-            <animate attributeName='y' from='-130' to='-130' fill='freeze' begin='22' />          
+            <animate attributeName='y' from='-130' to='-130' fill='freeze' begin='22' dur='0' />          
           </use>
         <use xlink:href="#bit2" x='50' y='60' >
             <animate attributeName='y' from='60' to='40' fill='freeze' dur='1' begin='24'/>
-            <animate attributeName='y' from='-130' to='-130' fill='freeze' begin='25' />          
+            <animate attributeName='y' from='-130' to='-130' fill='freeze' begin='25' dur='0' />          
           </use>
         <use xlink:href="#bit2" x='50' y='40' >
             <animate attributeName='y' from='40' to='20' fill='freeze' dur='1' begin='27'/>        
@@ -162,26 +163,26 @@
  <!--      <use xlink:href='#column' x='80' y='50' />-->
         <use xlink:href="#bit2" x='80' y='130' >
             <animate attributeName='y' from='130' to='110' fill='freeze' dur='1' begin='1'/>
-            <animate attributeName='y' from='-130' to='-130' fill='freeze' begin='2' />
+            <animate attributeName='y' from='-130' to='-130' fill='freeze' begin='2' dur='0' />
         </use>
         <use xlink:href="#bit2" x='80' y='110' >
             <animate attributeName='y' from='110' to='90' fill='freeze' dur='1' begin='4'/>
-            <animate attributeName='y' from='-130' to='-130' fill='freeze' begin='5' />
+            <animate attributeName='y' from='-130' to='-130' fill='freeze' begin='5' dur='0' />
         </use>
         <use xlink:href="#bit2" x='80' y='90' >
             <animate attributeName='y' from='90' to='70' fill='freeze' dur='1' begin='7'/>
-            <animate attributeName='y' from='-130' to='-130' fill='freeze' begin='8' />
+            <animate attributeName='y' from='-130' to='-130' fill='freeze' begin='8' dur='0' />
         </use>
         <use xlink:href="#bit2" x='80' y='70' >
             <animate attributeName='y' from='70' to='50' fill='freeze' dur='1' begin='10'/>
-            <animate attributeName='y' from='-130' to='-130' fill='freeze' begin='11' />
+            <animate attributeName='y' from='-130' to='-130' fill='freeze' begin='11' dur='0' />
         </use>
         <use xlink:href="#bit2" x='80' y='50' >
             <animate attributeName='y' from='50' to='30' fill='freeze' dur='1' begin='13'/>
             <animate attributeName='x' from='80' to='90' fill='freeze' dur='1' begin='14'/>
             <animate attributeName='y' from='30' to='20' fill='freeze' dur='1' begin='14'/>
             <animate attributeName='x' from='90' to='70' fill='freeze' dur='1' begin='28'/>
-            <animate attributeName='x' from='-90' to='-98' fill='freeze' begin='29'/>
+            <animate attributeName='x' from='-90' to='-90' fill='freeze' begin='29' dur='0' />
         </use>
        
        
@@ -212,30 +213,30 @@
        <path d='M 70 50 l 10 -10 20 0 -10 10 -20 0' stroke='red' />
        
        <use xlink:href='#xor' x='80' y='-120' >
-        <animate attributeName='y' from='120' to='120' fill='freeze' begin='2' />
-        <animate attributeName='y' from='-120' to='-120' fill='freeze' begin='3' />
-        <animate attributeName='y' from='100' to='100' fill='freeze' begin='5' />
-        <animate attributeName='y' from='-120' to='-120' fill='freeze' begin='6' />
-        <animate attributeName='y' from='80' to='80' fill='freeze' begin='8' />
-        <animate attributeName='y' from='-120' to='-120' fill='freeze' begin='9' />
-        <animate attributeName='y' from='60' to='60' fill='freeze' begin='11' />
-        <animate attributeName='y' from='-120' to='-120' fill='freeze' begin='12' />
+        <animate attributeName='y' from='120' to='120' fill='freeze' begin='2' dur='0' />
+        <animate attributeName='y' from='-120' to='-120' fill='freeze' begin='3' dur='0' />
+        <animate attributeName='y' from='100' to='100' fill='freeze' begin='5' dur='0' />
+        <animate attributeName='y' from='-120' to='-120' fill='freeze' begin='6' dur='0' />
+        <animate attributeName='y' from='80' to='80' fill='freeze' begin='8' dur='0' />
+        <animate attributeName='y' from='-120' to='-120' fill='freeze' begin='9' dur='0' />
+        <animate attributeName='y' from='60' to='60' fill='freeze' begin='11' dur='0' />
+        <animate attributeName='y' from='-120' to='-120' fill='freeze' begin='12' dur='0' />
         
-        <animate attributeName='x' from='50' to='50' fill='freeze' begin='16' />
-        <animate attributeName='y' from='110' to='110' fill='freeze' begin='16' />
-        <animate attributeName='y' from='-110' to='-110' fill='freeze' begin='17' />
-        <animate attributeName='y' from='90' to='90' fill='freeze' begin='19' />
-        <animate attributeName='y' from='-110' to='-110' fill='freeze' begin='20' />
-        <animate attributeName='y' from='70' to='70' fill='freeze' begin='22' />
-        <animate attributeName='y' from='-110' to='-110' fill='freeze' begin='23' />
-        <animate attributeName='y' from='50' to='50' fill='freeze' begin='25' />
-        <animate attributeName='y' from='-110' to='-110' fill='freeze' begin='26' />
-        <animate attributeName='x' from='70' to='70' fill='freeze' begin='29' />
-        <animate attributeName='y' from='30' to='30' fill='freeze' begin='29' />
+        <animate attributeName='x' from='50' to='50' fill='freeze' begin='16' dur='0' />
+        <animate attributeName='y' from='110' to='110' fill='freeze' begin='16' dur='0' />
+        <animate attributeName='y' from='-110' to='-110' fill='freeze' begin='17' dur='0' />
+        <animate attributeName='y' from='90' to='90' fill='freeze' begin='19' dur='0' />
+        <animate attributeName='y' from='-110' to='-110' fill='freeze' begin='20' dur='0' />
+        <animate attributeName='y' from='70' to='70' fill='freeze' begin='22' dur='0' />
+        <animate attributeName='y' from='-110' to='-110' fill='freeze' begin='23' dur='0' />
+        <animate attributeName='y' from='50' to='50' fill='freeze' begin='25' dur='0' />
+        <animate attributeName='y' from='-110' to='-110' fill='freeze' begin='26' dur='0' />
+        <animate attributeName='x' from='70' to='70' fill='freeze' begin='29' dur='0' />
+        <animate attributeName='y' from='30' to='30' fill='freeze' begin='29' dur='0' />
         
-        <animate attributeName='y' from='-30' to='-30' fill='freeze' begin='30' />
-        <animate attributeName='y' from='90' to='90' fill='freeze' begin='33' />
-        <animate attributeName='y' from='-90' to='-90' fill='freeze' begin='34' />
+        <animate attributeName='y' from='-30' to='-30' fill='freeze' begin='30' dur='0' />
+        <animate attributeName='y' from='90' to='90' fill='freeze' begin='33' dur='0' />
+        <animate attributeName='y' from='-90' to='-90' fill='freeze' begin='34' dur='0' />
        </use>
        
     </svg>  

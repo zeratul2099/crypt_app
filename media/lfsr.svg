@@ -13,6 +13,7 @@
    height="90mm"
    id="svg2"
 >
+<script type="text/ecmascript" xlink:href="/content/smil.user.js" />
   <defs
      id="defs4">
        <svg width="30" height="30" id="bit" >
@@ -119,27 +120,27 @@
        <use xlink:href="#bit" x='290' y='50' >
         <animate attributeName="y" from="50" to="100" begin="1" dur="2s" fill='freeze' />
         <animate attributeName="x" from="290" to="250" begin="9" dur="2s" fill='freeze' />
-        <animate attributeName="x" from="-50" to="-50" begin="11" fill='freeze' />
+        <animate attributeName="x" from="-50" to="-50" begin="11" dur='0' fill='freeze' />
        </use>
        <use xlink:href="#bit" x='310' y='50' >
         <animate attributeName="y" from="50" to="100" begin="1" dur="2s" fill='freeze' />
         <animate attributeName="x" from="310" to="290" begin="7" dur="1s" fill='freeze' />
-        <animate attributeName="x" from="-50" to="-50" begin="8" fill='freeze' />
+        <animate attributeName="x" from="-50" to="-50" begin="8" dur='0' fill='freeze' />
        </use>
        <use xlink:href="#bit" x='350' y='50' >
         <animate attributeName="y" from="50" to="100" begin="1" dur="2s" fill='freeze' />
         <animate attributeName="x" from="350" to="310" begin="4" dur="2s" fill='freeze' />
-        <animate attributeName="x" from="-50" to="-50" begin="6" fill='freeze' />
+        <animate attributeName="x" from="-50" to="-50" begin="6" dur='0' fill='freeze' />
         
        </use>
        <use xlink:href="#xor" x='-50' y='-50' >
-        <animate attributeName="x" from="310" to="310" begin="6" fill='freeze' /> 
-        <animate attributeName="y" from="110" to="110" begin="6" fill='freeze' /> 
-        <animate attributeName="x" from="-50" to="-50" begin="7" fill='freeze' /> 
-        <animate attributeName="x" from="290" to="290" begin="8" fill='freeze' /> 
-        <animate attributeName="x" from="-50" to="-50" begin="9" fill='freeze' /> 
-        <animate attributeName="x" from="250" to="250" begin="11" fill='freeze' /> 
-        <animate attributeName="x" from="-50" to="-50" begin="12" fill='freeze' /> 
+        <animate attributeName="x" from="310" to="310" begin="6" dur='0' fill='freeze' /> 
+        <animate attributeName="y" from="110" to="110" begin="6" dur='0' fill='freeze' /> 
+        <animate attributeName="x" from="-50" to="-50" begin="7" dur='0' fill='freeze' /> 
+        <animate attributeName="x" from="290" to="290" begin="8" dur='0' fill='freeze' /> 
+        <animate attributeName="x" from="-50" to="-50" begin="9" dur='0' fill='freeze' /> 
+        <animate attributeName="x" from="250" to="250" begin="11" dur='0' fill='freeze' /> 
+        <animate attributeName="x" from="-50" to="-50" begin="12" dur='0' fill='freeze' /> 
        </use>
 
 
@@ -199,15 +200,15 @@
        
        <text fill='black' x='150' y='30' style="font-size:18px;">
        Old register state
-       <animate attributeName="y" begin='19' from='-30' to='-30' fill='freeze' />
+       <animate attributeName="y" begin='19' from='-30' to='-30' dur='0' fill='freeze' />
        </text>
        <text fill='black' x='150' y='-30' style="font-size:18px;">
        New register state
-       <animate attributeName="y" begin='19' from='30' to='30' fill='freeze' />
+       <animate attributeName="y" begin='19' from='30' to='30' dur='0' fill='freeze' />
        </text>
        <text fill='black' x='400' y='-30' style="font-size:18px;">
        Output
-       <animate attributeName="y" begin='19' from='30' to='30' fill='freeze' />
+       <animate attributeName="y" begin='19' from='30' to='30' dur='0' fill='freeze' />
        </text>
        
         <use xlink:href="#bit" x='60' y='170' />

@@ -13,6 +13,7 @@
    height="120mm"
    id="svg2"
 >
+<script type="text/ecmascript" xlink:href="/content/smil.user.js" />
   <defs
      id="defs4">
        <svg width="30" height="30" id="bit" >
@@ -123,14 +124,14 @@
         <animate attributeName='y' from='20' to='60' fill='freeze' dur='2' />
         <animate attributeName='x' from='70' to='85' fill='freeze' begin='7' dur='1' />
         <animate attributeName='x' from='85' to='40' fill='freeze' begin='12' dur='1' />
-        <animate attributeName='x' from='-185' to='-185' fill='freeze' begin='13' />
-        <animate attributeName='x' from='70' to='70' fill='freeze' begin='17' />
-        <animate attributeName='y' from='20' to='20' fill='freeze' begin='17' />
+        <animate attributeName='x' from='-185' to='-185' fill='freeze' begin='13' dur='0' />
+        <animate attributeName='x' from='70' to='70' fill='freeze' begin='17' dur='0' />
+        <animate attributeName='y' from='20' to='20' fill='freeze' begin='17' dur='0' />
         <!-- phase 2 -->
         <animate attributeName='y' from='20' to='60' fill='freeze' dur='2' begin='26' />
-        <animate attributeName='y' from='60' to='60' fill='freeze' begin='28' />
+        <animate attributeName='y' from='60' to='60' fill='freeze' begin='28' dur='0' />
         <animate attributeName='y' from='60' to='120' fill='freeze' dur='2' begin='31' />
-        <animate attributeName='y' from='120' to='120' fill='freeze' begin='33' />
+        <animate attributeName='y' from='120' to='120' fill='freeze' begin='33' dur='0' />
        </use>
        <!-- lane 2 -->
        <use xlink:href="#lane" x='100' y='20' >
@@ -140,32 +141,32 @@
         <animate attributeName='y' from='20' to='60' fill='freeze' begin='4' dur='2' />
         <animate attributeName='x' from='100' to='85' fill='freeze' begin='7' dur='1' />
         <animate attributeName='x' from='-185' to='-185' fill='freeze' begin='8' dur='1' />
-        <animate attributeName='x' from='100' to='100' fill='freeze' begin='17' />
-        <animate attributeName='y' from='20' to='20' fill='freeze' begin='17' />
+        <animate attributeName='x' from='100' to='100' fill='freeze' begin='17' dur='0' />
+        <animate attributeName='y' from='20' to='20' fill='freeze' begin='17' dur='0' />
         <!-- phase 2 -->
         <animate attributeName='y' from='20' to='60' fill='freeze' begin='18' dur='2' />
-        <animate attributeName='y' from='60' to='60' fill='freeze' begin='20' />
+        <animate attributeName='y' from='60' to='60' fill='freeze' begin='20' dur='0' />
         <animate attributeName='x' from='100' to='115' fill='freeze' begin='24' dur='1' />
-        <animate attributeName='x' from='115' to='115' fill='freeze' begin='25' />
+        <animate attributeName='x' from='115' to='115' fill='freeze' begin='25' dur='0' />
         <animate attributeName='x' from='115' to='70' fill='freeze' begin='29' dur='1' />
-        <animate attributeName='x' from='-185' to='-185' fill='freeze' begin='30' />
-        <animate attributeName='x' from='100' to='100' fill='freeze' begin='34' />
-        <animate attributeName='y' from='20' to='20' fill='freeze' begin='34' />
+        <animate attributeName='x' from='-185' to='-185' fill='freeze' begin='30' dur='0' />
+        <animate attributeName='x' from='100' to='100' fill='freeze' begin='34' dur='0' />
+        <animate attributeName='y' from='20' to='20' fill='freeze' begin='34' dur='0' />
         <!-- phase 3 -->
         <animate attributeName='y' from='20' to='60' fill='freeze' dur='2' begin='43' />
-        <animate attributeName='y' from='60' to='60' fill='freeze' begin='45' />
+        <animate attributeName='y' from='60' to='60' fill='freeze' begin='45' dur='0' />
         <animate attributeName='y' from='60' to='120' fill='freeze' dur='2' begin='48' />
-        <animate attributeName='y' from='120' to='120' fill='freeze' begin='50' />
+        <animate attributeName='y' from='120' to='120' fill='freeze' begin='50' dur='0' />
 
        </use>
        
               <!-- new instance of lane 0 -->
         <use xlink:href="#lane" x='-140' y='20' >
        <!-- phase 4 -->
-        <animate attributeName='x' from='40' to='40' fill='freeze' begin='51' />
+        <animate attributeName='x' from='40' to='40' fill='freeze' begin='51' dur='0' />
         <animate attributeName='y' from='20' to='60' fill='freeze' dur='2' begin='55' />
         <animate attributeName='x' from='40' to='160' fill='freeze' dur='2' begin='58' />
-        <animate attributeName='x' from='-140' to='-140' fill='freeze' begin='60' />
+        <animate attributeName='x' from='-140' to='-140' fill='freeze' begin='60' dur='0' />
 
        </use>
        
@@ -175,137 +176,137 @@
        <use xlink:href="#lane" x='130' y='20' >
        <!-- phase 2 -->
        <animate attributeName='y' from='20' to='60' fill='freeze' dur='2' begin='21' />
-       <animate attributeName='y' from='60' to='60' fill='freeze' begin='23' />
+       <animate attributeName='y' from='60' to='60' fill='freeze' begin='23' dur='0' />
        <animate attributeName='x' from='130' to='115' fill='freeze' begin='24' dur='1' />
-       <animate attributeName='x' from='-173' to='-173' fill='freeze' begin='25' />
-       <animate attributeName='x' from='130' to='130' fill='freeze' begin='34' />
-       <animate attributeName='y' from='20' to='20' fill='freeze' begin='34' />
+       <animate attributeName='x' from='-173' to='-173' fill='freeze' begin='25' dur='0' />
+       <animate attributeName='x' from='130' to='130' fill='freeze' begin='34' dur='0' />
+       <animate attributeName='y' from='20' to='20' fill='freeze' begin='34' dur='0' />
        <!-- phase 3 -->
        <animate attributeName='y' from='20' to='60' fill='freeze' dur='2' begin='35' />
-       <animate attributeName='y' from='60' to='60' fill='freeze' begin='37' />
+       <animate attributeName='y' from='60' to='60' fill='freeze' begin='37' dur='0' />
        <animate attributeName='x' from='130' to='145' fill='freeze' begin='41' dur='1' />
-       <animate attributeName='x' from='145' to='145' fill='freeze' begin='42' />
+       <animate attributeName='x' from='145' to='145' fill='freeze' begin='42' dur='0' />
        <animate attributeName='x' from='145' to='100' fill='freeze' begin='46' dur='1' />
-       <animate attributeName='x' from='-185' to='-185' fill='freeze' begin='47' />
-       <animate attributeName='x' from='130' to='130' fill='freeze' begin='51' />
-       <animate attributeName='y' from='20' to='20' fill='freeze' begin='51' />
+       <animate attributeName='x' from='-185' to='-185' fill='freeze' begin='47' dur='0' />
+       <animate attributeName='x' from='130' to='130' fill='freeze' begin='51' dur='0' />
+       <animate attributeName='y' from='20' to='20' fill='freeze' begin='51' dur='0' />
        <!-- phase 4 -->
        <animate attributeName='y' from='20' to='60' fill='freeze' dur='2' begin='61' />
-       <animate attributeName='y' from='60' to='60' fill='freeze' begin='63' />
+       <animate attributeName='y' from='60' to='60' fill='freeze' begin='63' dur='0' />
        <animate attributeName='y' from='60' to='120' fill='freeze' dur='2' begin='66' />
-       <animate attributeName='y' from='120' to='120' fill='freeze' begin='68' />
+       <animate attributeName='y' from='120' to='120' fill='freeze' begin='68' dur='0' />
        </use>
        <!-- lane 4 -->
        <use xlink:href="#lane" x='160' y='20' >
        <!-- phase 3 -->
        <animate attributeName='y' from='20' to='60' fill='freeze' dur='2' begin='38' />
-       <animate attributeName='y' from='60' to='60' fill='freeze' begin='40' />
+       <animate attributeName='y' from='60' to='60' fill='freeze' begin='40' dur='0' />
        <animate attributeName='x' from='160' to='145' fill='freeze' begin='41' dur='1' />
-       <animate attributeName='x' from='-173' to='-173' fill='freeze' begin='42' />
-       <animate attributeName='x' from='160' to='160' fill='freeze' begin='51' />
-       <animate attributeName='y' from='20' to='20' fill='freeze' begin='51' /> 
+       <animate attributeName='x' from='-173' to='-173' fill='freeze' begin='42' dur='0' />
+       <animate attributeName='x' from='160' to='160' fill='freeze' begin='51' dur='0' />
+       <animate attributeName='y' from='20' to='20' fill='freeze' begin='51' dur='0' /> 
        <!-- phase 4 -->
        <animate attributeName='y' from='20' to='60' fill='freeze' dur='2' begin='52' />
-       <animate attributeName='y' from='60' to='60' fill='freeze' begin='54' />
+       <animate attributeName='y' from='60' to='60' fill='freeze' begin='54' dur='0' />
        <animate attributeName='x' from='160' to='130' fill='freeze' begin='64' dur='1' />
-       <animate attributeName='x' from='-160' to='-160' fill='freeze' begin='65' /> 
-       <animate attributeName='x' from='160' to='160' fill='freeze' begin='69' />
-       <animate attributeName='y' from='20' to='20' fill='freeze'  begin='69' />
+       <animate attributeName='x' from='-160' to='-160' fill='freeze' begin='65' dur='0' /> 
+       <animate attributeName='x' from='160' to='160' fill='freeze' begin='69' dur='0' />
+       <animate attributeName='y' from='20' to='20' fill='freeze'  begin='69' dur='0' />
        <!-- phase 5 -->
        <animate attributeName='y' from='20' to='60' fill='freeze' dur='2' begin='78' />
-       <animate attributeName='y' from='60' to='60' fill='freeze' begin='80' />
+       <animate attributeName='y' from='60' to='60' fill='freeze' begin='80' dur='0' />
        <animate attributeName='y' from='60' to='120' fill='freeze' dur='2' begin='84' />
-       <animate attributeName='y' from='120' to='120' fill='freeze' begin='86' />
+       <animate attributeName='y' from='120' to='120' fill='freeze' begin='86' dur='0' />
        </use>
        <!-- new instances of lane 0 und 1 -->
        <use xlink:href="#lane" x='-140' y='20' >
        <!-- phase 5 -->
-        <animate attributeName='x' from='40' to='40' fill='freeze' begin='69' />
+        <animate attributeName='x' from='40' to='40' fill='freeze' begin='69' dur='0' />
         <animate attributeName='y' from='20' to='60' fill='freeze' dur='2' begin='70' />
         <animate attributeName='x' from='40' to='55' fill='freeze' dur='1' begin='76' />
-        <animate attributeName='x' from='55' to='55' fill='freeze' begin='77' />
+        <animate attributeName='x' from='55' to='55' fill='freeze' begin='77' dur='0' />
         <animate attributeName='x' from='55' to='160' fill='freeze' dur='2' begin='81' />
-        <animate attributeName='x' from='-160' to='-160' fill='freeze' begin='83' />
+        <animate attributeName='x' from='-160' to='-160' fill='freeze' begin='83' dur='0' />
        </use>
        <use xlink:href="#lane" x='-140' y='20' >
        <!-- phase 5 -->
-        <animate attributeName='x' from='70' to='70' fill='freeze' begin='69' />
+        <animate attributeName='x' from='70' to='70' fill='freeze' begin='69' dur='0' />
         <animate attributeName='y' from='20' to='60' fill='freeze' dur='2' begin='73' />
         <animate attributeName='x' from='70' to='55' fill='freeze' dur='1' begin='76' />
-        <animate attributeName='x' from='-140' to='-140' fill='freeze' begin='77' />
+        <animate attributeName='x' from='-140' to='-140' fill='freeze' begin='77' dur='0' />
        </use>
        
        
-       <text fill='red' x='-73' y='159' style="font-size:38px;font-family:'serif';" >
+       <text fill='red' x='-73' y='159' style="font-size:38px;font-family:'serif';"  >
        <!-- phase 1 -->
        -
-       <animate attributeName='x' from='73' to='73' fill='freeze' begin='3' dur='0' />
+       <animate attributeName='x' from='73' to='73' fill='freeze' begin='2' dur='0' />
        <animate attributeName='x' from='73' to='88' fill='freeze' begin='7' dur='1' />
-       <animate attributeName='x' from='-73' to='-73' fill='freeze' begin='8' />
+       <animate attributeName='x' from='-73' to='-73' fill='freeze' begin='8' dur='0' />
        <!-- phase 2 -->
-       <animate attributeName='x' from='103' to='103' fill='freeze' begin='20' />
+       <animate attributeName='x' from='103' to='103' fill='freeze' begin='20' dur='0' />
        <animate attributeName='x' from='100' to='115' fill='freeze' begin='24' dur='1' />
-       <animate attributeName='x' from='-73' to='-73' fill='freeze' begin='25' />
+       <animate attributeName='x' from='-73' to='-73' fill='freeze' begin='25' dur='0' />
        <!-- phase 3 -->
-       <animate attributeName='x' from='133' to='133' fill='freeze' begin='37' />
+       <animate attributeName='x' from='133' to='133' fill='freeze' begin='37' dur='0' />
        <animate attributeName='x' from='130' to='145' fill='freeze' begin='41' dur='1' />
-       <animate attributeName='x' from='-73' to='-73' fill='freeze' begin='42' />
+       <animate attributeName='x' from='-73' to='-73' fill='freeze' begin='42' dur='0' />
        <!-- phase 4 -->
-       <animate attributeName='x' from='163' to='163' fill='freeze' begin='54' />
-       <animate attributeName='x' from='-73' to='-73' fill='freeze' begin='60' />
+       <animate attributeName='x' from='163' to='163' fill='freeze' begin='54' dur='0' />
+       <animate attributeName='x' from='-73' to='-73' fill='freeze' begin='60' dur='0' />
        <!-- phase 5 -->
-       <animate attributeName='x' from='43' to='43' fill='freeze' begin='72' />
+       <animate attributeName='x' from='43' to='43' fill='freeze' begin='72' dur='0' />
        <animate attributeName='x' from='40' to='58' fill='freeze' dur='1' begin='76' />
-       <animate attributeName='x' from='-40' to='-40' fill='freeze' begin='77' />
+       <animate attributeName='x' from='-40' to='-40' fill='freeze' begin='77' dur='0' />
        </text>
        <text fill='red' x='-73' y='155' style="font-size:18px;font-family:'serif';" >
        <!-- phase 1 -->
        &amp;
-       <animate attributeName="x" begin='8' from='88' to='88' fill='freeze' />
+       <animate attributeName="x" begin='8' from='88' to='88' fill='freeze' dur='0' />
        <animate attributeName='x' from='85' to='40' fill='freeze' begin='12' dur='1' />
-       <animate attributeName='x' from='-185' to='-185' fill='freeze' begin='13' />
+       <animate attributeName='x' from='-185' to='-185' fill='freeze' begin='13' dur='0' />
        <!-- phase 2 -->
-       <animate attributeName="x" begin='25' from='115' to='115' fill='freeze' />
+       <animate attributeName="x" begin='25' from='115' to='115' fill='freeze' dur='0' />
        <animate attributeName='x' from='115' to='70' fill='freeze' begin='29' dur='1' />
-       <animate attributeName='x' from='-185' to='-185' fill='freeze' begin='30' />
+       <animate attributeName='x' from='-185' to='-185' fill='freeze' begin='30' dur='0' />
        <!-- phase 3 -->
-       <animate attributeName="x" begin='42' from='145' to='145' fill='freeze' />
+       <animate attributeName="x" begin='42' from='145' to='145' fill='freeze' dur='0' />
        <animate attributeName='x' from='145' to='100' fill='freeze' begin='46' dur='1' />
-       <animate attributeName='x' from='-185' to='-185' fill='freeze' begin='47' />
+       <animate attributeName='x' from='-185' to='-185' fill='freeze' begin='47' dur='0' />
        <!-- phase 4 -->
-       <animate attributeName="x" begin='60' from='165' to='165' fill='freeze' />
+       <animate attributeName="x" begin='60' from='165' to='165' fill='freeze' dur='0' />
        <animate attributeName='x' from='165' to='130' fill='freeze' begin='64' dur='1' />
-       <animate attributeName='x' from='-185' to='-185' fill='freeze' begin='65' />
+       <animate attributeName='x' from='-185' to='-185' fill='freeze' begin='65' dur='0' />
        <!-- phase 5 -->
-       <animate attributeName="x" begin='77' from='58' to='58' fill='freeze' />
+       <animate attributeName="x" begin='77' from='58' to='58' fill='freeze' dur='0' />
         <animate attributeName='x' from='58' to='163' fill='freeze' dur='2' begin='81' />
-        <animate attributeName='x' from='-160' to='-160' fill='freeze' begin='83' />
+        <animate attributeName='x' from='-160' to='-160' fill='freeze' begin='83' dur='0' />
        </text>
        <use xlink:href='#xor' x='-40' y='140'>
        <!-- phase 1 -->
-        <animate attributeName='x' begin='13' from='39' to='39' fill='freeze' />
+        <animate attributeName='x' begin='13' from='39' to='39' fill='freeze' dur='0' />
         <animate attributeName='y' from='140' to='200' fill='freeze' dur='2' begin='14' />
-        <animate attributeName='x' from='-140' to='-140' fill='freeze' begin='16' />
+        <animate attributeName='x' from='-140' to='-140' fill='freeze' begin='16' dur='0' />
         <!-- phase 2 -->
-        <animate attributeName='x' begin='30' from='69' to='69' fill='freeze' />
-        <animate attributeName='y' from='140' to='140' fill='freeze' begin='30' />
+        <animate attributeName='x' begin='30' from='69' to='69' fill='freeze' dur='0' />
+        <animate attributeName='y' from='140' to='140' fill='freeze' begin='30' dur='0' />
         <animate attributeName='y' from='140' to='200' fill='freeze' dur='2' begin='31' />
-        <animate attributeName='x' from='-140' to='-140' fill='freeze' begin='33' />
+        <animate attributeName='x' from='-140' to='-140' fill='freeze' begin='33' dur='0' />
         <!-- phase 3 -->
-        <animate attributeName='x' begin='47' from='99' to='99' fill='freeze' />
-        <animate attributeName='y' from='140' to='140' fill='freeze' begin='47' />
+        <animate attributeName='x' begin='47' from='99' to='99' fill='freeze' dur='0' />
+        <animate attributeName='y' from='140' to='140' fill='freeze' begin='47' dur='0' />
         <animate attributeName='y' from='140' to='200' fill='freeze' dur='2' begin='48' />
-        <animate attributeName='x' from='-140' to='-140' fill='freeze' begin='50' />
+        <animate attributeName='x' from='-140' to='-140' fill='freeze' begin='50' dur='0' />
         <!-- phase 4 -->
-        <animate attributeName='x' begin='65' from='129' to='129' fill='freeze' />
-        <animate attributeName='y' from='140' to='140' fill='freeze' begin='65' />
+        <animate attributeName='x' begin='65' from='129' to='129' fill='freeze' dur='0' />
+        <animate attributeName='y' from='140' to='140' fill='freeze' begin='65' dur='0' />
         <animate attributeName='y' from='140' to='200' fill='freeze' dur='2' begin='66' />
-        <animate attributeName='x' from='-140' to='-140' fill='freeze' begin='68' />
+        <animate attributeName='x' from='-140' to='-140' fill='freeze' begin='68' dur='0' />
         <!-- phase 5 -->
-        <animate attributeName='x' begin='83' from='159' to='159' fill='freeze' />
-        <animate attributeName='y' from='140' to='140' fill='freeze' begin='83' />
+        <animate attributeName='x' begin='83' from='159' to='159' fill='freeze' dur='0' />
+        <animate attributeName='y' from='140' to='140' fill='freeze' begin='83' dur='0' />
         <animate attributeName='y' from='140' to='200' fill='freeze' dur='2' begin='84' />
-        <animate attributeName='x' from='-140' to='-140' fill='freeze' begin='86' />
+        <animate attributeName='x' from='-140' to='-140' fill='freeze' begin='86' dur='0' />
        </use>
   
          <!-- lanes -->
