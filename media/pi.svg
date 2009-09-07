@@ -117,11 +117,11 @@
        >
  <rect x='0' y='0' width='600' height='400' fill='white' /> 
     <text fill="black" x="50" y="30" style="font-size:12px;font-family:'serif';" >
-    old lane positions
+    Old lane positions
     </text>
     <use xlink:href='#slice' x='50' y='50' />
     <text fill="black" x="250" y="30" style="font-size:12px;font-family:'serif';" >
-    new lane positions
+    New lane positions
     </text>
     <use xlink:href='#slice' x='250' y='50' />
     <!-- phase 0 -->

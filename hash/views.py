@@ -94,6 +94,10 @@ def info(request, algo, page):
             nav += q.shortTitle+"/'>"+q.title+"</a></li>"
         nav += "</ul>"
     nav += "</ul></ul>"
+    nav_list = [];
+    # doesn't work because of urls inside list :(
+    #for p in InfoPage.objects.filter(algo=algo_object, masterPage=main_page):
+    #   nav_list.append("<a href='/"+algo_object.type+"/info/"+algo_object.shortTitle+"/"+p.shortTitle+"/'>"+p.title+"</a>")
     return render_to_response("hash_info.html", {'title' : info_page.title,
                                                 'text' : info_page.text,
                                                 'svg' : svg,

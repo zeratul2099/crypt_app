@@ -21,6 +21,6 @@ class InfoPage(models.Model):
     shortTitle = models.CharField(max_length=10)
     masterPage = models.ForeignKey('self', blank=True, null=True)
     def __unicode__(self):
-        return self.title
+        return self.algo.name+": "+self.title
     
         
