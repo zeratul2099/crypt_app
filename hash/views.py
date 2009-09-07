@@ -13,86 +13,6 @@ def hash(request):
         
     return render_to_response("hash.html", { "algos" : algos })
 
-#~ def algo_keccak(request):
-    #~ salt = 0
-    #~ salt_str = ''
-    #~ if request.method == 'POST':
-        #~ 
-        #~ if request.FILES:
-            #~ if request.FILES['file'].size > 10000:
-                #~ form = HashForm()
-                #~ return render_to_response("hash_algo.html", {'hashvalue' : 'Datei zu gross',  'form' : form}) 
-            #~ clear_text = request.FILES['file'].read()
-            #~ output = "Eingabedatei:\n%s (%s Bytes)\n" %(request.FILES['file'].name,
-                                                      #~ request.FILES['file'].size)
-        #~ else:
-            #~ clear_text = request.POST.get("clear", "")
-            #~ output = "Eingabestring:\n%s\n" %(clear_text)
-            #~ 
-        #~ if 'withSalt' in request.POST:
-            #~ rand = random.Random(datetime.now().strftime('%s'))
-            #~ salt = rand.randint(0, sys.maxint)
-            #~ for i in range(4):
-                #~ salt_str += chr((salt%(1<<(8*(i+1))))>>((i*8)+1))
-            #~ clear_text += salt_str
-            #~ 
-        #~ form = HashForm(request.POST, request.FILES)   
-        #~ output += "Keccak[800]-224-Hash:\n"
-        #~ output += KeccakHash(repr(clear_text)).hexdigest()
-        #~ 
-        #~ if 'withSalt' in request.POST:
-            #~ output += "\nSalt:\n"
-            #~ output += repr(salt_str)
-    #~ else:
-        #~ clear_text = ""
-        #~ output = ''
-        #~ form = HashForm()
-    #~ return render_to_response("hash_algo.html", {'title' : 'Keccak',
-                                            #~ 'algo' : 'keccak',
-                                            #~ 'hashvalue' : output,
-                                            #~ 'clear_text' : clear_text,
-                                            #~ 'form' : form,}) 
-#~ 
-#~ def algo_md5(request):
-    #~ salt = 0
-    #~ salt_str = ''
-    #~ if request.method == 'POST':
-        #~ 
-        #~ if request.FILES:
-            #~ if request.FILES['file'].size > 10000:
-                #~ form = HashForm()
-                #~ return render_to_response("hash_algo.html", {'hashvalue' : 'Datei zu gross',  'form' : form}) 
-            #~ clear_text = request.FILES['file'].read()
-            #~ output = "Eingabedatei:\n%s (%s Bytes)\n" %(request.FILES['file'].name,
-                                                      #~ request.FILES['file'].size)
-        #~ else:
-            #~ clear_text = request.POST.get("clear", "")
-            #~ output = "Eingabestring:\n%s\n" %(clear_text)
-            #~ 
-        #~ if 'withSalt' in request.POST:
-            #~ rand = random.Random(datetime.now().strftime('%s'))
-            #~ salt = rand.randint(0, sys.maxint)
-            #~ for i in range(4):
-                #~ salt_str += chr((salt%(1<<(8*(i+1))))>>((i*8)+1))
-            #~ clear_text += salt_str
-            #~ 
-        #~ form = HashForm(request.POST, request.FILES)   
-        #~ output += "MD5-Hash:\n"
-        #~ output += hashlib.md5(clear_text).hexdigest()
-        #~ 
-        #~ if 'withSalt' in request.POST:
-            #~ output += "\nSalt:\n"
-            #~ output += repr(salt_str)
-    #~ else:
-        #~ clear_text = ""
-        #~ output = ''
-        #~ form = HashForm()
-    #~ return render_to_response("hash_algo.html", {'title' : 'MD5',
-                                            #~ 'algo' : 'md5',
-                                            #~ 'hashvalue' : output,
-                                            #~ 'clear_text' : clear_text,
-                                            #~ 'form' : form,}) 
-
 
 def algo(request, algo):
     salt = 0
@@ -177,6 +97,9 @@ def info(request, algo, page):
     return render_to_response("hash_info.html", {'title' : info_page.title,
                                                 'text' : info_page.text,
                                                 'svg' : svg,
+                                                'width' : info_page.i_width,
+                                                'height' : info_page.i_height,
+                                                'caption' : info_page.i_caption,
                                                 'nav' : nav,
                                                 'algo' : algo_object.shortTitle,
                                                 'name' : algo_object.name,

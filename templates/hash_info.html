@@ -4,13 +4,15 @@
 {% block titel %}{{ title }}{% endblock %}
 
 {% block inhalt %}
-<!-- still doesn't work -->
 <a href='/hash/algo/{{ algo }}/'>{{ name }} ausprobieren</a>
 <p>
 <table width='100%'>
     <tr>
-        <th width='25%' rowspan='2' valign='top' align='left' >{{ nav|safe }}<p><a href='/hash/'>zur&uuml;ck</a><br></th>
-        <td width='75%' valign='top' ><object type="image/svg+xml" data='/content/{{ svg }}' width="820" height="600"></object></td>
+        <th width='25%' rowspan='3' valign='top' align='left' >{{ nav|safe }}<p><a href='/hash/'>zur&uuml;ck</a><br></th>
+        {% if caption %}
+        <td width='75%' valign='top' align='center' ><h3>{{ caption }}</h3></td></tr>
+        <tr>{% endif %}<td width='75%' valign='top' align='center' ><object type="image/svg+xml" data='/content/{{ svg }}' width="{{ width }}" height="{{ height }}"></object></td>
+        
     </tr><tr>
         <td width='75%' valign='top'>{{ text|safe }}</td>
     </tr>

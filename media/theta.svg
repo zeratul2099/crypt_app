@@ -9,7 +9,7 @@
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:xlink="http://www.w3.org/1999/xlink"
-   width="200mm"
+   width="180mm"
    height="120mm"
    id="svg2"
 >
@@ -114,7 +114,7 @@
 
     <g
        
-       style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1"
+       style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;font-family:'sans';"
        id="g2383" transform="scale(1.5)"
        >
  <rect x='0' y='0' width='600' height='400' fill='white' />       
@@ -243,11 +243,11 @@
     
     <svg x='250' y='50' width='250' height='150'>
         <use xlink:href='#bit' x='10' y='10' />
-        <text x='50' y='25' fill='black' style="font-size:10px;font-family:'serif';" >
+        <text x='50' y='25' fill='black' style="font-size:10px;" >
         = Bit to be manipulated
         </text>
         <use xlink:href='#xor' x='15' y='50'/>
-        <text x='50' y='65' fill='black' style="font-size:10px;font-family:'serif';" >
+        <text x='50' y='65' fill='black' style="font-size:10px;" >
         = Bitwise XOR-Operation
         </text>
     </svg> 

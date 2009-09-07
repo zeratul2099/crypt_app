@@ -9,8 +9,8 @@
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:xlink="http://www.w3.org/1999/xlink"
-   width="100mm"
-   height="100mm"
+   width="85mm"
+   height="85mm"
    id="svg2"
 >
 <script type="text/ecmascript" xlink:href="/content/smil.user.js" />
@@ -116,39 +116,39 @@
        id="g2383" transform="scale(1.5)"
        >
  <rect x='0' y='0' width='600' height='400' fill='white' /> 
-    <use xlink:href='#bit2' x='50' y='150' >
+    <use xlink:href='#bit2' x='50' y='120' >
     <animate attributeName='x' from='50' to='60' fill='freeze' begin='1' dur='3' />
-    <animate attributeName='y' from='150' to='140' fill='freeze' begin='1' dur='3' />
-    </use>
-    <use xlink:href='#bit2' x='60' y='140' >
-    <animate attributeName='x' from='60' to='70' fill='freeze' begin='1' dur='3' />
-    <animate attributeName='y' from='140' to='130' fill='freeze' begin='1' dur='3' />
-    </use>
-    <use xlink:href='#bit2' x='70' y='130' >
-    <animate attributeName='x' from='70' to='80' fill='freeze' begin='1' dur='3' />
-    <animate attributeName='y' from='130' to='120' fill='freeze' begin='1' dur='3' />
-    </use>
-    <use xlink:href='#bit2' x='80' y='120' >
-    <animate attributeName='x' from='80' to='90' fill='freeze' begin='1' dur='3' />
     <animate attributeName='y' from='120' to='110' fill='freeze' begin='1' dur='3' />
     </use>
-    <use xlink:href='#bit2' x='90' y='110' >
-    <animate attributeName='x' from='90' to='100' fill='freeze' begin='1' dur='3' />
+    <use xlink:href='#bit2' x='60' y='110' >
+    <animate attributeName='x' from='60' to='70' fill='freeze' begin='1' dur='3' />
     <animate attributeName='y' from='110' to='100' fill='freeze' begin='1' dur='3' />
     </use>
-    <use xlink:href='#bit2' x='100' y='100' >
-    <animate attributeName='x' from='100' to='110' fill='freeze' begin='1' dur='3' />
+    <use xlink:href='#bit2' x='70' y='100' >
+    <animate attributeName='x' from='70' to='80' fill='freeze' begin='1' dur='3' />
     <animate attributeName='y' from='100' to='90' fill='freeze' begin='1' dur='3' />
     </use>
-    <use xlink:href='#bit2' x='110' y='90' >
-    <animate attributeName='x' from='110' to='120' fill='freeze' begin='1' dur='3' />
+    <use xlink:href='#bit2' x='80' y='90' >
+    <animate attributeName='x' from='80' to='90' fill='freeze' begin='1' dur='3' />
     <animate attributeName='y' from='90' to='80' fill='freeze' begin='1' dur='3' />
     </use>
-    <use xlink:href='#bit2' x='120' y='80' >
+    <use xlink:href='#bit2' x='90' y='80' >
+    <animate attributeName='x' from='90' to='100' fill='freeze' begin='1' dur='3' />
+    <animate attributeName='y' from='80' to='70' fill='freeze' begin='1' dur='3' />
+    </use>
+    <use xlink:href='#bit2' x='100' y='70' >
+    <animate attributeName='x' from='100' to='110' fill='freeze' begin='1' dur='3' />
+    <animate attributeName='y' from='70' to='60' fill='freeze' begin='1' dur='3' />
+    </use>
+    <use xlink:href='#bit2' x='110' y='60' >
+    <animate attributeName='x' from='110' to='120' fill='freeze' begin='1' dur='3' />
+    <animate attributeName='y' from='60' to='50' fill='freeze' begin='1' dur='3' />
+    </use>
+    <use xlink:href='#bit2' x='120' y='50' >
     <animate attributeName='x' from='120' to='140' fill='freeze' dur='1' />
-    <animate attributeName='y' from='80' to='150' fill='freeze' begin='1' dur='3' />
+    <animate attributeName='y' from='50' to='120' fill='freeze' begin='1' dur='3' />
     <animate attributeName='x' from='140' to='70' fill='freeze' begin='1' dur='3' />
-    <animate attributeName='x' from='70' to='50' fill='freeze' begin='4' dur='1' />
+    <animate attributeName='x' from='40' to='20' fill='freeze' begin='4' dur='1' />
     
     </use>
     

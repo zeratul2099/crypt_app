@@ -10,7 +10,7 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:xlink="http://www.w3.org/1999/xlink"
    width="160mm"
-   height="120mm"
+   height="110mm"
    id="svg2"
 >
 <script type="text/ecmascript" xlink:href="/content/smil.user.js" />
@@ -317,19 +317,19 @@
         <use xlink:href="#lane" x='160' y='20' />
   
   <!-- Legend -->     
-  <text fill='black' x='50' y='15' style="font-size:14px;font-family:'serif';" >
+  <text fill='black' x='50' y='15' style="font-size:14px;font-family:'sans';" >
   Old Plane
   </text>
-  <text fill='black' x='50' y='240' style="font-size:14px;font-family:'serif';" >
+  <text fill='black' x='50' y='240' style="font-size:14px;font-family:'sans';" >
   New Plane
   </text>
 
   <path d="M 50 320 l 150 0 l -7 -7 m 7 7 l -7 7" stroke='black' />
-  <text fill='black' x='200' y='340' style="font-size:14px;font-family:'serif';" >
+  <text fill='black' x='200' y='340' style="font-size:14px;font-family:'sans';" >
   x
   </text>
   <path d="M 50 320 l 50 -50 l -7 0 m 7 0 l 0 7" stroke='black' />
-  <text fill='black' x='105' y='280' style="font-size:14px;font-family:'serif';" >
+  <text fill='black' x='105' y='280' style="font-size:14px;font-family:'sans';" >
   z
   </text>
   <use xlink:href="#lane" x='300' y='20' />
@@ -337,22 +337,22 @@
   = Lane of w bits
   </text>
   <use xlink:href="#bit" x='300' y='130' />
-   <text fill='red' x='303' y='160' style="font-size:38px;font-family:'serif';" >
+   <text fill='red' x='303' y='160' style="font-size:38px;font-family:'sans';" >
   -
   </text> 
-  <text fill='black' x='340' y='150' style="font-size:14px;font-family:'serif';" >
+  <text fill='black' x='340' y='150' style="font-size:14px;font-family:'sans';" >
   = Bitwise NOT
   </text>
   <use xlink:href="#bit" x='300' y='170' />
-  <text fill='red' x='303' y='196' style="font-size:18px;font-family:'serif';" >
+  <text fill='red' x='303' y='196' style="font-size:18px;font-family:'sans';" >
   &amp;
   </text>
-    <text fill='black' x='340' y='190' style="font-size:14px;font-family:'serif';" >
+    <text fill='black' x='340' y='190' style="font-size:14px;font-family:'sans';" >
   = Bitwise AND
   </text>
   <use xlink:href="#bit" x='300' y='210' />
   <use xlink:href="#xor" x='300' y='220' />
-    <text fill='black' x='340' y='230' style="font-size:14px;font-family:'serif';" >
+    <text fill='black' x='340' y='230' style="font-size:14px;font-family:'sans';" >
   = Bitwise XOR
   </text>
 </g>

@@ -100,58 +100,58 @@
 
     <g
        
-       style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1"
+       style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;font-family:'sans';"
        id="g2383"
        >
 <rect x='0' y='0' width='800' height='800' fill='white' />
-<text fill='black' x='10' y='30' style="font-size:18px;">
+<text fill='black' x='10' y='30' style="font-size:16px;">
 Single Bit:
 </text>
 <use xlink:href="#bit" x='100' y='10' />
 
-<text fill='black' x='10' y='80' style="font-size:18px;">
+<text fill='black' x='10' y='80' style="font-size:16px;">
 Lane:
 </text>
 <use xlink:href="#lane" x='100' y='60' />
 
-<text fill='black' x='10' y='200' style="font-size:18px;">
+<text fill='black' x='10' y='200' style="font-size:16px;">
 Plane:
 </text>
 <use xlink:href="#plane" x='100' y='180' />
 
-<text fill='black' x='280' y='140' style="font-size:18px;">
+<text fill='black' x='280' y='140' style="font-size:16px;">
 State:
 </text>
 <use xlink:href="#state" x='350' y='40' />
 
-<text fill='black' x='10' y='350' style="font-size:18px;">
+<text fill='black' x='10' y='350' style="font-size:16px;">
 Row:
 </text>
 <use xlink:href="#row" x='100' y='330' />
 
-<text fill='black' x='280' y='350' style="font-size:18px;">
+<text fill='black' x='280' y='350' style="font-size:16px;">
 Column:
 </text>
 <use xlink:href="#column" x='350' y='280' />
 
-<text fill='black' x='10' y='480' style="font-size:18px;">
+<text fill='black' x='10' y='480' style="font-size:16px;">
 Slice:
 </text>
 <use xlink:href="#slice" x='100' y='420' />
 
-<text fill='black' x='280' y='480' style="font-size:18px;">
+<text fill='black' x='280' y='480' style="font-size:16px;">
 Sheet:
 </text>
 <use xlink:href="#sheet" x='350' y='360' />
 
 <svg x="480" y="320">
-<text fill='black' x='0' y='20' style="font-size:18px;">
+<text fill='black' x='0' y='20' style="font-size:16px;">
 0 &lt;= x &lt; 5
 </text>
-<text fill='black' x='0' y='40' style="font-size:18px;">
+<text fill='black' x='0' y='40' style="font-size:16px;">
 0 &lt;= y &lt; 5
 </text>
-<text fill='black' x='0' y='60' style="font-size:18px;">
+<text fill='black' x='0' y='60' style="font-size:16px;">
 0 &lt;= z &lt; w, mit w = |CPU-Wort|
 </text>
 </svg>

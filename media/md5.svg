@@ -9,8 +9,8 @@
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:xlink="http://www.w3.org/1999/xlink"
-   width="240mm"
-   height="135mm"
+   width="200mm"
+   height="110mm"
    id="svg2"
 >
 <script type="text/ecmascript" xlink:href="/content/smil.user.js" />
@@ -91,7 +91,7 @@
 
     <g
        
-       style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1"
+       style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;font-family:'sans';"
        id="g2383 " transform="scale(0.9)"
        >
 <rect x='0' y='0' width='640' height='500' fill='white' />
@@ -190,8 +190,8 @@
 <set attributeName='x' to='150' begin='xor01.end' />
 <set attributeName='y' to='135' begin='xor01.end' />
 <set attributeName='x' to='-150' begin='xor01.end+1' />
-<set attributeName='x' to='150' begin='m01.end' />
 <set attributeName='y' to='220' begin='m01.end' />
+<set attributeName='x' to='150' begin='m01.end' />
 <set attributeName='x' to='-150' begin='m01.end+1' />
 <set attributeName='x' to='150' begin='k01.end' />
 <set attributeName='y' to='300' begin='k01.end' />
