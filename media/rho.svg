@@ -148,7 +148,7 @@
     <animate attributeName='x' from='120' to='140' fill='freeze' dur='1' />
     <animate attributeName='y' from='50' to='120' fill='freeze' begin='1' dur='3' />
     <animate attributeName='x' from='140' to='70' fill='freeze' begin='1' dur='3' />
-    <animate attributeName='x' from='40' to='20' fill='freeze' begin='4' dur='1' />
+    <animate attributeName='x' from='70' to='50' fill='freeze' begin='4' dur='1' />
     
     </use>
     

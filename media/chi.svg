@@ -259,7 +259,7 @@
        <animate attributeName='x' from='40' to='58' fill='freeze' dur='1' begin='76' />
        <animate attributeName='x' from='-40' to='-40' fill='freeze' begin='77' dur='0' />
        </text>
-       <text fill='red' x='-73' y='155' style="font-size:18px;font-family:'serif';" >
+       <text fill='red' x='-73' y='155' style="font-size:18px;font-family:'sans';" >
        <!-- phase 1 -->
        &amp;
        <animate attributeName="x" begin='8' from='88' to='88' fill='freeze' dur='0' />
