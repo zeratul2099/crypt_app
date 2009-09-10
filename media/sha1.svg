@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   width="200mm"
+   height="110mm"
+   id="svg2"
+>
+<script type="text/ecmascript" xlink:href="/content/smil.user.js" />
+  <defs
+     id="defs4">
+       <svg width="30" height="30" id="bit" >
+            <rect y="10" x="0.1" width="19.9" height="19.9" fill="white" stroke="black" />
+            <polygon fill="white" stroke="black" 
+                points="0.1 10, 10 0.1, 29.9 0.1, 20 10" />
+            <polygon fill="white" stroke="black" 
+                points="29.9 0.1, 29.9 20, 20 29.9, 20 10" />
+            
+       </svg>
+       <svg width="30" height="30" id="a" >
+       <use xlink:href='#bit' x='0' y='0' />
+       <text fill='black' x='5' y='25' style="font-size:18px;" >
+        A
+       </text>
+       </svg>
+       <svg width="30" height="30" id="b" >
+       <use xlink:href='#bit' x='0' y='0' />
+       <text fill='black' x='5' y='25' style="font-size:18px;" >
+        B
+       </text>
+       </svg>
+       <svg width="30" height="30" id="c" >
+       <use xlink:href='#bit' x='0' y='0' />
+       <text fill='black' x='5' y='25' style="font-size:18px;" >
+        C
+       </text>
+       </svg>
+       <svg width="30" height="30" id="d" >
+       <use xlink:href='#bit' x='0' y='0' />
+       <text fill='black' x='5' y='25' style="font-size:18px;" >
+        D
+       </text>
+       </svg>
+       <svg width="30" height="30" id="e" >
+       <use xlink:href='#bit' x='0' y='0' />
+       <text fill='black' x='5' y='25' style="font-size:18px;" >
+        E
+       </text>
+       </svg>
+       <svg width="30" height="30" id="m" >
+       <use xlink:href='#bit' x='0' y='0' />
+       <text fill='black' x='3' y='25' style="font-size:18px;" >
+       m
+       </text>
+       </svg>
+       <svg width="30" height="30" id="k" >
+       <use xlink:href='#bit' x='0' y='0' />
+       <text fill='black' x='5' y='25' style="font-size:18px;" >
+       k
+       </text>
+       </svg>
+       <svg id='f' width="20" height="100">
+        <rect x='0.5' width="19" height="99" rx="10" ry="10"
+        fill="white" stroke="black" />
+        <text fill='black' x='8' y='50'>
+        F
+        </text>
+       </svg>
+       <path id='arrow0' d='m 0 0 l 50 0 -4 -4 m 4 4 l -4 4' stroke='black' />
+       <path id='arrow1' d='m 0 0 l 20 0 -4 -4 m 4 4 l -4 4' stroke='black' />
+       <svg id='xor' width="30" height="30" >
+       
+       <use xlink:href="#bit" x='0' y='0' />
+       <circle cx='15' cy='15' r='13' stroke='red' stroke-width='2' />
+       <path d="M 15 2 l 0 26 M 2 15 l 26 0" stroke='red' stroke-width='2' />
+        </svg>
+        <svg id='shift' width="30" height="30" >
+        <use xlink:href="#bit" x='0' y='0' />
+        <path d="M 10 12 l -10 5 10 5 m 10 -10 l -10 5 10 5 m 10 -10 l -10 5 10 5" stroke='red' stroke-width='2' />
+        </svg>
+  </defs>
+
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+
+    <g
+       
+       style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;font-family:'sans';"
+       id="g2383 " transform="scale(0.9)"
+       >
+<rect x='0' y='0' width='640' height='500' fill='white' />
+<svg id='f' width="20" height="100" x='400' y='100' >
+        <rect x='0.5' width="19" height="99" rx="10" ry="10"
+        fill="white" stroke="black" >
+        <animateColor attributeName="fill" id='f_ani' begin='b02.end' dur='1' from='#ffffff' to='#ff0000' />
+        <animateColor attributeName="fill" id='f_ani2' begin='f_ani.end' dur='1' from='#ff0000' to='#ffffff' fill='freeze' />
+        </rect>
+        <text fill='black' x='5' y='50'>
+        F
+        </text>
+</svg>
+<!-- A -->
+<use xlink:href='#a' x='50' y='30' >
+<animate attributeName='y' id='a01' from='30' to='135' begin='start.click' dur='2' fill='freeze' />
+<animate attributeName='y' id='a03' from='135' to='220' begin='f01.end+1' dur='2' fill='freeze' />
+<animate attributeName='y' id='a06' from='220' to='300' begin='b03.end+1' dur='2' fill='freeze' />
+
+</use>
+<use xlink:href='#a' x='-50' y='220' >
+<animate attributeName='x' id='a04' from='50' to='200' begin='a03.end' dur='2' fill='freeze' />
+<animate attributeName='x' id='a05' from='200' to='450' begin='a04.end+1' dur='3' fill='freeze' />
+<set attributeName='opacity' to='0' begin='a05.end' />
+</use>
+<!-- B -->
+<use xlink:href='#b' x='150' y='30' >
+<animate attributeName='y' id='b01' from='30' to='170' begin='start.click' dur='2' fill='freeze' />
+<animate attributeName='y' id='b03' from='170' to='220' begin='a05.end+1' dur='2' fill='freeze' />
+<animate attributeName='y' id='b06' from='220' to='300' begin='b03.end+1' dur='2' fill='freeze' />
+</use>
+<use xlink:href='#b' x='-150' y='170' >
+<animate attributeName='x' id='b02' from='150' to='400' begin='b01.end' dur='5' />
+</use>
+<!-- C -->
+<use xlink:href='#c' x='250' y='30' >
+<animate attributeName='y' id='c01' from='30' to='135' begin='start.click' dur='2' fill='freeze' />
+
+<animate attributeName='y' id='c03' from='135' to='220' begin='a05.end+1' dur='2' fill='freeze' />
+<animate attributeName='y' id='c06' from='220' to='300' begin='b03.end+1' dur='2' fill='freeze' />
+
+</use>
+<use xlink:href='#c' x='-250' y='135' >
+
+<animate attributeName='x' id='c02' from='250' to='400' begin='b01.end+2' dur='3' />
+</use>
+
+
+<!-- D -->
+<use xlink:href='#d' x='350' y='30' >
+<animate attributeName='y' id='d01' from='30' to='100' begin='start.click' dur='2' fill='freeze' />
+
+<animate attributeName='y' id='d03' from='100' to='220' begin='a05.end+1' dur='2' fill='freeze' />
+<animate attributeName='y' id='d06' from='220' to='300' begin='b03.end+1' dur='2' fill='freeze' />
+
+</use>
+<use xlink:href='#d' x='-350' y='100' >
+<animate attributeName='x' id='d02' from='350' to='400' begin='b01.end+4' dur='1' />
+</use>
+<!-- E -->
+<use xlink:href='#e' x='450' y='30' >
+<animate attributeName='y' id='e01' from='30' to='135' begin='start.click' dur='2' fill='freeze' />
+<animate attributeName='y' id='e03' from='135' to='220' begin='f01.end+1' dur='2' fill='freeze' />
+<animate attributeName='y' id='e06' from='220' to='300' begin='b03.end+1' dur='2' fill='freeze' />
+</use>
+<!-- empty block -->
+<use xlink:href='#bit' x='-400' y='135' >
+<animate attributeName='x' id='f01' from='400' to='450' begin='f_ani2.end' dur='1' />
+</use>
+<!-- xor -->
+<use xlink:href='#xor' x='-450' y='135' >
+<set attributeName='x' to='450' dur='1' begin='f01.end' />
+<set attributeName='y' to='220' begin='a05.end' />
+<set attributeName='x' to='450' dur='1' begin='a05.end' />
+<set attributeName='y' to='300' begin='e06.end+1' />
+<set attributeName='x' to='450' dur='1' begin='e06.end+1' />
+</use>
+
+<!-- shift -->
+<use xlink:href='#shift' x='200' y='220' opacity='0' >
+<set attributeName='opacity' to='1' dur='1' begin='a04.end' />
+<set attributeName='x' to='150' begin='b03.end' />
+<set attributeName='opacity' to='1' dur='1' begin='b03.end' />
+</use>
+
+
+<!-- message -->
+<text fill='black' x='510' y='280' style="font-size:12px;">
+16*32 bit of
+</text>
+<text fill='black' x='510' y='290' style="font-size:12px;">
+message (512 bit)
+</text>
+<use xlink:href='#m' x='510' y='300' >
+<animate attributeName='x' id='m01' from='510' to='450' begin='e06.end' dur='1' />
+<set attributeName='opacity' to='0'  begin='m01.end' />
+</use>
+<use xlink:href='#m' x='530' y='300' >
+</use>
+<text fill='black' x='570' y='320'>
+...
+</text>
+
+<use xlink:href='#m' x='590' y='300' >
+</use>
+<!-- constant -->
+<text fill='black' x='510' y='360' style="font-size:12px;">
+16*32 bit of
+</text>
+<text fill='black' x='510' y='370' style="font-size:12px;">
+constant (512 bit)
+</text>
+<use xlink:href='#k' x='510' y='380' />
+<use xlink:href='#k' x='530' y='380' >
+
+</use>
+<text fill='black' x='570' y='400'>
+...
+</text>
+<use xlink:href='#k' x='590' y='380' >
+</use>
+
+
+
+<text fill='black' x='200' y='15'  style="font-size:18px;" >
+Old state
+</text>
+<text fill='black' x='120' y='460' opacity='0' style="font-size:18px;" >
+
+New state for next round
+</text>
+<text fill='black' x='110' y='190' opacity='0' style="font-size:38px;" >
+
+New round
+</text>
+<!-- Legend -->
+<!--
+<use xlink:href='#bit' x='450' y='50' />
+<text fill='black' x='645' y='70' style="font-size:14px;" >
+= 32 bit value
+</text>
+<use xlink:href='#a' x='550' y='100' />
+<use xlink:href='#b' x='570' y='100' />
+<use xlink:href='#c' x='590' y='100' />
+<use xlink:href='#d' x='610' y='100' />
+
+<text fill='black' x='645' y='120' style="font-size:14px;" >
+= MD5 state / hash value
+</text>
+<text fill='black' x='685' y='140' style="font-size:14px;" >
+(128 bit)
+</text>
+
+<use xlink:href='#m' x='550' y='150' />
+<text fill='black' x='580' y='170'>
+...
+</text>
+<use xlink:href='#m' x='590' y='150' />
+<use xlink:href='#m' x='610' y='150' />
+<text fill='black' x='645' y='170' style="font-size:14px;" >
+= 512 bit message block
+</text>
+
+<use xlink:href='#k' x='550' y='200' />
+<text fill='black' x='580' y='220'>
+...
+</text>
+<use xlink:href='#k' x='590' y='200' />
+<use xlink:href='#k' x='610' y='200' />
+<text fill='black' x='645' y='220' style="font-size:14px;" >
+= 512 bit constant block
+</text>
+
+<rect x='550' y='250' width="20" height="100" rx="10" ry="10"
+      fill="white" stroke="black" />
+<text fill='black' x='645' y='300' style="font-size:14px;" >
+= Functions F, G, H, I
+</text>       
+<path d='M 525 5 l 0 450' stroke='black' stroke-dasharray="10,10" />
+
+<use xlink:href='#xor' x='550' y='370' />
+<text fill='black' x='645' y='390' style="font-size:14px;" >
+= Bitwise XOR
+</text>
+
+<use xlink:href='#bit' x='550' y='420' />
+<text fill='red' x='550' y='440' style="font-size:14px;" font-weight="bold" >
+&lt;&lt;&lt;
+</text>
+<text fill='black' x='645' y='440' style="font-size:14px;" >
+= Leftshift
+</text>-->
+
+<svg height='25' width='100' x='5' y='425' id='start' >
+<rect height='24' width='99' x='0.5' y='0.5' rx='5' ry='5' stroke='black' fill='white' />
+ <text fill='black' x='35' y='18' style="font-size:14px;" >
+Start
+</text>
+</svg>
+
+</g>
+</svg>
