@@ -278,29 +278,32 @@ New state for next round
 New round
 </text>
 <!-- Legend -->
-<!--
-<use xlink:href='#bit' x='450' y='50' />
+
+<use xlink:href='#bit' x='600' y='50' />
 <text fill='black' x='645' y='70' style="font-size:14px;" >
 = 32 bit value
 </text>
-<use xlink:href='#a' x='550' y='100' />
-<use xlink:href='#b' x='570' y='100' />
-<use xlink:href='#c' x='590' y='100' />
-<use xlink:href='#d' x='610' y='100' />
+
+<use xlink:href='#a' x='520' y='100' />
+<use xlink:href='#b' x='540' y='100' />
+<use xlink:href='#c' x='560' y='100' />
+<use xlink:href='#d' x='580' y='100' />
+<use xlink:href='#e' x='600' y='100' />
 
 <text fill='black' x='645' y='120' style="font-size:14px;" >
-= MD5 state / hash value
+= SHA-1 state / hash value
 </text>
 <text fill='black' x='685' y='140' style="font-size:14px;" >
 (128 bit)
 </text>
-
-<use xlink:href='#m' x='550' y='150' />
-<text fill='black' x='580' y='170'>
+<!--
+<use xlink:href='#m' x='515' y='150' />
+<use xlink:href='#m' x='535' y='150' />
+<text fill='black' x='575' y='170'>
 ...
 </text>
-<use xlink:href='#m' x='590' y='150' />
-<use xlink:href='#m' x='610' y='150' />
+
+<use xlink:href='#m' x='595' y='150' />
 <text fill='black' x='645' y='170' style="font-size:14px;" >
 = 512 bit message block
 </text>
@@ -319,21 +322,20 @@ New round
       fill="white" stroke="black" />
 <text fill='black' x='645' y='300' style="font-size:14px;" >
 = Functions F, G, H, I
-</text>       
-<path d='M 525 5 l 0 450' stroke='black' stroke-dasharray="10,10" />
+</text>
+-->    
+<path d='M 500 5 l 0 255 350 0' stroke='black' stroke-dasharray="10,10" />
 
-<use xlink:href='#xor' x='550' y='370' />
-<text fill='black' x='645' y='390' style="font-size:14px;" >
+<use xlink:href='#xor' x='600' y='170' />
+<text fill='black' x='645' y='185' style="font-size:14px;" >
 = Bitwise XOR
 </text>
 
-<use xlink:href='#bit' x='550' y='420' />
-<text fill='red' x='550' y='440' style="font-size:14px;" font-weight="bold" >
-&lt;&lt;&lt;
-</text>
-<text fill='black' x='645' y='440' style="font-size:14px;" >
+<use xlink:href='#shift' x='600' y='220' />
+
+<text fill='black' x='645' y='235' style="font-size:14px;" >
 = Leftshift
-</text>-->
+</text>
 
 <svg height='25' width='100' x='5' y='525' id='start' >
 <set attributeName='opacity' to='0' begin='start.click' />
