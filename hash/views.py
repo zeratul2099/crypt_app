@@ -29,7 +29,7 @@ def algo(request, algo):
                                                       request.FILES['file'].size)
         else:
             clear_text = request.POST.get("clear", "")
-            output = "Eingabestring:\n%s\n" %(clear_text)
+            output = "Eingabestring:\n%s\n\n" %(clear_text)
             
         if 'withSalt' in request.POST:
             rand = random.Random(datetime.now().strftime('%s'))
@@ -51,6 +51,12 @@ def algo(request, algo):
         elif algo == "sha2":
             output += "SHA-2-224-Hash:\n"
             output += hashlib.sha224(clear_text).hexdigest()   
+            output += "\n\nSHA-2-256-Hash:\n"
+            output += hashlib.sha256(clear_text).hexdigest()   
+            output += "\n\nSHA-2-384-Hash:\n"
+            output += hashlib.sha384(clear_text).hexdigest()   
+            output += "\n\nSHA-2-512-Hash:\n"
+            output += hashlib.sha512(clear_text).hexdigest()   
         else:
             output += "Invalid algorithm"
         if 'withSalt' in request.POST:
