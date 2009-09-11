@@ -85,6 +85,12 @@
         <use xlink:href="#bit" x='0' y='0' />
         <path d="M 10 12 l -10 5 10 5 m 10 -10 l -10 5 10 5 m 10 -10 l -10 5 10 5" stroke='red' stroke-width='2' />
         </svg>
+        <svg id='add' width="30" height="30" >
+       
+       <use xlink:href="#bit" x='0' y='0' />
+       <rect x='3' y='3' width='24' height='24' stroke='red' stroke-width='2' />
+       <path d="M 15 2 l 0 26 M 2 15 l 26 0" stroke='red' stroke-width='2' />
+        </svg>
   </defs>
 
   <metadata
@@ -194,8 +200,8 @@
 <use xlink:href='#bit' x='-400' y='135' >
 <animate attributeName='x' id='f01' from='400' to='450' begin='f_ani2.end' dur='1' />
 </use>
-<!-- xor -->
-<use xlink:href='#xor' x='-450' y='135' >
+<!-- add -->
+<use xlink:href='#add' x='-450' y='135' >
 <set attributeName='y' to='135' begin='start.click' />
 <set attributeName='x' to='450' dur='1' begin='f01.end' />
 <set attributeName='y' to='220' begin='a05.end' />
@@ -326,9 +332,9 @@ New round
 -->    
 <path d='M 500 5 l 0 255 350 0' stroke='black' stroke-dasharray="10,10" />
 
-<use xlink:href='#xor' x='600' y='170' />
+<use xlink:href='#add' x='600' y='170' />
 <text fill='black' x='645' y='185' style="font-size:14px;" >
-= Bitwise XOR
+= modulo 2^32 addition
 </text>
 
 <use xlink:href='#shift' x='600' y='220' />

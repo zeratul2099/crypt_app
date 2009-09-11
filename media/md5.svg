@@ -75,6 +75,16 @@
        <circle cx='15' cy='15' r='13' stroke='red' stroke-width='2' />
        <path d="M 15 2 l 0 26 M 2 15 l 26 0" stroke='red' stroke-width='2' />
         </svg>
+        <svg id='add' width="30" height="30" >
+       
+       <use xlink:href="#bit" x='0' y='0' />
+       <rect x='3' y='3' width='24' height='24' stroke='red' stroke-width='2' />
+       <path d="M 15 2 l 0 26 M 2 15 l 26 0" stroke='red' stroke-width='2' />
+        </svg>
+        <svg id='shift' width="30" height="30" >
+        <use xlink:href="#bit" x='0' y='0' />
+        <path d="M 10 12 l -10 5 10 5 m 10 -10 l -10 5 10 5 m 10 -10 l -10 5 10 5" stroke='red' stroke-width='2' />
+        </svg>
   </defs>
 
   <metadata
@@ -188,8 +198,8 @@
 <animate attributeName='x' from='-150' to='-150' begin='d02.end' dur='0' fill='freeze' />
 </use>
 
-<!-- xor -->
-<use xlink:href='#xor' x='-350' y='135' >
+<!-- add -->
+<use xlink:href='#add' x='-350' y='135' >
 <set attributeName='x' to='150' begin='xor01.end' />
 <set attributeName='y' to='135' begin='xor01.end' />
 <set attributeName='x' to='-150' begin='xor01.end+1' />
@@ -203,11 +213,12 @@
 <set attributeName='y' to='300' begin='b05.end' />
 <set attributeName='x' to='-150' begin='b05.end+1' />
 </use>
-<text fill='red' x='150' y='322' opacity='0' style="font-size:14px;" font-weight="bold" >
-<set attributeName='opacity' id='shift' to='1' begin='k01.end+2' />
-<set attributeName='x' to='-150' begin='k01.end+3' />
-&lt;&lt;&lt;
-</text>
+
+<use xlink:href='#shift' x='-150' y='300' >
+
+<set attributeName='x' to='150' dur='1' begin='k01.end+2' />
+
+</use>
 
 
 <text fill='black' x='5' y='200' style="font-size:12px;">
@@ -280,7 +291,7 @@ New round
 <text fill='black' x='685' y='140' style="font-size:14px;" >
 (128 bit)
 </text>
-
+<!--
 <use xlink:href='#m' x='550' y='150' />
 <text fill='black' x='580' y='170'>
 ...
@@ -299,7 +310,7 @@ New round
 <use xlink:href='#k' x='610' y='200' />
 <text fill='black' x='645' y='220' style="font-size:14px;" >
 = 512 bit constant block
-</text>
+</text>-->
 
 <rect x='550' y='250' width="20" height="100" rx="10" ry="10"
       fill="white" stroke="black" />
@@ -308,16 +319,13 @@ New round
 </text>       
 <path d='M 525 5 l 0 450' stroke='black' stroke-dasharray="10,10" />
 
-<use xlink:href='#xor' x='550' y='370' />
-<text fill='black' x='645' y='390' style="font-size:14px;" >
-= Bitwise XOR
+<use xlink:href='#add' x='550' y='150' />
+<text fill='black' x='645' y='170' style="font-size:14px;" >
+= modulo 2^32 addition
 </text>
 
-<use xlink:href='#bit' x='550' y='420' />
-<text fill='red' x='550' y='440' style="font-size:14px;" font-weight="bold" >
-&lt;&lt;&lt;
-</text>
-<text fill='black' x='645' y='440' style="font-size:14px;" >
+<use xlink:href='#shift' x='550' y='200' />
+<text fill='black' x='645' y='220' style="font-size:14px;" >
 = Leftshift
 </text>
 
