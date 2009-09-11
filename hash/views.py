@@ -60,7 +60,7 @@ def algo(request, algo):
         else:
             output += "Invalid algorithm"
         if 'withSalt' in request.POST:
-            output += "\nSalt:\n"
+            output += "\n\nSalt:\n"
             output += repr(salt_str)
     else:
         clear_text = ""
