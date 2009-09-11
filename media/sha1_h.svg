@@ -48,10 +48,10 @@
         D
        </text>
        </svg>
-       <svg width="30" height="30" id="f" >
+       <svg width="30" height="30" id="h" >
        <use xlink:href='#bit' x='0' y='0' />
        <text fill='black' x='3' y='25' style="font-size:18px;" >
-       F
+       H
        </text>
        </svg>
        <svg width="30" height="30" id="k" >
@@ -96,28 +96,49 @@
 <set attributeName='x' to='150' begin='start.click' />
 <set attributeName='y' to='125' begin='start.click' />
 <set attributeName='opacity' to='1' begin='start.click' />
-<animate attributeName='x' id='d4' from='150' to='100' begin='b3.end' fill='freeze' dur='1s' />
-<animate attributeName='y' id='d5' from='125' to='100' begin='d4.end' fill='freeze' dur='1s' />
-<set attributeName='opacity' to='0' begin='d5.end' />
+<animate attributeName='x' id='d4' from='150' to='100' begin='c2.end+1' fill='freeze' dur='1s' />
+
+<set attributeName='opacity' to='0' begin='b3.end' />
 </use>
+
+
 <!-- C -->
 <use xlink:href='#c' x='150' y='75' >
 <set attributeName='x' to='150' begin='start.click' />
 <set attributeName='y' to='75' begin='start.click' />
 <set attributeName='opacity' to='1' begin='start.click' />
+<animate attributeName='x' id='c3' from='150' to='100' begin='b3.end+1' fill='freeze' dur='1s' />
+<set attributeName='opacity' to='0' begin='d6.end' />
+</use>
+
+<use xlink:href='#c' x='150' y='75' >
+<set attributeName='x' to='150' begin='start.click' />
+<set attributeName='y' to='75' begin='start.click' />
+<set attributeName='opacity' to='1' begin='start.click' />
 <animate attributeName='x' id='c1' from='150' to='100' begin='start.click' fill='freeze' dur='1s' />
-<animate attributeName='y' id='c2' from='75' to='50' begin='c1.end' fill='freeze' dur='1s' />
+<animate attributeName='y' id='c2' from='75' to='25' begin='c1.end' fill='freeze' dur='1s' />
 <set attributeName='opacity' to='0' begin='c2.end' />
 </use>
+
+<!-- D2 -->
+<use xlink:href='#d' x='150' y='125' >
+<set attributeName='x' to='150' begin='start.click' />
+<set attributeName='y' to='125' begin='start.click' />
+<set attributeName='opacity' to='1' begin='start.click' />
+<animate attributeName='y' id='d5' from='125' to='75' begin='b3.end+1' fill='freeze' dur='1s' />
+<animate attributeName='x' id='d6' from='150' to='100' begin='d5.end' fill='freeze' dur='1s' />
+<set attributeName='opacity' to='0' begin='d6.end' />
+</use>
+
 <!-- b -->
 <use xlink:href='#b' x='150' y='25' >
 <set attributeName='x' to='150' begin='start.click' />
 <set attributeName='y' to='25' begin='start.click' />
 <set attributeName='opacity' to='1' begin='start.click' />
-<animate attributeName='y' id='b3' from='25' to='75' begin='b2.end+2' fill='freeze' dur='1s' />
-<animate attributeName='x' id='b4' from='150' to='100' begin='b3.end' fill='freeze' dur='1s' />
-<animate attributeName='y' id='b5' from='75' to='100' begin='b4.end' fill='freeze' dur='1s' />
-<set attributeName='opacity' to='0' begin='b5.end' />
+<animate attributeName='x' id='b2y' from='150' to='100' begin='c2.end+1' fill='freeze' dur='1s' />
+<animate attributeName='y' id='b2x' from='25' to='75' begin='c2.end+1' fill='freeze' dur='1s' />
+<animate attributeName='y' id='b3' from='75' to='125' begin='b2y.end' fill='freeze' dur='1s' />
+<set attributeName='opacity' to='0' begin='b3.end' />
 </use>
 
 <use xlink:href='#b' x='150' y='25' >
@@ -125,61 +146,63 @@
 <set attributeName='y' to='25' begin='start.click' />
 <set attributeName='opacity' to='1' begin='start.click' />
 <animate attributeName='x' id='b1' from='150' to='100' begin='start.click' fill='freeze' dur='1s' />
-<animate attributeName='y' id='b2' from='25' to='50' begin='b1.end' fill='freeze' dur='1s' />
-<set attributeName='opacity' to='0' begin='b2.end' />
+
+<set attributeName='opacity' to='0' begin='c2.end' />
 </use>
 
 <!-- white bits -->
-<use xlink:href='#bit' x='100' y='100' opacity='0' >
+<use xlink:href='#bit' x='100' y='125' opacity='0' >
 <set attributeName='x' to='100' begin='start.click' />
-<set attributeName='y' to='100' begin='start.click' />
-<set attributeName='opacity' to='1' begin='d5.end' />
-<animate attributeName='x' id='bitb1' from='100' to='50' begin='d5.end+2' fill='freeze' dur='1s' />
-<animate attributeName='y' id='bitb2' from='100' to='75' begin='bitb1.end' fill='freeze' dur='1s' />
+<set attributeName='y' to='125' begin='start.click' />
+<set attributeName='opacity' to='1' begin='b3.end' />
+<animate attributeName='x' id='bitb1' from='100' to='50' begin='d6.end+1' fill='freeze' dur='1s' />
+<animate attributeName='y' id='bitb2' from='125' to='75' begin='bitb1.end' fill='freeze' dur='1s' />
 <set attributeName='opacity' to='0' begin='bitb2.end' />
 </use>
 
-<use xlink:href='#bit' x='100' y='50' opacity='0' >
+
+
+<use xlink:href='#bit' x='100' y='25' opacity='0' >
 <set attributeName='x' to='100' begin='start.click' />
-<set attributeName='y' to='50' begin='start.click' />
+<set attributeName='y' to='25' begin='start.click' />
 <set attributeName='opacity' to='1' begin='c2.end' />
-<animate attributeName='x' id='bita1' from='100' to='50' begin='d5.end+2' fill='freeze' dur='1s' />
-<animate attributeName='y' id='bita2' from='50' to='75' begin='bita1.end' fill='freeze' dur='1s' />
-<set attributeName='opacity' to='0' begin='bita2.end' />
+<animate attributeName='x' id='bita1' from='100' to='50' begin='d6.end+1' fill='freeze' dur='1s' />
+<animate attributeName='y' id='bita2' from='25' to='75' begin='bita1.end' fill='freeze' dur='1s' />
+<set attributeName='opacity' to='0' begin='bitc1.end' />
 </use>
-<!-- F -->
-<use xlink:href='#f' x='50' y='75' opacity='0' >
+
+<use xlink:href='#bit' x='100' y='75' opacity='0' >
+<set attributeName='x' to='100' begin='start.click' />
+<set attributeName='y' to='75' begin='start.click' />
+<set attributeName='opacity' to='0' begin='start.click' />
+<set attributeName='opacity' to='1' begin='d6.end' />
+<animate attributeName='x' id='bitc1' from='100' to='50' begin='bita1.end+2' fill='freeze' dur='1s' />
+<set attributeName='opacity' to='0' begin='bitc1.end' />
+</use>
+<!-- H -->
+<use xlink:href='#h' x='50' y='75' opacity='0' >
 <set attributeName='x' to='50' begin='start.click' />
 <set attributeName='opacity' to='0' begin='start.click' />
-<set attributeName='opacity' to='1' begin='bita2.end' />
-<animate attributeName='x' id='f1' from='50' to='-30' begin='bita2.end+2' fill='freeze' dur='1s' />
+<set attributeName='opacity' to='1' begin='bitc1.end' />
+<animate attributeName='x' id='f1' from='50' to='-30' begin='bitc1.end+2' fill='freeze' dur='1s' />
 </use>
-<!-- - -->
-<svg width='15' heigth='15' x='150' y='85' opacity='0' >
-<path d='M 0 7.5 L 15 7.5' stroke='red' stroke-width='2' />
-<set attributeName='x' to='150' begin='start.click' />
-<set attributeName='y' to='85' begin='start.click' />
-<set attributeName='opacity' to='1' begin='b3.end' />
-<animate attributeName='x' id='minus1' from='150' to='105' begin='b3.end' fill='freeze' dur='1s' />
-<animate attributeName='y' id='minus2' from='85' to='110' begin='minus1.end' fill='freeze' dur='1s' />
-<set attributeName='opacity' to='0' begin='minus2.end' />
-</svg>
+
  
 <!-- AND -->
-<svg width='15' heigth='15' x='103' y='63' opacity='0' >
+<svg width='15' heigth='15' x='103' y='38' opacity='0' >
 <path d='M 0 15 L 7.5 0 15 15' stroke='red' stroke-width='2' />
-<set attributeName='y' to='63' begin='start.click' />
-<set attributeName='opacity' to='1' begin='c2.end' />
-<set attributeName='opacity' to='0' begin='c2.end+1' />
-<set attributeName='y' to='113' begin='d5.end' />
-<set attributeName='opacity' to='1' begin='d5.end' />
-<set attributeName='opacity' to='0' begin='d5.end+1' />
+<set attributeName='y' to='38' begin='start.click' />
+<set attributeName='opacity' to='1' dur='1' begin='c2.end' />
+<set attributeName='y' to='138' begin='b3.end' />
+<set attributeName='opacity' to='1' dur='1' begin='b3.end' />
+<set attributeName='y' to='88' begin='d6.end' />
+<set attributeName='opacity' to='1' dur='1' begin='d6.end' />
 </svg>
 <!-- OR -->
 <svg width='15' heigth='15' x='53' y='87' opacity='0' >
 <path d='M 0 0 L 7.5 15 15 0' stroke='red' stroke-width='2' />
-<set attributeName='opacity' to='1' begin='bita2.end' />
-<set attributeName='opacity' to='0' begin='bita2.end+1' />
+<set attributeName='opacity' to='1' dur='1' begin='bita2.end' />
+<set attributeName='opacity' to='1' dur='1' begin='bitc1.end' />
 </svg>
 <!-- Legende -->
 <path d='M 220 15 l 0 150' stroke='black' stroke-dasharray="10,10"/>
@@ -190,18 +213,12 @@
 <text fill='black' x='270' y='45' style="font-size:14px;" >
 = Logic AND
 </text>
+
 <use xlink:href='#bit' x='230' y='75' />
-<svg width='15' heigth='15' x='232' y='87' opacity='1' >
-<path d='M 0 7.5 L 15 7.5' stroke='red' stroke-width='2' />
-</svg>
-<text fill='black' x='270' y='94' style="font-size:14px;" >
-= Inverse
-</text>
-<use xlink:href='#bit' x='230' y='125' />
-<svg width='15' heigth='15' x='232' y='137' opacity='1' >
+<svg width='15' heigth='15' x='232' y='88' opacity='1' >
 <path d='M 0 0 L 7.5 15 15 0' stroke='red' stroke-width='2' />
 </svg>
-<text fill='black' x='270' y='144' style="font-size:14px;" >
+<text fill='black' x='270' y='94' style="font-size:14px;" >
 = Logic OR
 </text>
 <svg height='25' width='75' x='5' y='150' id='start' >
