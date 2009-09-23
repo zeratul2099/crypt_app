@@ -88,8 +88,8 @@
         <svg id='add' width="30" height="30" >
        
        <use xlink:href="#bit" x='0' y='0' />
-       <rect x='3' y='3' width='24' height='24' stroke='red' stroke-width='2' />
-       <path d="M 15 2 l 0 26 M 2 15 l 26 0" stroke='red' stroke-width='2' />
+       <rect x='2' y='12' width='16' height='16' stroke='red' stroke-width='2' />
+       <path d="M 10 12 l 0 16 M 2 20 l 16 0" stroke='red' stroke-width='2' />
         </svg>
   </defs>
 

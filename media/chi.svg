@@ -236,8 +236,10 @@
         <animate attributeName='x' from='-140' to='-140' fill='freeze' begin='77' dur='0' />
        </use>
        
-       
-       <text fill='red' x='-73' y='159' style="font-size:38px;font-family:'serif';"  >
+         <svg x='-73' y='140' width='16' height='20' >
+        <path d="M 0 10 l 15 0" stroke='red' stroke-width='3' />
+
+       <!--<text fill='red' x='-73' y='159' style="font-size:38px;font-family:'serif';"  >-->
        <!-- phase 1 -->
        -
        <animate attributeName='x' from='73' to='73' fill='freeze' begin='2' dur='0' />
@@ -258,8 +260,12 @@
        <animate attributeName='x' from='43' to='43' fill='freeze' begin='72' dur='0' />
        <animate attributeName='x' from='40' to='58' fill='freeze' dur='1' begin='76' />
        <animate attributeName='x' from='-40' to='-40' fill='freeze' begin='77' dur='0' />
-       </text>
-       <text fill='red' x='-73' y='155' style="font-size:18px;font-family:'sans';" >
+         </svg>
+       
+         <svg width='15' heigth='15' x='-73' y='143' >
+        <path d='M 0 15 L 7.5 0 15 15' stroke='red' stroke-width='2' />
+
+       <!--<text fill='red' x='-73' y='155' style="font-size:18px;font-family:'sans';" >-->
        <!-- phase 1 -->
        &amp;
        <animate attributeName="x" begin='8' from='88' to='88' fill='freeze' dur='0' />
@@ -281,7 +287,7 @@
        <animate attributeName="x" begin='77' from='58' to='58' fill='freeze' dur='0' />
         <animate attributeName='x' from='58' to='163' fill='freeze' dur='2' begin='81' />
         <animate attributeName='x' from='-160' to='-160' fill='freeze' begin='83' dur='0' />
-       </text>
+       </svg>
        <use xlink:href='#xor' x='-40' y='140'>
        <!-- phase 1 -->
         <animate attributeName='x' begin='13' from='39' to='39' fill='freeze' dur='0' />
@@ -337,16 +343,17 @@
   = Lane of w bits
   </text>
   <use xlink:href="#bit" x='300' y='130' />
-   <text fill='red' x='303' y='160' style="font-size:38px;font-family:'sans';" >
-  -
-  </text> 
+  <svg x='302' y='140' width='16' height='20' >
+  <path d="M 0.5 10 l 15.5 0" stroke='red' stroke-width='3' />
+  </svg>
   <text fill='black' x='340' y='150' style="font-size:14px;font-family:'sans';" >
   = Bitwise NOT
   </text>
   <use xlink:href="#bit" x='300' y='170' />
-  <text fill='red' x='303' y='196' style="font-size:18px;font-family:'sans';" >
-  &amp;
-  </text>
+  <svg width='15' heigth='15' x='303' y='183' >
+<path d='M 0 15 L 7.5 0 15 15' stroke='red' stroke-width='2' />
+</svg>
+
     <text fill='black' x='340' y='190' style="font-size:14px;font-family:'sans';" >
   = Bitwise AND
   </text>
