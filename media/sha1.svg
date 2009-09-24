@@ -54,10 +54,22 @@
         E
        </text>
        </svg>
-       <svg width="30" height="30" id="m" >
+       <svg width="30" height="30" id="m0" >
        <use xlink:href='#bit' x='0' y='0' />
-       <text fill='black' x='3' y='25' style="font-size:18px;" >
-       m
+       <text fill='black' x='1' y='25' style="font-size:16px;" >
+       m<tspan style="baseline-shift:sub;font-size:8px">0</tspan>
+       </text>
+       </svg>
+       <svg width="30" height="30" id="m1" >
+       <use xlink:href='#bit' x='0' y='0' />
+       <text fill='black' x='1' y='25' style="font-size:16px;" >
+       m<tspan style="baseline-shift:sub;font-size:8px">1</tspan>
+       </text>
+       </svg>
+       <svg width="30" height="30" id="mn" >
+       <use xlink:href='#bit' x='0' y='0' />
+       <text fill='black' x='1' y='25' style="font-size:16px;" >
+       m<tspan style="baseline-shift:sub;font-size:8px">n</tspan>
        </text>
        </svg>
        <svg width="30" height="30" id="k" >
@@ -253,14 +265,14 @@
 <text fill='black' x='510' y='290' style="font-size:12px;">
 message (512 bit)
 </text>
-<use xlink:href='#m' x='510' y='300' >
+<use xlink:href='#m0' x='510' y='300' >
 <animate attributeName='x' from='510' to='510' begin='start.begin' dur='0' fill='freeze' />
 <set attributeName='opacity' to='1'  begin='start.begin' />
-<animate attributeName='x' id='m01' from='510' to='450' begin='e06.end' dur='1' />
+<animate attributeName='x' id='m01' from='510' to='450' begin='e06.end' dur='1' fill='freeze' />
 <set attributeName='opacity' to='0'  begin='m01.end' />
 
 </use>
-<use xlink:href='#m' x='530' y='300' >
+<use xlink:href='#m1' x='530' y='300' >
 <animate attributeName='x' from='530' to='530' begin='start.begin' dur='0' fill='freeze' />
 <animate attributeName='x' id='m02' from='530' to='510' begin='a09.end-1' dur='1' fill='freeze' />
 </use>
@@ -268,19 +280,44 @@ message (512 bit)
 ...
 </text>
 
-<use xlink:href='#m' x='590' y='300' >
+<use xlink:href='#mn' x='590' y='300' >
 </use>
 <!-- constant -->
 <text fill='black' x='510' y='360' style="font-size:12px;">
-16*32 bit of
+16*32 bit constant
 </text>
 <text fill='black' x='510' y='370' style="font-size:12px;">
-constant (512 bit)
+k = 0x5A827999
+<animate attributeName='opacity' from='1' to='1' begin='round1.click' dur='1' fill='freeze' />
+<animate attributeName='opacity' from='0' to='0' begin='round2.click' dur='1' fill='freeze' />
+<animate attributeName='opacity' from='0' to='0' begin='round3.click' dur='1' fill='freeze' />
+<animate attributeName='opacity' from='0' to='0' begin='round4.click' dur='1' fill='freeze' />
+</text>
+<text fill='black' x='510' y='370' style="font-size:12px;" opacity='0' >
+k = 0x6ED9EBA1
+<animate attributeName='opacity' from='0' to='0' begin='round1.click' dur='1' fill='freeze' />
+<animate attributeName='opacity' from='1' to='1' begin='round2.click' dur='1' fill='freeze' />
+<animate attributeName='opacity' from='0' to='0' begin='round3.click' dur='1' fill='freeze' />
+<animate attributeName='opacity' from='0' to='0' begin='round4.click' dur='1' fill='freeze' />
+</text>
+<text fill='black' x='510' y='370' style="font-size:12px;" opacity='0' >
+k = 0x8F1BBCDC
+<animate attributeName='opacity' from='0' to='0' begin='round1.click' dur='1' fill='freeze' />
+<animate attributeName='opacity' from='0' to='0' begin='round2.click' dur='1' fill='freeze' />
+<animate attributeName='opacity' from='1' to='1' begin='round3.click' dur='1' fill='freeze' />
+<animate attributeName='opacity' from='0' to='0' begin='round4.click' dur='1' fill='freeze' />
+</text>
+<text fill='black' x='510' y='370' style="font-size:12px;" opacity='0' >
+k = 0xCA62C1D6
+<animate attributeName='opacity' from='0' to='0' begin='round1.click' dur='1' fill='freeze' />
+<animate attributeName='opacity' from='0' to='0' begin='round2.click' dur='1' fill='freeze' />
+<animate attributeName='opacity' from='0' to='0' begin='round3.click' dur='1' fill='freeze' />
+<animate attributeName='opacity' from='1' to='1' begin='round4.click' dur='1' fill='freeze' />
 </text>
 <use xlink:href='#k' x='510' y='380' >
 <animate attributeName='x' from='510' to='510' begin='start.begin' dur='0' fill='freeze' />
 <set attributeName='opacity' to='1'  begin='start.begin' />
-<animate attributeName='x' id='k01' from='510' to='450' begin='e07.end' dur='1' />
+<animate attributeName='x' id='k01' from='510' to='450' begin='e07.end' dur='1' fill='freeze' />
 <set attributeName='opacity' to='0' begin='k01.end' />
 </use>
 <use xlink:href='#k' x='530' y='380' >

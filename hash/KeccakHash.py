@@ -13,7 +13,7 @@ class KeccakHash(object):
     c = 576
     d = 28
     hash_len = 224
-    num_rounds = 17
+    num_rounds = 22
     filename = "views.pyc"
     #filename = "test.pdf"
     def __init__(self, message):
