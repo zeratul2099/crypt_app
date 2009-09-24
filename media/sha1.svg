@@ -396,7 +396,7 @@ New round
 
 <use xlink:href='#add' x='600' y='170' />
 <text fill='black' x='645' y='185' style="font-size:14px;" >
-= modulo 2^32 addition
+= modulo 2<tspan style="baseline-shift:super;font-size:10px">32</tspan> addition
 </text>
 
 <use xlink:href='#shift' x='600' y='220' />
