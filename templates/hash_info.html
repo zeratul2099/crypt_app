@@ -1,7 +1,7 @@
 {% extends "basis.html" %}
 
-{% block titleline %}{{ title }}{% endblock %}
-{% block titel %}{{ title }}{% endblock %}
+{% block titleline %}{{ title|safe }}{% endblock %}
+{% block titel %}{{ title|safe }}{% endblock %}
 
 {% block inhalt %}
 <a href='/hash/algo/{{ algo }}/'>{{ name }} ausprobieren</a>
@@ -10,7 +10,7 @@
     <tr>
         <th width='25%' rowspan='3' valign='top' align='left' ><ul></ul>{{ nav|safe }}</ul><p><a href='/hash/'>zur&uuml;ck</a><br></th>
         {% if caption %}
-        <td width='75%' valign='top' align='center' ><h3>{{ caption }}</h3></td></tr>
+        <td width='75%' valign='top' align='center' ><h3>{{ caption|safe }}</h3></td></tr>
         <tr>{% endif %}<td width='75%' valign='top' align='center' ><object type="image/svg+xml" data='/content/{{ svg }}' width="{{ width }}" height="{{ height }}"></object></td>
         
     </tr><tr>
