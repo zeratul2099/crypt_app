@@ -1,0 +1,44 @@
+{% extends "basis.html" %}
+
+{% block titleline %}{{ title }}{% endblock %}
+{% block titel %}{{ title }}{% endblock %}
+
+{% block inhalt %}
+(<a href='/hash/info/{{ algo }}/overview/'>Was ist das?</a>)
+<table>
+    <tr valign='top'>
+        <td>
+
+    <table width='100%'>
+        <tr><td>Einbetten</td><td>Ausbetten</td></tr>
+           
+        
+        <tr>
+            <td width='50%'>
+            <form method='post' action='.' enctype="multipart/form-data">
+            {{ embedForm }}
+
+            <input type='submit' name='submit' value='Abschicken' />
+            </form>
+            </td>
+            <td width='50%'>
+            <form method='post' action='.' enctype="multipart/form-data">
+            {{ extractForm }}
+
+            <input type='submit' name='submit2' value='Abschicken' />
+            </form>
+            </td>
+        </tr>
+    </table>
+
+    
+
+
+     </table>
+    
+ </td>
+    </tr>
+</table>
+<a href='../../'>zur&uuml;ck</a>
+{% endblock %}
+
