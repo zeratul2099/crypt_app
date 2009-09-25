@@ -129,33 +129,26 @@
         <animateColor attributeName="fill" id='f_ani' begin='b02.end' dur='1' from='#ffffff' to='#ff0000' />
         <animateColor attributeName="fill" id='f_ani2' begin='f_ani.end' dur='1' from='#ff0000' to='#ffffff' fill='freeze' />
         </rect>
-        <text fill='black' x='5' y='50' opacity='0' >
-        F
+        <text fill='black' x='3' y='50' opacity='0' style="font-size:12px;" >
+        Ch
         <animate attributeName='opacity' from='1' to='1' begin='round1.click' dur='1' fill='freeze' />
         <animate attributeName='opacity' from='0' to='0' begin='round2.click' dur='1' fill='freeze' />
         <animate attributeName='opacity' from='0' to='0' begin='round3.click' dur='1' fill='freeze' />
         <animate attributeName='opacity' from='0' to='0' begin='round4.click' dur='1' fill='freeze' />
         </text>
-        <text fill='black' x='5' y='50' opacity='0' >
-        G
+        <text fill='black' x='2' y='50' opacity='0' style="font-size:12px;" >
+        Par
         <animate attributeName='opacity' from='0' to='0' begin='round1.click' dur='1' fill='freeze' />
         <animate attributeName='opacity' from='1' to='1' begin='round2.click' dur='1' fill='freeze' />
         <animate attributeName='opacity' from='0' to='0' begin='round3.click' dur='1' fill='freeze' />
-        <animate attributeName='opacity' from='0' to='0' begin='round4.click' dur='1' fill='freeze' />
+        <animate attributeName='opacity' from='1' to='1' begin='round4.click' dur='1' fill='freeze' />
         </text>
-        <text fill='black' x='5' y='50' opacity='0' >
-        H
+        <text fill='black' x='2' y='50' opacity='0' style="font-size:10px;" >
+        Maj
         <animate attributeName='opacity' from='0' to='0' begin='round1.click' dur='1' fill='freeze' />
         <animate attributeName='opacity' from='0' to='0' begin='round2.click' dur='1' fill='freeze' />
         <animate attributeName='opacity' from='1' to='1' begin='round3.click' dur='1' fill='freeze' />
         <animate attributeName='opacity' from='0' to='0' begin='round4.click' dur='1' fill='freeze' />
-        </text>
-        <text fill='black' x='5' y='50' opacity='0' >
-        I
-        <animate attributeName='opacity' from='0' to='0' begin='round1.click' dur='1' fill='freeze' />
-        <animate attributeName='opacity' from='0' to='0' begin='round2.click' dur='1' fill='freeze' />
-        <animate attributeName='opacity' from='0' to='0' begin='round3.click' dur='1' fill='freeze' />
-        <animate attributeName='opacity' from='1' to='1' begin='round4.click' dur='1' fill='freeze' />
         </text>
 </svg>
 <!-- A -->

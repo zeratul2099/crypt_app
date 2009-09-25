@@ -9,7 +9,7 @@
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:xlink="http://www.w3.org/1999/xlink"
-   width="204mm"
+   width="205mm"
    height="135mm"
    id="svg2"
 >
@@ -173,8 +173,8 @@
         <animateColor attributeName="fill" id='f_ani5' begin='a04.end' dur='1' from='#ffffff' to='#ff0000' />
         <animateColor attributeName="fill" id='f_ani6' begin='f_ani5.end' dur='1' from='#ff0000' to='#ffffff' fill='freeze' />
         </rect>
-        <text fill='black' x='5' y='50' >
-        Ma
+        <text fill='black' x='2' y='50' style="font-size:12px;" >
+        Maj
         </text>
 </svg>
 <svg id='sigma0' width="25" height="50" x='450' y='430' >
@@ -478,7 +478,7 @@ block
 <rect x='560' y='480' width="24" height="50" rx="10" ry="10"
       fill="white" stroke="black" />
 <text fill='black' x='665' y='510' style="font-size:14px;" >
-= Functions Ch, &#931;1, Ma, &#931;0
+= Functions Ch, &#931;1, Maj, &#931;0
 </text>
 
 </g>

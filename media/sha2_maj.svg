@@ -50,8 +50,8 @@
        </svg>
        <svg width="30" height="30" id="h" >
        <use xlink:href='#bit' x='0' y='0' />
-       <text fill='black' x='3' y='25' style="font-size:18px;" >
-       H
+       <text fill='black' x='3' y='25' style="font-size:10px;" >
+       Maj
        </text>
        </svg>
        <svg width="30" height="30" id="k" >
