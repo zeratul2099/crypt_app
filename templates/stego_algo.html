@@ -5,9 +5,6 @@
 
 {% block inhalt %}
 (<a href='/hash/info/{{ algo }}/overview/'>Was ist das?</a>)
-<table>
-    <tr valign='top'>
-        <td>
 
     <table width='100%'>
         <tr><td>Einbetten</td><td>Ausbetten</td></tr>
@@ -16,29 +13,27 @@
         <tr>
             <td width='50%'>
             <form method='post' action='.' enctype="multipart/form-data">
+            <table>
             {{ embedForm }}
-
-            <input type='submit' name='submit' value='Abschicken' />
+            </table>
+            <input type='submit' name='submit1' value='Abschicken' />
             </form>
             </td>
             <td width='50%'>
             <form method='post' action='.' enctype="multipart/form-data">
+            <table>
             {{ extractForm }}
-
+            </table>
             <input type='submit' name='submit2' value='Abschicken' />
             </form>
             </td>
         </tr>
     </table>
+{{ text|escape|linebreaksbr }}<p>
+   
 
-    
 
 
-     </table>
-    
- </td>
-    </tr>
-</table>
 <a href='../../'>zur&uuml;ck</a>
 {% endblock %}
 
