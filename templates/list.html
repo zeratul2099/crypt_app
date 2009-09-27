@@ -1,8 +1,8 @@
 {% extends "basis.html" %}
 
-{%block titleline %}Hashalgorithmen{% endblock %}
+{%block titleline %}{{ title }}{% endblock %}
 
-{% block titel %}Hashalgorithmen:{% endblock %}
+{% block titel %}{{ title }}{% endblock %}
 
 {% block inhalt %}
 <table>
@@ -10,7 +10,7 @@
     
     <tr>
         <td><a href='./algo/{{ a.shortTitle }}/'>{{ a.name }}</a></td>
-        <td>(<a href='./info/{{ a.shortTitle }}/overview/'>Was ist das?</a>)</td>
+        <td>(<a href='../info/{{ a.shortTitle }}/overview/'>Was ist das?</a>)</td>
     </tr>
     
     {% endfor %}

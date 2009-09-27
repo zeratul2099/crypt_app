@@ -13,7 +13,8 @@ urlpatterns = patterns('',
 
     (r'^hash/algo/(?P<algo>\w*)/?$', 'hash.views.algo'),
     
-    (r'^hash/info/(?P<algo>\w*)/(?P<page>\w*)/?$', 'hash.views.info'),
+    (r'^info/(?P<algo>\w*)/(?P<page>\w*)/?$', 'base_app.views.info'),
+
     (r'^stego/algo/(?P<algo>\w*)/?$', 'stego.views.algo'),
     (r'^hashtest/$', 'hashtest.views.hashtest'),
     (r'^admin/(.*)', admin.site.root),
