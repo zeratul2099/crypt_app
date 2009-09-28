@@ -24,3 +24,12 @@ class F5EmbedForm(forms.Form):
 class F5ExtractForm(forms.Form):
     file = forms.FileField(required=True, label='JPEG-Datei')
     pw = forms.CharField(label='Password',widget=forms.PasswordInput(render_value=False))
+
+class LsbEmbedForm(forms.Form):
+    message = forms.CharField(label='Nachricht', required=True)
+    file = forms.FileField(required=True, label='PNG-Datei')
+    pw = forms.CharField(label='Password',widget=forms.PasswordInput(render_value=False))
+
+class LsbExtractForm(forms.Form):
+    file = forms.FileField(required=True, label='PNG-Datei')
+    pw = forms.CharField(label='Password',widget=forms.PasswordInput(render_value=False))
