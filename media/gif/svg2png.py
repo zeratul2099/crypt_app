@@ -2,9 +2,9 @@
 
 import os
 
-name = "sha1"
+name = "md5_g"
 
-for i in range(0, 180, 2):
+for i in range(0, 65, 2):
     os.system("rasterizer -d png/%s%3.3d.png -snapshotTime %f %s.svg &"%(name, i, float(i)/4, name))
     os.system("rasterizer -d png/%s%3.3d.png -snapshotTime %f %s.svg"%(name, i+1, float(i+1)/4, name))
 os.chdir("png")

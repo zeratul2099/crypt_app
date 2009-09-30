@@ -25,7 +25,7 @@ def info(request, algo, page):
     text = ''
     svg = ''
     user_agent = request.META['HTTP_USER_AGENT']
-    if user_agent.find('WebKit') != -1 or user_agent.find('Presto') != -1 or user_agent.find('Gecko') != -1:
+    if (user_agent.find('WebKit') != -1 or user_agent.find('Presto') != -1 or user_agent.find('Gecko') != -1) and user_agent.find('Chrome/4.0') == -1:
         pictype = "svg"
     else:
         pictype = "gif"
