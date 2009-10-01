@@ -13,7 +13,6 @@ import Queue as Q
 import libstego, libstegofile, os
 
 def algo(request, algo):
-    print "entering algo"
     text = ""
     type = ""
     algo_object = get_object_or_404(Algo, shortTitle=algo)
