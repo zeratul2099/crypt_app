@@ -14,199 +14,107 @@ import libstego, libstegofile, os
 
 def algo(request, algo):
     text = ""
+    type = ""
     algo_object = get_object_or_404(Algo, shortTitle=algo)
     if request.method == 'POST':
-        parent_conn, child_conn = Pipe()
         q = Queue()
+        # embedding
         if "submit1" in request.POST:
 
             if algo == "cpt":
                 embedForm = CPTEmbedForm(request.POST, request.FILES)
                 extractForm = CPTExtractForm()
-                if embedForm.is_valid():
-                # do libstego work
-                    p = Process(target=cptEmbed, args=(q, ))
-                    p.start()
-                    q.put([request.POST, request.FILES['file'].temporary_file_path()])
-                    try:
-                        retval = q.get(True, 10)
-                    except Q.Empty:
-                        retval = -2
-                    p.join()
-                    if retval == -1:
-                        text += "\nNo PNG File or PNG file could not be read."
-                    elif retval == -2:
-                        text += "Error on embedding. Try another image or different parameter"
-                    else:
-                        return createResponse(retval, "png")
+                type = "png"
+                p = Process(target=cptEmbed, args=(q, ))
+                    
             elif algo == "f5":
                 embedForm = F5EmbedForm(request.POST, request.FILES)
                 extractForm = F5ExtractForm()
-                if embedForm.is_valid():
-                # do libstego work
-                    p = Process(target=f5Embed, args=(q, ))
-                    p.start()
-                    q.put([request.POST, request.FILES['file'].temporary_file_path()])
-                    try:
-                        retval = q.get(True, 10)
-                    except Q.Empty:
-                        retval = -2
-                    p.join()
-                    if retval == -1:
-                        text += "\nNo JPEG File or JPEG file could not be read."
-                    elif retval == -2:
-                        text += "Error on embedding. Try another image or different parameter"
-                    else:
-                        return createResponse(retval, "jpeg")
+                type = "jpeg"
+                p = Process(target=f5Embed, args=(q, ))
+                    
             elif algo == "lsb":
                 embedForm = LsbEmbedForm(request.POST, request.FILES)
                 extractForm = LsbExtractForm()
-                if embedForm.is_valid():
-                    p = Process(target=lsbEmbed, args=(q, ))
-                    p.start()
-                    q.put([request.POST, request.FILES['file'].temporary_file_path()])
-                    try:
-                        retval = q.get(True, 10)
-                    except Q.Empty:
-                        retval = -2
-                    p.join()
-                    if retval == -1:
-                        text += "\nNo PNG File or PNG file could not be read."
-                    elif retval == -2:
-                        text += "Error on embedding. Try another image or different parameter"
-                    else:
-                        return createResponse(retval, "png")
+                type = "png"
+                p = Process(target=lsbEmbed, args=(q, ))
+                    
             elif algo == "gifshuffle":
                 embedForm = GifShuffleEmbedForm(request.POST, request.FILES)
                 extractForm = GifShuffleExtractForm()
-                if embedForm.is_valid():
-                    p = Process(target=gifShuffleEmbed, args=(q, ))
-                    p.start()
-                    q.put([request.POST, request.FILES['file'].temporary_file_path()])
-                    try:
-                        retval = q.get(True, 10)
-                    except Q.Empty:
-                        retval = -2
-                    p.join()
-                    if retval == -1:
-                        text += "\nNo GIF File or GIF file could not be read."
-                    elif retval == -2:
-                        text += "Error on embedding. Try another image or different parameter"
-                    else:
-                        return createResponse(retval, "gif")
+                type = "gif"
+                p = Process(target=gifShuffleEmbed, args=(q, ))
+                    
             elif algo == "bs":
                 embedForm = BattlestegEmbedForm(request.POST, request.FILES)
                 extractForm = BattlestegExtractForm()
-                if embedForm.is_valid():
-                    p = Process(target=bsEmbed, args=(q, ))
-                    p.start()
-                    q.put([request.POST, request.FILES['file'].temporary_file_path()])
-                    try:
-                        retval = q.get(True, 10)
-                    except Q.Empty:
-                        retval = -2
-                    p.join()
-                    if retval == -1:
-                        text += "\nNo PNG File or PNG file could not be read."
-                    elif retval == -2:
-                        text += "Error on embedding. Try another image or different parameter"
-                    else:
-                        return createResponse(retval, "png")
+                type = "png"
+                p = Process(target=bsEmbed, args=(q, ))
+            # fork process to embed
+            if embedForm.is_valid():
+                p.start()
+                q.put([request.POST, request.FILES['file'].temporary_file_path()])
+                os.system("sleep 1")
+                try:
+                    retval = q.get(True, 10)
+                except Q.Empty:
+                    retval = -2
+                p.join()
+                if retval == -1:
+                    text += "No %s file or %s file could not be read."%(type, type)
+                elif retval == -2:
+                    text += "Error on embedding. Try another image or different parameter."
+                else:
+                    return createResponse(retval, type)
+        # extracting        
         elif "submit2" in request.POST:
     
             if algo == "cpt":
                 embedForm = CPTEmbedForm()
                 extractForm = CPTExtractForm(request.POST, request.FILES)
-                if extractForm.is_valid():
-                    p = Process(target=cptExtract, args=(q, ))
-                    p.start()
-                    q.put([request.POST, request.FILES['file'].temporary_file_path()])
-                    try:
-                        retval = q.get(True, 10)
-                    except Q.Empty:
-                        retval = -2
-                    p.join()
-                    if retval == -1:
-                        text += "\nNo PNG File or PNG file could not be read."
-                    elif retval == -2:
-                        text += "Error on embedding. Try another image or different parameter"
-                    else:
-                        text += retval
+                type = "png"
+                p = Process(target=cptExtract, args=(q, ))
+                    
             elif algo == "f5":
                 embedForm = F5EmbedForm()
                 extractForm = F5ExtractForm(request.POST, request.FILES)
-                if extractForm.is_valid():
-                    p = Process(target=f5Extract, args=(q, ))
-                    p.start()
-                    q.put([request.POST, request.FILES['file'].temporary_file_path()])
-                    try:
-                        retval = q.get(True, 10)
-                    except Q.Empty:
-                        retval = -2
-                    p.join()
-                    if retval == -1:
-                        text += "\nNo JPEG File or JPEG file could not be read."
-                    elif retval == -2:
-                        text += "Error on embedding. Try another image or different parameter"
-                    else:
-                        text += retval
+                type = "jpeg"
+                p = Process(target=f5Extract, args=(q, ))
 
             elif algo == "lsb":
                 embedForm = LsbEmbedForm()
                 extractForm = LsbExtractForm(request.POST, request.FILES)
-                if extractForm.is_valid():
-                    p = Process(target=lsbExtract, args=(q, ))
-                    p.start()
-                    q.put([request.POST, request.FILES['file'].temporary_file_path()])
-                    try:
-                        retval = q.get(True, 10)
-                    except Q.Empty:
-                        retval = -2
-                    p.join()
-                    if retval == -1:
-                        text += "\nNo PNG File or PNG file could not be read."
-                    elif retval == -2:
-                        text += "Error on embedding. Try another image or different parameter"
-                    else:
-                        text += retval
+                type = "png"
+                p = Process(target=lsbExtract, args=(q, ))
+
             elif algo == "gifshuffle":
                 print "gifshuffle extracting..."
                 embedForm = GifShuffleEmbedForm()
                 extractForm = GifShuffleExtractForm(request.POST, request.FILES)
-                if extractForm.is_valid():
-                    p = Process(target=gifShuffleExtract, args=(q, ))
-                    p.start()
-                    q.put([request.POST, request.FILES['file'].temporary_file_path()])
-                    try:
-                        retval = q.get(True, 10)
-                    except Q.Empty:
-                        retval = -2
-                    p.join()
-                    if retval == -1:
-                        text += "\nNo GIF File or GIF file could not be read."
-                    elif retval == -2:
-                        text += "Error on embedding. Try another image or different parameter"
-                    else:
-                        text += retval
+                type = "gif"
+                p = Process(target=gifShuffleExtract, args=(q, ))
+
             elif algo == "bs":
                 embedForm = BattlestegEmbedForm()
                 extractForm = BattlestegExtractForm(request.POST, request.FILES)
-                if extractForm.is_valid():
-                    p = Process(target=bsExtract, args=(q, ))
-                    p.start()
-                    q.put([request.POST, request.FILES['file'].temporary_file_path()])
-                    try:
-                        retval = q.get(True, 10)
-                    except Q.Empty:
-                        retval = -2
-                    p.join()
-                    if retval == -1:
-                        text += "\nNo PNG File or PNG file could not be read."
-                    elif retval == -2:
-                        text += "Error on embedding. Try another image or different parameter"
-                    else:
-                        text += retval
-                
+                type = "png"
+                p = Process(target=bsExtract, args=(q, ))
+            # fork process to extract
+            if extractForm.is_valid():
+                p.start()
+                q.put([request.POST, request.FILES['file'].temporary_file_path()])
+                try:
+                    retval = q.get(True, 10)
+                except Q.Empty:
+                    retval = -2
+                p.join()
+                if retval == -1:
+                    text += "\nNo %s file or %s file could not be read."%(type, type)
+                elif retval == -2:
+                    text += "Error on extracting. Try another image or different parameter."
+                else:
+                    text += retval
+    # empty form
     else:
         if algo == "cpt":
             embedForm = CPTEmbedForm()
@@ -223,7 +131,7 @@ def algo(request, algo):
         elif algo == "bs":
             embedForm = BattlestegEmbedForm()
             extractForm = BattlestegExtractForm()
-            
+    # render
     return render_to_response("stego_algo.html", {'title' : algo_object.name,
                                             'algo' : algo,
                                             'embedForm' : embedForm, 
@@ -236,19 +144,23 @@ def createResponse(filename, type):
     response = HttpResponse(wrapper, mimetype='image/%s'%(type))
     response['Content-Length'] = os.path.getsize(filename)
 
-    response['Content-Disposition'] = 'attachment; filename=stego.png'
+    response['Content-Disposition'] = 'attachment; filename=stego.%s'%(type)
     return response
 
+    
 
 def cptEmbed(q):
+    print "Child process"
     post, filename = q.get()
     rgb_data = libstegofile.rgb_data_t()
     stego_data = libstegofile.rgb_data_t()
     png_struct = libstegofile.png_internal_data_t()
+    print "received request, opening file..."
     retcode = libstegofile.io_png_read(filename,rgb_data, png_struct)
     if retcode == 0:
         pass
     else:
+        print "File open failed"
         q.put(-1)
         return -1
     para = libstegofile.cpt_parameter()
@@ -257,10 +169,14 @@ def cptEmbed(q):
     para.pwlen = len(para.password)
     para.block_width = int(post['width'])
     para.block_height = int(post['height'])
+    print "file opened, embedding..."
     retcode = libstego.cpt_embed(rgb_data, stego_data, message, len(message), para)
+    print "integrating..."
     libstegofile.io_png_integrate(png_struct, stego_data)
+    print "writing..."
     libstegofile.io_png_write(filename, png_struct)
     q.put(filename)
+    print "Child process finished"
                     
 
 
