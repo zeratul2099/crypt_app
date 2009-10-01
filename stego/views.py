@@ -8,11 +8,12 @@ from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render_to_response
 from django.template import Context, loader
 from django.core.servers.basehttp import FileWrapper
-from multiprocessing import Process, Pipe, Queue
+from processing import Process, Pipe, Queue
 import Queue as Q
 import libstego, libstegofile, os
 
 def algo(request, algo):
+    print "entering algo"
     text = ""
     type = ""
     algo_object = get_object_or_404(Algo, shortTitle=algo)
