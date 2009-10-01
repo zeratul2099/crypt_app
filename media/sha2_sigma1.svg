@@ -197,7 +197,7 @@
 = Logic XOR
 </text>
 <svg x='0' y='0' width='1' height='1' >
-<set attributeName='x' from='0' to='0' dur='1' id='start' begin='s32.click;s64.click' />
+<set attributeName='x' to='0' dur='1' id='start' begin='s32.click;s64.click' />
 </svg>
 
 <svg height='25' width='75' x='5' y='150' id='s32' >

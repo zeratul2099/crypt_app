@@ -155,7 +155,7 @@
 <animate attributeName='x' id='f1' from='50' to='-30' begin='bita2.end+2' fill='freeze' dur='1s' />
 </use>
 <!-- - -->
-<svg width='15' heigth='15' x='150' y='85' opacity='0' >
+<svg width='15' height='15' x='150' y='85' opacity='0' >
 <path d='M 0 7.5 L 15 7.5' stroke='red' stroke-width='2' />
 <set attributeName='x' to='150' begin='start.click' />
 <set attributeName='y' to='85' begin='start.click' />

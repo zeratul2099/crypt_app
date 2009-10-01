@@ -78,13 +78,6 @@
        k
        </text>
        </svg>
-       <svg id='f' width="20" height="100">
-        <rect x='0.5' width="19" height="99" rx="10" ry="10"
-        fill="white" stroke="black" />
-        <text fill='black' x='8' y='50'>
-        F
-        </text>
-       </svg>
        <path id='arrow0' d='m 0 0 l 50 0 -4 -4 m 4 4 l -4 4' stroke='black' />
        <path id='arrow1' d='m 0 0 l 20 0 -4 -4 m 4 4 l -4 4' stroke='black' />
        <svg id='xor' width="30" height="30" >
@@ -398,7 +391,7 @@ New round
 = Leftshift
 </text>
 <svg x='0' y='0' width='1' height='1' >
-<set attributeName='x' from='0' to='0' dur='1' id='start' begin='round1.click;round2.click;round3.click;round4.click' />
+<set attributeName='x' to='0' dur='1' id='start' begin='round1.click;round2.click;round3.click;round4.click' />
 </svg>
 
 <svg height='25' width='100' x='5' y='525' id='round1' >

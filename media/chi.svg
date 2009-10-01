@@ -241,7 +241,6 @@
 
        <!--<text fill='red' x='-73' y='159' style="font-size:38px;font-family:'serif';"  >-->
        <!-- phase 1 -->
-       -
        <animate attributeName='x' from='73' to='73' fill='freeze' begin='2' dur='0' />
        <animate attributeName='x' from='73' to='88' fill='freeze' begin='7' dur='1' />
        <animate attributeName='x' from='-73' to='-73' fill='freeze' begin='8' dur='0' />
@@ -262,12 +261,11 @@
        <animate attributeName='x' from='-40' to='-40' fill='freeze' begin='77' dur='0' />
          </svg>
        
-         <svg width='15' heigth='15' x='-73' y='143' >
+         <svg width='15' height='15' x='-73' y='143' >
         <path d='M 0 15 L 7.5 0 15 15' stroke='red' stroke-width='2' />
 
        <!--<text fill='red' x='-73' y='155' style="font-size:18px;font-family:'sans';" >-->
        <!-- phase 1 -->
-       &amp;
        <animate attributeName="x" begin='8' from='88' to='88' fill='freeze' dur='0' />
        <animate attributeName='x' from='85' to='40' fill='freeze' begin='12' dur='1' />
        <animate attributeName='x' from='-185' to='-185' fill='freeze' begin='13' dur='0' />
