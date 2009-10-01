@@ -5,7 +5,7 @@ class CPTEmbedForm(forms.Form):
     message = forms.CharField(label='Nachricht', required=True)
     file = forms.FileField(required=True, label='PNG-Datei')
     pw = forms.CharField(label='Password',widget=forms.PasswordInput(render_value=False))
-    matrix_values = ((1,'1'),(2,'2'),(3,'3'),(4,'4'),) 
+    matrix_values = ((1,'1'),(3,'3'),(4,'4'),(5,'5'),(6,'6'),(7,'7'),(8,'8')) 
     height = forms.ChoiceField(choices=matrix_values, label='Blockhoehe')
     width = forms.ChoiceField(choices=matrix_values, label='Blockbreite')
 
