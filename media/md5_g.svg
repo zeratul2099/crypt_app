@@ -153,7 +153,7 @@
 </svg>
  
 <!-- AND -->
-<svg width='15' heigth='15' x='103' y='63' opacity='0' >
+<svg width='15' height='15' x='103' y='63' opacity='0' >
 <path d='M 0 15 L 7.5 0 15 15' stroke='red' stroke-width='2' />
 <set attributeName='y' to='63' begin='start.click' />
 <set attributeName='opacity' to='1' begin='b2.end' />

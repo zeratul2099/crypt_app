@@ -141,7 +141,7 @@
 <set attributeName='opacity' to='0' begin='c2.end+1' />
 </use>
 <!-- - -->
-<svg width='15' heigth='15' x='103' y='137' opacity='0' >
+<svg width='15' height='15' x='103' y='137' opacity='0' >
 <path d='M 0 7.5 L 15 7.5' stroke='red' stroke-width='2' />
 <set attributeName='x' to='103' begin='start.click' />
 <set attributeName='opacity' to='1' begin='d1.end' />
