@@ -145,6 +145,8 @@
 </text>
 
 <svg height='25' width='75' x='5' y='150' id='start' >
+<set attributeName='x' to='-100' begin='start.click' />
+<set attributeName='x' to='5' begin='f1.end' />
 <rect height='24' width='74' x='0.5' y='0.5' rx='5' ry='5' stroke='black' fill='white' />
  <text fill='black' x='25' y='18' style="font-size:14px;" >
 Start

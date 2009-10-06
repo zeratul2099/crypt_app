@@ -367,8 +367,8 @@ New round
 </svg>
 
 <svg height='25' width='100' x='5' y='425' id='round1' >
-<set attributeName='opacity' to='0' begin='start.begin' />
-<set attributeName='opacity' to='1' begin='a07.end' />
+<set attributeName='x' to='-100' begin='start.begin' />
+<set attributeName='x' to='5' begin='a07.end' />
 <rect height='24' width='99' x='0.5' y='0.5' rx='5' ry='5' stroke='black' fill='white' />
  <text fill='black' x='5' y='18' style="font-size:14px;" >
 Round 0-15
@@ -376,8 +376,8 @@ Round 0-15
 </svg>
 
 <svg height='25' width='100' x='115' y='425' id='round2' >
-<set attributeName='opacity' to='0' begin='start.begin' />
-<set attributeName='opacity' to='1' begin='a07.end' />
+<set attributeName='x' to='-100' begin='start.begin' />
+<set attributeName='x' to='115' begin='a07.end' />
 <rect height='24' width='99' x='0.5' y='0.5' rx='5' ry='5' stroke='black' fill='white' />
  <text fill='black' x='5' y='18' style="font-size:14px;" >
 Round 16-31
@@ -385,8 +385,8 @@ Round 16-31
 </svg>
 
 <svg height='25' width='100' x='225' y='425' id='round3' >
-<set attributeName='opacity' to='0' begin='start.begin' />
-<set attributeName='opacity' to='1' begin='a07.end' />
+<set attributeName='x' to='-100' begin='start.begin' />
+<set attributeName='x' to='225' begin='a07.end' />
 <rect height='24' width='99' x='0.5' y='0.5' rx='5' ry='5' stroke='black' fill='white' />
  <text fill='black' x='5' y='18' style="font-size:14px;" >
 Round 32-47
@@ -394,8 +394,8 @@ Round 32-47
 </svg>
 
 <svg height='25' width='100' x='335' y='425' id='round4' >
-<set attributeName='opacity' to='0' begin='start.begin' />
-<set attributeName='opacity' to='1' begin='a07.end' />
+<set attributeName='x' to='-100' begin='start.begin' />
+<set attributeName='x' to='335' begin='a07.end' />
 <rect height='24' width='99' x='0.5' y='0.5' rx='5' ry='5' stroke='black' fill='white' />
  <text fill='black' x='5' y='18' style="font-size:14px;" >
 Round 48-63

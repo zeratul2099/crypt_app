@@ -415,8 +415,8 @@ New round
 </svg>
 
 <svg height='25' width='100' x='5' y='525' id='round1' >
-<set attributeName='opacity' to='0' begin='start.begin' />
-<set attributeName='opacity' to='1' begin='a08.end' />
+<set attributeName='x' to='-100' begin='start.begin' />
+<set attributeName='x' to='5' begin='a08.end' />
 <rect height='24' width='99' x='0.5' y='0.5' rx='5' ry='5' stroke='black' fill='white' />
  <text fill='black' x='35' y='18' style="font-size:14px;" >
 Start
