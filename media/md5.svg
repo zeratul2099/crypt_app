@@ -358,7 +358,7 @@ New round
 
 <use xlink:href='#shift' x='550' y='200' />
 <text fill='black' x='645' y='220' style="font-size:14px;" >
-= Leftshift
+= Leftrotation
 </text>
 
 

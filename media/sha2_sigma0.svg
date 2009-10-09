@@ -177,7 +177,7 @@
 <path d='M 220 15 l 0 150' stroke='black' stroke-dasharray="10,10"/>
 <use xlink:href='#shift' x='230' y='25' />
 <text fill='black' x='270' y='45' style="font-size:14px;" >
-= Rightshift
+= Rightrotation
 </text>
 
 <use xlink:href='#xor' x='230' y='75' />
