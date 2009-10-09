@@ -90,6 +90,18 @@
         <use xlink:href="#bit" x='0' y='0' />
         <path d="M 10 12 l -10 5 10 5 m 10 -10 l -10 5 10 5 m 10 -10 l -10 5 10 5" stroke='red' stroke-width='2' />
         </svg>
+        <svg id='shift5' width="40" height="30" >
+        <use xlink:href="#shift" x='0' y='0' />
+        <text fill='red' x='30' y='30' style="font-size:12px;" >
+        5
+        </text>
+        </svg>
+        <svg id='shift30' width="40" height="30" >
+        <use xlink:href="#shift" x='0' y='0' />
+        <text fill='red' x='25' y='30' style="font-size:12px;" >
+        30
+        </text>
+        </svg>
         <svg id='add' width="30" height="30" >
        
        <use xlink:href="#bit" x='0' y='0' />
@@ -224,9 +236,11 @@
 </use>
 
 <!-- shift -->
-<use xlink:href='#shift' x='200' y='220' opacity='0' >
+<use xlink:href='#shift5' x='200' y='220' opacity='0' >
 <set attributeName='x' to='200' begin='start.begin' />
 <set attributeName='opacity' to='1' dur='1' begin='a04.end' />
+</use>
+<use xlink:href='#shift30' x='150' y='220' opacity='0' >
 <set attributeName='x' to='150' begin='b03.end' />
 <set attributeName='opacity' to='1' dur='1' begin='b03.end' />
 </use>
@@ -338,34 +352,7 @@ New round
 <text fill='black' x='685' y='140' style="font-size:14px;" >
 (128 bit)
 </text>
-<!--
-<use xlink:href='#m' x='515' y='150' />
-<use xlink:href='#m' x='535' y='150' />
-<text fill='black' x='575' y='170'>
-...
-</text>
-
-<use xlink:href='#m' x='595' y='150' />
-<text fill='black' x='645' y='170' style="font-size:14px;" >
-= 512 bit message block
-</text>
-
-<use xlink:href='#k' x='550' y='200' />
-<text fill='black' x='580' y='220'>
-...
-</text>
-<use xlink:href='#k' x='590' y='200' />
-<use xlink:href='#k' x='610' y='200' />
-<text fill='black' x='645' y='220' style="font-size:14px;" >
-= 512 bit constant block
-</text>
-
-<rect x='550' y='250' width="20" height="100" rx="10" ry="10"
-      fill="white" stroke="black" />
-<text fill='black' x='645' y='300' style="font-size:14px;" >
-= Functions F, G, H, I
-</text>
--->    
+   
 <path d='M 500 5 l 0 255 350 0' stroke='black' stroke-dasharray="10,10" />
 
 <use xlink:href='#add' x='600' y='170' />
