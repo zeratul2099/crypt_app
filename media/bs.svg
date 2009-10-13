@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   width="100mm"
+   height="100mm"
+   id="svg2"
+>
+<script type="text/ecmascript" xlink:href="/content/smil.user.js" />
+  <defs
+     id="defs4">
+       <svg width="30" height="30" id="bit" >
+            <rect y="10" x="0.1" width="19.9" height="19.9" fill="white" stroke="black" />
+            <polygon fill="white" stroke="black" 
+                points="0.1 10, 10 0.1, 29.9 0.1, 20 10" />
+            <polygon fill="white" stroke="black" 
+                points="29.9 0.1, 29.9 20, 20 29.9, 20 10" />
+            
+       </svg>
+       <svg width="30" height="30" id="zero" >
+        <use xlink:href='#bit' x='0' y='0' />
+        <text x='5' y='25' fill='black' style="font-size:18px;" >
+        0
+        </text>
+       </svg>
+       <svg width="30" height="30" id="one" >
+        <use xlink:href='#bit' x='0' y='0' />
+        <text x='5' y='25' fill='black' style="font-size:18px;" >
+        1
+        </text>
+       </svg>
+       <svg width='15' height='15' id='cross' stroke='black' stroke-width='2' >
+       <path d='M 7.5 2 l 0 11 M 2 7.5 l 11 0' />
+       </svg>
+
+
+  </defs>
+
+    <g
+       
+       style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;font-family:'sans';"
+       id="g2383 " transform="scale(1)"
+       >
+<rect x='0' y='0' width='800' height='600' fill='white' />
+<image x="100" y="100" width="128" height="128"
+    xlink:href="/content/bs_cut.png">
+    <title>bs_cut.png</title>
+</image>
+<rect x='186' y='129' width='12' height='12' stroke='black' opacity='0' >
+<animate attributeName='width' from='12' to='12' dur='0' begin='start.click' fill='freeze' />
+<animate attributeName='height' from='12' to='12' dur='0' begin='start.click' fill='freeze' />
+<animate attributeName='x' from='186' to='186' dur='0' begin='start.click' fill='freeze' />
+<animate attributeName='y' from='129' to='129' dur='0' begin='start.click' fill='freeze' />
+<animate attributeName='opacity' from='0' to='1' dur='0.1' begin='start.click' fill='freeze' id='square' />
+<animate attributeName='stroke' from='black' to='red' dur='0.2' begin='square.end+0.1' />
+<animate attributeName='stroke' from='red' to='black' dur='0.2' begin='square.end+0.3' />
+<animate attributeName='stroke' from='black' to='red' dur='0.2' begin='square.end+0.5' />
+<animate attributeName='stroke' from='red' to='black' dur='0.2' begin='square.end+0.7' />
+<animate attributeName='stroke' from='black' to='red' dur='0.2' begin='square.end+0.9' />
+
+<animate attributeName='width' from='12' to='189' dur='1' fill='freeze' begin='square.end+2' />
+<animate attributeName='height' from='12' to='189' dur='1' fill='freeze' begin='square.end+2' />
+<animate attributeName='x' from='186' to='69' dur='1' fill='freeze' begin='square.end+2' />
+<animate attributeName='y' from='129' to='69' dur='1' fill='freeze' begin='square.end+2' />
+</rect>
+<svg height='190' width='190' x='69' y='69' opacity='0' >
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='opacity' from='0' to='1' dur='0.7' fill='freeze' begin='square.end+2.3' />
+<!-- line 1 -->
+<rect x='2' y='2' width='15' height='15' stroke='black' fill='#fefefe' />
+<rect x='19' y='2' width='15' height='15' stroke='black' fill='#fefefe' />
+<rect x='36' y='2' width='15' height='15' stroke='black' fill='#f9f9f9' />
+<rect x='53' y='2' width='15' height='15' stroke='black' fill='#c1c1c1' />
+<rect x='70' y='2' width='15' height='15' stroke='black' fill='#c4c4c1' />
+<rect x='87' y='2' width='15' height='15' stroke='black' fill='#eeeed6' />
+<rect x='104' y='2' width='15' height='15' stroke='black' fill='#f0f0d8' />
+<rect x='121' y='2' width='15' height='15' stroke='black' fill='#f0f0d8' />
+<rect x='138' y='2' width='15' height='15' stroke='black' fill='#f0f0d8' />
+<rect x='155' y='2' width='15' height='15' stroke='black' fill='#f0f0d8' />
+<rect x='172' y='2' width='15' height='15' stroke='black' fill='#f0f0d8' />
+<!-- line 2 -->
+<rect x='2' y='19' width='15' height='15' stroke='black' fill='#fefefe' />
+<rect x='19' y='19' width='15' height='15' stroke='black' fill='#fefefe' />
+<rect x='36' y='19' width='15' height='15' stroke='black' fill='#cdcdcd' />
+<rect x='53' y='19' width='15' height='15' stroke='black' fill='#bdbdbd' />
+<rect x='70' y='19' width='15' height='15' stroke='black' fill='#e4e4d1' />
+<rect x='87' y='19' width='15' height='15' stroke='black' fill='#f0f0d8' />
+<rect x='104' y='19' width='15' height='15' stroke='black' fill='#f0f0d8' />
+<rect x='121' y='19' width='15' height='15' stroke='black' fill='#f0f0d8' />
+<rect x='138' y='19' width='15' height='15' stroke='black' fill='#f0f0d8' />
+<rect x='155' y='19' width='15' height='15' stroke='black' fill='#f0f0d8' />
+<rect x='172' y='19' width='15' height='15' stroke='black' fill='#f0f0d8' />
+<!-- line 3 -->
+<rect x='2' y='36' width='15' height='15' stroke='black' fill='#fefefe' />
+<rect x='19' y='36' width='15' height='15' stroke='black' fill='#e1e1e1' />
+<rect x='36' y='36' width='15' height='15' stroke='black' fill='#bababa' />
+<rect x='53' y='36' width='15' height='15' stroke='black' fill='#dbdbcc' />
+<rect x='70' y='36' width='15' height='15' stroke='black' fill='#f0f0d8' />
+<rect x='87' y='36' width='15' height='15' stroke='black' fill='#f0f0d8' />
+<rect x='104' y='36' width='15' height='15' stroke='black' fill='#f0f0d8' />
+<rect x='121' y='36' width='15' height='15' stroke='black' fill='#f0f0d8' />
+<rect x='138' y='36' width='15' height='15' stroke='black' fill='#f0f0d8' />
+<rect x='155' y='36' width='15' height='15' stroke='black' fill='#f0f0d8' />
+<rect x='172' y='36' width='15' height='15' stroke='black' fill='#f0f0d8' />
+<!-- line 4 -->
+<rect x='2' y='53' width='15' height='15' stroke='black' fill='#f5f5f5' />
+<rect x='19' y='53' width='15' height='15' stroke='black' fill='#bdbdbd' />
+<rect x='36' y='53' width='15' height='15' stroke='black' fill='#c9c9c2' />
+<rect x='53' y='53' width='15' height='15' stroke='black' fill='#eeeed6' />
+<rect x='70' y='53' width='15' height='15' stroke='black' fill='#f0f0d8' />
+<rect x='87' y='53' width='15' height='15' stroke='black' fill='#f0f0d8' />
+<rect x='104' y='53' width='15' height='15' stroke='black' fill='#f0f0d8' />
+<rect x='121' y='53' width='15' height='15' stroke='black' fill='#f0f0d8' />
+<rect x='138' y='53' width='15' height='15' stroke='black' fill='#f0f0d8' />
+<rect x='155' y='53' width='15' height='15' stroke='black' fill='#f0f0d8' />
+<rect x='172' y='53' width='15' height='15' stroke='black' fill='#f0f0d8' />
+<!-- line 5 -->
+<rect x='2' y='70' width='15' height='15' stroke='black' fill='#c9c9c9' />
+<rect x='19' y='70' width='15' height='15' stroke='black' fill='#bebbbb' />
+<rect x='36' y='70' width='15' height='15' stroke='black' fill='#d6ada4' />
+<rect x='53' y='70' width='15' height='15' stroke='black' fill='#e2cbb9' />
+<rect x='70' y='70' width='15' height='15' stroke='black' fill='#f0f0d8' />
+<rect x='87' y='70' width='15' height='15' stroke='black' fill='#f0f0d8' />
+<rect x='104' y='70' width='15' height='15' stroke='black' fill='#f0f0d8' />
+<rect x='121' y='70' width='15' height='15' stroke='black' fill='#f0f0d8' />
+<rect x='138' y='70' width='15' height='15' stroke='black' fill='#f0f0d8' />
+<rect x='155' y='70' width='15' height='15' stroke='black' fill='#f0f0d8' />
+<rect x='172' y='70' width='15' height='15' stroke='black' fill='#f0f0d8' />
+<!-- line 6 -->
+<rect x='2' y='87' width='15' height='15' stroke='black' fill='#bababa' />
+<rect x='19' y='87' width='15' height='15' stroke='black' fill='#dedcd8' />
+<rect x='36' y='87' width='15' height='15' stroke='black' fill='#f1eee8' />
+<rect x='53' y='87' width='15' height='15' stroke='black' fill='#e2cac3' />
+<rect x='70' y='87' width='15' height='15' stroke='black' fill='#d6ada4' />
+<rect x='87' y='87' width='15' height='15' stroke='black' fill='#e0c6b4' />
+<rect x='104' y='87' width='15' height='15' stroke='black' fill='#f0f0d8' />
+<rect x='121' y='87' width='15' height='15' stroke='black' fill='#f0f0d8' />
+<rect x='138' y='87' width='15' height='15' stroke='black' fill='#f0f0d8' />
+<rect x='155' y='87' width='15' height='15' stroke='black' fill='#f0f0d8' />
+<rect x='172' y='87' width='15' height='15' stroke='black' fill='#f0f0d8' />
+<!-- line 7 -->
+<rect x='2' y='104' width='15' height='15' stroke='black' fill='#d5d5d5' />
+<rect x='19' y='104' width='15' height='15' stroke='black' fill='#f0ece6' />
+<rect x='36' y='104' width='15' height='15' stroke='black' fill='#f1eee8' />
+<rect x='53' y='104' width='15' height='15' stroke='black' fill='#f1eee8' />
+<rect x='70' y='104' width='15' height='15' stroke='black' fill='#f1eee8' />
+<rect x='87' y='104' width='15' height='15' stroke='black' fill='#e7d7d0' />
+<rect x='104' y='104' width='15' height='15' stroke='black' fill='#d6ada4' />
+<rect x='121' y='104' width='15' height='15' stroke='black' fill='#dcbbab' />
+<rect x='138' y='104' width='15' height='15' stroke='black' fill='#eeeed6' />
+<rect x='155' y='104' width='15' height='15' stroke='black' fill='#f0f0d8' />
+<rect x='172' y='104' width='15' height='15' stroke='black' fill='#f0f0d8' />
+<!-- line 8 -->
+<rect x='2' y='121' width='15' height='15' stroke='black' fill='#d5d5d5' />
+<rect x='19' y='121' width='15' height='15' stroke='black' fill='#dddddd' />
+<rect x='36' y='121' width='15' height='15' stroke='black' fill='#e6e4e1' />
+<rect x='53' y='121' width='15' height='15' stroke='black' fill='#f1eee8' />
+<rect x='70' y='121' width='15' height='15' stroke='black' fill='#f1eee8' />
+<rect x='87' y='121' width='15' height='15' stroke='black' fill='#f1eee8' />
+<rect x='104' y='121' width='15' height='15' stroke='black' fill='#f1eee8' />
+<rect x='121' y='121' width='15' height='15' stroke='black' fill='#eaded8' />
+<rect x='138' y='121' width='15' height='15' stroke='black' fill='#d6ada4' />
+<rect x='155' y='121' width='15' height='15' stroke='black' fill='#dab6a8' />
+<rect x='172' y='121' width='15' height='15' stroke='black' fill='#eeeed6' />
+<!-- line 9 -->
+<rect x='2' y='138' width='15' height='15' stroke='black' fill='#dddddd' />
+<rect x='19' y='138' width='15' height='15' stroke='black' fill='#dddddd' />
+<rect x='36' y='138' width='15' height='15' stroke='black' fill='#dddddd' />
+<rect x='53' y='138' width='15' height='15' stroke='black' fill='#dddddd' />
+<rect x='70' y='138' width='15' height='15' stroke='black' fill='#e6e4e1' />
+<rect x='87' y='138' width='15' height='15' stroke='black' fill='#eeece7' />
+<rect x='104' y='138' width='15' height='15' stroke='black' fill='#f1eee8' />
+<rect x='121' y='138' width='15' height='15' stroke='black' fill='#f1eee8' />
+<rect x='138' y='138' width='15' height='15' stroke='black' fill='#f1eee8' />
+<rect x='155' y='138' width='15' height='15' stroke='black' fill='#ece2dc' />
+<rect x='172' y='138' width='15' height='15' stroke='black' fill='#d8afa8' />
+<!-- line 10 -->
+<rect x='2' y='155' width='15' height='15' stroke='black' fill='#dddddd' />
+<rect x='19' y='155' width='15' height='15' stroke='black' fill='#dddddd' />
+<rect x='36' y='155' width='15' height='15' stroke='black' fill='#dddddd' />
+<rect x='53' y='155' width='15' height='15' stroke='black' fill='#dddddd' />
+<rect x='70' y='155' width='15' height='15' stroke='black' fill='#dddddd' />
+<rect x='87' y='155' width='15' height='15' stroke='black' fill='#dddddd' />
+<rect x='104' y='155' width='15' height='15' stroke='black' fill='#e4e3e1' />
+<rect x='121' y='155' width='15' height='15' stroke='black' fill='#eceae5' />
+<rect x='138' y='155' width='15' height='15' stroke='black' fill='#f1eee8' />
+<rect x='155' y='155' width='15' height='15' stroke='black' fill='#f1eee8' />
+<rect x='172' y='155' width='15' height='15' stroke='black' fill='#f1eee8' />
+<!-- line 11 -->
+<rect x='2' y='172' width='15' height='15' stroke='black' fill='#dddddd' />
+<rect x='19' y='172' width='15' height='15' stroke='black' fill='#dddddd' />
+<rect x='36' y='172' width='15' height='15' stroke='black' fill='#dddddd' />
+<rect x='53' y='172' width='15' height='15' stroke='black' fill='#dddddd' />
+<rect x='70' y='172' width='15' height='15' stroke='black' fill='#dddddd' />
+<rect x='87' y='172' width='15' height='15' stroke='black' fill='#dddddd' />
+<rect x='104' y='172' width='15' height='15' stroke='black' fill='#dddddd' />
+<rect x='121' y='172' width='15' height='15' stroke='black' fill='#dddddd' />
+<rect x='138' y='172' width='15' height='15' stroke='black' fill='#e1e1e1' />
+<rect x='155' y='172' width='15' height='15' stroke='black' fill='#eceae5' />
+<rect x='172' y='172' width='15' height='15' stroke='black' fill='#f1eee8' />
+
+<use xlink:href='#cross' x='88' y='-100' >
+<animate attributeName='y' from='0' to='88' dur='2' begin='norm01.end+1' id='shot01' />
+<animate attributeName='y' from='0' to='19' dur='2' begin='ranged01.end' id='shot02' />
+<animate attributeName='x' from='88' to='138' dur='2' begin='ranged01.end'  />
+<animate attributeName='y' from='0' to='121' dur='2' begin='ranged02.end' id='shot03' />
+<animate attributeName='x' from='88' to='121' dur='2' begin='ranged02.end'  />
+<animate attributeName='y' from='0' to='70' dur='2' begin='ranged03.end' id='shot04' />
+<animate attributeName='x' from='88' to='19' dur='2' begin='ranged03.end'  />
+<animate attributeName='y' from='0' to='87' dur='2' begin='ranged04.end' id='shot05' />
+<animate attributeName='x' from='88' to='172' dur='2' begin='ranged04.end'  />
+<animate attributeName='y' from='0' to='36' dur='2' begin='ranged05.end' id='shot06' />
+<animate attributeName='x' from='88' to='53' dur='2' begin='ranged05.end'  />
+</use>
+
+<rect width='13' height='13' x='88' y='88' fill='red' opacity='0' >
+<animate attributeName='opacity' from='0' to='0' dur='0' begin='start.click' fill='freeze' />
+<animate attributeName='opacity' from='0' to='1' dur='0.1' begin='shot01.end' fill='freeze' />
+</rect>
+<rect width='13' height='13' x='139' y='20' fill='green' opacity='0' >
+<animate attributeName='opacity' from='0' to='0' dur='0' begin='start.click' fill='freeze' />
+<animate attributeName='opacity' from='0' to='1' dur='0.1' begin='shot02.end' fill='freeze' />
+</rect>
+<rect width='13' height='13' x='122' y='122' fill='red' opacity='0' >
+<animate attributeName='opacity' from='0' to='0' dur='0' begin='start.click' fill='freeze' />
+<animate attributeName='opacity' from='0' to='1' dur='0.1' begin='shot03.end' fill='freeze' />
+</rect>
+<rect width='13' height='13' x='20' y='71' fill='red' opacity='0' >
+<animate attributeName='opacity' from='0' to='0' dur='0' begin='start.click' fill='freeze' />
+<animate attributeName='opacity' from='0' to='1' dur='0.1' begin='shot04.end' fill='freeze' />
+</rect>
+<rect width='13' height='13' x='173' y='88' fill='green' opacity='0' >
+<animate attributeName='opacity' from='0' to='0' dur='0' begin='start.click' fill='freeze' />
+<animate attributeName='opacity' from='0' to='1' dur='0.1' begin='shot05.end' fill='freeze' />
+</rect>
+<rect width='13' height='13' x='54' y='37' fill='red' opacity='0' >
+<animate attributeName='opacity' from='0' to='0' dur='0' begin='start.click' fill='freeze' />
+<animate attributeName='opacity' from='0' to='1' dur='0.1' begin='shot06.end' fill='freeze' />
+</rect>
+
+</svg>
+
+
+<text x='5' y='25' fill='black' opacity='0' >
+<animate attributeName='opacity' from='0' to='1' dur='0.5' begin='square.end+3.5' fill='freeze' id='norm01' />
+<animate attributeName='opacity' from='1' to='0' dur='0.5' begin='shot01.end+3' fill='freeze' />
+Normal shot
+</text>
+<text x='5' y='25' fill='black' opacity='0' >
+<animate attributeName='opacity' from='0' to='0' dur='0' begin='start.click' fill='freeze' />
+<animate attributeName='opacity' from='0' to='1' dur='0.5' begin='shot01.end+3' fill='freeze' id='ranged01' />
+Ranged shot
+</text>
+<text x='250' y='25' fill='black' opacity='0' >
+<animate attributeName='opacity' from='0' to='1' dur='0.1' begin='norm01.end' fill='freeze' id='norm02' />
+<animate attributeName='opacity' from='1' to='0' dur='0.1' begin='shot01.end+3' fill='freeze' />
+x = 0 y = 0
+</text>
+<text x='250' y='25' fill='black' opacity='0' >
+<animate attributeName='opacity' from='0' to='1' dur='0.1' begin='shot01.end+3' fill='freeze' />
+<animate attributeName='opacity' from='1' to='0' dur='0.1' begin='shot02.end+3' fill='freeze' />
+x = 3 y = -4
+</text>
+<text x='250' y='25' fill='black' opacity='0' >
+<animate attributeName='opacity' from='0' to='1' dur='0.1' begin='shot02.end+3' fill='freeze' id='ranged02' />
+<animate attributeName='opacity' from='1' to='0' dur='0.1' begin='shot03.end+3' fill='freeze' />
+x = 2 y = 2
+</text>
+<text x='250' y='25' fill='black' opacity='0' >
+<animate attributeName='opacity' from='0' to='1' dur='0.1' begin='shot03.end+3' fill='freeze' id='ranged03' />
+<animate attributeName='opacity' from='1' to='0' dur='0.1' begin='shot04.end+3' fill='freeze' />
+x = -4 y = -1
+</text>
+<text x='250' y='25' fill='black' opacity='0' >
+<animate attributeName='opacity' from='0' to='1' dur='0.1' begin='shot04.end+3' fill='freeze' id='ranged04' />
+<animate attributeName='opacity' from='1' to='0' dur='0.1' begin='shot05.end+3' fill='freeze' />
+x = 5 y = 0
+</text>
+<text x='250' y='25' fill='black' opacity='0' >
+<animate attributeName='opacity' from='0' to='1' dur='0.1' begin='shot05.end+3' fill='freeze' id='ranged05' />
+<animate attributeName='opacity' from='0' to='0' dur='0' begin='start.click' fill='freeze' />
+x = -2 y = -3
+</text>
+<text x='250' y='40' opacity='0' fill='red' >
+<set attributeName='opacity'  to='1' dur='1' begin='shot01.end' />
+<set attributeName='opacity'  to='1' dur='1' begin='shot03.end' />
+<set attributeName='opacity'  to='1' dur='1' begin='shot04.end' />
+<set attributeName='opacity'  to='1' dur='1' begin='shot06.end' />
+Hit
+</text>
+<text x='250' y='40' opacity='0' fill='green' >
+<set attributeName='opacity'  to='1' dur='1' begin='shot02.end' />
+<set attributeName='opacity'  to='1' dur='1' begin='shot05.end' />
+Miss
+</text>
+<text x='300' y='100' opacity='0' fill='black' >
+Shots left
+</text>
+<text x='270' y='100' opacity='0' fill='black' >
+<animate attributeName='opacity' from='0' to='0' dur='0' begin='start.click' fill='freeze' />
+<animate attributeName='opacity' from='0' to='1' dur='0.1' begin='norm01.end' fill='freeze' />
+Shots left
+</text>
+<text x='270' y='120' opacity='0' fill='black' >
+<animate attributeName='opacity' from='0' to='1' dur='0.01' begin='norm01.end' fill='freeze' />
+<animate attributeName='opacity' from='1' to='0' dur='0.01' begin='ranged01.end' fill='freeze' />
+5
+</text>
+<text x='270' y='120' opacity='0' fill='black' >
+<animate attributeName='opacity' from='0' to='1' dur='0.01' begin='ranged01.end' fill='freeze' />
+<animate attributeName='opacity' from='1' to='0' dur='0.01' begin='ranged02.end' fill='freeze' />
+4
+</text>
+<text x='270' y='120' opacity='0' fill='black' >
+<animate attributeName='opacity' from='0' to='1' dur='0.01' begin='ranged02.end' fill='freeze' />
+<animate attributeName='opacity' from='1' to='0' dur='0.01' begin='ranged03.end' fill='freeze' />
+3
+</text>
+<text x='270' y='120' opacity='0' fill='black' >
+<animate attributeName='opacity' from='0' to='1' dur='0.01' begin='ranged03.end' fill='freeze' />
+<animate attributeName='opacity' from='1' to='0' dur='0.01' begin='ranged04.end' fill='freeze' />
+2
+</text>
+<text x='270' y='120' opacity='0' fill='black' >
+<animate attributeName='opacity' from='0' to='1' dur='0.01' begin='ranged04.end' fill='freeze' />
+<animate attributeName='opacity' from='1' to='0' dur='0.01' begin='ranged05.end' fill='freeze' />
+1
+</text>
+<text x='270' y='120' opacity='0' fill='black' >
+<animate attributeName='opacity' from='0' to='0' dur='0' begin='start.click' fill='freeze' />
+<animate attributeName='opacity' from='0' to='1' dur='0.01' begin='ranged05.end' fill='freeze' />
+0
+</text>
+<text x='270' y='150' opacity='0' fill='black' >
+<animate attributeName='opacity' from='0' to='0' dur='0' begin='start.click' fill='freeze' />
+<animate attributeName='opacity' from='0' to='1' dur='0.1' begin='norm01.end' fill='freeze' />
+Range
+</text>
+<text x='270' y='170' opacity='0' fill='black' >
+<animate attributeName='opacity' from='0' to='0' dur='0' begin='start.click' fill='freeze' />
+<animate attributeName='opacity' from='0' to='1' dur='0.1' begin='norm01.end' fill='freeze' />
+5
+</text>
+
+
+<rect width='13' height='13' x='55' y='270' fill='white' stroke='black' />
+<text x='75' y='280' fill='black' font-size='12' >
+= single pixel
+</text>
+<rect width='13' height='13' x='55' y='295' fill='red' stroke='black' />
+<text x='75' y='305' fill='black' font-size='12' >
+= edge here, embed message bit via LSB
+</text>
+<rect width='13' height='13' x='55' y='320' fill='green' stroke='black' />
+<text x='75' y='330' fill='black' font-size='12' >
+= no edge here, do not embed
+</text>
+
+<svg height='25' width='75' x='125' y='35' id='start' >
+<set attributeName='x' to='-100' begin='start.click' />
+<set attributeName='x' to='125' begin='shot06.end+3' />
+<rect height='24' width='74' x='0.5' y='0.5' rx='5' ry='5' stroke='black' fill='white' />
+ <text fill='black' x='25' y='18' style="font-size:14px;" >
+Start
+</text>
+</svg>
+
+</g>
+</svg>
