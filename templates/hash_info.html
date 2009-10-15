@@ -1,20 +1,27 @@
 {% extends "basis.html" %}
 
-{% block titleline %}{{ title|safe }}{% endblock %}
-{% block titel %}{{ title|safe }}{% endblock %}
+{% block titleline %}{{ infopage.title|safe }}{% endblock %}
+{% block titel %}{{ infopage.title|safe }}{% endblock %}
 
 {% block inhalt %}
 <a href='/{{ algo.type }}/algo/{{ algo.shortTitle }}/'>{{ algo.name }} ausprobieren</a>
 <p>
+{% ifequal infopage.shortTitle "overview" %}
+&gt; <a href='../../../crypt_app/'>Crypt App</a> &gt; <a href='../../../{{ algo.type }}/'>{{ algo_type }}</a> &gt; {{ algo.name }}
+{% else %}
+&gt; <a href='../../../crypt_app/'>Crypt App</a> &gt; <a href='../../../{{ algo.type }}/'>{{ algo_type }}</a> &gt; <a href='../../../info/{{ algo.shortTitle }}/overview'>{{ algo.name }}</a> &gt; {{ infopage.title|safe }}
+{% endifequal %}
+</p>
+<p>
 <table width='100%'>
     <tr>
-        <th width='25%' rowspan='3' valign='top' align='left' ><ul></ul>{{ nav|safe }}</ul><p><a href='/{{ algo.type }}/'>zur&uuml;ck</a><br></th>
+        <th width='25%' rowspan='3' valign='top' align='left' ><ul></ul>{{ nav|safe }}</ul></th>
         {% if caption %}
-        <td width='75%' valign='top' align='center' ><h3>{{ caption|safe }}</h3></td></tr>
-        <tr>{% endif %}<td width='75%' valign='top' align='center' ><object type="image/svg+xml" data='/content/{{ svg }}' width="{{ width }}" height="{{ height }}"></object></td>
+        <td width='75%' valign='top' align='center' ><h3>{{ infopage.caption|safe }}</h3></td></tr>
+        <tr>{% endif %}<td width='75%' valign='top' align='center' ><object type="image/svg+xml" data='/content/{{ svg }}' width="{{ infopage.width }}" height="{{ infopage.height }}"></object></td>
         
     </tr><tr>
-        <td width='75%' valign='top'>{{ text|safe }}</td>
+        <td width='75%' valign='top'>{{ infopage.text|safe }}</td>
     </tr>
 </table>
 <p>You are using {{ user_agent }}</p>

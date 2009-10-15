@@ -12,9 +12,9 @@ def list(request, algo_type):
     if algo_type == "hash":
         title = "Hashalgorithmen"
     elif algo_type == "stego":
-        title = "Steganographische Algorithmen"
+        title = "Steganographie"
     elif algo_type == "crypto":
-        title = "Kryptographische Algorithmen"
+        title = "Kryptographie"
     else:
         title = ""
         
@@ -50,13 +50,17 @@ def info(request, algo, page):
     # doesn't work because of urls inside list :(
     #for p in InfoPage.objects.filter(algo=algo_object, masterPage=main_page):
     #   nav_list.append("<a href='/"+algo_object.type+"/info/"+algo_object.shortTitle+"/"+p.shortTitle+"/'>"+p.title+"</a>")
-    return render_to_response("hash_info.html", {'title' : info_page.title,
-                                                'text' : info_page.text,
+    type_long = ""
+    if algo_object.type == 'crypo':
+        type_long = "Krytographie"
+    elif algo_object.type == 'stego':
+        type_long = "Steganographie"
+    elif algo_object.type == 'hash':
+        type_long = "Hashalgorithmen"
+    return render_to_response("hash_info.html", { 'infopage' : info_page,
                                                 'svg' : svg,
-                                                'width' : info_page.i_width,
-                                                'height' : info_page.i_height,
-                                                'caption' : info_page.i_caption,
                                                 'nav' : nav,
                                                 'algo' : algo_object,
+                                                'algo_type' : type_long,
                                                 'user_agent' : user_agent,
                                                 })

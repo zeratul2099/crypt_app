@@ -5,7 +5,9 @@
 
 {% block inhalt %}
 (<a href='/info/{{ algo }}/overview/'>Was ist das?</a>)
-
+<p>
+&gt; <a href='../../../crypt_app/'>Crypt App</a> &gt; <a href='../../'>Steganographie</a> &gt; <a href='../../../info/{{ algo }}/overview'>{{ title }}</a> &gt; Ausprobieren
+</p>
     <table width='100%'>
         <tr><td>Einbetten</td><td>Ausbetten</td></tr>
            
@@ -32,8 +34,5 @@
 {{ text|escape|linebreaksbr }}<p>
    
 
-
-
-<a href='../../'>zur&uuml;ck</a>
 {% endblock %}
 
