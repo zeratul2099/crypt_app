@@ -16,9 +16,9 @@
 <table width='100%'>
     <tr>
         <th width='25%' rowspan='3' valign='top' align='left' ><ul></ul>{{ nav|safe }}</ul></th>
-        {% if caption %}
-        <td width='75%' valign='top' align='center' ><h3>{{ infopage.caption|safe }}</h3></td></tr>
-        <tr>{% endif %}<td width='75%' valign='top' align='center' ><object type="image/svg+xml" data='/content/{{ svg }}' width="{{ infopage.width }}" height="{{ infopage.height }}"></object></td>
+        {% if infopage.i_caption %}
+        <td width='75%' valign='top' align='center' ><h3>{{ infopage.i_caption }}</h3></td></tr>
+        <tr>{% endif %}<td width='75%' valign='top' align='center' ><object type="image/svg+xml" data='/content/{{ svg }}' width="{{ infopage.i_width }}" height="{{ infopage.i_height }}"></object></td>
         
     </tr><tr>
         <td width='75%' valign='top'>{{ infopage.text|safe }}</td>

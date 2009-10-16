@@ -33,11 +33,7 @@ def info(request, algo, page):
     info_page = get_list_or_404(InfoPage, algo=algo_object, shortTitle=page)[0]
     svg = info_page.image+"."+pictype
     main_page = get_list_or_404(InfoPage, masterPage=None, algo=algo_object)[0]
-    #try:
-    #    main_page = InfoPage.objects.get(masterPage=None, algo=algo_object)[0]
-    #except InfoPage.DoesNotExist:
-    #    raise Http404
-    
+
     nav = "<ul>"
     nav +="<li><a href='/info/"+algo_object.shortTitle+"/"
     nav += main_page.shortTitle+"/'>"+main_page.title+"</a></li><ul>"
