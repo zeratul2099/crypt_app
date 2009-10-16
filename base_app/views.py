@@ -1,6 +1,6 @@
 from crypt_app.base_app.models import Algo, InfoPage
 from django.http import HttpResponse, Http404, HttpResponseRedirect
-from django.shortcuts import get_object_or_404, render_to_response
+from django.shortcuts import get_object_or_404, get_list_or_404, render_to_response
 from django.template import Context, loader
 
 
@@ -8,7 +8,7 @@ def base(request):
     return render_to_response("base_app.html")
 
 def list(request, algo_type):
-    algos = Algo.objects.filter(type=algo_type)
+    algos = Algo.objects.filter(type=algo_type).order_by("order")
     if algo_type == "hash":
         title = "Hashalgorithmen"
     elif algo_type == "stego":
@@ -30,18 +30,21 @@ def info(request, algo, page):
     else:
         pictype = "gif"
     algo_object = get_object_or_404(Algo, shortTitle=algo)
-    info_page = get_object_or_404(InfoPage, algo=algo_object, shortTitle=page)
+    info_page = get_list_or_404(InfoPage, algo=algo_object, shortTitle=page)[0]
     svg = info_page.image+"."+pictype
-    
-    main_page = get_object_or_404(InfoPage, masterPage=None, algo=algo_object)
+    main_page = get_list_or_404(InfoPage, masterPage=None, algo=algo_object)[0]
+    #try:
+    #    main_page = InfoPage.objects.get(masterPage=None, algo=algo_object)[0]
+    #except InfoPage.DoesNotExist:
+    #    raise Http404
     
     nav = "<ul>"
     nav +="<li><a href='/info/"+algo_object.shortTitle+"/"
     nav += main_page.shortTitle+"/'>"+main_page.title+"</a></li><ul>"
-    for p in InfoPage.objects.filter(algo=algo_object, masterPage=main_page):
+    for p in InfoPage.objects.filter(algo=algo_object, masterPage=main_page).order_by("order"):
         nav += "<li><a href='/info/"+algo_object.shortTitle+"/"
         nav += p.shortTitle+"/'>"+p.title+"</a></li><ul>"
-        for q in InfoPage.objects.filter(algo=algo_object, masterPage=p):
+        for q in InfoPage.objects.filter(algo=algo_object, masterPage=p).order_by("order"):
             nav += "<li><a href='/info/"+algo_object.shortTitle+"/"
             nav += q.shortTitle+"/'>"+q.title+"</a></li>"
         nav += "</ul>"

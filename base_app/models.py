@@ -6,6 +6,7 @@ class Algo(models.Model):
     name = models.CharField(max_length=30, unique=True)
     shortTitle = models.CharField(max_length=10, unique=True)
     type = models.CharField(max_length=10)
+    order = models.IntegerField()
     def __unicode__(self):
         return self.name
         
@@ -20,6 +21,7 @@ class InfoPage(models.Model):
     title = models.CharField(max_length=50)
     shortTitle = models.CharField(max_length=10)
     masterPage = models.ForeignKey('self', blank=True, null=True)
+    order = models.IntegerField()
     def __unicode__(self):
         return self.algo.name+": "+self.title
     
