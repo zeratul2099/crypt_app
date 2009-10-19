@@ -47,7 +47,10 @@
 <rect x='0' y='0' width='800' height='600' fill='white' />
 
 <!-- scala -->
-<text x='20' y='10' fill='black' font-size='14' >
+<text x='20' y='10' fill='black' font-size='14' font-family='sans' >
+Natural order
+</text>
+<text x='20' y='23' fill='black' font-size='14' font-family='sans' >
 Index i
 </text>
 <svg x='25' y='24' height='242' width='20' >
@@ -79,8 +82,11 @@ stroke='black' />
 </text>
 </svg>
 
-<text x='440' y='10' fill='black' font-size='14' >
-Index j
+<text x='400' y='10' fill='black' font-size='14' >
+Stego order
+</text>
+<text x='400' y='23' fill='black' font-size='14' >
+Index p
 </text>
 <svg x='450' y='24' height='242' width='25' >
 <path d='M 10 1 l 0 240 M 0 1 l 10 0 m 0 30 l -10 0 m 0 30 l 10 0 m 0 30 l -10 0 m 0 30 l 10 0 m 0 30 l -10 0 m 0 30 l 10 0 m 0 30 l -10 0 m 0 30 l 10 0' 
@@ -266,10 +272,10 @@ Iterator k = 8
 </text>
 
 <text x='200' y='60' fill='black' font-size='14' >
-j = m mod k
+p = m mod k
 </text>
 
-<!-- j -->
+<!-- p -->
 <text x='208' y='80' fill='black' font-size='14' opacity='0'>
 <set attributeName='opacity' to='1' dur='4' begin='white01.end' />
 = 0

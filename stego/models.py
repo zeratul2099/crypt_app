@@ -37,11 +37,11 @@ class LsbExtractForm(forms.Form):
 class GifShuffleEmbedForm(forms.Form):
     message = forms.CharField(label='Nachricht', required=True)
     file = forms.FileField(required=True, label='GIF-Datei')
-    pw = forms.CharField(label='Password',widget=forms.PasswordInput(render_value=False))
+    pw = forms.CharField(label='Password',widget=forms.PasswordInput(render_value=False), required='False')
 
 class GifShuffleExtractForm(forms.Form):
     file = forms.FileField(required=True, label='GIF-Datei')
-    pw = forms.CharField(label='Password',widget=forms.PasswordInput(render_value=False))
+    pw = forms.CharField(label='Password',widget=forms.PasswordInput(render_value=False), required='False')
 
 class BattlestegEmbedForm(forms.Form):
     message = forms.CharField(label='Nachricht', required=True)

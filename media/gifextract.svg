@@ -47,6 +47,9 @@
 <rect x='0' y='0' width='800' height='600' fill='white' />
 
 <!-- scala -->
+<text x='20' y='45' fill='black' font-size='14' >
+Stego order
+</text>
 <text x='20' y='60' fill='black' font-size='14' >
 Index p
 </text>
@@ -54,24 +57,24 @@ Index p
 <path d='M 10 1 l 0 240 M 10 1 l 10 0 m 0 30 l -10 0 m 0 30 l 10 0 m 0 30 l -10 0 m 0 30 l 10 0 m 0 30 l -10 0 m 0 30 l 10 0 m 0 30 l -10 0 m 0 30 l 10 0' 
 stroke='black' />
 <text x='0' y='20' fill='black' font-size='14' >
+0
 <animate attributeName='fill' from='red' to='red' begin='black01.begin' dur='5' />
 <animate attributeName='fill' from='red' to='red' begin='blue01.begin' dur='5' />
 <animate attributeName='fill' from='red' to='red' begin='green01.begin' dur='5' />
 <animate attributeName='fill' from='red' to='red' begin='white01.begin' dur='5' />
-0
 </text>
 <text x='0' y='50' fill='black' font-size='14' >
+1
 <animate attributeName='fill' from='red' to='red' begin='cyan01.begin' dur='5' />
 <animate attributeName='fill' from='red' to='red' begin='pink01.begin' dur='5' />
 <animate attributeName='fill' from='red' to='red' begin='yellow01.begin' dur='5' />
-1
 </text>
 <text x='0' y='80' fill='black' font-size='14' >
 2
 </text>
 <text x='0' y='110' fill='black' font-size='14' >
-<animate attributeName='fill' from='red' to='red' begin='red01.begin' dur='5' />
 3
+<animate attributeName='fill' from='red' to='red' begin='red01.begin' dur='5' />
 </text>
 <text x='0' y='140' fill='black' font-size='14' >
 4
@@ -87,7 +90,10 @@ stroke='black' />
 </text>
 </svg>
 
-<text x='440' y='60' fill='black' font-size='14' >
+<text x='400' y='45' fill='black' font-size='14' >
+Natural order
+</text>
+<text x='400' y='60' fill='black' font-size='14' >
 Index i
 </text>
 <svg x='424' y='74' height='242' width='50' >
