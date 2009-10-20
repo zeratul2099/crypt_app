@@ -76,13 +76,13 @@
 </rect>
 <rect x='160' y='280' width='30' height='30' stroke='black' fill='white' />
 
-<rect x='240' y='200' width='30' height='30' stroke='black' fill='white' />
-<rect x='280' y='200' width='30' height='30' stroke='black' fill='white' />
-<rect x='320' y='200' width='30' height='30' stroke='black' fill='white' />
-<rect x='360' y='200' width='30' height='30' stroke='black' fill='white' />
+<rect x='240' y='200' width='30' height='30' stroke='grey' fill='white' />
+<rect x='280' y='200' width='30' height='30' stroke='grey' fill='white' />
+<rect x='320' y='200' width='30' height='30' stroke='grey' fill='white' />
+<rect x='360' y='200' width='30' height='30' stroke='grey' fill='white' />
 
-<rect x='240' y='240' width='30' height='30' stroke='black' fill='white' />
-<rect x='280' y='240' width='30' height='30' stroke='black' fill='white' />
+<rect x='240' y='240' width='30' height='30' stroke='grey' fill='white' />
+<rect x='280' y='240' width='30' height='30' stroke='grey' fill='white' />
 
 <!-- main pixel -->
 <rect x='120' y='240' width='30' height='30' stroke='black' fill='white' opacity='0' >
@@ -94,6 +94,7 @@
 <animate attributeName='y' from='240' to='100' begin='move05.end+2' dur='1' fill='freeze' />
 <set attributeName='fill' to='green' begin='move06.end+1' fill='freeze' />
 <set attributeName='fill' to='white' begin='move09.end' fill='freeze' />
+<set attributeName='stroke' to='grey' begin='move09.end' fill='freeze' />
 <animate attributeName='x' from='240' to='320' begin='move09.end+2' dur='1' fill='freeze' id='move10' />
 <animate attributeName='y' from='100' to='240' begin='move09.end+2' dur='1' fill='freeze' />
 </rect>
@@ -287,42 +288,53 @@ Filter Image
 <text x='470' y='40' fill='black' font-size='12' >
 = single pixel
 </text>
-<rect x='430' y='60' width='30' height='30' stroke='red' stroke-width='2' fill='white' />
+<rect x='430' y='60' width='30' height='30' stroke='grey' fill='white' />
 <text x='470' y='80' fill='black' font-size='12' >
 =
 </text>
 <text x='487' y='72' fill='black' font-size='12' >
-pixel to calculate
+filter value
 </text>
 <text x='487' y='88' fill='black' font-size='12' >
-filter value from
+0..255
 </text>
 
-<svg x='430' y='100' width='30' height='30' stroke-width='2' >
-<line x1='15' y1='5' x2='15' y2='25' stroke='black' />
-<line x1='5' y1='15' x2='25' y2='15' stroke='black' />
-</svg>
+<rect x='430' y='100' width='30' height='30' stroke='red' stroke-width='2' fill='white' />
 <text x='470' y='120' fill='black' font-size='12' >
 =
 </text>
 <text x='487' y='112' fill='black' font-size='12' >
-addition of
+pixel to calculate
 </text>
 <text x='487' y='128' fill='black' font-size='12' >
-color values
+filter value from
 </text>
 
-
 <svg x='430' y='140' width='30' height='30' stroke-width='2' >
+<line x1='15' y1='5' x2='15' y2='25' stroke='black' />
 <line x1='5' y1='15' x2='25' y2='15' stroke='black' />
 </svg>
 <text x='470' y='160' fill='black' font-size='12' >
 =
 </text>
 <text x='487' y='152' fill='black' font-size='12' >
+addition of
+</text>
+<text x='487' y='178' fill='black' font-size='12' >
+color values
+</text>
+
+
+<svg x='430' y='180' width='30' height='30' stroke-width='2' >
+<line x1='5' y1='15' x2='25' y2='15' stroke='black' />
+</svg>
+<text x='470' y='200' fill='black' font-size='12' >
+=
+</text>
+<text x='487' y='192' fill='black' font-size='12' >
 subtraction of
 </text>
-<text x='487' y='168' fill='black' font-size='12' >
+<text x='487' y='208' fill='black' font-size='12' >
 color values
 </text>
 
