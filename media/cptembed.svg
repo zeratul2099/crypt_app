@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   width="155mm"
+   height="90mm"
+   id="svg2"
+>
+<script type="text/ecmascript" xlink:href="/content/smil.user.js" />
+  <defs
+     id="defs4">
+       <svg width="30" height="30" id="bit" >
+            <rect y="10" x="0.1" width="19.9" height="19.9" fill="white" stroke="black" />
+            <polygon fill="white" stroke="black" 
+                points="0.1 10, 10 0.1, 29.9 0.1, 20 10" />
+            <polygon fill="white" stroke="black" 
+                points="29.9 0.1, 29.9 20, 20 29.9, 20 10" />
+            
+       </svg>
+       <svg width="30" height="30" id="zero" >
+       <use xlink:href='#bit' />
+        <text x='2' y='25' fill='black' style="font-size:14px;" >
+        &#x0394;0
+        </text>
+       </svg>
+       <svg width="30" height="30" id="one" >
+         <use xlink:href='#bit' />
+        <text x='2' y='25' fill='black' style="font-size:14px;" >
+        &#x0394;1
+        </text>
+       </svg>
+       <svg width="30" height="30" id="two" >
+         <use xlink:href='#bit' />
+        <text x='2' y='25' fill='black' style="font-size:14px;" >
+        &#x0394;2
+        </text>
+       </svg>
+       <svg width="30" height="30" id="three" >
+         <use xlink:href='#bit' />
+        <text x='2' y='25' fill='black' style="font-size:14px;" >
+        &#x0394;3
+        </text>
+       </svg>
+       <svg width="30" height="30" id="4" >
+         <use xlink:href='#bit' />
+        <text x='2' y='25' fill='black' style="font-size:14px;" >
+        &#x0394;4
+        </text>
+       </svg>
+       <svg width="30" height="30" id="5" >
+        <use xlink:href='#bit' />
+        <text x='2' y='25' fill='black' style="font-size:14px;" >
+        &#x0394;5
+        </text>
+        </svg>
+       <svg width="30" height="30" id="n" >
+        <use xlink:href='#bit' />
+        <text x='2' y='25' fill='black' style="font-size:14px;" >
+        &#x0394;n
+        </text>
+       </svg>
+       <svg width="30" height="30" id="6" >
+        <text x='10' y='20' fill='black' style="font-size:18px;" >
+        6
+        </text>
+       </svg>
+       <svg width="30" height="30" id="7" >
+        <text x='10' y='20' fill='black' style="font-size:18px;" >
+        7
+        </text>
+       </svg>
+       <svg width="30" height="30" id="8" >
+        <text x='10' y='20' fill='black' style="font-size:18px;" >
+        8
+        </text>
+       </svg>
+       <svg width="30" height="30" id="9" >
+        <text x='10' y='20' fill='black' style="font-size:18px;" >
+        9
+        </text>
+       </svg>
+       <svg width="30" height="30" id="10" >
+        <text x='6' y='20' fill='black' style="font-size:18px;" >
+        10
+        </text>
+       </svg>
+       <svg width="30" height="30" id="11" >
+        <text x='6' y='20' fill='black' style="font-size:18px;" >
+        11
+        </text>
+       </svg>
+       <svg width="30" height="30" id="12" >
+        <text x='6' y='20' fill='black' style="font-size:18px;" >
+        12
+        </text>
+       </svg>
+       <svg width="30" height="30" id="13" >
+        <text x='6' y='20' fill='black' style="font-size:18px;" >
+        13
+        </text>
+       </svg>
+       <svg width="30" height="30" id="14" >
+        <text x='6' y='20' fill='black' style="font-size:18px;" >
+        14
+        </text>
+       </svg>
+       <svg width="30" height="30" id="15" >
+        <text x='6' y='20' fill='black' style="font-size:18px;" >
+        15
+        </text>
+       </svg>
+       
+       <svg width='120' height='120' id='mat' >
+        <rect x='0' y='0' width='120' height='120' stroke='black' />
+        <line x1='0' x2='120' y1='30' y2='30' stroke='black' />
+        <line x1='0' x2='120' y1='60' y2='60' stroke='black' />
+        <line x1='0' x2='120' y1='90' y2='90' stroke='black' />
+        <line x1='30' x2='30' y1='0' y2='120' stroke='black' />
+        <line x1='60' x2='60' y1='0' y2='120' stroke='black' />
+        <line x1='90' x2='90' y1='0' y2='120' stroke='black' />
+       </svg>
+
+  </defs>
+
+    <g
+       
+       style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;font-family:'sans';"
+       id="g2383 " transform="scale(1)"
+       >
+<rect x='0' y='0' width='800' height='600' fill='white' />
+<use xlink:href='#bit' x='5' y='25' />
+<use xlink:href='#bit' x='5' y='25' >
+<animate attributeName='y' from='25' to='25' dur='0' begin='start.click' fill='freeze' />
+<animate attributeName='y' from='25' to='135' dur='2' begin='w02.end+1' fill='freeze' id='d01' />
+</use>
+<use xlink:href='#bit' x='5' y='25' >
+<animate attributeName='x' from='5' to='200' dur='2' begin='start.click' id='w01' />
+</use>
+<!-- functions -->
+<rect x='200' y='5' width='25' height='200' rx='10' ry='10' stroke='black' >
+<animate attributeName='fill' from='white' to='red' dur='1' begin='w01.end' fill='freeze' />
+<animate attributeName='fill' from='red' to='white' dur='1' begin='w01.end+1' fill='freeze' />
+<animate attributeName='fill' from='white' to='red' dur='1' begin='d03.end' fill='freeze' />
+<animate attributeName='fill' from='red' to='white' dur='1' begin='d03.end+1' fill='freeze' />
+<animate attributeName='fill' from='white' to='red' dur='1' begin='d12.end' fill='freeze' />
+<animate attributeName='fill' from='red' to='white' dur='1' begin='d12.end+1' fill='freeze' />
+<animate attributeName='fill' from='white' to='red' dur='1' begin='d22.end' fill='freeze' />
+<animate attributeName='fill' from='red' to='white' dur='1' begin='d22.end+1' fill='freeze' />
+<animate attributeName='fill' from='white' to='red' dur='1' begin='d32.end' fill='freeze' />
+<animate attributeName='fill' from='red' to='white' dur='1' begin='d32.end+1' fill='freeze' />
+<animate attributeName='fill' from='white' to='red' dur='1' begin='d42.end' fill='freeze' />
+<animate attributeName='fill' from='red' to='white' dur='1' begin='d42.end+1' fill='freeze' />
+</rect>
+<rect x='100' y='105' width='25' height='100' rx='10' ry='10' stroke='black' >
+<animate attributeName='fill' from='white' to='red' dur='1' begin='d02.end' fill='freeze' />
+<animate attributeName='fill' from='red' to='white' dur='1' begin='d02.end+1' fill='freeze' />
+<animate attributeName='fill' from='white' to='red' dur='1' begin='d11.end' fill='freeze' />
+<animate attributeName='fill' from='red' to='white' dur='1' begin='d11.end+1' fill='freeze' />
+<animate attributeName='fill' from='white' to='red' dur='1' begin='d21.end' fill='freeze' />
+<animate attributeName='fill' from='red' to='white' dur='1' begin='d21.end+1' fill='freeze' />
+<animate attributeName='fill' from='white' to='red' dur='1' begin='d31.end' fill='freeze' />
+<animate attributeName='fill' from='red' to='white' dur='1' begin='d31.end+1' fill='freeze' />
+<animate attributeName='fill' from='white' to='red' dur='1' begin='d41.end' fill='freeze' />
+<animate attributeName='fill' from='red' to='white' dur='1' begin='d41.end+1' fill='freeze' />
+</rect>
+<rect x='290' y='105' width='25' height='100' rx='10' ry='10' stroke='black' >
+<animate attributeName='fill' from='white' to='red' dur='1' begin='d04.end' fill='freeze' />
+<animate attributeName='fill' from='red' to='white' dur='1' begin='d04.end+1' fill='freeze' />
+<animate attributeName='fill' from='white' to='red' dur='1' begin='d13.end' fill='freeze' />
+<animate attributeName='fill' from='red' to='white' dur='1' begin='d13.end+1' fill='freeze' />
+<animate attributeName='fill' from='white' to='red' dur='1' begin='d23.end' fill='freeze' />
+<animate attributeName='fill' from='red' to='white' dur='1' begin='d23.end+1' fill='freeze' />
+<animate attributeName='fill' from='white' to='red' dur='1' begin='d33.end' fill='freeze' />
+<animate attributeName='fill' from='red' to='white' dur='1' begin='d33.end+1' fill='freeze' />
+<animate attributeName='fill' from='white' to='red' dur='1' begin='d43.end' fill='freeze' />
+<animate attributeName='fill' from='red' to='white' dur='1' begin='d43.end+1' fill='freeze' />
+</rect>
+
+<text x='170' y='225' fill='black' font-size='14px' >
+calculate weight
+</text>
+<text x='70' y='225' fill='black' font-size='14px' >
+switch bit
+</text>
+<text x='290' y='225' fill='black' font-size='14px' >
+w - &#x0394;w
+</text>
+<text x='300' y='15' fill='black' font-size='14px' >
+w
+</text>
+<text x='400' y='15' fill='black' font-size='14px' >
+n = 7
+</text>
+<text x='400' y='30' fill='black' font-size='14px' opacity='0' >
+w = 3
+<animate attributeName='opacity' from='0' to='0' dur='0' begin='start.click' fill='freeze' />
+<animate attributeName='opacity' from='1' to='1' dur='0' begin='w02.end' fill='freeze' />
+</text>
+<text x='400' y='45' fill='black' font-size='14px' opacity='0' >
+d = w - n = -4
+<animate attributeName='opacity' from='0' to='0' dur='0' begin='start.click' fill='freeze' />
+<animate attributeName='opacity' from='1' to='1' dur='0' begin='w02.end' fill='freeze' />
+</text>
+<text x='200' y='35' fill='black' font-size='14px' opacity='0' >
+3
+<animate attributeName='opacity' from='0' to='0' dur='0' begin='start.click' fill='freeze' />
+<animate attributeName='opacity' from='1' to='1' dur='0' begin='w01.end+2' fill='freeze' />
+<animate attributeName='x' from='200' to='300' dur='2' begin='w01.end+2' fill='freeze' id='w02' />
+</text>
+<text x='-200' y='150' fill='black' font-size='14px' >
+5
+<animate attributeName='x' from='200' to='305' dur='2' begin='d03.end+2' id='d04' />
+</text>
+<text x='-200' y='150' fill='black' font-size='14px' >
+11
+<animate attributeName='x' from='200' to='305' dur='2' begin='d12.end+2' id='d13' />
+</text>
+<text x='-200' y='150' fill='black' font-size='14px' >
+2
+<animate attributeName='x' from='200' to='305' dur='2' begin='d22.end+2' id='d23' />
+</text>
+<text x='-200' y='150' fill='black' font-size='14px' >
+3
+<animate attributeName='x' from='200' to='305' dur='2' begin='d32.end+2' id='d33' />
+</text>
+<text x='-200' y='150' fill='black' font-size='14px' >
+7
+<animate attributeName='x' from='200' to='305' dur='2' begin='d42.end+2' id='d43' />
+</text>
+<path d="M 302.5 40 l 0 65 -5 -5 m 5 5 l 5 -5" stroke='black' opacity='0' >
+<animate attributeName='opacity' from='0' to='0' dur='0' begin='start.click' fill='freeze' />
+<animate attributeName='opacity' from='1' to='1' dur='0' begin='w02.end' fill='freeze' />
+</path>
+
+
+<use xlink:href='#mat' x='400' y='150' />
+<text x='400' y='140' fill='black' font-size='14px' >
+difference matrix
+</text>
+<use xlink:href='#bit' x='-50' y='135' >
+<animate attributeName='x' from='5' to='100' dur='2' begin='d01.end' id='d02' />
+<animate attributeName='x' from='5' to='100' dur='2' begin='d05.end+1' id='d11' />
+<animate attributeName='x' from='5' to='100' dur='2' begin='d14.end+1' id='d21' />
+<animate attributeName='x' from='5' to='100' dur='2' begin='d24.end+1' id='d31' />
+<animate attributeName='x' from='5' to='100' dur='2' begin='d34.end+1' id='d41' />
+</use>
+<use xlink:href='#zero' x='-50' y='135' >
+<animate attributeName='x' from='100' to='200' dur='2' begin='d02.end+2' id='d03' />
+</use>
+<use xlink:href='#one' x='-50' y='135' >
+<animate attributeName='x' from='100' to='200' dur='2' begin='d11.end+2' id='d12' />
+</use>
+<use xlink:href='#two' x='-50' y='135' >
+<animate attributeName='x' from='100' to='200' dur='2' begin='d21.end+2' id='d22' />
+</use>
+<use xlink:href='#three' x='-50' y='135' >
+<animate attributeName='x' from='100' to='200' dur='2' begin='d31.end+2' id='d32' />
+</use>
+<use xlink:href='#4' x='-50' y='135' >
+<animate attributeName='x' from='100' to='200' dur='2' begin='d41.end+2' id='d42' />
+</use>
+
+<text x='305' y='150' fill='black' font-size='18px' opacity='0'>
+-2
+<animate attributeName='opacity' from='0' to='0' dur='0' begin='start.click' fill='freeze' />
+<animate attributeName='opacity' from='1' to='1' dur='0' begin='d04.end+2' fill='freeze' />
+<animate attributeName='x' from='300' to='405' dur='2' begin='d04.end+2' fill='freeze' id='d05' />
+<animate attributeName='y' from='150' to='172' dur='2' begin='d04.end+2' fill='freeze' />
+</text>
+<text x='305' y='150' fill='black' font-size='18px' opacity='0'>
+-9
+<animate attributeName='opacity' from='0' to='0' dur='0' begin='start.click' fill='freeze' />
+<animate attributeName='opacity' from='1' to='1' dur='0' begin='d13.end+2' fill='freeze' />
+<animate attributeName='x' from='300' to='435' dur='2' begin='d13.end+2' fill='freeze' id='d14' />
+<animate attributeName='y' from='150' to='172' dur='2' begin='d13.end+2' fill='freeze' />
+</text>
+<text x='305' y='150' fill='black' font-size='18px' opacity='0'>
+1
+<animate attributeName='opacity' from='0' to='0' dur='0' begin='start.click' fill='freeze' />
+<animate attributeName='opacity' from='1' to='1' dur='0' begin='d23.end+2' fill='freeze' />
+<animate attributeName='x' from='300' to='470' dur='2' begin='d23.end+2' fill='freeze' id='d24' />
+<animate attributeName='y' from='150' to='172' dur='2' begin='d23.end+2' fill='freeze' />
+</text>
+<text x='305' y='150' fill='black' font-size='18px' opacity='0'>
+0
+<animate attributeName='opacity' from='0' to='0' dur='0' begin='start.click' fill='freeze' />
+<animate attributeName='opacity' from='1' to='1' dur='0' begin='d33.end+2' fill='freeze' />
+<animate attributeName='x' from='300' to='500' dur='2' begin='d33.end+2' fill='freeze' id='d34' />
+<animate attributeName='y' from='150' to='172' dur='2' begin='d33.end+2' fill='freeze' />
+</text>
+<rect x='400' y='180' width='30' height='30' fill='red' opacity='0' >
+<animate attributeName='opacity' from='0' to='0' dur='0' begin='start.click' fill='freeze' />
+<animate attributeName='opacity' from='0' to='1' dur='1' begin='d44.end' id='mark' fill='freeze' />
+</rect>
+<text x='305' y='150' fill='black' font-size='18px' opacity='0'>
+-4
+<animate attributeName='opacity' from='0' to='0' dur='0' begin='start.click' fill='freeze' />
+<animate attributeName='opacity' from='1' to='1' dur='0' begin='d43.end+2' fill='freeze' />
+<animate attributeName='x' from='300' to='405' dur='2' begin='d43.end+2' fill='freeze' id='d44' />
+<animate attributeName='y' from='150' to='202' dur='2' begin='d43.end+2' fill='freeze' />
+</text>
+<text x='370' y='230' fill='black' font-size='14px' opacity='0'>
+switch this bit in original block
+<animate attributeName='opacity' from='0' to='0' dur='0' begin='start.click' fill='freeze' />
+<animate attributeName='opacity' from='1' to='1' dur='0' begin='mark.end' fill='freeze' />
+
+</text>
+<!-- Legend -->
+<path d='M 5 250 l 380 0' stroke-dasharray='5,5' stroke='black' />
+<use xlink:href='#bit' x='10' y='260' />
+<text x='50' y='280' fill='black' font-size='14px' >
+= image block
+</text>
+<use xlink:href='#n' x='10' y='300' />
+<text x='50' y='320' fill='black' font-size='14px' >
+= block with bit n switched
+</text>
+<svg height='25' width='75' x='250' y='280' id='start' >
+<set attributeName='x' to='-100' begin='start.click' />
+<set attributeName='x' to='250' begin='mark.end+1' />
+<rect height='24' width='74' x='0.5' y='0.5' rx='5' ry='5' stroke='black' fill='white' />
+ <text fill='black' x='25' y='18' style="font-size:14px;" >
+Start
+</text>
+</svg>
+</g>
+</svg>
