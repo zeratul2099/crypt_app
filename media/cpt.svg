@@ -125,63 +125,48 @@
 <rect x='0' y='0' width='800' height='600' fill='white' />
 <!-- image block -->
 <svg x='400' y='75' width='120' height='120'>
+<animate attributeName='x' from='400' to='400' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='75' to='75' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='opacity' from='1' to='1' dur='0' fill='freeze' begin='start.click' />
+
 <animate attributeName='x' from='400' to='320' dur='2' fill='freeze' begin='prng02.end+2' id='xor01' />
 <animate attributeName='y' from='75' to='220' dur='2' fill='freeze' begin='prng02.end+2' />
 <animate attributeName='opacity' from='1' to='0' dur='1' fill='freeze' begin='xor01.end' />
 <use xlink:href='#mat' />
 <rect x='0' y='30' width='30' height='30' fill='black' >
-<animate attributeName='opacity' from='1' to='0' dur='1' begin='1' fill='freeze' id='fade' />
+<animate attributeName='opacity' from='1' to='0' dur='1' begin='start.click' fill='freeze' id='fade' />
 </rect>
 <rect x='30' y='30' width='30' height='30' fill='black' >
-<animate attributeName='opacity' from='1' to='0' dur='1' begin='1' fill='freeze' />
+<animate attributeName='opacity' from='1' to='0' dur='1' begin='start.click' fill='freeze' />
 </rect>
 <rect x='60' y='60' width='30' height='30' fill='black' >
-<animate attributeName='opacity' from='1' to='0' dur='1' begin='1' fill='freeze' />
+<animate attributeName='opacity' from='1' to='0' dur='1' begin='start.click' fill='freeze' />
 </rect>
 <rect x='90' y='60' width='30' height='30' fill='black' >
-<animate attributeName='opacity' from='1' to='0' dur='1' begin='1' fill='freeze' />
+<animate attributeName='opacity' from='1' to='0' dur='1' begin='start.click' fill='freeze' />
 </rect>
 <rect x='30' y='90' width='30' height='30' fill='black' >
-<animate attributeName='opacity' from='1' to='0' dur='1' begin='1' fill='freeze' />
+<animate attributeName='opacity' from='1' to='0' dur='1' begin='start.click' fill='freeze' />
 </rect>
+<svg width='120' height='120' opacity='0' >
+<animate attributeName='opacity' from='0' to='1' dur='1' begin='start.click' fill='freeze' />
 <use x='0' y='30' xlink:href='#one' />
 <use x='30' y='30' xlink:href='#one' />
 <use x='60' y='60' xlink:href='#one' />
 <use x='90' y='60' xlink:href='#one' />
 <use x='30' y='90' xlink:href='#one' />
-<use x='0' y='0' xlink:href='#zero' opacity='0' >
-<animate attributeName='opacity' from='0' to='1' dur='1' begin='1' fill='freeze' />
-</use>
-<use x='30' y='0' xlink:href='#zero' opacity='0' >
-<animate attributeName='opacity' from='0' to='1' dur='1' begin='1' fill='freeze' />
-</use>
-<use x='60' y='0' xlink:href='#zero' opacity='0' >
-<animate attributeName='opacity' from='0' to='1' dur='1' begin='1' fill='freeze' />
-</use>
-<use x='90' y='0' xlink:href='#zero' opacity='0' >
-<animate attributeName='opacity' from='0' to='1' dur='1' begin='1' fill='freeze' />
-</use>
-<use x='60' y='30' xlink:href='#zero' opacity='0' >
-<animate attributeName='opacity' from='0' to='1' dur='1' begin='1' fill='freeze' />
-</use>
-<use x='0' y='60' xlink:href='#zero' opacity='0' >
-<animate attributeName='opacity' from='0' to='1' dur='1' begin='1' fill='freeze' />
-</use>
-<use x='30' y='60' xlink:href='#zero' opacity='0' >
-<animate attributeName='opacity' from='0' to='1' dur='1' begin='1' fill='freeze' />
-</use>
-<use x='0' y='90' xlink:href='#zero' opacity='0' >
-<animate attributeName='opacity' from='0' to='1' dur='1' begin='1' fill='freeze' />
-</use>
-<use x='90' y='30' xlink:href='#zero' opacity='0' >
-<animate attributeName='opacity' from='0' to='1' dur='1' begin='1' fill='freeze' />
-</use>
-<use x='60' y='90' xlink:href='#zero' opacity='0' >
-<animate attributeName='opacity' from='0' to='1' dur='1' begin='1' fill='freeze' />
-</use>
-<use x='90' y='90' xlink:href='#zero' opacity='0' >
-<animate attributeName='opacity' from='0' to='1' dur='1' begin='1' fill='freeze' />
-</use>
+<use x='0' y='0' xlink:href='#zero' />
+<use x='30' y='0' xlink:href='#zero' />
+<use x='60' y='0' xlink:href='#zero' />
+<use x='90' y='0' xlink:href='#zero' />
+<use x='60' y='30' xlink:href='#zero' />
+<use x='0' y='60' xlink:href='#zero' />
+<use x='30' y='60' xlink:href='#zero' />
+<use x='0' y='90' xlink:href='#zero' />
+<use x='90' y='30' xlink:href='#zero' />
+<use x='60' y='90' xlink:href='#zero' />
+<use x='90' y='90' xlink:href='#zero' />
+</svg>
 </svg>
 <text x='410' y='65' fill='black' style="font-size:12px;" >
 m x n block of image
@@ -189,6 +174,10 @@ m x n block of image
 
 <!-- key matrix -->
 <svg x='225' y='75' width='120' height='120'>
+<animate attributeName='x' from='225' to='225' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='75' to='75' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='opacity' from='1' to='1' dur='0' fill='freeze' begin='start.click' />
+
 <animate attributeName='x' from='225' to='320' dur='2' fill='freeze' begin='prng02.end+2' />
 <animate attributeName='y' from='75' to='220' dur='2' fill='freeze' begin='prng02.end+2' />
 <animate attributeName='x' from='320' to='225' dur='2' begin='mult01.end' fill='freeze' />
@@ -242,68 +231,117 @@ m x n block of image
 <use x='90' y='90' xlink:href='#one' />
 </svg>
 <svg width='120' height='120' opacity='0' >
+<animate attributeName='opacity' from='0' to='0' dur='1' begin='start.click' fill='freeze' />
 <animate attributeName='opacity' from='0' to='1' dur='1' begin='mult02.end' fill='freeze' />
 <use x='0' y='0' xlink:href='#zero' >
+<animate attributeName='x' from='0' to='0' dur='0' begin='start.click' fill='freeze' />
+<animate attributeName='y' from='0' to='0' dur='0' begin='start.click' fill='freeze' />
+
 <animate attributeName='x' from='0' to='45' dur='1' begin='sum01.end' fill='freeze' id='sum02' />
 <animate attributeName='y' from='0' to='45' dur='1' begin='sum01.end' fill='freeze' />
 </use>
 <use x='30' y='0' xlink:href='#11' >
+<animate attributeName='x' from='30' to='30' dur='0' begin='start.click' fill='freeze' />
+<animate attributeName='y' from='0' to='0' dur='0' begin='start.click' fill='freeze' />
+
 <animate attributeName='x' from='30' to='45' dur='1' begin='sum01.end' fill='freeze' />
 <animate attributeName='y' from='0' to='45' dur='1' begin='sum01.end' fill='freeze' />
 </use>
 <use x='60' y='0' xlink:href='#zero' >
+<animate attributeName='x' from='60' to='60' dur='0' begin='start.click' fill='freeze' />
+<animate attributeName='y' from='0' to='0' dur='0' begin='start.click' fill='freeze' />
+
 <animate attributeName='x' from='60' to='45' dur='1' begin='sum01.end' fill='freeze' />
 <animate attributeName='y' from='0' to='45' dur='1' begin='sum01.end' fill='freeze' />
 </use>
 <use x='90' y='0' xlink:href='#7' >
+<animate attributeName='x' from='90' to='90' dur='0' begin='start.click' fill='freeze' />
+<animate attributeName='y' from='0' to='0' dur='0' begin='start.click' fill='freeze' />
+
 <animate attributeName='x' from='90' to='45' dur='1' begin='sum01.end' fill='freeze' />
 <animate attributeName='y' from='0' to='45' dur='1' begin='sum01.end' fill='freeze' />
 </use>
 <use x='0' y='30' xlink:href='#zero' >
+<animate attributeName='x' from='0' to='0' dur='0' begin='start.click' fill='freeze' />
+<animate attributeName='y' from='30' to='30' dur='0' begin='start.click' fill='freeze' />
+
 <animate attributeName='x' from='0' to='45' dur='1' begin='sum01.end' fill='freeze' />
 <animate attributeName='y' from='30' to='45' dur='1' begin='sum01.end' fill='freeze' />
 </use>
 <use x='30' y='30' xlink:href='#5' >
+<animate attributeName='x' from='30' to='30' dur='0' begin='start.click' fill='freeze' />
+<animate attributeName='y' from='30' to='30' dur='0' begin='start.click' fill='freeze' />
+
 <animate attributeName='x' from='30' to='45' dur='1' begin='sum01.end' fill='freeze' />
 <animate attributeName='y' from='30' to='45' dur='1' begin='sum01.end' fill='freeze' />
 </use>
 <use x='60' y='30' xlink:href='#one' >
+<animate attributeName='x' from='60' to='60' dur='0' begin='start.click' fill='freeze' />
+<animate attributeName='y' from='30' to='30' dur='0' begin='start.click' fill='freeze' />
+
 <animate attributeName='x' from='60' to='45' dur='1' begin='sum01.end' fill='freeze' />
 <animate attributeName='y' from='30' to='45' dur='1' begin='sum01.end' fill='freeze' />
 </use>
 <use x='90' y='30' xlink:href='#zero' >
+<animate attributeName='x' from='90' to='90' dur='0' begin='start.click' fill='freeze' />
+<animate attributeName='y' from='30' to='30' dur='0' begin='start.click' fill='freeze' />
+
 <animate attributeName='x' from='90' to='45' dur='1' begin='sum01.end' fill='freeze' />
 <animate attributeName='y' from='30' to='45' dur='1' begin='sum01.end' fill='freeze' />
 </use>
 <use x='0' y='60' xlink:href='#6' >
+<animate attributeName='x' from='0' to='0' dur='0' begin='start.click' fill='freeze' />
+<animate attributeName='y' from='60' to='60' dur='0' begin='start.click' fill='freeze' />
+
 <animate attributeName='x' from='0' to='45' dur='1' begin='sum01.end' fill='freeze' />
 <animate attributeName='y' from='60' to='45' dur='1' begin='sum01.end' fill='freeze' />
 </use>
 <use x='30' y='60' xlink:href='#zero' >
+<animate attributeName='x' from='30' to='30' dur='0' begin='start.click' fill='freeze' />
+<animate attributeName='y' from='60' to='60' dur='0' begin='start.click' fill='freeze' />
+
 <animate attributeName='x' from='30' to='45' dur='1' begin='sum01.end' fill='freeze' />
 <animate attributeName='y' from='60' to='45' dur='1' begin='sum01.end' fill='freeze' />
 </use>
 <use x='60' y='60' xlink:href='#9' >
+<animate attributeName='x' from='60' to='60' dur='0' begin='start.click' fill='freeze' />
+<animate attributeName='y' from='60' to='60' dur='0' begin='start.click' fill='freeze' />
+
 <animate attributeName='x' from='60' to='45' dur='1' begin='sum01.end' fill='freeze' />
 <animate attributeName='y' from='60' to='45' dur='1' begin='sum01.end' fill='freeze' />
 </use>
 <use x='90' y='60' xlink:href='#zero' >
+<animate attributeName='x' from='90' to='90' dur='0' begin='start.click' fill='freeze' />
+<animate attributeName='y' from='60' to='60' dur='0' begin='start.click' fill='freeze' />
+
 <animate attributeName='x' from='90' to='45' dur='1' begin='sum01.end' fill='freeze' />
 <animate attributeName='y' from='60' to='45' dur='1' begin='sum01.end' fill='freeze' />
 </use>
 <use x='0' y='90' xlink:href='#15' >
+<animate attributeName='x' from='0' to='0' dur='0' begin='start.click' fill='freeze' />
+<animate attributeName='y' from='90' to='90' dur='0' begin='start.click' fill='freeze' />
+
 <animate attributeName='x' from='0' to='45' dur='1' begin='sum01.end' fill='freeze' />
 <animate attributeName='y' from='90' to='45' dur='1' begin='sum01.end' fill='freeze' />
 </use>
 <use x='30' y='90' xlink:href='#10' >
+<animate attributeName='x' from='30' to='30' dur='0' begin='start.click' fill='freeze' />
+<animate attributeName='y' from='90' to='90' dur='0' begin='start.click' fill='freeze' />
+
 <animate attributeName='x' from='30' to='45' dur='1' begin='sum01.end' fill='freeze' />
 <animate attributeName='y' from='90' to='45' dur='1' begin='sum01.end' fill='freeze' />
 </use>
 <use x='60' y='90' xlink:href='#zero' >
+<animate attributeName='x' from='60' to='60' dur='0' begin='start.click' fill='freeze' />
+<animate attributeName='y' from='90' to='90' dur='0' begin='start.click' fill='freeze' />
+
 <animate attributeName='x' from='60' to='45' dur='1' begin='sum01.end' fill='freeze' />
 <animate attributeName='y' from='90' to='45' dur='1' begin='sum01.end' fill='freeze' />
 </use>
 <use x='90' y='90' xlink:href='#three' >
+<animate attributeName='x' from='90' to='90' dur='0' begin='start.click' fill='freeze' />
+<animate attributeName='y' from='90' to='90' dur='0' begin='start.click' fill='freeze' />
+
 <animate attributeName='x' from='90' to='45' dur='1' begin='sum01.end' fill='freeze' />
 <animate attributeName='y' from='90' to='45' dur='1' begin='sum01.end' fill='freeze' />
 </use>
@@ -333,6 +371,10 @@ PRNG
 </path>
 <!-- weight matrix -->
 <svg x='50' y='75' width='120' height='120'>
+<animate attributeName='x' from='50' to='50' dur='0' begin='start.click' fill='freeze' />
+<animate attributeName='y' from='75' to='75' dur='0' begin='start.click' fill='freeze' />
+<animate attributeName='opacity' from='1' to='1' dur='0' begin='start.click' fill='freeze' />
+
 <animate attributeName='x' from='50' to='125' dur='2' begin='xor02.end+1' fill='freeze' id='mult01' />
 <animate attributeName='y' from='75' to='220' dur='2' begin='xor02.end+1' fill='freeze' />
 <animate attributeName='x' from='125' to='225' dur='2' begin='mult01.end' fill='freeze' id='mult02' />
@@ -360,6 +402,8 @@ PRNG
 <use x='90' y='90' xlink:href='#one' />
 </svg>
 <svg width='120' height='120' opacity='0' >
+<animate attributeName='opacity' from='0' to='0' dur='0' begin='start.click' fill='freeze' />
+
 <animate attributeName='opacity' from='0' to='1' dur='1' begin='prng02.end' fill='freeze' />
 <use x='0' y='0' xlink:href='#12' />
 <use x='30' y='0' xlink:href='#11' />
@@ -394,10 +438,12 @@ mod 2^r
 
 <text x='280' y='285' fill='black' style="font-size:18px;" opacity='0'>
 3
+<animate attributeName='opacity' from='0' to='0' dur='0' begin='start.click' fill='freeze' />
 <animate attributeName='opacity' from='0' to='1' dur='1' begin='sum02.end' fill='freeze' />
 </text>
 <text x='120' y='285' fill='black' style="font-size:18px;" opacity='0'>
 weight of block = 
+<animate attributeName='opacity' from='0' to='0' dur='0' begin='start.click' fill='freeze' />
 <animate attributeName='opacity' from='0' to='1' dur='1' begin='sum02.end' fill='freeze' />
 </text>
 <!-- Legend -->
@@ -450,7 +496,7 @@ r = 4
 </text>
 <svg height='25' width='75' x='5' y='310' id='start' >
 <set attributeName='x' to='-100' begin='start.click' />
-<set attributeName='x' to='5' begin='sum02.end' />
+<set attributeName='x' to='5' begin='sum02.end+2' />
 <rect height='24' width='74' x='0.5' y='0.5' rx='5' ry='5' stroke='black' fill='white' />
  <text fill='black' x='25' y='18' style="font-size:14px;" >
 Start
