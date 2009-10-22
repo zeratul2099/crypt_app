@@ -196,7 +196,7 @@ w - &#x0394;w
 w
 </text>
 <text x='400' y='15' fill='black' font-size='14px' >
-n = 7
+p = 7
 </text>
 <text x='400' y='30' fill='black' font-size='14px' opacity='0' >
 w = 3
@@ -204,7 +204,7 @@ w = 3
 <animate attributeName='opacity' from='1' to='1' dur='0' begin='w02.end' fill='freeze' />
 </text>
 <text x='400' y='45' fill='black' font-size='14px' opacity='0' >
-d = w - n = -4
+d = w - p = -4
 <animate attributeName='opacity' from='0' to='0' dur='0' begin='start.click' fill='freeze' />
 <animate attributeName='opacity' from='1' to='1' dur='0' begin='w02.end' fill='freeze' />
 </text>
