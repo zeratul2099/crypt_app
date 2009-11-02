@@ -145,8 +145,8 @@ f
 <animate attributeName='y' from='120' to='180' begin='code01.end+2' dur='1' fill='freeze' id='code02' />
 <animate attributeName='opacity' from='0' to='0' begin='msg01.end+1' fill='freeze' dur='0' />
 </use>
- <text x='175' y='35' fill='black' style="font-size:18px;" >
-codeword[1:n]
+ <text x='175' y='35' fill='black' style="font-size:14px;" >
+codeword N (n Bytes)
 </text>
 
 
@@ -159,7 +159,7 @@ codeword[1:n]
 <animate attributeName='opacity' from='0' to='0' begin='msg01.end' fill='freeze' dur='0' />
 </use>
  <text x='290' y='200' fill='black' style="font-size:14px;" >
-messageblock[1:k]
+messageblock K (k Bits)
 </text>
 <!-- XOR -->
 <svg id='xor' width="30" height="30" x='200' y='180' opacity='0'>
