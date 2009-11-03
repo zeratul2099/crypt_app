@@ -1,0 +1,46 @@
+{% extends "basis.html" %}
+
+{% block titleline %}{{ title }}{% endblock %}
+{% block titel %}{{ title }}{% endblock %}
+
+{% block inhalt %}
+(<a href='/info/{{ algo }}/overview/'>Was ist das?</a>)
+<p>
+&gt; <a href='../../../crypt_app/'>Crypt App</a> &gt; <a href='../../'>Kryptologie</a> &gt; <a href='../../../info/{{ algo }}/overview'>{{ title }}</a> &gt; Ausprobieren
+</p>
+    <table width='100%'>
+        <tr><td>Verschl&uuml;sseln</td><td>Entschl&uuml;sseln</td></tr>
+           
+        
+        <tr>
+            <td width='50%'>
+            <form method='post' action='.' enctype="multipart/form-data">
+            <table>
+            {{ cypherForm }}
+            </table>
+            <input type='submit' name='submit1' value='Abschicken' />
+            </form>
+            </td>
+            <td width='50%'>
+            <form method='post' action='.' enctype="multipart/form-data">
+            <table>
+            {{ decypherForm }}
+            </table>
+            <input type='submit' name='submit2' value='Abschicken' />
+            </form>
+            </td>
+        </tr>
+    </table>
+     <table>
+        <tr>
+            <td>{{ output|escape|linebreaksbr }}</td>
+        </tr>
+        <tr>
+            <td>{{ cypher|escape|linebreaksbr }}</td>
+        </tr>
+    </table>   
+ </td>
+    </tr>
+</table>
+{% endblock %}
+
