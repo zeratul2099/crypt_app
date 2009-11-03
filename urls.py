@@ -16,7 +16,7 @@ urlpatterns = patterns('',
     (r'^info/(?P<algo>\w*)/(?P<page>\w*)/?$', 'base_app.views.info'),
 
     (r'^stego/algo/(?P<algo>\w*)/?$', 'stego.views.algo'),
-    (r'^hashtest/$', 'hashtest.views.hashtest'),
+    (r'^crypto/algo/(?P<algo>\w*)/?$', 'crypto.views.algo'),
     (r'^admin/(.*)', admin.site.root),
     (r'^content/(?P<path>.*)$', 'django.views.static.serve',
         {'document_root': settings.STATIC_DOC_ROOT}),
