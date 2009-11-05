@@ -1,0 +1,7 @@
+*.pyc
+*~
+settings.py
+stego/_*
+stego/libstego.py
+stego/libstegofile.py
+
