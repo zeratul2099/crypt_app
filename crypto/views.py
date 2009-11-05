@@ -77,8 +77,12 @@ def algo(request, algo):
                 if cypherForm.is_valid():
                     output = "Klartext:\n%s\n\n" %(plain_text)
                     output += "RSA-verschluesselt:\n"
-                    PubKey = RSA.load_pub_key(request.FILES['key'].temporary_file_path())
-                    cypher = number.bytes_to_long(PubKey.public_encrypt(plain_text, 1))
+                    try:
+                        PubKey = RSA.load_pub_key(request.FILES['key'].temporary_file_path())
+                        cypher = number.bytes_to_long(PubKey.public_encrypt(plain_text, 1))
+                    except RSA.RSAError:
+                        output = "Invalid key"
+                    
             else:
                 output += "Invalid algorithm"
         # decrypt
@@ -111,9 +115,12 @@ def algo(request, algo):
                 cypherForm = RSAEncryptForm()
                 decypherForm = RSADecryptForm(request.POST, request.FILES)
                 if decypherForm.is_valid():
-                    output = "Entschluesselter Klartext:\n"
-                    PrivKey = RSA.load_key(request.FILES['key'].temporary_file_path())
-                    cypher = PrivKey.private_decrypt(number.long_to_bytes(request.POST["cypher_text"]), 1).replace('\0','')
+                    try:
+                        output = "Entschluesselter Klartext:\n"
+                        PrivKey = RSA.load_key(request.FILES['key'].temporary_file_path())
+                        cypher = PrivKey.private_decrypt(number.long_to_bytes(request.POST["cypher_text"]), 1).replace('\0','')
+                    except RSA.RSAError:
+                        output = "Invalid key"
             else:
                 output += "Invalid algorithm"
     else:

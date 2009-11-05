@@ -9,9 +9,18 @@
 &gt; <a href='../../../crypt_app/'>Crypt App</a> &gt; <a href='../../'>Kryptologie</a> &gt; <a href='../../../info/{{ algo }}/overview'>{{ title }}</a> &gt; Ausprobieren
 </p>
 {% ifequal algo 'rsa' %}
-<form method='post' action='.' enctype="multipart/form-data">
-<input type='submit' name='keygen' value='Schl&uuml;sselpaar generieren' />
-</form>
+<table>
+    <tr>
+        <td>2048-Bit-RSA-Schl&uuml;sselpaar generieren und als zip-Archiv herunterladen:</td>
+    </tr>
+    <tr>
+        <td><form method='post' action='.' enctype="multipart/form-data">
+            <input type='submit' name='keygen' value='Schl&uuml;sselpaar generieren' />
+        </form></td>
+    </tr>
+</table>
+<p>
+
 {% endifequal %}
     <table width='100%'>
         <tr><td>Verschl&uuml;sseln</td><td>Entschl&uuml;sseln</td></tr>

@@ -228,7 +228,7 @@ def f5Extract(q):
     para.password = str(post['pw'])
     para.pwlen = len(para.password)
     stegomsg = libstego.new_charp()
-    stegolen = libstego.new_intp0()
+    stegolen = libstego.new_intp()
     retcode = libstegofile.io_jpeg_read(filename, jpeg_data, jpeg_struct)
     if retcode == 0:
         pass
