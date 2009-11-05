@@ -9,13 +9,13 @@
 <p>
 &gt; <a href='../../../crypt_app/'>Crypt App</a> &gt; {{ title }}
 </p>
-<table width='400'>
+<table width='600'>
     {% for a in algos %}
     
     <tr>
-        <td width='33%'>{{ a.name }}:</td>
-        <td width='15%'><a href='../info/{{ a.shortTitle }}/overview/'>Was ist das?</a></td>
-        <td width='15%'><a href='./algo/{{ a.shortTitle }}/'>Ausprobieren</a></td>
+        <td width='50%'>{{ a.name }}:</td>
+        <td width='25%'><a href='../info/{{ a.shortTitle }}/overview/'>Was ist das?</a></td>
+        <td width='25%'><a href='./algo/{{ a.shortTitle }}/'>Ausprobieren</a></td>
     </tr>
     
     {% endfor %}
