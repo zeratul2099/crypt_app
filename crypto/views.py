@@ -1,18 +1,35 @@
-from crypt_app.crypto.models import AESEncryptForm, AESDecryptForm, SimpleEncryptForm, SimpleDecryptForm
+from crypt_app.crypto.models import AESEncryptForm, AESDecryptForm, SimpleEncryptForm, SimpleDecryptForm, RSAEncryptForm, RSADecryptForm
 from crypt_app.base_app.models import Algo
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render_to_response
 from django.template import Context, loader
+from django.core.servers.basehttp import FileWrapper
 from Crypto.Cipher import AES, DES, XOR
-from Crypto.Util import RFC1751 as rfc
 from Crypto.Util import number
+from M2Crypto import RSA
+import zipfile, os
 
 def algo(request, algo):
     output = ""
     cypher = ""
     algo_object = get_object_or_404(Algo, shortTitle=algo)
     if request.method == 'POST':
-
+        if "keygen" in request.POST:
+            RSAKey = RSA.gen_key(2048, 1023)
+            RSAKey.save_key("private.pem",cipher=None)
+            RSAKey.save_pub_key("public.pem")
+            zipF = zipfile.ZipFile("keys.zip", "w")
+            zipF.write("private.pem")
+            zipF.write("public.pem")
+            zipF.close()
+            os.remove("private.pem")
+            os.remove("public.pem")
+            wrapper = FileWrapper(file("keys.zip"))
+            response = HttpResponse(wrapper, mimetype='application/zip')
+            response['Content-Length'] = os.path.getsize("keys.zip")
+            response['Content-Disposition'] = 'attachment; filename=keys.zip'
+            os.remove("keys.zip")
+            return response
 
         # encrypt
         if "submit1" in request.POST:
@@ -54,6 +71,14 @@ def algo(request, algo):
                     output += "XOR-verschluesselt:\n"
                     xorObject = XOR.new(key)
                     cypher = number.bytes_to_long(xorObject.encrypt(plain_text))
+            elif algo == 'rsa':
+                cypherForm = RSAEncryptForm(request.POST, request.FILES)
+                decypherForm = RSADecryptForm()
+                if cypherForm.is_valid():
+                    output = "Klartext:\n%s\n\n" %(plain_text)
+                    output += "RSA-verschluesselt:\n"
+                    PubKey = RSA.load_pub_key(request.FILES['key'].temporary_file_path())
+                    cypher = number.bytes_to_long(PubKey.public_encrypt(plain_text, 1))
             else:
                 output += "Invalid algorithm"
         # decrypt
@@ -71,7 +96,7 @@ def algo(request, algo):
                 decypherForm = AESDecryptForm(request.POST)
                 if decypherForm.is_valid():
                     key = number.long_to_bytes(request.POST["key"], 8)[0:8]
-                    output = "Klartext:\n"
+                    output = "Entschluesselter Klartext:\n"
                     desObject = DES.new(key, int(request.POST["block_mode"]))
                     cypher = desObject.decrypt(number.long_to_bytes(request.POST["cypher_text"]))                
             elif algo == 'xor':
@@ -79,9 +104,16 @@ def algo(request, algo):
                 decypherForm = SimpleDecryptForm(request.POST)
                 if decypherForm.is_valid():
                     key = number.long_to_bytes(request.POST["key"], 0)
-                    output = "Klartext:\n"
+                    output = "Entschluesselter Klartext:\n"
                     xorObject = XOR.new(key)
-                    cypher = xorObject.decrypt(number.long_to_bytes(request.POST["cypher_text"]))                
+                    cypher = xorObject.decrypt(number.long_to_bytes(request.POST["cypher_text"]))   
+            elif algo == 'rsa':
+                cypherForm = RSAEncryptForm()
+                decypherForm = RSADecryptForm(request.POST, request.FILES)
+                if decypherForm.is_valid():
+                    output = "Entschluesselter Klartext:\n"
+                    PrivKey = RSA.load_key(request.FILES['key'].temporary_file_path())
+                    cypher = PrivKey.private_decrypt(number.long_to_bytes(request.POST["cypher_text"]), 1).replace('\0','')
             else:
                 output += "Invalid algorithm"
     else:
@@ -91,6 +123,9 @@ def algo(request, algo):
         elif algo == 'xor':
             cypherForm = SimpleEncryptForm()
             decypherForm = SimpleDecryptForm()
+        elif algo == 'rsa':
+            cypherForm = RSAEncryptForm()
+            decypherForm = RSADecryptForm()
     
     return render_to_response("crypto_algo.html", {'title' : algo_object.name,
                                             'algo' : algo,
