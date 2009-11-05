@@ -80,7 +80,7 @@ def algo(request, algo):
                     try:
                         PubKey = RSA.load_pub_key(request.FILES['key'].temporary_file_path())
                         cypher = number.bytes_to_long(PubKey.public_encrypt(plain_text, 1))
-                    except RSA.RSAError as e:
+                    except RSA.RSAError, e:
                         output = e
                     
             else:
@@ -119,7 +119,7 @@ def algo(request, algo):
                         output = "Entschluesselter Klartext:\n"
                         PrivKey = RSA.load_key(request.FILES['key'].temporary_file_path())
                         cypher = PrivKey.private_decrypt(number.long_to_bytes(request.POST["cypher_text"]), 1).replace('\0','')
-                    except RSA.RSAError as e:
+                    except RSA.RSAError, e:
                         output = e
             else:
                 output += "Invalid algorithm"
