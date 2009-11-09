@@ -96,7 +96,7 @@ k<tspan baseline-shift = "sub" font-size='8' >0</tspan>
 
 <!-- message m -->
 <text x='45' y='40' fill='black' style="font-size:14px;" >
-message m
+cipher text c
 </text>
 <text x='45' y='70' fill='black' style="font-size:12px;" >
 ...
@@ -108,12 +108,12 @@ message m
 <svg height='30' width='30' x='10' y='50' >
 <use xlink:href='#bit' /> 
 <text x='2' y='22' fill='black' style="font-size:12px;" >
-m<tspan baseline-shift = "sub" font-size='8' >n-1</tspan>
+c<tspan baseline-shift = "sub" font-size='8' >n-1</tspan>
 <animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='mn2.end' />
 <animate attributeName='opacity' from='1' to='1' dur='0' fill='freeze' begin='start.click' />
 </text>
 <text x='2' y='22' fill='black' style="font-size:12px;" opacity='0' >
-c<tspan baseline-shift = "sub" font-size='8' >n-1</tspan>
+m<tspan baseline-shift = "sub" font-size='8' >n-1</tspan>
 <animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' dur='0' fill='freeze' begin='mn2.end+1' />
 </text>
@@ -126,12 +126,12 @@ c<tspan baseline-shift = "sub" font-size='8' >n-1</tspan>
 <svg height='30' width='30' x='60' y='50' >
 <use xlink:href='#bit' /> 
 <text x='2' y='22' fill='black' style="font-size:12px;" >
-m<tspan baseline-shift = "sub" font-size='8' >2</tspan>
+c<tspan baseline-shift = "sub" font-size='8' >2</tspan>
 <animate attributeName='opacity' from='1' to='1' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='m22.end' />
 </text>
 <text x='2' y='22' fill='black' style="font-size:12px;" opacity='0' >
-c<tspan baseline-shift = "sub" font-size='8' >2</tspan>
+m<tspan baseline-shift = "sub" font-size='8' >2</tspan>
 <animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' dur='0' fill='freeze' begin='m22.end+1' />
 </text>
@@ -144,12 +144,12 @@ c<tspan baseline-shift = "sub" font-size='8' >2</tspan>
 <svg height='30' width='30' x='80' y='50' >
 <use xlink:href='#bit' /> 
 <text x='2' y='22' fill='black' style="font-size:12px;" >
-m<tspan baseline-shift = "sub" font-size='8' >1</tspan>
+c<tspan baseline-shift = "sub" font-size='8' >1</tspan>
 <animate attributeName='opacity' from='1' to='1' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='m12.end' />
 </text>
 <text x='2' y='22' fill='black' style="font-size:12px;" opacity='0' >
-c<tspan baseline-shift = "sub" font-size='8' >1</tspan>
+m<tspan baseline-shift = "sub" font-size='8' >1</tspan>
 <animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' dur='0' fill='freeze' begin='m12.end+1' />
 </text>
@@ -162,12 +162,12 @@ c<tspan baseline-shift = "sub" font-size='8' >1</tspan>
 <svg height='30' width='30' x='100' y='50' >
 <use xlink:href='#bit' /> 
 <text x='2' y='22' fill='black' style="font-size:12px;" >
-m<tspan baseline-shift = "sub" font-size='8' >0</tspan>
+c<tspan baseline-shift = "sub" font-size='8' >0</tspan>
 <animate attributeName='opacity' from='1' to='1' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='m02.end' />
 </text>
 <text x='2' y='22' fill='black' style="font-size:12px;" opacity='0' >
-c<tspan baseline-shift = "sub" font-size='8' >0</tspan>
+m<tspan baseline-shift = "sub" font-size='8' >0</tspan>
 <animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' dur='0' fill='freeze' begin='m02.end+1' />
 </text>
@@ -187,7 +187,7 @@ c<tspan baseline-shift = "sub" font-size='8' >0</tspan>
 
 <!-- cipher text -->
 <text x='245' y='90' fill='black' style="font-size:14px;" opacity='0'>
-cipher text c
+message m
 <set attributeName='opacity' to='0' begin='start.click' dur='0' fill='freeze' />
 <set attributeName='opacity' to='1' begin='mn3.end' dur='0' fill='freeze' />
 </text>

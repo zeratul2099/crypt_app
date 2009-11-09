@@ -50,7 +50,7 @@ def info(request, algo, page):
     #for p in InfoPage.objects.filter(algo=algo_object, masterPage=main_page):
     #   nav_list.append("<a href='/"+algo_object.type+"/info/"+algo_object.shortTitle+"/"+p.shortTitle+"/'>"+p.title+"</a>")
     type_long = ""
-    if algo_object.type == 'crypo':
+    if algo_object.type == 'crypto':
         type_long = "Krytographie"
     elif algo_object.type == 'stego':
         type_long = "Steganographie"
