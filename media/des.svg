@@ -130,7 +130,7 @@ k<tspan baseline-shift = "sub" font-size='8' >1</tspan>
 
 <animate attributeName='y' from='240' to='240' dur='0' begin='start.click' fill='freeze' />
 <animate attributeName='x' from='50' to='200' dur='2s' begin='start.click' fill='freeze' id='k01' />
-<set attributeName='opacity' to='1' dur='0' begin='start.click' />
+<set attributeName='opacity' to='1' dur='0' begin='start.click' fill='freeze' />
 <set attributeName='opacity' to='0' dur='2s' begin='k01.end' />
 <animate attributeName='x' from='200' to='250' dur='1s' begin='k01.end+2' fill='freeze' id='k02' />
 <animate attributeName='y' from='240' to='200' dur='1s' begin='k01.end+2' fill='freeze' />
