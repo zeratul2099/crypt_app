@@ -93,12 +93,12 @@ PC
 <text x='5' y='25' font-size='14' fill='black' >
 k<tspan baseline-shift = "sub" font-size='8' >16</tspan> 
 </text>
-<set attributeName='opacity' to='1' fill='freeze' begin='k01.end+2' />
+<set attributeName='opacity' to='1' dur='0' fill='freeze' begin='k01.end+2' />
 <animate attributeName='x' from='200' to='250' dur='1s' begin='k01.end+2' fill='freeze' />
 <animate attributeName='y' from='240' to='270' dur='1s' begin='k01.end+2' fill='freeze' />
 <animate attributeName='x' from='250' to='350' dur='2s' begin='m06d.end+7.5' fill='freeze' />
 <animate attributeName='y' from='270' to='100' dur='2s' begin='m06d.end+7.5' fill='freeze' />
-<set attributeName='opacity' to='0' fill='freeze' begin='m07.end' />
+<set attributeName='opacity' to='0' dur='0' fill='freeze' begin='m07.end' />
 </svg>
 <!-- k2 -->
 <svg width='30' height='30' x='200' y='240' opacity='0' >
@@ -106,12 +106,12 @@ k<tspan baseline-shift = "sub" font-size='8' >16</tspan>
 <text x='5' y='25' font-size='14' fill='black' >
 k<tspan baseline-shift = "sub" font-size='8' >2</tspan> 
 </text>
-<set attributeName='opacity' to='1' fill='freeze' begin='k01.end+2' />
+<set attributeName='opacity' to='1' dur='0' fill='freeze' begin='k01.end+2' />
 <animate attributeName='x' from='200' to='250' dur='1s' begin='k01.end+2' fill='freeze' />
 <animate attributeName='y' from='240' to='220' dur='1s' begin='k01.end+2' fill='freeze' />
 <animate attributeName='x' from='250' to='350' dur='2s' begin='m04d.end+1' fill='freeze' />
-<animate attributeName='y' from='250' to='100' dur='2s' begin='m04d.end+1' fill='freeze' />
-<set attributeName='opacity' to='0' fill='freeze' begin='m05.end' />
+<animate attributeName='y' from='220' to='100' dur='2s' begin='m04d.end+1' fill='freeze' />
+<set attributeName='opacity' to='0' dur='0' fill='freeze' begin='m05.end' />
 </svg>
 
 <!-- k k1 -->
@@ -125,18 +125,19 @@ k
 <text x='5' y='25' font-size='14' fill='black' opacity='0' >
 k<tspan baseline-shift = "sub" font-size='8' >1</tspan> 
 <set attributeName='opacity' to='0' begin='start.click' fill='freeze' />
-<set attributeName='opacity' to='1' begin='k01.end' fill='freeze' />
+<set attributeName='opacity' to='1' begin='k01.end+2' fill='freeze' />
 </text>
 
 <animate attributeName='y' from='240' to='240' dur='0' begin='start.click' fill='freeze' />
 <animate attributeName='x' from='50' to='200' dur='2s' begin='start.click' fill='freeze' id='k01' />
 <set attributeName='opacity' to='1' dur='0' begin='start.click' fill='freeze' />
-<set attributeName='opacity' to='0' dur='2s' begin='k01.end' />
+<set attributeName='opacity' to='0' dur='0' fill='freeze' begin='k01.end' />
+<set attributeName='opacity' to='1' dur='0' fill='freeze' begin='k01.end+2' />
 <animate attributeName='x' from='200' to='250' dur='1s' begin='k01.end+2' fill='freeze' id='k02' />
 <animate attributeName='y' from='240' to='200' dur='1s' begin='k01.end+2' fill='freeze' />
 <animate attributeName='x' from='250' to='350' dur='2s' begin='m02.end+1' fill='freeze' />
 <animate attributeName='y' from='200' to='100' dur='2s' begin='m02.end+1' fill='freeze' />
-<set attributeName='opacity' to='0' fill='freeze' begin='m03.end' />
+<set attributeName='opacity' to='0' dur='0' fill='freeze' begin='m03.end' />
 </svg>
 
 <!-- m -->

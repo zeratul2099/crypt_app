@@ -9,8 +9,8 @@
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:xlink="http://www.w3.org/1999/xlink"
-   width="500"
-   height="300"
+   width="750"
+   height="480"
    id="svg2"
 >
 <script type="text/ecmascript" xlink:href="/content/smil.user.js" />
@@ -85,7 +85,6 @@ k<tspan baseline-shift = "sub" font-size='8' >1</tspan>
 <text x='2' y='22' fill='black' style="font-size:12px;" >
 k<tspan baseline-shift = "sub" font-size='8' >0</tspan>
 </text>
-<animate attributeName='x' from='100' to='100' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='y' from='150' to='150' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='x' from='100' to='150' dur='1' fill='freeze' begin='start.click' />
@@ -171,7 +170,6 @@ c<tspan baseline-shift = "sub" font-size='8' >0</tspan>
 <animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' dur='0' fill='freeze' begin='m02.end+1' />
 </text>
-<animate attributeName='x' from='100' to='100' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='y' from='50' to='50' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='x' from='100' to='150' dur='1' fill='freeze' begin='start.click' id='m01' />
 <animate attributeName='y' from='50' to='100' dur='1' fill='freeze' begin='m01.end' id='m02' />

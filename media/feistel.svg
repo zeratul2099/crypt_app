@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   width="550"
+   height="400"
+   id="svg2"
+>
+<script type="text/ecmascript" xlink:href="/content/smil.user.js" />
+  <defs
+     id="defs4">
+       <svg width="30" height="30" id="bit48"  >
+            <rect y="10" x="0.1" width="19.9" height="19.9" fill="white" stroke="black" />
+            <polygon fill="white" stroke="black" 
+                points="0.1 10, 10 0.1, 29.9 0.1, 20 10" />
+            <polygon fill="white" stroke="black" 
+                points="29.9 0.1, 29.9 20, 20 29.9, 20 10" />
+            
+       </svg>
+       <svg width='27' height='27' id='bit32' >
+       <use xlink:href='#bit48' transform="scale(0.85)" />
+       </svg>
+       <svg width='45' height='45' id='bit64' >
+       <use xlink:href='#bit48' transform="scale(1.3)" />
+       </svg>
+
+
+  </defs>
+
+    <g
+       
+       style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;font-family:'sans';"
+       id="g2383 " transform="scale(1)"
+       >
+<rect x='0' y='0' width='800' height='600' fill='white' />
+<!-- E -->
+<svg x='185' y='140' width='75' height='20' >
+<rect width='75' height='20' rx='15' ry='15' stroke='black' >
+<animate attributeName='fill' from='white' to='red' dur='1' begin='r02.end' fill='freeze' />
+<animate attributeName='fill' from='red' to='white' dur='1' begin='r02.end+1' fill='freeze' />
+</rect>
+<text x='35' y='16' font-size='14' fill='black' >
+E
+</text>
+</svg>
+
+
+<use xlink:href='#bit64' x='150' y='50' >
+<animate attributeName='opacity' from='1' to='0' begin='1' dur='1' fill='freeze' />
+</use>
+<text x='130' y='40' font-size='14' fill='black' >
+message block m
+</text>
+<!-- l -->
+<use xlink:href='#bit32' x='155' y='58' opacity='0' >
+<animate attributeName='opacity' from='0' to='1' begin='1' dur='1' fill='freeze' />
+<animate attributeName='x' from='155' to='100' begin='1' dur='2' fill='freeze' />
+<animate attributeName='y' from='58' to='80' begin='1' dur='2' fill='freeze' />
+</use>
+
+<text x='40' y='100' font-size='14' fill='black' opacity='0' >
+l block
+<animate attributeName='opacity' from='1' to='1' dur='0' fill='freeze' begin='r01.end' />
+</text>
+<text x='250' y='100' font-size='14' fill='black' opacity='0' >
+r block
+<animate attributeName='opacity' from='1' to='1' dur='0' fill='freeze' begin='r01.end' />
+</text>
+<!-- r  -->
+<use xlink:href='#bit32' x='210' y='80' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='r01.end' dur='0' fill='freeze' />
+</use>
+<use xlink:href='#bit32' x='155' y='58' opacity='0' >
+<animate attributeName='opacity' from='0' to='1' begin='1' dur='1' fill='freeze' />
+<animate attributeName='x' from='155' to='210' begin='1' dur='2' fill='freeze' />
+<animate attributeName='y' from='58' to='80' begin='1' dur='2' fill='freeze' id='r01' />
+<animate attributeName='y' from='80' to='140' begin='r01.end+1' dur='1' fill='freeze' id='r02' />
+<animate attributeName='opacity' from='0' to='0' begin='r02.end' dur='0' fill='freeze' />
+</use>
+<use xlink:href='#bit48' x='205' y='140' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='r02.end+2' dur='0' fill='freeze' />
+<animate attributeName='y' from='140' to='180' begin='r02.end+2' dur='1' fill='freeze' id='r03' />
+</use>
+
+<!-- k -->
+<svg width="30" height="30" x='300' y='180' opacity='1' >
+<use xlink:href='#bit48' />
+<text x='5' y='23' font-size='14' fill='black' >
+k<tspan baseline-shift = "sub" font-size='8' >i</tspan>
+</text>
+<animate attributeName='x' from='300' to='205' begin='r03.end' dur='2' id='k01' />
+<animate attributeName='opacity' from='0' to='0' begin='k01.end' dur='0' />
+</svg>
+
+</g>
+</svg>
