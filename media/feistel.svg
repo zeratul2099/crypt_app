@@ -30,6 +30,12 @@
        <svg width='45' height='45' id='bit64' >
        <use xlink:href='#bit48' transform="scale(1.3)" />
        </svg>
+       <svg width='15' height='15' id='bit6' >
+       <use xlink:href='#bit48' transform="scale(0.5)" />
+       </svg>
+       <svg width='12' height='12' id='bit4' >
+       <use xlink:href='#bit48' transform="scale(0.35)" />
+       </svg>
 
 
   </defs>
@@ -42,7 +48,7 @@
 <rect x='0' y='0' width='800' height='600' fill='white' />
 <!-- E -->
 <svg x='185' y='140' width='75' height='20' >
-<rect width='75' height='20' rx='15' ry='15' stroke='black' >
+<rect width='73' height='19' x='1' y='0.5' rx='15' ry='15' stroke='black' >
 <animate attributeName='fill' from='white' to='red' dur='1' begin='r02.end' fill='freeze' />
 <animate attributeName='fill' from='red' to='white' dur='1' begin='r02.end+1' fill='freeze' />
 </rect>
@@ -59,34 +65,40 @@ E
 message block m
 </text>
 <!-- l -->
-<use xlink:href='#bit32' x='155' y='58' opacity='0' >
+<svg width="27" height="27" x='155' y='58' opacity='0' >
+<use xlink:href='#bit32' />
+<text x='5' y='23' font-size='14' fill='black' >
+l
+</text>
 <animate attributeName='opacity' from='0' to='1' begin='1' dur='1' fill='freeze' />
 <animate attributeName='x' from='155' to='100' begin='1' dur='2' fill='freeze' />
 <animate attributeName='y' from='58' to='80' begin='1' dur='2' fill='freeze' />
-</use>
+</svg>
 
-<text x='40' y='100' font-size='14' fill='black' opacity='0' >
-l block
-<animate attributeName='opacity' from='1' to='1' dur='0' fill='freeze' begin='r01.end' />
-</text>
-<text x='250' y='100' font-size='14' fill='black' opacity='0' >
-r block
-<animate attributeName='opacity' from='1' to='1' dur='0' fill='freeze' begin='r01.end' />
-</text>
 <!-- r  -->
-<use xlink:href='#bit32' x='210' y='80' opacity='0' >
+<svg width="27" height="27" x='210' y='80' opacity='0' >
+<use xlink:href='#bit32' />
+<text x='5' y='23' font-size='14' fill='black' >
+r
+</text>
 <animate attributeName='opacity' from='1' to='1' begin='r01.end' dur='0' fill='freeze' />
-</use>
-<use xlink:href='#bit32' x='155' y='58' opacity='0' >
+</svg>
+
+<svg width="27" height="27" x='155' y='58' opacity='0' >
+<use xlink:href='#bit32' />
+<text x='5' y='23' font-size='14' fill='black' >
+r
+</text>
 <animate attributeName='opacity' from='0' to='1' begin='1' dur='1' fill='freeze' />
 <animate attributeName='x' from='155' to='210' begin='1' dur='2' fill='freeze' />
 <animate attributeName='y' from='58' to='80' begin='1' dur='2' fill='freeze' id='r01' />
 <animate attributeName='y' from='80' to='140' begin='r01.end+1' dur='1' fill='freeze' id='r02' />
 <animate attributeName='opacity' from='0' to='0' begin='r02.end' dur='0' fill='freeze' />
-</use>
+</svg>
 <use xlink:href='#bit48' x='205' y='140' opacity='0' >
 <animate attributeName='opacity' from='1' to='1' begin='r02.end+2' dur='0' fill='freeze' />
 <animate attributeName='y' from='140' to='180' begin='r02.end+2' dur='1' fill='freeze' id='r03' />
+<animate attributeName='opacity' from='1' to='0' dur='1' fill='freeze' begin='k01.end+2'/>
 </use>
 
 <!-- k -->
@@ -99,5 +111,139 @@ k<tspan baseline-shift = "sub" font-size='8' >i</tspan>
 <animate attributeName='opacity' from='0' to='0' begin='k01.end' dur='0' />
 </svg>
 
+<!-- XOR -->
+<svg x='205' y='180' height='30' width='30' opacity='0' >
+       <set attributeName='opacity' to='1' dur='1' begin='k01.end' />
+       <circle cx='10' cy='20' r='8' stroke='red' stroke-width='2' />
+       <path d="M 10 12 l 0 16 M 2 20 l 16 0" stroke='red' stroke-width='2' />
+</svg>
+<!-- s-boxes -->
+<svg x='50' y='250' width='30' height='30' >
+<circle cx='15' cy='15' r='14' stroke='black' />
+<text x='10' y='20' font-size='14' fill='black' >
+s<tspan baseline-shift = "sub" font-size='8' >1</tspan>
+</text>
+<animate attributeName='fill' from='white' to='red' dur='1' begin='s01.end' fill='freeze' />
+<animate attributeName='fill' from='red' to='white' dur='1' begin='s01.end+1' fill='freeze' />
+</svg>
+
+<svg x='90' y='250' width='30' height='30' >
+<circle cx='15' cy='15' r='14' stroke='black' />
+<text x='10' y='20' font-size='14' fill='black' >
+s<tspan baseline-shift = "sub" font-size='8' >2</tspan>
+</text>
+<animate attributeName='fill' from='white' to='red' dur='1' begin='s01.end' fill='freeze' />
+<animate attributeName='fill' from='red' to='white' dur='1' begin='s01.end+1' fill='freeze' />
+</svg>
+
+<svg x='130' y='250' width='30' height='30' >
+<circle cx='15' cy='15' r='14' stroke='black' />
+<text x='10' y='20' font-size='14' fill='black' >
+s<tspan baseline-shift = "sub" font-size='8' >3</tspan>
+</text>
+<animate attributeName='fill' from='white' to='red' dur='1' begin='s01.end' fill='freeze' />
+<animate attributeName='fill' from='red' to='white' dur='1' begin='s01.end+1' fill='freeze' />
+</svg>
+
+<svg x='170' y='250' width='30' height='30' >
+<circle cx='15' cy='15' r='14' stroke='black' />
+<text x='10' y='20' font-size='14' fill='black' >
+s<tspan baseline-shift = "sub" font-size='8' >4</tspan>
+</text>
+<animate attributeName='fill' from='white' to='red' dur='1' begin='s01.end' fill='freeze' />
+<animate attributeName='fill' from='red' to='white' dur='1' begin='s01.end+1' fill='freeze' />
+</svg>
+
+<svg x='210' y='250' width='30' height='30' >
+<circle cx='15' cy='15' r='14' stroke='black' />
+<text x='10' y='20' font-size='14' fill='black' >
+s<tspan baseline-shift = "sub" font-size='8' >5</tspan>
+</text>
+<animate attributeName='fill' from='white' to='red' dur='1' begin='s01.end' fill='freeze' />
+<animate attributeName='fill' from='red' to='white' dur='1' begin='s01.end+1' fill='freeze' />
+</svg>
+
+<svg x='250' y='250' width='30' height='30' >
+<circle cx='15' cy='15' r='14' stroke='black' />
+<text x='10' y='20' font-size='14' fill='black' >
+s<tspan baseline-shift = "sub" font-size='8' >6</tspan>
+</text>
+<animate attributeName='fill' from='white' to='red' dur='1' begin='s01.end' fill='freeze' />
+<animate attributeName='fill' from='red' to='white' dur='1' begin='s01.end+1' fill='freeze' />
+</svg>
+
+<svg x='290' y='250' width='30' height='30' >
+<circle cx='15' cy='15' r='14' stroke='black' />
+<text x='10' y='20' font-size='14' fill='black' >
+s<tspan baseline-shift = "sub" font-size='8' >7</tspan>
+</text>
+<animate attributeName='fill' from='white' to='red' dur='1' begin='s01.end' fill='freeze' />
+<animate attributeName='fill' from='red' to='white' dur='1' begin='s01.end+1' fill='freeze' />
+</svg>
+
+<svg x='330' y='250' width='30' height='30' >
+<circle cx='15' cy='15' r='14' stroke='black' />
+<text x='10' y='20' font-size='14' fill='black' >
+s<tspan baseline-shift = "sub" font-size='8' >8</tspan>
+</text>
+<animate attributeName='fill' from='white' to='red' dur='1' begin='s01.end' fill='freeze' />
+<animate attributeName='fill' from='red' to='white' dur='1' begin='s01.end+1' fill='freeze' />
+</svg>
+<!-- b -->
+<use xlink:href='#bit6' x='210' y='190' opacity='0' >
+<animate attributeName='opacity' from='0' to='1' dur='1' fill='freeze' begin='k01.end+2'/>
+<animate attributeName='x' from='210' to='55' dur='2' begin='k01.end+2' id='s01' />
+<animate attributeName='y' from='190' to='255' dur='2' begin='k01.end+2' />
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='s01.end' />
+</use>
+<use xlink:href='#bit6' x='210' y='190' opacity='0' >
+<animate attributeName='opacity' from='0' to='1' dur='1' fill='freeze' begin='k01.end+2'/>
+<animate attributeName='x' from='210' to='95' dur='2' begin='k01.end+2' />
+<animate attributeName='y' from='190' to='255' dur='2' begin='k01.end+2' />
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='s01.end' />
+</use>
+<use xlink:href='#bit6' x='210' y='190' opacity='0' >
+<animate attributeName='opacity' from='0' to='1' dur='1' fill='freeze' begin='k01.end+2'/>
+<animate attributeName='x' from='210' to='135' dur='2' begin='k01.end+2' />
+<animate attributeName='y' from='190' to='255' dur='2' begin='k01.end+2' />
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='s01.end' />
+</use>
+<use xlink:href='#bit6' x='210' y='190' opacity='0' >
+<animate attributeName='opacity' from='0' to='1' dur='1' fill='freeze' begin='k01.end+2'/>
+<animate attributeName='x' from='210' to='175' dur='2' begin='k01.end+2' />
+<animate attributeName='y' from='190' to='255' dur='2' begin='k01.end+2' />
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='s01.end' />
+</use>
+<use xlink:href='#bit6' x='210' y='190' opacity='0' >
+<animate attributeName='opacity' from='0' to='1' dur='1' fill='freeze' begin='k01.end+2'/>
+<animate attributeName='x' from='210' to='215' dur='2' begin='k01.end+2' />
+<animate attributeName='y' from='190' to='255' dur='2' begin='k01.end+2' />
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='s01.end' />
+</use>
+<use xlink:href='#bit6' x='210' y='190' opacity='0' >
+<animate attributeName='opacity' from='0' to='1' dur='1' fill='freeze' begin='k01.end+2'/>
+<animate attributeName='x' from='210' to='255' dur='2' begin='k01.end+2' />
+<animate attributeName='y' from='190' to='255' dur='2' begin='k01.end+2' />
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='s01.end' />
+</use>
+<use xlink:href='#bit6' x='210' y='190' opacity='0' >
+<animate attributeName='opacity' from='0' to='1' dur='1' fill='freeze' begin='k01.end+2'/>
+<animate attributeName='x' from='210' to='295' dur='2' begin='k01.end+2' />
+<animate attributeName='y' from='190' to='255' dur='2' begin='k01.end+2' />
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='s01.end' />
+</use>
+<use xlink:href='#bit6' x='210' y='190' opacity='0' >
+<animate attributeName='opacity' from='0' to='1' dur='1' fill='freeze' begin='k01.end+2'/>
+<animate attributeName='x' from='210' to='335' dur='2' begin='k01.end+2' />
+<animate attributeName='y' from='190' to='255' dur='2' begin='k01.end+2' />
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='s01.end' />
+</use>
+<!-- b' -->
+<use xlink:href='#bit4' x='60' y='260' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' dur='0' fill='freeze' begin='s01.end+2'/>
+<animate attributeName='x' from='60' to='210' dur='2' begin='s01.end+2' />
+<animate attributeName='y' from='260' to='320' dur='2' begin='s01.end+2' />
+<animate attributeName='opacity' from='1' to='0' dur='1' fill='freeze' begin='s01.end+3'/>
+</use>
 </g>
 </svg>
