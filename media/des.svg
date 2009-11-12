@@ -9,7 +9,7 @@
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:xlink="http://www.w3.org/1999/xlink"
-   width="550"
+   width="650"
    height="400"
    id="svg2"
 >
@@ -43,27 +43,44 @@
 <text x='10' y='215' font-size='12' fill='black' >
 (56 bit + 8 bit parity)
 </text> 
-<text x='400' y='80' font-size='14' fill='black' opacity='0' >
-64 bit cipher block
+<text x='540' y='70' font-size='14' fill='black' opacity='0' >
+64 bit cipher
 <set attributeName='opacity' to='0' fill='freeze' begin='start.click' />
-<set attributeName='opacity' to='1' fill='freeze' begin='m08.end' />
+<set attributeName='opacity' to='1' fill='freeze' begin='m09.end' />
+</text> 
+<text x='540' y='90' font-size='14' fill='black' opacity='0' >
+block
+<set attributeName='opacity' to='0' fill='freeze' begin='start.click' />
+<set attributeName='opacity' to='1' fill='freeze' begin='m09.end' />
 </text> 
 <!-- IP -->
 <svg width='25' height='100' x='200' y='60' >
-<rect x='1' y='1' width='23' height='98' rx='10' ry='10' stroke='black' >
-<animate attributeName='fill' from='white' to='red' dur='1' begin='m01.end' fill='freeze' />
-<animate attributeName='fill' from='red' to='white' dur='1' begin='m01.end+1' fill='freeze' />
+<rect x='1' y='1' width='23' height='98' rx='10' ry='10' stroke='black' fill='white' >
+<animateColor attributeName='fill' from='#ffffff' to='#ff0000' dur='1' begin='m01.end' fill='freeze' />
+<animateColor attributeName='fill' from='#ff0000' to='#ffffff' dur='1' begin='m01.end+1' fill='freeze' />
 
 </rect> 
 <text x='5' y='55' font-size='14' fill='black' >
 IP
 </text>
 </svg>
+<!-- IP^-1 -->
+<svg width='25' height='100' x='500' y='60' >
+<rect x='1' y='1' width='23' height='98' rx='10' ry='10' stroke='black' fill='white' >
+<animateColor attributeName='fill' from='#ffffff' to='#ff0000' dur='1' begin='m08.end' fill='freeze' />
+<animateColor attributeName='fill' from='#ff0000' to='#ffffff' dur='1' begin='m08.end+1' fill='freeze' />
+
+</rect> 
+<text x='2' y='55' font-size='14' fill='black' >
+IP<tspan baseline-shift = "super" font-size='8' >-1</tspan>
+</text>
+</svg>
+
 <!-- f -->
 <svg width='25' height='100' x='350' y='60' >
-<rect x='1' y='1' width='23' height='98' rx='10' ry='10' stroke='black' >
-<animate attributeName='fill' from='white' to='red' dur='1' begin='m03.end;m05.end;m07.end' fill='freeze' />
-<animate attributeName='fill' from='red' to='white' dur='1' begin='m03.end+1;m05.end+1;m07.end+1' fill='freeze' />
+<rect x='1' y='1' width='23' height='98' rx='10' ry='10' stroke='black' fill='white' >
+<animateColor attributeName='fill' from='#ffffff' to='#ff0000' dur='1' begin='m03.end;m05.end;m07.end' fill='freeze' />
+<animateColor attributeName='fill' from='#ff0000' to='#ffffff' dur='1' begin='m03.end+1;m05.end+1;m07.end+1' fill='freeze' />
 
 </rect> 
 <text x='8' y='55' font-size='14' fill='black' >
@@ -77,9 +94,9 @@ f
 
 <!-- PC -->
 <svg width='25' height='100' x='200' y='200' >
-<rect x='1' y='1' width='23' height='98' rx='10' ry='10' stroke='black' >
-<animate attributeName='fill' from='white' to='red' dur='1' begin='k01.end' fill='freeze' />
-<animate attributeName='fill' from='red' to='white' dur='1' begin='k01.end+1' fill='freeze' />
+<rect x='1' y='1' width='23' height='98' rx='10' ry='10' stroke='black' fill='white' >
+<animateColor attributeName='fill' from='#ffffff' to='#ff0000' dur='1' begin='k01.end' fill='freeze' />
+<animateColor attributeName='fill' from='#ff0000' to='#ffffff' dur='1' begin='k01.end+1' fill='freeze' />
 
 </rect> 
 <text x='5' y='55' font-size='14' fill='black' >
@@ -151,7 +168,7 @@ m
 <text x='5' y='25' font-size='14' fill='black' opacity='0' >
 c
 <set attributeName='opacity' to='0' begin='start.click' fill='freeze' />
-<set attributeName='opacity' to='1' begin='m07.end+2' fill='freeze' />
+<set attributeName='opacity' to='1' begin='m08.end+2' fill='freeze' />
 </text>
 
 <animate attributeName='x' from='50' to='50' dur='0' begin='start.click' fill='freeze' />
@@ -175,8 +192,9 @@ c
 <!-- round 16 -->
 <animate attributeName='x' from='280' to='350' dur='2s' begin='m06d.end+7.5' fill='freeze' id='m07' />
 <set attributeName='opacity' to='0' dur='2s' begin='m07.end' />
-<animate attributeName='x' from='350' to='420' dur='1s' begin='m07.end+2' fill='freeze' id='m08' />
-
+<animate attributeName='x' from='350' to='500' dur='2s' begin='m07.end+2' fill='freeze' id='m08' />
+<set attributeName='opacity' to='0' dur='2s' begin='m08.end' />
+<animate attributeName='x' from='500' to='550' dur='1s' begin='m08.end+2' fill='freeze' id='m09' />
 </svg>
 
 <text x='350' y='240' font-size='22' fill='black' opacity='0' >
@@ -242,7 +260,7 @@ round 15
 <text x='350' y='240' font-size='22' fill='black' opacity='0' >
 round 16
 <set attributeName='opacity' to='0' begin='start.click' fill='freeze' />
-<set attributeName='opacity' to='1' begin='m06d.end+7.5' fill='freeze' />
+<set attributeName='opacity' to='1' begin='m06d.end+7.5' dur='5' />
 </text>
 
 
@@ -265,7 +283,7 @@ round 16
 
 <svg height='25' width='75' x='350' y='250' id='start' >
 <set attributeName='x' to='-100' begin='start.click' />
-<set attributeName='x' to='350' begin='m08.end' />
+<set attributeName='x' to='350' begin='m09.end' />
 <rect height='24' width='74' x='0.5' y='0.5' rx='5' ry='5' stroke='black' fill='white' />
  <text fill='black' x='25' y='18' style="font-size:14px;" >
 Start
