@@ -360,7 +360,7 @@ repeat 16 rounds
 <set attributeName='opacity' to='1' dur='3' begin='r06.end' />
 </text>
 <!-- Legend -->
-<path d='M 450 0 l 0 400' stroke='black' stroke-dasharray='5, 5' />
+<path d='M 450 0 l 0 430' stroke='black' stroke-dasharray='5, 5' />
 <svg height='40' width='150' x='460' y='10' >
 <use xlink:href='#bit64' />
 <text x='45' y='20' font-size='14' fill='black'  >

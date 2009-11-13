@@ -34,7 +34,7 @@ def info(request, algo, page):
     svg = info_page.image+"."+pictype
     main_page = get_list_or_404(InfoPage, masterPage=None, algo=algo_object)[0]
 
-    nav = "<ul>"
+    nav = "<ul id='menu'>"
     nav +="<li><a href='/info/"+algo_object.shortTitle+"/"
     nav += main_page.shortTitle+"/'>"+main_page.title+"</a></li><ul>"
     for p in InfoPage.objects.filter(algo=algo_object, masterPage=main_page).order_by("order"):
@@ -58,8 +58,8 @@ def info(request, algo, page):
         type_long = "Hashalgorithmen"
     return render_to_response("hash_info.html", { 'infopage' : info_page,
                                                 'svg' : svg,
+                                                'pictype' : pictype,
                                                 'nav' : nav,
-                                                'algo' : algo_object,
                                                 'algo_type' : type_long,
                                                 'user_agent' : user_agent,
                                                 })
