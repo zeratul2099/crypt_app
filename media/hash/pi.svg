@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   width="210mm"
+   height="100mm"
+   id="svg2"
+>
+<script type="text/ecmascript" xlink:href="/content/smil.user.js" />
+  <defs
+     id="defs4">
+       <svg width="30" height="30" id="bit" stroke-dasharray='2, 2'  stroke="grey">
+            <rect y="10" x="0.1" width="19.9" height="19.9" />
+            <polygon  
+                points="0.1 10, 10 0.1, 29.9 0.1, 20 10" />
+            <polygon 
+                points="29.9 0.1, 29.9 20, 20 29.9, 20 10" />
+            
+       </svg>
+       <svg width="30" height="30" id="bit2" stroke="black" >
+            <rect y="10" x="0.1" width="19.9" height="19.9" />
+            <polygon points="0.1 10, 10 0.1, 29.9 0.1, 20 10" />
+            <polygon points="29.9 0.1, 29.9 20, 20 29.9, 20 10" />
+            <path d='M 0.1 29.9 l 10 -10 0 -20 m 0 20 l 20 0' stroke-dasharray="2, 2" />
+       </svg>       
+       <path id='arrow0' d='m 0 0 l 50 0 -4 -4 m 4 4 l -4 4' stroke='black' />
+       <path id='arrow1' d='m 0 0 l 20 0 -4 -4 m 4 4 l -4 4' stroke='black' />
+       
+       <svg width="100" height="100" id="lane" >
+        <use xlink:href="#bit2" x='70' y='0' />
+        <use xlink:href="#bit2" x='60' y='10' />
+        <use xlink:href="#bit2" x='50' y='20' />
+        <use xlink:href="#bit2" x='40' y='30' />
+        <use xlink:href="#bit2" x='30' y='40' />
+        <use xlink:href="#bit2" x='20' y='50' />
+        <use xlink:href="#bit2" x='10' y='60' />
+        <use xlink:href="#bit2" x='0' y='70' />
+       </svg>
+       
+       <svg width="180" height="100" id="plane">
+       <use xlink:href="#lane" x='0' y='0' />
+       <use xlink:href="#lane" x='20' y='0' />
+       <use xlink:href="#lane" x='40' y='0' />
+       <use xlink:href="#lane" x='60' y='0' />
+       <use xlink:href="#lane" x='80' y='0' />
+       </svg>
+       
+       <svg width="180" height="180" id="state">
+       <use xlink:href="#plane" x='0' y='80' />
+       <use xlink:href="#plane" x='0' y='60' />
+       <use xlink:href="#plane" x='0' y='40' />
+       <use xlink:href="#plane" x='0' y='20' />
+       <use xlink:href="#plane" x='0' y='0' />
+       </svg>
+       
+       <svg width="110" height="30" id="row">
+        <use xlink:href="#bit" x='0' y='0' />
+        <use xlink:href="#bit" x='20' y='0' />
+        <use xlink:href="#bit" x='40' y='0' />
+        <use xlink:href="#bit" x='60' y='0' />
+        <use xlink:href="#bit" x='80' y='0' />
+       </svg>
+       
+       <svg width="30" height="110" id="column">
+        <use xlink:href="#bit2" x='0' y='80' />
+        <use xlink:href="#bit2" x='0' y='60' />
+        <use xlink:href="#bit2" x='0' y='40' />
+        <use xlink:href="#bit2" x='0' y='20' />
+        <use xlink:href="#bit2" x='0' y='0' />
+       </svg>
+       
+       <svg width="110" height="110" id="slice" >
+       <use xlink:href="#row" x='0' y='80' />
+       <use xlink:href="#row" x='0' y='60' />
+       <use xlink:href="#row" x='0' y='40' />
+       <use xlink:href="#row" x='0' y='20' />
+       <use xlink:href="#row" x='0' y='0' />
+       </svg>
+       
+       <svg width="100" height="180" id="sheet" >
+        <use xlink:href="#lane" x='0' y='80' />
+        <use xlink:href="#lane" x='0' y='60' />
+        <use xlink:href="#lane" x='0' y='40' />
+        <use xlink:href="#lane" x='0' y='20' />
+        <use xlink:href="#lane" x='0' y='0' />
+       </svg>
+       <svg id='xor' width="20" height="20" >
+       <circle cx='10' cy='10' r='8' stroke='red' stroke-width='2' />
+       <path d="M 10 2 l 0 16 M 2 10 l 16 0" stroke='red' stroke-width='2' />
+        </svg>
+       
+  </defs>
+
+
+    <g
+       
+       style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1"
+       id="g2383" transform="scale(1.5)"
+       >
+ <rect x='0' y='0' width='600' height='400' fill='white' /> 
+    <text fill="black" x="50" y="30" style="font-size:12px;font-family:'serif';" >
+    Old lane positions
+    </text>
+    <use xlink:href='#slice' x='50' y='50' />
+    <text fill="black" x="250" y="30" style="font-size:12px;font-family:'serif';" >
+    New lane positions
+    </text>
+    <use xlink:href='#slice' x='250' y='50' />
+    <!-- phase 0 -->
+    <use xlink:href='#bit2' x='50' y='50' >
+        <animate attributeName='x' from='50' to='330' fill='freeze' dur='4' begin='1' />
+    </use>
+    <use xlink:href='#bit2' x='70' y='70' >
+        <animate attributeName='x' from='70' to='310' fill='freeze' dur='4' begin='1' />
+    </use>
+    <use xlink:href='#bit2' x='90' y='90' >
+        <animate attributeName='x' from='90' to='290' fill='freeze' dur='4' begin='1' />
+    </use>
+    <use xlink:href='#bit2' x='110' y='110' >
+        <animate attributeName='x' from='110' to='270' fill='freeze' dur='4' begin='1' />
+    </use>
+    <use xlink:href='#bit2' x='130' y='130' >
+        <animate attributeName='x' from='130' to='250' fill='freeze' dur='4' begin='1' />
+    </use>
+    <!-- phase 1 -->
+    <use xlink:href='#bit2' x='130' y='50' >
+        <animate attributeName='x' from='130' to='330' fill='freeze' dur='4' begin='6' />
+        <animate attributeName='y' from='50' to='90' fill='freeze' dur='4' begin='6' />
+    </use>
+    <use xlink:href='#bit2' x='110' y='70' >
+        <animate attributeName='x' from='110' to='310' fill='freeze' dur='4' begin='6' />
+        <animate attributeName='y' from='70' to='90' fill='freeze' dur='4' begin='6' />
+    </use>
+    <use xlink:href='#bit2' x='70' y='110' >
+        <animate attributeName='x' from='70' to='270' fill='freeze' dur='4' begin='6' />
+        <animate attributeName='y' from='110' to='90' fill='freeze' dur='4' begin='6' />
+    </use>
+    <use xlink:href='#bit2' x='50' y='130' >
+        <animate attributeName='x' from='50' to='250' fill='freeze' dur='4' begin='6' />
+        <animate attributeName='y' from='130' to='90' fill='freeze' dur='4' begin='6' />
+    </use>
+    <!-- phase 2 -->
+    <use xlink:href='#bit2' x='50' y='90' >
+        <animate attributeName='x' from='50' to='290' fill='freeze' dur='4' begin='11' />
+        <animate attributeName='y' from='90' to='70' fill='freeze' dur='4' begin='11' />
+    </use>
+    <use xlink:href='#bit2' x='70' y='90' >
+        <animate attributeName='x' from='70' to='290' fill='freeze' dur='4' begin='11' />
+        <animate attributeName='y' from='90' to='130' fill='freeze' dur='4' begin='11' />
+    </use>
+    <use xlink:href='#bit2' x='110' y='90' >
+        <animate attributeName='x' from='110' to='290' fill='freeze' dur='4' begin='11' />
+        <animate attributeName='y' from='90' to='50' fill='freeze' dur='4' begin='11' />
+    </use>   
+    <use xlink:href='#bit2' x='130' y='90' >
+        <animate attributeName='x' from='130' to='290' fill='freeze' dur='4' begin='11' />
+        <animate attributeName='y' from='90' to='110' fill='freeze' dur='4' begin='11' />
+    </use> 
+    <!-- phase 3 -->
+    <use xlink:href='#bit2' x='90' y='50' >
+        <animate attributeName='x' from='90' to='330' fill='freeze' dur='4' begin='16' />
+        <animate attributeName='y' from='50' to='70' fill='freeze' dur='4' begin='16' />
+    </use> 
+    <use xlink:href='#bit2' x='90' y='70' >
+        <animate attributeName='x' from='90' to='310' fill='freeze' dur='4' begin='16' />
+        <animate attributeName='y' from='70' to='130' fill='freeze' dur='4' begin='16' />
+    </use>
+    <use xlink:href='#bit2' x='90' y='110' >
+        <animate attributeName='x' from='90' to='270' fill='freeze' dur='4' begin='16' />
+        <animate attributeName='y' from='110' to='50' fill='freeze' dur='4' begin='16' />
+    </use>
+    <use xlink:href='#bit2' x='90' y='130' >
+        <animate attributeName='x' from='90' to='250' fill='freeze' dur='4' begin='16' />
+        <animate attributeName='y' from='130' to='110' fill='freeze' dur='4' begin='16' />
+    </use>
+    <!-- phase 4 -->
+    <use xlink:href='#bit2' x='70' y='50' >
+        <animate attributeName='x' from='70' to='330' fill='freeze' dur='4' begin='21' />
+        <animate attributeName='y' from='50' to='110' fill='freeze' dur='4' begin='21' />
+    </use> 
+    <use xlink:href='#bit2' x='130' y='70' >
+        <animate attributeName='x' from='130' to='310' fill='freeze' dur='4' begin='21' />
+        <animate attributeName='y' from='70' to='50' fill='freeze' dur='4' begin='21' />
+    </use>
+    <use xlink:href='#bit2' x='50' y='110' >
+        <animate attributeName='x' from='50' to='270' fill='freeze' dur='4' begin='21' />
+        <animate attributeName='y' from='110' to='130' fill='freeze' dur='4' begin='21' />
+    </use>
+    <use xlink:href='#bit2' x='110' y='130' >
+        <animate attributeName='x' from='110' to='250' fill='freeze' dur='4' begin='21' />
+        <animate attributeName='y' from='130' to='70' fill='freeze' dur='4' begin='21' />
+    </use>
+    <!-- phase 5 -->
+    <use xlink:href='#bit2' x='110' y='50' >
+        <animate attributeName='x' from='110' to='330' fill='freeze' dur='4' begin='26' />
+        <animate attributeName='y' from='50' to='130' fill='freeze' dur='4' begin='26' />
+    </use>
+    <use xlink:href='#bit2' x='50' y='70' >
+        <animate attributeName='x' from='50' to='310' fill='freeze' dur='4' begin='26' />
+        <animate attributeName='y' from='70' to='110' fill='freeze' dur='4' begin='26' />
+    </use>
+    <use xlink:href='#bit2' x='130' y='110' >
+        <animate attributeName='x' from='130' to='270' fill='freeze' dur='4' begin='26' />
+        <animate attributeName='y' from='110' to='70' fill='freeze' dur='4' begin='26' />
+    </use>
+    <use xlink:href='#bit2' x='70' y='130' >
+        <animate attributeName='x' from='70' to='250' fill='freeze' dur='4' begin='26' />
+        <animate attributeName='y' from='130' to='50' fill='freeze' dur='4' begin='26' />
+    </use>
+    
+<svg x="400" y="50" width="180" height="150">
+<path d="M 10 90 l 0 -80 l -10 10 m 10 -10 l 10 10" stroke="black" />
+<text fill="black" x="0" y="10" style="font-size:10px;font-family:'serif';">
+y
+</text>
+<path d="M 10 90 l 80 0 l -10 -10 m 10 10 l -10 10" stroke="black" />
+<text fill="black" x="92" y="95" style="font-size:10px;font-family:'serif';">
+x
+</text>
+<path d="M 10 90 l 60 -60 l -10 0 m 10 0 l 0 10" stroke="black" />
+<text fill="black" x="75" y="30" style="font-size:10px;font-family:'serif';">
+z
+</text>
+<use xlink:href='#bit2' x='5' y='110' />
+<text fill="black" x="50" y="130" style="font-size:10px;font-family:'serif';" >
+= single lane
+</text>
+</svg>
+    
+    
+</g>
+</svg>

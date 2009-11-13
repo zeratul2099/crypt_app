@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   width="220mm"
+   height="170mm"
+   id="svg2"
+>
+  <defs
+     id="defs4">
+       <svg width="30" height="30" id="bit" >
+            <rect y="10" x="0.1" width="19.9" height="19.9" fill="white" stroke="black" />
+            <polygon fill="white" stroke="black" 
+                points="0.1 10, 10 0.1, 29.9 0.1, 20 10" />
+            <polygon fill="white" stroke="black" 
+                points="29.9 0.1, 29.9 20, 20 29.9, 20 10" />
+       </svg>
+       
+       <path id='arrow0' d='m 0 0 l 50 0 -4 -4 m 4 4 l -4 4' stroke='black' />
+       <path id='arrow1' d='m 0 0 l 20 0 -4 -4 m 4 4 l -4 4' stroke='black' />
+       
+       <svg width="100" height="100" id="lane" >
+        <use xlink:href="#bit" x='70' y='0' />
+        <use xlink:href="#bit" x='60' y='10' />
+        <use xlink:href="#bit" x='50' y='20' />
+        <use xlink:href="#bit" x='40' y='30' />
+        <use xlink:href="#bit" x='30' y='40' />
+        <use xlink:href="#bit" x='20' y='50' />
+        <use xlink:href="#bit" x='10' y='60' />
+        <use xlink:href="#bit" x='0' y='70' />
+       </svg>
+       
+       <svg width="180" height="100" id="plane">
+       <use xlink:href="#lane" x='0' y='0' />
+       <use xlink:href="#lane" x='20' y='0' />
+       <use xlink:href="#lane" x='40' y='0' />
+       <use xlink:href="#lane" x='60' y='0' />
+       <use xlink:href="#lane" x='80' y='0' />
+       </svg>
+       
+       <svg width="180" height="180" id="state">
+       <use xlink:href="#plane" x='0' y='80' />
+       <use xlink:href="#plane" x='0' y='60' />
+       <use xlink:href="#plane" x='0' y='40' />
+       <use xlink:href="#plane" x='0' y='20' />
+       <use xlink:href="#plane" x='0' y='0' />
+       </svg>
+       
+       <svg width="110" height="30" id="row">
+        <use xlink:href="#bit" x='0' y='0' />
+        <use xlink:href="#bit" x='20' y='0' />
+        <use xlink:href="#bit" x='40' y='0' />
+        <use xlink:href="#bit" x='60' y='0' />
+        <use xlink:href="#bit" x='80' y='0' />
+       </svg>
+       
+       <svg width="30" height="110" id="column">
+        <use xlink:href="#bit" x='0' y='80' />
+        <use xlink:href="#bit" x='0' y='60' />
+        <use xlink:href="#bit" x='0' y='40' />
+        <use xlink:href="#bit" x='0' y='20' />
+        <use xlink:href="#bit" x='0' y='0' />
+       </svg>
+       
+       <svg width="110" height="110" id="slice" >
+       <use xlink:href="#row" x='0' y='80' />
+       <use xlink:href="#row" x='0' y='60' />
+       <use xlink:href="#row" x='0' y='40' />
+       <use xlink:href="#row" x='0' y='20' />
+       <use xlink:href="#row" x='0' y='0' />
+       </svg>
+       
+       <svg width="100" height="180" id="sheet" >
+        <use xlink:href="#lane" x='0' y='80' />
+        <use xlink:href="#lane" x='0' y='60' />
+        <use xlink:href="#lane" x='0' y='40' />
+        <use xlink:href="#lane" x='0' y='20' />
+        <use xlink:href="#lane" x='0' y='0' />
+       </svg>
+  </defs>
+
+
+
+    <g
+       
+       style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;font-family:'sans';"
+       id="g2383"
+       >
+<rect x='0' y='0' width='800' height='800' fill='white' />
+<text fill='black' x='10' y='30' style="font-size:16px;">
+Single Bit:
+</text>
+<use xlink:href="#bit" x='100' y='10' />
+
+<text fill='black' x='10' y='80' style="font-size:16px;">
+Lane:
+</text>
+<use xlink:href="#lane" x='100' y='60' />
+
+<text fill='black' x='10' y='200' style="font-size:16px;">
+Plane:
+</text>
+<use xlink:href="#plane" x='100' y='180' />
+
+<text fill='black' x='280' y='140' style="font-size:16px;">
+State:
+</text>
+<use xlink:href="#state" x='350' y='40' />
+
+<text fill='black' x='10' y='350' style="font-size:16px;">
+Row:
+</text>
+<use xlink:href="#row" x='100' y='330' />
+
+<text fill='black' x='280' y='350' style="font-size:16px;">
+Column:
+</text>
+<use xlink:href="#column" x='350' y='280' />
+
+<text fill='black' x='10' y='480' style="font-size:16px;">
+Slice:
+</text>
+<use xlink:href="#slice" x='100' y='420' />
+
+<text fill='black' x='280' y='480' style="font-size:16px;">
+Sheet:
+</text>
+<use xlink:href="#sheet" x='350' y='360' />
+
+<svg x="480" y="320">
+<text fill='black' x='0' y='20' style="font-size:16px;">
+0 &lt;= x &lt; 5
+</text>
+<text fill='black' x='0' y='40' style="font-size:16px;">
+0 &lt;= y &lt; 5
+</text>
+<text fill='black' x='0' y='60' style="font-size:16px;">
+0 &lt;= z &lt; w, mit w = |CPU-Wort|
+</text>
+</svg>
+
+<svg x="480" y="220" width="100" height="100">
+<path d="M 10 90 l 0 -80 l -10 10 m 10 -10 l 10 10" stroke="black" />
+<text fill="black" x="0" y="10">
+y
+</text>
+<path d="M 10 90 l 80 0 l -10 -10 m 10 10 l -10 10" stroke="black" />
+<text fill="black" x="92" y="95">
+x
+</text>
+<path d="M 10 90 l 60 -60 l -10 0 m 10 0 l 0 10" stroke="black" />
+<text fill="black" x="75" y="30">
+z
+</text>
+</svg>
+
+</g>
+</svg>

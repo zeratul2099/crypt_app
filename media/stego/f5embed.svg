@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   width="600"
+   height="400"
+   id="svg2"
+>
+<script type="text/ecmascript" xlink:href="/content/smil.user.js" />
+  <defs
+     id="defs4">
+       <svg width="30" height="30" id="bit" >
+            <rect y="10" x="0.1" width="19.9" height="19.9" fill="white" stroke="black" />
+            <polygon fill="white" stroke="black" 
+                points="0.1 10, 10 0.1, 29.9 0.1, 20 10" />
+            <polygon fill="white" stroke="black" 
+                points="29.9 0.1, 29.9 20, 20 29.9, 20 10" />
+            
+       </svg>
+       <svg width="30" height="30" id="zero" >
+        <text x='5' y='20' fill='black' style="font-size:18px;" >
+        0
+        </text>
+       </svg>
+       <svg width="30" height="30" id="one" >
+        <text x='5' y='20' fill='black' style="font-size:18px;" >
+        1
+        </text>
+       </svg>
+       <svg width="30" height="30" id="two" >
+        <text x='5' y='20' fill='black' style="font-size:18px;" >
+        2
+        </text>
+       </svg>
+       <svg width="30" height="30" id="three" >
+        <text x='5' y='20' fill='black' style="font-size:18px;" >
+        3
+        </text>
+       </svg>
+       <svg width="30" height="30" id="4" >
+        <text x='5' y='20' fill='black' style="font-size:18px;" >
+        4
+        </text>
+       </svg>
+       <svg width="30" height="30" id="5" >
+        <text x='5' y='20' fill='black' style="font-size:18px;" >
+        5
+        </text>
+       </svg>
+       <svg width="30" height="30" id="6" >
+        <text x='5' y='20' fill='black' style="font-size:18px;" >
+        6
+        </text>
+       </svg>
+       <svg width="30" height="30" id="7" >
+        <text x='5' y='20' fill='black' style="font-size:18px;" >
+        7
+        </text>
+       </svg>
+       <svg width="30" height="30" id="8" >
+        <text x='10' y='20' fill='black' style="font-size:18px;" >
+        8
+        </text>
+       </svg>
+       <svg width="30" height="30" id="9" >
+        <text x='10' y='20' fill='black' style="font-size:18px;" >
+        9
+        </text>
+       </svg>
+       <svg width="30" height="30" id="10" >
+        <text x='6' y='20' fill='black' style="font-size:18px;" >
+        10
+        </text>
+       </svg>
+       <svg width="30" height="30" id="11" >
+        <text x='6' y='20' fill='black' style="font-size:18px;" >
+        11
+        </text>
+       </svg>
+       <svg width="30" height="30" id="12" >
+        <text x='6' y='20' fill='black' style="font-size:18px;" >
+        12
+        </text>
+       </svg>
+       <svg width="30" height="30" id="13" >
+        <text x='6' y='20' fill='black' style="font-size:18px;" >
+        13
+        </text>
+       </svg>
+       <svg width="30" height="30" id="14" >
+        <text x='6' y='20' fill='black' style="font-size:18px;" >
+        14
+        </text>
+       </svg>
+       <svg width="30" height="30" id="15" >
+        <text x='6' y='20' fill='black' style="font-size:18px;" >
+        15
+        </text>
+       </svg>
+       
+       <svg width='120' height='120' id='mat' >
+        <rect x='0' y='0' width='120' height='120' stroke='black' />
+        <line x1='0' x2='120' y1='30' y2='30' stroke='black' />
+        <line x1='0' x2='120' y1='60' y2='60' stroke='black' />
+        <line x1='0' x2='120' y1='90' y2='90' stroke='black' />
+        <line x1='30' x2='30' y1='0' y2='120' stroke='black' />
+        <line x1='60' x2='60' y1='0' y2='120' stroke='black' />
+        <line x1='90' x2='90' y1='0' y2='120' stroke='black' />
+       </svg>
+       
+
+
+  </defs>
+
+    <g
+       
+       style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;font-family:'sans';"
+       id="g2383 " transform="scale(1)"
+       >
+<rect x='0' y='0' width='800' height='600' fill='white' />
+<!-- hash f -->
+<svg width='100' height='25' x='170' y='120' >
+<rect width='100' height='25' x='0' y='0' rx='15' ry='15' stroke='black' >
+<animate attributeName='fill' from='white' to='red' begin='code01.end' dur='1' id='f01' />
+<animate attributeName='fill' from='red' to='white' begin='f01.end' dur='1' />
+</rect>
+ <text x='48' y='18' fill='black' style="font-size:18px;" >
+f
+</text>
+</svg>
+
+<!-- codeword -->
+<use xlink:href='#bit' x='200' y='50' >
+<animate attributeName='opacity' from='1' to='1' begin='start.click' fill='freeze' dur='0' />
+<animate attributeName='y' from='50' to='120' begin='start.click' dur='1' fill='freeze' id='code01' />
+<animate attributeName='opacity' from='0' to='0' begin='code01.end' fill='freeze' dur='0' />
+<animate attributeName='opacity' from='1' to='1' begin='code01.end+2' fill='freeze' dur='0' />
+<animate attributeName='y' from='120' to='180' begin='code01.end+2' dur='1' fill='freeze' id='code02' />
+<animate attributeName='opacity' from='0' to='0' begin='msg01.end+1' fill='freeze' dur='0' />
+</use>
+ <text x='175' y='35' fill='black' style="font-size:14px;" >
+codeword N (n Bytes)
+</text>
+
+
+
+<!-- message -->
+<use xlink:href='#bit' x='250' y='180' >
+<animate attributeName='x' from='250' to='250' begin='start.click' fill='freeze' dur='0' />
+<animate attributeName='opacity' from='1' to='1' begin='start.click' fill='freeze' dur='0' />
+<animate attributeName='x' from='250' to='200' begin='code02.end+1' fill='freeze' dur='1' id='msg01' />
+<animate attributeName='opacity' from='0' to='0' begin='msg01.end' fill='freeze' dur='0' />
+</use>
+ <text x='290' y='200' fill='black' style="font-size:14px;" >
+messageblock K (k Bits)
+</text>
+<!-- XOR -->
+<svg id='xor' width="30" height="30" x='200' y='180' opacity='0'>
+	<set attributeName='opacity' to='1' dur='1' begin='msg01.end' />
+	<circle cx='10' cy='20' r='8' stroke='red' stroke-width='2' />
+	<path d="M 10 12 l 0 16 M 2 20 l 16 0" stroke='red' stroke-width='2' />
+</svg>
+<!-- s -->
+<svg height='30' width='30' x='200' y='180' opacity='0' >
+<animate attributeName='opacity' from='0' to='0' begin='start.click' fill='freeze' dur='0' />
+<animate attributeName='y' from='180' to='180' begin='start.click' dur='0' fill='freeze' />
+<animate attributeName='opacity' from='1' to='1' begin='msg01.end+1' fill='freeze' dur='0' />
+<animate attributeName='y' from='180' to='230' begin='msg01.end+2' dur='1' fill='freeze' id='s01' />
+<use xlink:href='#bit' x='0' y='0' />
+ <text x='5' y='25' fill='black' style="font-size:22px;" >
+s
+</text>
+</svg>
+<!-- text -->
+<svg width='150' height='70' x='80' y='230' opacity='0' >
+<animate attributeName='opacity' from='0' to='0' begin='start.click' fill='freeze' dur='0' />
+<animate attributeName='opacity' from='1' to='1' begin='s01.end' fill='freeze' dur='0' />
+<text x='0' y='20' fill='black' style="font-size:14px;"  >
+if s == 0:
+</text>
+<text x='10' y='40' fill='black' style="font-size:14px;"  >
+next codeword
+</text>
+<text x='10' y='60' fill='black' style="font-size:14px;"  >
+next messageblock
+</text>
+</svg>
+
+<svg width='150' height='70' x='250' y='230' opacity='0' >
+<animate attributeName='opacity' from='0' to='0' begin='start.click' fill='freeze' dur='0' />
+<animate attributeName='opacity' from='1' to='1' begin='s01.end+2' fill='freeze' dur='0' />
+<text x='0' y='20' fill='black' style="font-size:14px;"  >
+else:
+</text>
+<text x='10' y='40' fill='black' style="font-size:14px;"  >
+codeword[s-1] -= 1
+</text>
+</svg>
+
+<svg height='25' width='75' x='180' y='300' id='start' >
+<set attributeName='x' to='-100' begin='start.click' />
+<set attributeName='x' to='180' begin='s01.end+3' />
+<rect height='24' width='74' x='0.5' y='0.5' rx='5' ry='5' stroke='black' fill='white' />
+ <text fill='black' x='25' y='18' style="font-size:14px;" >
+Start
+</text>
+</svg>
+
+</g>
+</svg>

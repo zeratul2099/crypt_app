@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   width="750"
+   height="480"
+   id="svg2"
+>
+<script type="text/ecmascript" xlink:href="/content/smil.user.js" />
+  <defs
+     id="defs4">
+       <svg width="30" height="30" id="bit" >
+            <rect y="10" x="0.1" width="19.9" height="19.9" fill="white" stroke="black" />
+            <polygon fill="white" stroke="black" 
+                points="0.1 10, 10 0.1, 29.9 0.1, 20 10" />
+            <polygon fill="white" stroke="black" 
+                points="29.9 0.1, 29.9 20, 20 29.9, 20 10" />
+            
+       </svg>
+
+
+  </defs>
+
+    <g
+       
+       style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;font-family:'sans';"
+       id="g2383 " transform="scale(1.5)"
+       >
+<rect x='0' y='0' width='800' height='600' fill='white' />
+
+<!-- key k -->
+<text x='45' y='200' fill='black' style="font-size:14px;" >
+key k
+</text>
+<text x='45' y='170' fill='black' style="font-size:12px;" >
+...
+<set attributeName='opacity' to='1' begin='start.click' dur='0' fill='freeze' />
+<set attributeName='opacity' to='0' begin='m23.end+2' dur='0' fill='freeze' />
+</text>
+<svg height='30' width='30' x='10' y='150' >
+<use xlink:href='#bit' /> 
+<text x='2' y='22' fill='black' style="font-size:12px;" >
+k<tspan baseline-shift = "sub" font-size='8' >n-1</tspan>
+</text>
+<animate attributeName='x' from='10' to='10' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='150' to='150' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='opacity' from='1' to='1' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='x' from='10' to='150' dur='2' fill='freeze' begin='m23.end+4' />
+<animate attributeName='y' from='150' to='100' dur='1' fill='freeze' begin='mn1.end' />
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='mn2.end' />
+</svg>
+<svg height='30' width='30' x='60' y='150' >
+<use xlink:href='#bit' /> 
+<text x='2' y='22' fill='black' style="font-size:12px;" >
+k<tspan baseline-shift = "sub" font-size='8' >2</tspan>
+</text>
+<animate attributeName='x' from='60' to='60' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='150' to='150' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='opacity' from='1' to='1' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='x' from='60' to='150' dur='1.5' fill='freeze' begin='m13.end+2' />
+<animate attributeName='y' from='150' to='100' dur='1' fill='freeze' begin='m21.end' />
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='m22.end' />
+</svg>
+<svg height='30' width='30' x='80' y='150' >
+<use xlink:href='#bit' /> 
+<text x='2' y='22' fill='black' style="font-size:12px;" >
+k<tspan baseline-shift = "sub" font-size='8' >1</tspan>
+</text>
+<animate attributeName='x' from='80' to='80' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='150' to='150' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='opacity' from='1' to='1' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='x' from='80' to='150' dur='1' fill='freeze' begin='m03.end+2' />
+<animate attributeName='y' from='150' to='100' dur='1' fill='freeze' begin='m11.end' />
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='m12.end' />
+</svg>
+<svg height='30' width='30' x='100' y='150' >
+<use xlink:href='#bit' /> 
+<text x='2' y='22' fill='black' style="font-size:12px;" >
+k<tspan baseline-shift = "sub" font-size='8' >0</tspan>
+</text>
+<animate attributeName='y' from='150' to='150' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='opacity' from='1' to='1' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='x' from='100' to='150' dur='1' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='150' to='100' dur='1' fill='freeze' begin='m01.end' />
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='m01.end+1' />
+</svg>
+
+
+<!-- message m -->
+<text x='45' y='40' fill='black' style="font-size:14px;" >
+cipher text c
+</text>
+<text x='45' y='70' fill='black' style="font-size:12px;" >
+...
+<set attributeName='x' to='45' begin='start.click' dur='0' fill='freeze' />
+<set attributeName='y' to='70' begin='start.click' dur='0' fill='freeze' />
+<set attributeName='x' to='245' begin='m23.end+2' dur='0' fill='freeze' />
+<set attributeName='y' to='120' begin='m23.end+2' dur='0' fill='freeze' />
+</text>
+<svg height='30' width='30' x='10' y='50' >
+<use xlink:href='#bit' /> 
+<text x='2' y='22' fill='black' style="font-size:12px;" >
+c<tspan baseline-shift = "sub" font-size='8' >n-1</tspan>
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='mn2.end' />
+<animate attributeName='opacity' from='1' to='1' dur='0' fill='freeze' begin='start.click' />
+</text>
+<text x='2' y='22' fill='black' style="font-size:12px;" opacity='0' >
+m<tspan baseline-shift = "sub" font-size='8' >n-1</tspan>
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='opacity' from='1' to='1' dur='0' fill='freeze' begin='mn2.end+1' />
+</text>
+<animate attributeName='x' from='10' to='10' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='50' to='50' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='x' from='10' to='150' dur='2' fill='freeze' begin='m23.end+4' id='mn1' />
+<animate attributeName='y' from='50' to='100' dur='1' fill='freeze' begin='mn1.end' id='mn2' />
+<animate attributeName='x' from='150' to='210' dur='1' fill='freeze' begin='mn2.end+2' id='mn3' />
+</svg>
+<svg height='30' width='30' x='60' y='50' >
+<use xlink:href='#bit' /> 
+<text x='2' y='22' fill='black' style="font-size:12px;" >
+c<tspan baseline-shift = "sub" font-size='8' >2</tspan>
+<animate attributeName='opacity' from='1' to='1' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='m22.end' />
+</text>
+<text x='2' y='22' fill='black' style="font-size:12px;" opacity='0' >
+m<tspan baseline-shift = "sub" font-size='8' >2</tspan>
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='opacity' from='1' to='1' dur='0' fill='freeze' begin='m22.end+1' />
+</text>
+<animate attributeName='x' from='60' to='60' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='50' to='50' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='x' from='60' to='150' dur='1.5' fill='freeze' begin='m13.end+2' id='m21' />
+<animate attributeName='y' from='50' to='100' dur='1' fill='freeze' begin='m21.end' id='m22' />
+<animate attributeName='x' from='150' to='260' dur='1.5' fill='freeze' begin='m22.end+2' id='m23' />
+</svg>
+<svg height='30' width='30' x='80' y='50' >
+<use xlink:href='#bit' /> 
+<text x='2' y='22' fill='black' style="font-size:12px;" >
+c<tspan baseline-shift = "sub" font-size='8' >1</tspan>
+<animate attributeName='opacity' from='1' to='1' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='m12.end' />
+</text>
+<text x='2' y='22' fill='black' style="font-size:12px;" opacity='0' >
+m<tspan baseline-shift = "sub" font-size='8' >1</tspan>
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='opacity' from='1' to='1' dur='0' fill='freeze' begin='m12.end+1' />
+</text>
+<animate attributeName='x' from='80' to='80' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='50' to='50' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='x' from='80' to='150' dur='1' fill='freeze' begin='m03.end+2' id='m11' />
+<animate attributeName='y' from='50' to='100' dur='1' fill='freeze' begin='m11.end' id='m12' />
+<animate attributeName='x' from='150' to='280' dur='2' fill='freeze' begin='m12.end+2' id='m13' />
+</svg>
+<svg height='30' width='30' x='100' y='50' >
+<use xlink:href='#bit' /> 
+<text x='2' y='22' fill='black' style="font-size:12px;" >
+c<tspan baseline-shift = "sub" font-size='8' >0</tspan>
+<animate attributeName='opacity' from='1' to='1' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='m02.end' />
+</text>
+<text x='2' y='22' fill='black' style="font-size:12px;" opacity='0' >
+m<tspan baseline-shift = "sub" font-size='8' >0</tspan>
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='opacity' from='1' to='1' dur='0' fill='freeze' begin='m02.end+1' />
+</text>
+<animate attributeName='y' from='50' to='50' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='x' from='100' to='150' dur='1' fill='freeze' begin='start.click' id='m01' />
+<animate attributeName='y' from='50' to='100' dur='1' fill='freeze' begin='m01.end' id='m02' />
+<animate attributeName='x' from='150' to='300' dur='2' fill='freeze' begin='m02.end+2' id='m03' />
+</svg>
+
+<!-- XOR -->
+<svg x='150' y='100' height='30' width='30' opacity='0' >
+       <set attributeName='opacity' to='1' dur='1' begin='m02.end;m12.end;m22.end;mn2.end' />
+       <circle cx='10' cy='20' r='8' stroke='red' stroke-width='2' />
+       <path d="M 10 12 l 0 16 M 2 20 l 16 0" stroke='red' stroke-width='2' />
+</svg>
+
+<!-- cipher text -->
+<text x='245' y='90' fill='black' style="font-size:14px;" opacity='0'>
+message m
+<set attributeName='opacity' to='0' begin='start.click' dur='0' fill='freeze' />
+<set attributeName='opacity' to='1' begin='mn3.end' dur='0' fill='freeze' />
+</text>
+
+<!-- Legend -->
+<path d='M 210 300 l 0 -160 250 0' stroke='black' stroke-dasharray='5,5' />
+
+<svg height='30' width='250' x='230' y='160' >
+<use xlink:href='#bit' />
+<text x='2' y='22' fill='black' style="font-size:12px;" >
+m
+</text>
+<text x='40' y='22' fill='black' style="font-size:12px;" >
+= single bit of message
+</text>
+</svg>
+
+<svg height='30' width='250' x='230' y='200' >
+<use xlink:href='#bit' />
+<text x='2' y='22' fill='black' style="font-size:12px;" >
+k
+</text>
+<text x='40' y='22' fill='black' style="font-size:12px;" >
+= single bit of key
+</text>
+</svg>
+
+<svg height='30' width='250' x='230' y='240' >
+<use xlink:href='#bit' />
+<text x='2' y='22' fill='black' style="font-size:12px;" >
+c
+</text>
+<text x='40' y='22' fill='black' style="font-size:12px;" >
+= single bit of cipher text
+</text>
+</svg>
+
+<svg height='30' width='250' x='230' y='270' >
+<circle cx='10' cy='20' r='8' stroke='red' stroke-width='2' />
+<path d="M 10 12 l 0 16 M 2 20 l 16 0" stroke='red' stroke-width='2' />
+<text x='40' y='22' fill='black' style="font-size:12px;" >
+= XOR operation
+</text>
+</svg>
+
+<svg height='25' width='75' x='40' y='250' id='start' >
+<set attributeName='x' to='-100' begin='start.click' />
+<set attributeName='x' to='40' begin='mn3.end' />
+<rect height='24' width='74' x='0.5' y='0.5' rx='5' ry='5' stroke='black' fill='white' />
+ <text fill='black' x='25' y='18' style="font-size:14px;" >
+Start
+</text>
+</svg>
+
+</g>
+</svg>
