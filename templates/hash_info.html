@@ -29,7 +29,7 @@
         {% ifequal pictype "svg" %}
         <object type="image/svg+xml" data='/content/{{ infopage.algo.type }}/{{ svg }}' width="{{ infopage.i_width }}" height="{{ infopage.i_height }}"></object>
         {% else %}
-        <img src='/content/{{ svg }}' width="{{ infopage.i_width }}" height="{{ infopage.i_height }}" ></img>
+        <img src='/content/{{ infopage.algo.type }}/{{ svg }}' width="{{ infopage.i_width }}" height="{{ infopage.i_height }}" ></img>
         {% endifequal %}
         </td>
     </tr><tr>
