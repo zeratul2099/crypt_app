@@ -80,8 +80,8 @@ message block m
 <!-- l -->
 <svg width="27" height="27" x='155' y='58' opacity='0' >
 <use xlink:href='#bit32' />
-<text x='5' y='23' font-size='14' fill='black' >
-l
+<text x='4' y='20' font-size='14' fill='black' >
+l<tspan baseline-shift = "sub" font-size='8' >i</tspan>
 </text>
 <animate attributeName='opacity' from='0' to='1' begin='start.click' dur='1' fill='freeze' />
 <animate attributeName='x' from='155' to='100' begin='start.click' dur='2' fill='freeze' />
@@ -95,13 +95,13 @@ l
 <!-- r  -->
 <svg width="27" height="27" x='210' y='80' opacity='0' >
 <use xlink:href='#bit32' />
-<text x='5' y='23' font-size='14' fill='black' >
-r
+<text x='4' y='20' font-size='14' fill='black' >
+r<tspan baseline-shift = "sub" font-size='8' >i</tspan>
 <set attributeName='opacity' to='1' dur='0' fill='freeze' begin='start.click' />
 <set attributeName='opacity' to='0' dur='0' fill='freeze' begin='r06.end' />
 </text>
-<text x='5' y='23' font-size='14' fill='black' opacity='0' >
-l
+<text x='4' y='20' font-size='14' fill='black' opacity='0' >
+l<tspan baseline-shift = "sub" font-size='8' >i+1</tspan>
 <set attributeName='opacity' to='0' dur='0' fill='freeze' begin='start.click' />
 <set attributeName='opacity' to='1' dur='0' fill='freeze' begin='r06.end' />
 </text>
@@ -116,8 +116,8 @@ l
 
 <svg width="27" height="27" x='155' y='58' opacity='0' >
 <use xlink:href='#bit32' />
-<text x='5' y='23' font-size='14' fill='black' >
-r
+<text x='4' y='20' font-size='14' fill='black' >
+r<tspan baseline-shift = "sub" font-size='8' >i</tspan>
 </text>
 <animate attributeName='opacity' from='0' to='1' begin='start.click' dur='1' fill='freeze' />
 <animate attributeName='x' from='155' to='210' begin='start.click' dur='2' fill='freeze' />
@@ -330,8 +330,8 @@ s<tspan baseline-shift = "sub" font-size='8' >8</tspan>
 </use>
 <svg height='30' width='30' x='205' y='315' opacity='0' >
 <use xlink:href='#bit32' />
-<text x='5' y='23' font-size='14' fill='black' opacity='0' >
-r
+<text x='4' y='20' font-size='14' fill='black' opacity='0' >
+r<tspan baseline-shift = "sub" font-size='8' >i+1</tspan>
 <set attributeName='opacity' to='0' dur='0' fill='freeze' begin='start.click' />
 <set attributeName='opacity' to='1' dur='0' fill='freeze' begin='r06.end' />
 </text>

@@ -60,6 +60,12 @@ p.content
 .external a:active { text-decoration:none; }
 .external a:focus { text-decoration:none; }
 
+.source a:link { font-style:italic; font-size:small; text-decoration:none; color:blue;}
+.source a:visited { font-style:italic;text-decoration:none;color:blue; }
+.source a:hover { color:red;}
+.source a:active { text-decoration:none; }
+.source a:focus { text-decoration:none; }
+.source a:before {content: "Quelle: ";}
 div.info {
 border: 2px outset black;
 background: #FAFAFA;
