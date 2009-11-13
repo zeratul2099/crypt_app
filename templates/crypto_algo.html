@@ -4,12 +4,12 @@
 {% block titel %}{{ title }}{% endblock %}
 
 {% block inhalt %}
-(<a href='/info/{{ algo }}/overview/'>Was ist das?</a>)
+<a href='/info/{{ algo }}/overview/'>Was ist das?</a>
 <p class='nav' >
 &gt; <a href='../../../crypt_app/'>Crypt App</a> &gt; <a href='../../'>Kryptologie</a> &gt; <a href='../../../info/{{ algo }}/overview'>{{ title }}</a> &gt; Ausprobieren
 </p>
 {% ifequal algo 'rsa' %}
-<table>
+<table class='info'>
     <tr>
         <td>2048-Bit-RSA-Schl&uuml;sselpaar generieren und als zip-Archiv herunterladen:</td>
     </tr>
@@ -27,7 +27,7 @@
            
         
         <tr>
-            <td width='50%'>
+            <td width='50%' class='info' >
             <form method='post' action='.' enctype="multipart/form-data">
             <table>
             {{ cypherForm }}
@@ -35,7 +35,7 @@
             <input type='submit' name='submit1' value='Abschicken' />
             </form>
             </td>
-            <td width='50%'>
+            <td width='50%' class='info' >
             <form method='post' action='.' enctype="multipart/form-data">
             <table>
             {{ decypherForm }}
