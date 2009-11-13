@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:xlink="http://www.w3.org/1999/xlink" >
 <head>
   <title>{%block titleline %}Crypt_App{% endblock %}</title>
-  <link rel="stylesheet" type="text/css" href="/content/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/content/css/styles.css" />
   <style type="text/css">
 
   </style>
@@ -12,11 +12,9 @@
 <body>
   <div id="inhalt">
     <h2 id='header'>{% block titel %}Crypt_App{% endblock %}</h2>
-
     {% block inhalt %}
     test
     {% endblock %}
-    <p></p>
   </div>{% if user_agent %}
   <div id='footer' >You are using {{ user_agent }}</div>
   {% endif %}
