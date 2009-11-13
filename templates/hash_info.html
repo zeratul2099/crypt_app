@@ -9,8 +9,10 @@
 {% endifequal %}
 {% endblock %}
 {% block inhalt %}
+
 <a href='/{{ infopage.algo.type }}/algo/{{ infopage.algo.shortTitle }}/'>{{ infopage.algo.name }} ausprobieren</a>
-<p>
+
+<p class='nav' >
 {% ifequal infopage.shortTitle "overview" %}
 &gt; <a href='../../../crypt_app/'>Crypt App</a> &gt; <a href='../../../{{ infopage.algo.type }}/'>{{ algo_type }}</a> &gt; {{ infopage.algo.name }}
 {% else %}
@@ -31,7 +33,7 @@
         {% endifequal %}
         </td>
     </tr><tr>
-        <td width='75%' valign='top'>{{ infopage.text|safe }}</td>
+        <td width='75%' valign='top'><div class='info'>{{ infopage.text|safe }}</div></td>
     </tr>
 </table>
 
