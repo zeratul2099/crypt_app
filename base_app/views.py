@@ -10,7 +10,7 @@ def base(request):
 def list(request, algo_type):
     algos = Algo.objects.filter(type=algo_type).order_by("order")
     if algo_type == "hash":
-        title = "Hashalgorithmen"
+        title = "Hash-Algorithmen"
     elif algo_type == "stego":
         title = "Steganographie"
     elif algo_type == "crypto":

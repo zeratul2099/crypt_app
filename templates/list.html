@@ -2,12 +2,12 @@
 
 {%block titleline %}{{ title }}{% endblock %}
 
-{% block titel %}{{ title }}{% endblock %}
+{% block title %}{{ title }}{% endblock %}
 
 {% block content %}
 <a href='{% url base_app.views.info algo_type "overview" %}/'>Was ist das?</a>
 <p class='nav' >
-&gt; <a href='{% url base_app.views.base %}/'>Crypt App</a> &gt; {{ title }}
+&gt; <a href='{% url base_app.views.base %}'>Crypt App</a> &gt; {{ title }}
 </p>
 <table width='600'>
     {% for a in algos %}

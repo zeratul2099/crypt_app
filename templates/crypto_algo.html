@@ -4,9 +4,9 @@
 {% block titel %}{{ title }}{% endblock %}
 
 {% block content %}
-<a href='/info/{{ algo }}/overview/'>Was ist das?</a>
+<a href='{% url base_app.views.info algo "overview" %}/'>Was ist das?</a>
 <p class='nav' >
-&gt; <a href='../../../crypt_app/'>Crypt App</a> &gt; <a href='../../'>Kryptographie</a> &gt; <a href='../../../info/{{ algo }}/overview'>{{ title }}</a> &gt; Ausprobieren
+&gt; <a href='{% url base_app.views.base %}'>Crypt App</a> &gt; <a href='{% url base_app.views.list "crypto" %}'>Kryptographie</a> &gt; <a href='{% url base_app.views.info algo "overview" %}/'>{{ title }}</a> &gt; Ausprobieren
 </p>
 {% ifequal algo 'rsa' %}
 <table class='info'>
