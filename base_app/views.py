@@ -18,7 +18,7 @@ def list(request, algo_type):
     else:
         title = ""
         
-    return render_to_response("list.html", { "algos" : algos, "title" : title })
+    return render_to_response("list.html", { "algos" : algos, "title" : title, "algo_type" : algo_type, })
 
 def info(request, algo, page):
     title = ''
@@ -56,7 +56,7 @@ def info(request, algo, page):
         type_long = "Steganographie"
     elif algo_object.type == 'hash':
         type_long = "Hash-Algorithmen"
-    return render_to_response("hash_info.html", { 'infopage' : info_page,
+    return render_to_response("infopage.html", { 'infopage' : info_page,
                                                 'svg' : svg,
                                                 'pictype' : pictype,
                                                 'nav' : nav,

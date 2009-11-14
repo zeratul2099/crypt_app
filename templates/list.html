@@ -1,21 +1,27 @@
-{% extends "basis.html" %}
+{% extends "base.html" %}
 
 {%block titleline %}{{ title }}{% endblock %}
 
 {% block titel %}{{ title }}{% endblock %}
 
-{% block inhalt %}
-Was ist das?
+{% block content %}
+<a href='{% url base_app.views.info algo_type "overview" %}/'>Was ist das?</a>
 <p class='nav' >
-&gt; <a href='../../../crypt_app/'>Crypt App</a> &gt; {{ title }}
+&gt; <a href='{% url base_app.views.base %}/'>Crypt App</a> &gt; {{ title }}
 </p>
 <table width='600'>
     {% for a in algos %}
     
     <tr>
         <td width='50%'>{{ a.name }}:</td>
-        <td width='25%'><a href='../info/{{ a.shortTitle }}/overview/'>Was ist das?</a></td>
-        <td width='25%'><a href='./algo/{{ a.shortTitle }}/'>Ausprobieren</a></td>
+        <td width='25%'><a href='{% url base_app.views.info a.shortTitle "overview" %}/'>Was ist das?</a></td>
+        {% ifequal algo_type "crypto" %}
+        <td width='25%'><a href='{% url crypto.views.algo a.shortTitle %}/'>Ausprobieren</a></td>
+        {% else %}{% ifequal algo_type "stego" %}
+        <td width='25%'><a href='{% url stego.views.algo a.shortTitle %}/'>Ausprobieren</a></td>
+        {% else %}{% ifequal algo_type "hash" %}
+        <td width='25%'><a href='{% url hash.views.algo a.shortTitle %}/'>Ausprobieren</a></td>
+        {% endifequal %}{% endifequal %}{% endifequal %}
     </tr>
     
     {% endfor %}

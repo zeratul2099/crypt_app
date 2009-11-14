@@ -10,7 +10,7 @@ urlpatterns = patterns('',
     # Example:
     # (r'^sym_gui/', include('sym_gui.foo.urls')),
     (r'^crypt_app/$', 'base_app.views.base'),
-
+        
     (r'^hash/algo/(?P<algo>\w*)/?$', 'hash.views.algo'),
     
     (r'^info/(?P<algo>\w*)/(?P<page>\w*)/?$', 'base_app.views.info'),

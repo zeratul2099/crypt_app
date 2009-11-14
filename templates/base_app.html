@@ -1,22 +1,23 @@
-{% extends "basis.html" %}
+{% extends "base.html" %}
 
 {% block titleline %}Crypt_App{% endblock %}
 
-{% block titel %}Crypt_App{% endblock %}
+{% block title %}Crypt_App{% endblock %}
 
-{% block inhalt %}
+{% block content %}
+<br>
 <p class='nav' >
 &gt; Crypt App
 </p>
 <table width='400'>
     <tr>
-        <td><a href='../crypto/'>Kryptographie</a></td><td>Was ist das?</td>
+        <td><a href='{% url base_app.views.list algo_type="crypto" %}'>Kryptographie</a></td><td><a href='{% url base_app.views.info "crypto","overview" %}/'>Was ist das?</a></td>
     </tr>
     <tr>
-        <td><a href='../stego/'>Steganographie</a></td><td>Was ist das?</td>
+        <td><a href='{% url base_app.views.list algo_type="stego" %}'>Steganographie</a></td><td>Was ist das?</td>
     </tr>
     <tr>
-        <td><a href='../hash/'>Hash-Algorithmen</a></td><td>Was ist das?</td>
+        <td><a href='{% url base_app.views.list algo_type="hash" %}'>Hash-Algorithmen</a></td><td>Was ist das?</td>
     </tr>
 </table>
 
