@@ -484,7 +484,7 @@ weight of block =
 		Addition
 		</text>
 </svg>
-<path d='M 650 210 l -160 0 0 150' stroke='black' />
+<path d='M 650 210 l -160 0 0 150' stroke='black' stroke-dasharray='5, 5' />
 <text x='5' y='240' fill='black' style="font-size:12px;" >
 m = 4
 </text>

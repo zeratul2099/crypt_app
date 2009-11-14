@@ -311,7 +311,7 @@ p = m mod k
 
 
 <!-- m text -->
-<svg x='200' y='110' width='100' height='25' >
+<svg x='200' y='110' width='120' height='25' >
 <text x='0' y='20' fill='black' font-size='14' opacity='0'>
 <set attributeName='opacity' to='1' dur='2' begin='white02.end' />
 m = m / 1 = 101101

@@ -6,7 +6,7 @@
 {% block inhalt %}
 <a href='/info/{{ algo }}/overview/'>Was ist das?</a>
 <p class='nav' >
-&gt; <a href='../../../crypt_app/'>Crypt App</a> &gt; <a href='../../'>Kryptologie</a> &gt; <a href='../../../info/{{ algo }}/overview'>{{ title }}</a> &gt; Ausprobieren
+&gt; <a href='../../../crypt_app/'>Crypt App</a> &gt; <a href='../../'>Kryptographie</a> &gt; <a href='../../../info/{{ algo }}/overview'>{{ title }}</a> &gt; Ausprobieren
 </p>
 {% ifequal algo 'rsa' %}
 <table class='info'>
@@ -44,15 +44,15 @@
             </form>
             </td>
         </tr>
-    </table>
-     <table>
+    </table>{% if output %}
+     <table class='info'>
         <tr>
             <td>{{ output|escape|linebreaksbr }}</td>
         </tr>
         <tr>
             <td>{{ cypher|force_escape|linebreaksbr }}</td>
         </tr>
-    </table>   
+    </table>{% endif %}
  </td>
     </tr>
 </table>

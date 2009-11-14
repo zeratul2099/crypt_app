@@ -51,11 +51,11 @@ def info(request, algo, page):
     #   nav_list.append("<a href='/"+algo_object.type+"/info/"+algo_object.shortTitle+"/"+p.shortTitle+"/'>"+p.title+"</a>")
     type_long = ""
     if algo_object.type == 'crypto':
-        type_long = "Krytographie"
+        type_long = "Kryptographie"
     elif algo_object.type == 'stego':
         type_long = "Steganographie"
     elif algo_object.type == 'hash':
-        type_long = "Hashalgorithmen"
+        type_long = "Hash-Algorithmen"
     return render_to_response("hash_info.html", { 'infopage' : info_page,
                                                 'svg' : svg,
                                                 'pictype' : pictype,
