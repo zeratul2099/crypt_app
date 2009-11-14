@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<head>
+  <title>{%block titleline %}Crypt_App{% endblock %}</title>
+  <link rel="stylesheet" type="text/css" href="/content/css/styles.css" />
+  <style type="text/css">
+
+  </style>
+</head>
+<body>
+  <div id="inhalt">
+    <h2 id='header'>{% block title %}Crypt_App{% endblock %}</h2>
+    {% block content %}
+    test
+    {% endblock %}
+  </div>{% if user_agent %}
+  <div id='footer' >You are using {{ user_agent }}</div>
+  {% endif %}
+</body>
+</html>
+
