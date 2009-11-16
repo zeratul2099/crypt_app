@@ -132,8 +132,7 @@ def algo(request, algo):
             embedForm = BattlestegEmbedForm()
             extractForm = BattlestegExtractForm()
     # render
-    return render_to_response("stego_algo.html", {'title' : algo_object.name,
-                                            'algo' : algo,
+    return render_to_response("stego_algo.html", {'algo' : algo_object,
                                             'embedForm' : embedForm, 
                                             'extractForm' : extractForm,
                                             'text' : text}) 

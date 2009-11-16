@@ -134,8 +134,7 @@ def algo(request, algo):
             cypherForm = RSAEncryptForm()
             decypherForm = RSADecryptForm()
     
-    return render_to_response("crypto_algo.html", {'title' : algo_object.name,
-                                            'algo' : algo,
+    return render_to_response("crypto_algo.html", {'algo' : algo_object,
                                             'output' : output,
                                             'cypher' : cypher,
                                             'decypherForm' : decypherForm, 

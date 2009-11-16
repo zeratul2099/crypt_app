@@ -1,10 +1,14 @@
 {% extends "base.html" %}
-
-{% block titleline %}{{ infopage.algo.name }}: {{ infopage.title|safe }}{% endblock %}
-{% block title %}
+{% block titleline %}
 {% ifequal infopage.shortTitle "overview" %}
 {{ infopage.algo.name }}
 {% else %}
+{{ infopage.algo.name }}: {{ infopage.title|safe }}
+{% endifequal %}
+{% endblock %}
+
+{% block title %}
+{% ifequal infopage.shortTitle "overview" %}{{ infopage.algo.name }}{% else %}
 {{ infopage.algo.name }}: {{ infopage.title|safe }}
 {% endifequal %}
 {% endblock %}

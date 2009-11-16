@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 
-{% block titleline %}{{ title }}{% endblock %}
-{% block title %}{{ title }}{% endblock %}
+{% block titleline %}{{ algo.name }}{% endblock %}
+{% block title %}{{ algo.name }}{% endblock %}
 
 {% block content %}
-<a href='{% url base_app.views.info algo "overview" %}/'>Was ist das?</a>
+<a href='{% url base_app.views.info algo.shortTitle "overview" %}/'>Was ist das?</a>
 <p class='nav' >
-&gt; <a href='{% url base_app.views.base %}'>Crypt App</a> &gt; <a href='{% url base_app.views.list "hash" %}'>Hash-Algorithmen</a> &gt; <a href='{% url base_app.views.info algo "overview" %}/'>{{ title }}</a> &gt; Ausprobieren
+&gt; <a href='{% url base_app.views.base %}'>Crypt App</a> &gt; <a href='{% url base_app.views.list "hash" %}'>Hash-Algorithmen</a> &gt; <a href='{% url base_app.views.info algo.shortTitle "overview" %}/'>{{ algo.name }}</a> &gt; Ausprobieren
 </p>
 <table>
     <tr valign='top'>
