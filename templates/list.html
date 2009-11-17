@@ -5,11 +5,13 @@
 {% block title %}{{ title }}{% endblock %}
 
 {% block content %}
+<div class='leftspace' >
 <a href='{% url base_app.views.info algo_type "overview" %}/'>Was ist das?</a>
+</div>
 <p class='nav' >
 &gt; <a href='{% url base_app.views.base %}'>Crypt App</a> &gt; {{ title }}
 </p>
-<table width='600'>
+<table width='600' class='leftspace' >
     {% for a in algos %}
     
     <tr>

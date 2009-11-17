@@ -15,6 +15,7 @@
 {% block content %}
 
 {# ausprobieren #}
+<div class='leftspace' >
 {% ifequal infopage.algo.type "crypto" %}
 <a href='{% url crypto.views.algo infopage.algo.shortTitle %}/'>{{ infopage.algo.name }} ausprobieren</a>
 {% else %}{% ifequal infopage.algo.type "stego" %}
@@ -22,9 +23,8 @@
 {% else %}{% ifequal infopage.algo.type "hash" %}
 <a href='{% url hash.views.algo infopage.algo.shortTitle %}/'>{{ infopage.algo.name }} ausprobieren</a>
 {% else %}
-<br>
 {% endifequal %}{% endifequal %}{% endifequal %}
-
+</div>
 <p class='nav' >
 {% ifequal infopage.shortTitle "overview" %}
     {% ifequal infopage.algo.type "basics" %}
@@ -40,7 +40,7 @@
     {% endifequal %}
 {% endifequal %}
 </p>
-<p class='content' >
+<div class='content' >
 <table width='100%' >
     <tr>
         <th width='25%' rowspan='3' valign='top' align='left' ><ul></ul>{{ nav|safe }}</ul></th>
@@ -57,7 +57,7 @@
         <td width='75%' valign='top'><div class='info'>{{ infopage.text|safe }}</div></td>
     </tr>
 </table>
-</p>
+</div>
 
 {% endblock %}
 

@@ -4,7 +4,9 @@
 {% block title %}{{ algo.name }}{% endblock %}
 
 {% block content %}
+<div class='leftspace' >
 <a href='{% url base_app.views.info algo.shortTitle "overview" %}/'>Was ist das?</a>
+</div>
 <p class='nav' >
 &gt; <a href='{% url base_app.views.base %}'>Crypt App</a> &gt; <a href='{% url base_app.views.list "hash" %}'>Hash-Algorithmen</a> &gt; <a href='{% url base_app.views.info algo.shortTitle "overview" %}/'>{{ algo.name }}</a> &gt; Ausprobieren
 </p>

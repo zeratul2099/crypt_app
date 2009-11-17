@@ -292,6 +292,16 @@ round 16
 Start
 </text>
 </svg>
-
+<!-- Legend -->
+<path d='M 0 310 l 550 0' stroke='black' stroke-dasharray='5, 5' />
+ <text fill='black' x='15' y='330' style="font-size:14px;" >
+IP = Initiale Permutation
+</text>
+ <text fill='black' x='15' y='350' style="font-size:14px;" >
+IP<tspan baseline-shift = "super" font-size='8' >-1</tspan> = Inverse IP
+</text>
+ <text fill='black' x='15' y='370' style="font-size:14px;" >
+PC = Permuted Choice
+</text>
 </g>
 </svg>
