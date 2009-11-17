@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   width="650"
+   height="400"
+   id="svg2"
+>
+<script type="text/ecmascript" xlink:href="/content/smil.user.js" />
+  <defs
+     id="defs4">
+       <svg width="30" height="30" id="bit"  >
+            <rect y="10" x="0.1" width="19.9" height="19.9" fill="white" stroke="black" />
+            <polygon fill="white" stroke="black" 
+                points="0.1 10, 10 0.1, 29.9 0.1, 20 10" />
+            <polygon fill="white" stroke="black" 
+                points="29.9 0.1, 29.9 20, 20 29.9, 20 10" />
+            
+       </svg>
+
+
+  </defs>
+
+    <g
+       
+       style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;font-family:'sans';"
+       id="g2383 " transform="scale(1)"
+       >
+<rect x='0' y='0' width='800' height='600' fill='white' />
+<!-- matrix -->
+<svg width='502' height='162' x='50' y='50' >
+<path d='M 1 1 l 440 0 m 0 40 l -440 0 m 0 40 l 440 0 m 0 40 l -440 0 m 0 40 l 440 0' stroke='black' />
+<path d='M 441 1 l 90 0 m 0 40 l -90 0 m 0 40 l 90 0 m 0 40 l -90 0 m 0 40 l 90 0' stroke='black' stroke-dasharray='5, 5' />
+<path d='M 1 1 l 0 160 m 40 0 l 0 -160 m 40 0 l 0 160 m 40 0 l 0 -160 m 40 0 l 0 160 m 40 0 l 0 -160 m 40 0 l 0 160 m 40 0 l 0 -160 m 40 0 l 0 160 m 40 0 l 0 -160 m 40 0 l 0 160' stroke='black' />
+</svg>
+
+<!-- k -->
+<svg width='30' height='30' x='-50' y='120' >
+<use xlink:href='#bit' />
+<text x='5' y='25' font-size='14' fill='black' >
+k
+</text>
+<animate attributeName='x' from='-50' to='10' dur='2' begin='1' fill='freeze' id='k01' />
+</svg>
+
+<use xlink:href='#bit' x='10' y='120' opacity='0' >
+<animate attributeName='opacity' from='0' to='1' begin='k01.end+1' dur='1' fill='freeze' />
+<animate attributeName='x' from='10' to='55' begin='k01.end+1' dur='2' fill='freeze' />
+<animate attributeName='y' from='120' to='175' begin='k01.end+1' dur='2' fill='freeze' />
+</use>
+<use xlink:href='#bit' x='10' y='120' opacity='0' >
+<animate attributeName='opacity' from='0' to='1' begin='k01.end+1' dur='1' fill='freeze' />
+<animate attributeName='x' from='10' to='55' begin='k01.end+1' dur='2' fill='freeze' />
+<animate attributeName='y' from='120' to='135' begin='k01.end+1' dur='2' fill='freeze' />
+</use>
+<use xlink:href='#bit' x='10' y='120' opacity='0' >
+<animate attributeName='opacity' from='0' to='1' begin='k01.end+1' dur='1' fill='freeze' />
+<animate attributeName='x' from='10' to='55' begin='k01.end+1' dur='2' fill='freeze' />
+<animate attributeName='y' from='120' to='95' begin='k01.end+1' dur='2' fill='freeze' />
+</use>
+<use xlink:href='#bit' x='10' y='120' opacity='0' >
+<animate attributeName='opacity' from='0' to='1' begin='k01.end+1' dur='1' fill='freeze' />
+<animate attributeName='x' from='10' to='55' begin='k01.end+1' dur='2' fill='freeze' id='k02' />
+<animate attributeName='y' from='120' to='55' begin='k01.end+1' dur='2' fill='freeze' />
+</use>
+
+
+
+
+
+</g>
+</svg>
