@@ -48,6 +48,7 @@
 k
 </text>
 <animate attributeName='x' from='-50' to='10' dur='2' begin='1' fill='freeze' id='k01' />
+<animate attributeName='opacity' from='1' to='0' begin='k01.end+1' dur='1' fill='freeze' />
 </svg>
 
 <use xlink:href='#bit' x='10' y='120' opacity='0' >
@@ -67,7 +68,7 @@ k
 </use>
 <use xlink:href='#bit' x='10' y='120' opacity='0' >
 <animate attributeName='opacity' from='0' to='1' begin='k01.end+1' dur='1' fill='freeze' />
-<animate attributeName='x' from='10' to='55' begin='k01.end+1' dur='2' fill='freeze' id='k02' />
+<animate attributeName='x' from='10' to='55' begin='k01.end+1' dur='2' fill='freeze'  />
 <animate attributeName='y' from='120' to='55' begin='k01.end+1' dur='2' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='10' y='120' opacity='0' >
@@ -127,13 +128,531 @@ k
 </use>
 <use xlink:href='#bit' x='10' y='120' opacity='0' >
 <animate attributeName='opacity' from='0' to='1' begin='k01.end+1' dur='1' fill='freeze' />
-<animate attributeName='x' from='10' to='175' begin='k01.end+1' dur='5' fill='freeze'  />
+<animate attributeName='x' from='10' to='175' begin='k01.end+1' dur='5' fill='freeze' id='k02' />
 <animate attributeName='y' from='120' to='55' begin='k01.end+1' dur='5' fill='freeze' />
 </use>
 
 
+<!-- w0 -->
+<use xlink:href='#bit' x='55' y='175' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='rot03.end+5' dur='0' fill='freeze' />
+<animate attributeName='y' from='175' to='300' begin='rot03.end+5' dur='2' fill='freeze' id='w01' />
+<animate attributeName='x' from='55' to='175' begin='w01.end+1' dur='3' fill='freeze' id='w02' />
+<animate attributeName='opacity' from='0' to='0' begin='w02.end' dur='0' fill='freeze' />
+</use>
+<use xlink:href='#bit' x='55' y='135' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='rot03.end+5' dur='0' fill='freeze' />
+<animate attributeName='y' from='135' to='280' begin='rot03.end+5' dur='2' fill='freeze' />
+<animate attributeName='x' from='55' to='175' begin='w01.end+1' dur='3' fill='freeze' />
+<animate attributeName='opacity' from='0' to='0' begin='w02.end' dur='0' fill='freeze' />
+</use>
+<use xlink:href='#bit' x='55' y='95' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='rot03.end+5' dur='0' fill='freeze' />
+<animate attributeName='y' from='95' to='260' begin='rot03.end+5' dur='2' fill='freeze' />
+<animate attributeName='x' from='55' to='175' begin='w01.end+1' dur='3' fill='freeze' />
+<animate attributeName='opacity' from='0' to='0' begin='w02.end' dur='0' fill='freeze' />
+</use>
+<use xlink:href='#bit' x='55' y='55' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='rot03.end+5' dur='0' fill='freeze' />
+<animate attributeName='y' from='55' to='240' begin='rot03.end+5' dur='2' fill='freeze' />
+<animate attributeName='x' from='55' to='175' begin='w01.end+1' dur='3' fill='freeze' />
+<animate attributeName='opacity' from='0' to='0' begin='w02.end' dur='0' fill='freeze' />
+</use>
 
 
+<!-- w3 -->
+<use xlink:href='#bit' x='205' y='240' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='rot01.end' dur='0' fill='freeze' />
+<animate attributeName='y' from='240' to='300' begin='rot01.end' dur='2' fill='freeze' id='rot02' />
+<animate attributeName='x' from='205' to='175' begin='rot02.end' dur='1' fill='freeze' id='rot03' />
+<animate attributeName='x' from='175' to='215' begin='rcon01.end+2' dur='1' fill='freeze' id='w41' />
+<animate attributeName='y' from='300' to='175' begin='w41.end' dur='2' fill='freeze' id='w42' />
+</use>
+
+<use xlink:href='#bit' x='175' y='175' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='k02.end' dur='0' fill='freeze' />
+<animate attributeName='y' from='175' to='300' begin='k02.end+1' dur='2' fill='freeze' id='k03' />
+<animate attributeName='y' from='300' to='280' begin='rot01.end' dur='2' fill='freeze' />
+<animate attributeName='x' from='175' to='215' begin='rcon01.end+2' dur='1' fill='freeze' />
+<animate attributeName='y' from='280' to='135' begin='w41.end' dur='2' fill='freeze' />
+</use>
+<use xlink:href='#bit' x='175' y='135' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='k02.end' dur='0' fill='freeze' />
+<animate attributeName='y' from='135' to='280' begin='k02.end+1' dur='2' fill='freeze' />
+<animate attributeName='y' from='280' to='260' begin='rot01.end' dur='2' fill='freeze' />
+<animate attributeName='x' from='175' to='215' begin='rcon01.end+2' dur='1' fill='freeze' />
+<animate attributeName='y' from='260' to='95' begin='w41.end' dur='2' fill='freeze' />
+</use>
+<use xlink:href='#bit' x='175' y='95' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='k02.end' dur='0' fill='freeze' />
+<animate attributeName='y' from='95' to='260' begin='k02.end+1' dur='2' fill='freeze' />
+<animate attributeName='y' from='260' to='240' begin='rot01.end' dur='2' fill='freeze' />
+<animate attributeName='x' from='175' to='215' begin='rcon01.end+2' dur='1' fill='freeze'  />
+<animate attributeName='y' from='240' to='55' begin='w41.end' dur='2' fill='freeze' />
+</use>
+
+
+<use xlink:href='#bit' x='175' y='55' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='k02.end' dur='0' fill='freeze' />
+<animate attributeName='y' from='55' to='240' begin='k02.end+1' dur='2' fill='freeze' />
+<animate attributeName='x' from='175' to='205' begin='k03.end+2' dur='1' fill='freeze' id='rot01' />
+<animate attributeName='opacity' from='0' to='0' begin='rot01.end' dur='0' fill='freeze' />
+</use>
+
+
+
+<!-- XOR -->
+<svg x='175' y='240' height='30' width='30' opacity='0' >
+       <set attributeName='opacity' to='1' dur='1' begin='w02.end;rcon01.end' />
+       <circle cx='10' cy='20' r='8' stroke='red' stroke-width='2' />
+       <path d="M 10 12 l 0 16 M 2 20 l 16 0" stroke='red' stroke-width='2' />
+</svg>
+<svg x='175' y='260' height='30' width='30' opacity='0' >
+       <set attributeName='opacity' to='1' dur='1' begin='w02.end' />
+       <circle cx='10' cy='20' r='8' stroke='red' stroke-width='2' />
+       <path d="M 10 12 l 0 16 M 2 20 l 16 0" stroke='red' stroke-width='2' />
+</svg>
+<svg x='175' y='280' height='30' width='30' opacity='0' >
+       <set attributeName='opacity' to='1' dur='1' begin='w02.end' />
+       <circle cx='10' cy='20' r='8' stroke='red' stroke-width='2' />
+       <path d="M 10 12 l 0 16 M 2 20 l 16 0" stroke='red' stroke-width='2' />
+</svg>
+<svg x='175' y='300' height='30' width='30' opacity='0' >
+       <set attributeName='opacity' to='1' dur='1' begin='w02.end' />
+       <circle cx='10' cy='20' r='8' stroke='red' stroke-width='2' />
+       <path d="M 10 12 l 0 16 M 2 20 l 16 0" stroke='red' stroke-width='2' />
+</svg>
+
+
+
+<!-- w5 -->
+<use xlink:href='#bit' x='95' y='175' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='w42.end+1' dur='0' fill='freeze' />
+<animate attributeName='y' from='175' to='300' begin='w42.end+1' dur='2' fill='freeze' id='w51' />
+<animate attributeName='x' from='95' to='255' begin='w51.end' dur='3' fill='freeze' id='w52' />
+<animate attributeName='opacity' from='0' to='0' begin='w52.end' dur='0' fill='freeze' />
+</use>
+<use xlink:href='#bit' x='95' y='135' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='w42.end+1' dur='0' fill='freeze' />
+<animate attributeName='y' from='135' to='280' begin='w42.end+1' dur='2' fill='freeze' />
+<animate attributeName='x' from='95' to='255' begin='w51.end' dur='3' fill='freeze' />
+<animate attributeName='opacity' from='0' to='0' begin='w52.end' dur='0' fill='freeze' />
+</use>
+<use xlink:href='#bit' x='95' y='95' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='w42.end+1' dur='0' fill='freeze' />
+<animate attributeName='y' from='95' to='260' begin='w42.end+1' dur='2' fill='freeze' />
+<animate attributeName='x' from='95' to='255' begin='w51.end' dur='3' fill='freeze' />
+<animate attributeName='opacity' from='0' to='0' begin='w52.end' dur='0' fill='freeze' />
+</use>
+<use xlink:href='#bit' x='95' y='55' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='w42.end+1' dur='0' fill='freeze' />
+<animate attributeName='y' from='55' to='240' begin='w42.end+1' dur='2' fill='freeze' />
+<animate attributeName='x' from='95' to='255' begin='w51.end' dur='3' fill='freeze' />
+<animate attributeName='opacity' from='0' to='0' begin='w52.end' dur='0' fill='freeze' />
+</use>
+
+<use xlink:href='#bit' x='215' y='175' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='w42.end+1' dur='0' fill='freeze' />
+<animate attributeName='y' from='175' to='300' begin='w42.end+1' dur='2' fill='freeze' />
+<animate attributeName='x' from='215' to='255' begin='w51.end' dur='3' fill='freeze' />
+<animate attributeName='y' from='300' to='175' begin='w52.end+2' dur='2' fill='freeze' id='w53' />
+</use>
+<use xlink:href='#bit' x='215' y='135' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='w42.end+1' dur='0' fill='freeze' />
+<animate attributeName='y' from='135' to='280' begin='w42.end+1' dur='2' fill='freeze' />
+<animate attributeName='x' from='215' to='255' begin='w51.end' dur='3' fill='freeze' />
+<animate attributeName='y' from='280' to='135' begin='w52.end+2' dur='2' fill='freeze' />
+</use>
+<use xlink:href='#bit' x='215' y='95' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='w42.end+1' dur='0' fill='freeze' />
+<animate attributeName='y' from='95' to='260' begin='w42.end+1' dur='2' fill='freeze' />
+<animate attributeName='x' from='215' to='255' begin='w51.end' dur='3' fill='freeze' />
+<animate attributeName='y' from='260' to='95' begin='w52.end+2' dur='2' fill='freeze' />
+</use>
+<use xlink:href='#bit' x='215' y='55' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='w42.end+1' dur='0' fill='freeze' />
+<animate attributeName='y' from='55' to='240' begin='w42.end+1' dur='2' fill='freeze' />
+<animate attributeName='x' from='215' to='255' begin='w51.end' dur='3' fill='freeze' />
+<animate attributeName='y' from='240' to='55' begin='w52.end+2' dur='2' fill='freeze' />
+</use>
+
+<!-- XOR2 -->
+<svg x='255' y='240' height='30' width='30' opacity='0' >
+       <set attributeName='opacity' to='1' dur='1' begin='w52.end' />
+       <circle cx='10' cy='20' r='8' stroke='red' stroke-width='2' />
+       <path d="M 10 12 l 0 16 M 2 20 l 16 0" stroke='red' stroke-width='2' />
+</svg>
+<svg x='255' y='260' height='30' width='30' opacity='0' >
+       <set attributeName='opacity' to='1' dur='1' begin='w52.end' />
+       <circle cx='10' cy='20' r='8' stroke='red' stroke-width='2' />
+       <path d="M 10 12 l 0 16 M 2 20 l 16 0" stroke='red' stroke-width='2' />
+</svg>
+<svg x='255' y='280' height='30' width='30' opacity='0' >
+       <set attributeName='opacity' to='1' dur='1' begin='w52.end' />
+       <circle cx='10' cy='20' r='8' stroke='red' stroke-width='2' />
+       <path d="M 10 12 l 0 16 M 2 20 l 16 0" stroke='red' stroke-width='2' />
+</svg>
+<svg x='255' y='300' height='30' width='30' opacity='0' >
+       <set attributeName='opacity' to='1' dur='1' begin='w52.end' />
+       <circle cx='10' cy='20' r='8' stroke='red' stroke-width='2' />
+       <path d="M 10 12 l 0 16 M 2 20 l 16 0" stroke='red' stroke-width='2' />
+</svg>
+
+
+<!-- w6 -->
+<use xlink:href='#bit' x='135' y='175' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='w53.end+2' dur='0' fill='freeze' />
+<animate attributeName='y' from='175' to='300' begin='w53.end+2' dur='2' fill='freeze' id='w61' />
+<animate attributeName='x' from='135' to='295' begin='w61.end' dur='3' fill='freeze' id='w62' />
+<animate attributeName='opacity' from='0' to='0' begin='w62.end' dur='0' fill='freeze' />
+</use>
+<use xlink:href='#bit' x='135' y='135' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='w53.end+2' dur='0' fill='freeze' />
+<animate attributeName='y' from='135' to='280' begin='w53.end+2' dur='2' fill='freeze' />
+<animate attributeName='x' from='135' to='295' begin='w61.end' dur='3' fill='freeze' />
+<animate attributeName='opacity' from='0' to='0' begin='w62.end' dur='0' fill='freeze' />
+</use>
+<use xlink:href='#bit' x='135' y='95' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='w53.end+2' dur='0' fill='freeze' />
+<animate attributeName='y' from='95' to='260' begin='w53.end+2' dur='2' fill='freeze' />
+<animate attributeName='x' from='135' to='295' begin='w61.end' dur='3' fill='freeze' />
+<animate attributeName='opacity' from='0' to='0' begin='w62.end' dur='0' fill='freeze' />
+</use>
+<use xlink:href='#bit' x='135' y='55' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='w53.end+2' dur='0' fill='freeze' />
+<animate attributeName='y' from='55' to='240' begin='w53.end+2' dur='2' fill='freeze' />
+<animate attributeName='x' from='135' to='295' begin='w61.end' dur='3' fill='freeze' />
+<animate attributeName='opacity' from='0' to='0' begin='w62.end' dur='0' fill='freeze' />
+</use>
+
+<use xlink:href='#bit' x='255' y='175' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='w53.end+2' dur='0' fill='freeze' />
+<animate attributeName='y' from='175' to='300' begin='w53.end+2' dur='2' fill='freeze' />
+<animate attributeName='x' from='255' to='295' begin='w61.end' dur='3' fill='freeze' />
+<animate attributeName='y' from='300' to='175' begin='w62.end+2' dur='2' fill='freeze' id='w63' />
+</use>
+<use xlink:href='#bit' x='255' y='135' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='w53.end+2' dur='0' fill='freeze' />
+<animate attributeName='y' from='135' to='280' begin='w53.end+2' dur='2' fill='freeze' />
+<animate attributeName='x' from='255' to='295' begin='w61.end' dur='3' fill='freeze' />
+<animate attributeName='y' from='280' to='135' begin='w62.end+2' dur='2' fill='freeze' />
+</use>
+<use xlink:href='#bit' x='255' y='95' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='w53.end+2' dur='0' fill='freeze' />
+<animate attributeName='y' from='95' to='260' begin='w53.end+2' dur='2' fill='freeze' />
+<animate attributeName='x' from='255' to='295' begin='w61.end' dur='3' fill='freeze' />
+<animate attributeName='y' from='260' to='95' begin='w62.end+2' dur='2' fill='freeze' />
+</use>
+<use xlink:href='#bit' x='255' y='55' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='w53.end+2' dur='0' fill='freeze' />
+<animate attributeName='y' from='55' to='240' begin='w53.end+2' dur='2' fill='freeze' />
+<animate attributeName='x' from='255' to='295' begin='w61.end' dur='3' fill='freeze' />
+<animate attributeName='y' from='240' to='55' begin='w62.end+2' dur='2' fill='freeze' />
+</use>
+
+<!-- XOR3 -->
+<svg x='295' y='240' height='30' width='30' opacity='0' >
+       <set attributeName='opacity' to='1' dur='1' begin='w62.end' />
+       <circle cx='10' cy='20' r='8' stroke='red' stroke-width='2' />
+       <path d="M 10 12 l 0 16 M 2 20 l 16 0" stroke='red' stroke-width='2' />
+</svg>
+<svg x='295' y='260' height='30' width='30' opacity='0' >
+       <set attributeName='opacity' to='1' dur='1' begin='w62.end' />
+       <circle cx='10' cy='20' r='8' stroke='red' stroke-width='2' />
+       <path d="M 10 12 l 0 16 M 2 20 l 16 0" stroke='red' stroke-width='2' />
+</svg>
+<svg x='295' y='280' height='30' width='30' opacity='0' >
+       <set attributeName='opacity' to='1' dur='1' begin='w62.end' />
+       <circle cx='10' cy='20' r='8' stroke='red' stroke-width='2' />
+       <path d="M 10 12 l 0 16 M 2 20 l 16 0" stroke='red' stroke-width='2' />
+</svg>
+<svg x='295' y='300' height='30' width='30' opacity='0' >
+       <set attributeName='opacity' to='1' dur='1' begin='w62.end' />
+       <circle cx='10' cy='20' r='8' stroke='red' stroke-width='2' />
+       <path d="M 10 12 l 0 16 M 2 20 l 16 0" stroke='red' stroke-width='2' />
+</svg>
+
+<!-- w7 -->
+<use xlink:href='#bit' x='175' y='175' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='w63.end+2' dur='0' fill='freeze' />
+<animate attributeName='y' from='175' to='300' begin='w63.end+2' dur='2' fill='freeze' id='w71' />
+<animate attributeName='x' from='175' to='335' begin='w71.end' dur='3' fill='freeze' id='w72' />
+<animate attributeName='opacity' from='0' to='0' begin='w72.end' dur='0' fill='freeze' />
+</use>
+<use xlink:href='#bit' x='175' y='135' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='w63.end+2' dur='0' fill='freeze' />
+<animate attributeName='y' from='135' to='280' begin='w63.end+2' dur='2' fill='freeze' />
+<animate attributeName='x' from='175' to='335' begin='w71.end' dur='3' fill='freeze' />
+<animate attributeName='opacity' from='0' to='0' begin='w72.end' dur='0' fill='freeze' />
+</use>
+<use xlink:href='#bit' x='175' y='95' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='w63.end+2' dur='0' fill='freeze' />
+<animate attributeName='y' from='95' to='260' begin='w63.end+2' dur='2' fill='freeze' />
+<animate attributeName='x' from='175' to='335' begin='w71.end' dur='3' fill='freeze' />
+<animate attributeName='opacity' from='0' to='0' begin='w72.end' dur='0' fill='freeze' />
+</use>
+<use xlink:href='#bit' x='175' y='55' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='w63.end+2' dur='0' fill='freeze' />
+<animate attributeName='y' from='55' to='240' begin='w63.end+2' dur='2' fill='freeze' />
+<animate attributeName='x' from='175' to='335' begin='w71.end' dur='3' fill='freeze' />
+<animate attributeName='opacity' from='0' to='0' begin='w72.end' dur='0' fill='freeze' />
+</use>
+
+<use xlink:href='#bit' x='295' y='175' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='w63.end+2' dur='0' fill='freeze' />
+<animate attributeName='y' from='175' to='300' begin='w63.end+2' dur='2' fill='freeze' />
+<animate attributeName='x' from='295' to='335' begin='w71.end' dur='3' fill='freeze' />
+<animate attributeName='y' from='300' to='175' begin='w72.end+2' dur='2' fill='freeze' id='w73' />
+</use>
+<use xlink:href='#bit' x='295' y='135' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='w63.end+2' dur='0' fill='freeze' />
+<animate attributeName='y' from='135' to='280' begin='w63.end+2' dur='2' fill='freeze' />
+<animate attributeName='x' from='295' to='335' begin='w71.end' dur='3' fill='freeze' />
+<animate attributeName='y' from='280' to='135' begin='w72.end+2' dur='2' fill='freeze' />
+</use>
+<use xlink:href='#bit' x='295' y='95' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='w63.end+2' dur='0' fill='freeze' />
+<animate attributeName='y' from='95' to='260' begin='w63.end+2' dur='2' fill='freeze' />
+<animate attributeName='x' from='295' to='335' begin='w71.end' dur='3' fill='freeze' />
+<animate attributeName='y' from='260' to='95' begin='w72.end+2' dur='2' fill='freeze' />
+</use>
+<use xlink:href='#bit' x='295' y='55' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='w63.end+2' dur='0' fill='freeze' />
+<animate attributeName='y' from='55' to='240' begin='w63.end+2' dur='2' fill='freeze' />
+<animate attributeName='x' from='295' to='335' begin='w71.end' dur='3' fill='freeze' />
+<animate attributeName='y' from='240' to='55' begin='w72.end+2' dur='2' fill='freeze' />
+</use>
+
+<!-- XOR4 -->
+<svg x='335' y='240' height='30' width='30' opacity='0' >
+       <set attributeName='opacity' to='1' dur='1' begin='w72.end' />
+       <circle cx='10' cy='20' r='8' stroke='red' stroke-width='2' />
+       <path d="M 10 12 l 0 16 M 2 20 l 16 0" stroke='red' stroke-width='2' />
+</svg>
+<svg x='335' y='260' height='30' width='30' opacity='0' >
+       <set attributeName='opacity' to='1' dur='1' begin='w72.end' />
+       <circle cx='10' cy='20' r='8' stroke='red' stroke-width='2' />
+       <path d="M 10 12 l 0 16 M 2 20 l 16 0" stroke='red' stroke-width='2' />
+</svg>
+<svg x='335' y='280' height='30' width='30' opacity='0' >
+       <set attributeName='opacity' to='1' dur='1' begin='w72.end' />
+       <circle cx='10' cy='20' r='8' stroke='red' stroke-width='2' />
+       <path d="M 10 12 l 0 16 M 2 20 l 16 0" stroke='red' stroke-width='2' />
+</svg>
+<svg x='335' y='300' height='30' width='30' opacity='0' >
+       <set attributeName='opacity' to='1' dur='1' begin='w72.end' />
+       <circle cx='10' cy='20' r='8' stroke='red' stroke-width='2' />
+       <path d="M 10 12 l 0 16 M 2 20 l 16 0" stroke='red' stroke-width='2' />
+</svg>
+
+
+<!-- w8-2 -->
+<use xlink:href='#bit' x='215' y='175' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='rot13.end+5' dur='0' fill='freeze' />
+<animate attributeName='y' from='175' to='300' begin='rot13.end+5' dur='2' fill='freeze' id='w82' />
+<animate attributeName='x' from='215' to='335' begin='w82.end+1' dur='3' fill='freeze' id='w83' />
+<animate attributeName='opacity' from='0' to='0' begin='w83.end' dur='0' fill='freeze' />
+</use>
+<use xlink:href='#bit' x='215' y='135' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='rot13.end+5' dur='0' fill='freeze' />
+<animate attributeName='y' from='135' to='280' begin='rot13.end+5' dur='2' fill='freeze' />
+<animate attributeName='x' from='215' to='335' begin='w82.end+1' dur='3' fill='freeze' />
+<animate attributeName='opacity' from='0' to='0' begin='w83.end' dur='0' fill='freeze' />
+</use>
+<use xlink:href='#bit' x='215' y='95' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='rot13.end+5' dur='0' fill='freeze' />
+<animate attributeName='y' from='95' to='260' begin='rot13.end+5' dur='2' fill='freeze' />
+<animate attributeName='x' from='215' to='335' begin='w82.end+1' dur='3' fill='freeze' />
+<animate attributeName='opacity' from='0' to='0' begin='w83.end' dur='0' fill='freeze' />
+</use>
+<use xlink:href='#bit' x='215' y='55' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='rot13.end+5' dur='0' fill='freeze' />
+<animate attributeName='y' from='55' to='240' begin='rot13.end+5' dur='2' fill='freeze' />
+<animate attributeName='x' from='215' to='335' begin='w82.end+1' dur='3' fill='freeze' />
+<animate attributeName='opacity' from='0' to='0' begin='w83.end' dur='0' fill='freeze' />
+</use>
+
+
+<!-- w8 -->
+<use xlink:href='#bit' x='365' y='240' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='rot11.end' dur='0' fill='freeze' />
+<animate attributeName='y' from='240' to='300' begin='rot11.end' dur='2' fill='freeze' id='rot12' />
+<animate attributeName='x' from='365' to='335' begin='rot12.end' dur='1' fill='freeze' id='rot13' />
+<animate attributeName='x' from='335' to='375' begin='rcon11.end+2' dur='1' fill='freeze' id='w84' />
+<animate attributeName='y' from='300' to='175' begin='w84.end' dur='2' fill='freeze' id='w85' />
+</use>
+
+<use xlink:href='#bit' x='335' y='175' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='w73.end+2' dur='0' fill='freeze' />
+<animate attributeName='y' from='175' to='300' begin='w73.end+2' dur='2' fill='freeze' id='w81' />
+<animate attributeName='y' from='300' to='280' begin='rot11.end' dur='2' fill='freeze' />
+<animate attributeName='x' from='335' to='375' begin='rcon11.end+2' dur='1' fill='freeze' />
+<animate attributeName='y' from='280' to='135' begin='w84.end' dur='2' fill='freeze' />
+</use>
+<use xlink:href='#bit' x='335' y='135' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='w73.end+2' dur='0' fill='freeze' />
+<animate attributeName='y' from='135' to='280' begin='w73.end+2' dur='2' fill='freeze' />
+<animate attributeName='y' from='280' to='260' begin='rot11.end' dur='2' fill='freeze' />
+<animate attributeName='x' from='335' to='375' begin='rcon11.end+2' dur='1' fill='freeze' />
+<animate attributeName='y' from='260' to='95' begin='w84.end' dur='2' fill='freeze' />
+</use>
+<use xlink:href='#bit' x='335' y='95' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='w73.end+2' dur='0' fill='freeze' />
+<animate attributeName='y' from='95' to='260' begin='w73.end+2' dur='2' fill='freeze' />
+<animate attributeName='y' from='260' to='240' begin='rot11.end' dur='2' fill='freeze' />
+<animate attributeName='x' from='335' to='375' begin='rcon11.end+2' dur='1' fill='freeze'  />
+<animate attributeName='y' from='240' to='55' begin='w84.end' dur='2' fill='freeze' />
+</use>
+
+
+<use xlink:href='#bit' x='335' y='55' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='w73.end+2' dur='0' fill='freeze' />
+<animate attributeName='y' from='55' to='240' begin='w73.end+2' dur='2' fill='freeze' />
+<animate attributeName='x' from='335' to='365' begin='w81.end+2' dur='1' fill='freeze' id='rot11' />
+<animate attributeName='opacity' from='0' to='0' begin='rot11.end' dur='0' fill='freeze' />
+</use>
+
+
+<!-- XOR5 -->
+<svg x='335' y='240' height='30' width='30' opacity='0' >
+       <set attributeName='opacity' to='1' dur='1' begin='w83.end;rcon11.end' />
+       <circle cx='10' cy='20' r='8' stroke='red' stroke-width='2' />
+       <path d="M 10 12 l 0 16 M 2 20 l 16 0" stroke='red' stroke-width='2' />
+</svg>
+<svg x='335' y='260' height='30' width='30' opacity='0' >
+       <set attributeName='opacity' to='1' dur='1' begin='w83.end' />
+       <circle cx='10' cy='20' r='8' stroke='red' stroke-width='2' />
+       <path d="M 10 12 l 0 16 M 2 20 l 16 0" stroke='red' stroke-width='2' />
+</svg>
+<svg x='335' y='280' height='30' width='30' opacity='0' >
+       <set attributeName='opacity' to='1' dur='1' begin='w83.end' />
+       <circle cx='10' cy='20' r='8' stroke='red' stroke-width='2' />
+       <path d="M 10 12 l 0 16 M 2 20 l 16 0" stroke='red' stroke-width='2' />
+</svg>
+<svg x='335' y='300' height='30' width='30' opacity='0' >
+       <set attributeName='opacity' to='1' dur='1' begin='w83.end' />
+       <circle cx='10' cy='20' r='8' stroke='red' stroke-width='2' />
+       <path d="M 10 12 l 0 16 M 2 20 l 16 0" stroke='red' stroke-width='2' />
+</svg>
+
+
+
+<!-- w9 -->
+<use xlink:href='#bit' x='255' y='175' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='w85.end+2' dur='0' fill='freeze' />
+<animate attributeName='y' from='175' to='300' begin='w85.end+2' dur='2' fill='freeze' id='w91' />
+<animate attributeName='x' from='255' to='415' begin='w91.end' dur='3' fill='freeze' id='w92' />
+<animate attributeName='opacity' from='0' to='0' begin='w92.end' dur='0' fill='freeze' />
+</use>
+<use xlink:href='#bit' x='255' y='135' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='w85.end+2' dur='0' fill='freeze' />
+<animate attributeName='y' from='135' to='280' begin='w85.end+2' dur='2' fill='freeze' />
+<animate attributeName='x' from='255' to='415' begin='w91.end' dur='3' fill='freeze' />
+<animate attributeName='opacity' from='0' to='0' begin='w92.end' dur='0' fill='freeze' />
+</use>
+<use xlink:href='#bit' x='255' y='95' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='w85.end+2' dur='0' fill='freeze' />
+<animate attributeName='y' from='95' to='260' begin='w85.end+2' dur='2' fill='freeze' />
+<animate attributeName='x' from='255' to='415' begin='w91.end' dur='3' fill='freeze' />
+<animate attributeName='opacity' from='0' to='0' begin='w92.end' dur='0' fill='freeze' />
+</use>
+<use xlink:href='#bit' x='255' y='55' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='w85.end+2' dur='0' fill='freeze' />
+<animate attributeName='y' from='55' to='240' begin='w85.end+2' dur='2' fill='freeze' />
+<animate attributeName='x' from='255' to='415' begin='w91.end' dur='3' fill='freeze' />
+<animate attributeName='opacity' from='0' to='0' begin='w92.end' dur='0' fill='freeze' />
+</use>
+
+<use xlink:href='#bit' x='375' y='175' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='w85.end+2' dur='0' fill='freeze' />
+<animate attributeName='y' from='175' to='300' begin='w85.end+2' dur='2' fill='freeze' />
+<animate attributeName='x' from='375' to='415' begin='w91.end' dur='3' fill='freeze' />
+<animate attributeName='y' from='300' to='175' begin='w92.end+2' dur='2' fill='freeze' id='w93' />
+</use>
+<use xlink:href='#bit' x='375' y='135' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='w85.end+2' dur='0' fill='freeze' />
+<animate attributeName='y' from='135' to='280' begin='w85.end+2' dur='2' fill='freeze' />
+<animate attributeName='x' from='375' to='415' begin='w91.end' dur='3' fill='freeze' />
+<animate attributeName='y' from='280' to='135' begin='w92.end+2' dur='2' fill='freeze' />
+</use>
+<use xlink:href='#bit' x='375' y='95' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='w85.end+2' dur='0' fill='freeze' />
+<animate attributeName='y' from='95' to='260' begin='w85.end+2' dur='2' fill='freeze' />
+<animate attributeName='x' from='375' to='415' begin='w91.end' dur='3' fill='freeze' />
+<animate attributeName='y' from='260' to='95' begin='w92.end+2' dur='2' fill='freeze' />
+</use>
+<use xlink:href='#bit' x='375' y='55' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='w85.end+2' dur='0' fill='freeze' />
+<animate attributeName='y' from='55' to='240' begin='w85.end+2' dur='2' fill='freeze' />
+<animate attributeName='x' from='375' to='415' begin='w91.end' dur='3' fill='freeze' />
+<animate attributeName='y' from='240' to='55' begin='w92.end+2' dur='2' fill='freeze' />
+</use>
+
+<!-- XOR6 -->
+<svg x='415' y='240' height='30' width='30' opacity='0' >
+       <set attributeName='opacity' to='1' dur='1' begin='w92.end' />
+       <circle cx='10' cy='20' r='8' stroke='red' stroke-width='2' />
+       <path d="M 10 12 l 0 16 M 2 20 l 16 0" stroke='red' stroke-width='2' />
+</svg>
+<svg x='415' y='260' height='30' width='30' opacity='0' >
+       <set attributeName='opacity' to='1' dur='1' begin='w92.end' />
+       <circle cx='10' cy='20' r='8' stroke='red' stroke-width='2' />
+       <path d="M 10 12 l 0 16 M 2 20 l 16 0" stroke='red' stroke-width='2' />
+</svg>
+<svg x='415' y='280' height='30' width='30' opacity='0' >
+       <set attributeName='opacity' to='1' dur='1' begin='w92.end' />
+       <circle cx='10' cy='20' r='8' stroke='red' stroke-width='2' />
+       <path d="M 10 12 l 0 16 M 2 20 l 16 0" stroke='red' stroke-width='2' />
+</svg>
+<svg x='415' y='300' height='30' width='30' opacity='0' >
+       <set attributeName='opacity' to='1' dur='1' begin='w92.end' />
+       <circle cx='10' cy='20' r='8' stroke='red' stroke-width='2' />
+       <path d="M 10 12 l 0 16 M 2 20 l 16 0" stroke='red' stroke-width='2' />
+</svg>
+
+
+<!-- sbox -->
+<svg width='25' height='100' x='10' y='240' >
+<rect width='23' height='98' x='1' y='1' stroke='black' fill='white' rx='15' ry='15' >
+<animate attributeName='fill' from='white' to='red' dur='1' fill='freeze' begin='rot03.end+2;rot13.end+2' />
+<animate attributeName='fill' from='red' to='white' dur='1' fill='freeze' begin='rot03.end+3;rot13.end+3' />
+</rect>
+<text x='10' y='53' font-size='18' fill='black' >
+s
+</text>
+</svg>
+<svg width='140' height='100' x='35' y='240' opacity='0' >
+<path d='M 0 20 l 140 0 -5 -5 m 5 5 -5 5' stroke='black' />
+<path d='M 0 40 l 140 0 -5 -5 m 5 5 -5 5' stroke='black' />
+<path d='M 0 60 l 140 0 -5 -5 m 5 5 -5 5' stroke='black' />
+<path d='M 0 80 l 140 0 -5 -5 m 5 5 -5 5' stroke='black' />
+<set attributeName='opacity' to='1' dur='2' begin='rot03.end+2' />
+</svg>
+<svg width='300' height='100' x='35' y='240' opacity='0' >
+<path d='M 0 20 l 300 0 -5 -5 m 5 5 -5 5' stroke='black' />
+<path d='M 0 40 l 300 0 -5 -5 m 5 5 -5 5' stroke='black' />
+<path d='M 0 60 l 300 0 -5 -5 m 5 5 -5 5' stroke='black' />
+<path d='M 0 80 l 300 0 -5 -5 m 5 5 -5 5' stroke='black' />
+<set attributeName='opacity' to='1' dur='2' begin='rot13.end+2' />
+</svg>
+
+<!-- rcon -->
+<svg width='30' height='30' x='450' y='240' >
+<use xlink:href='#bit' />
+<text x='5' y='25' font-size='8' fill='black' >
+Rcon0
+</text>
+<animate attributeName='x' from='450' to='175' dur='4' begin='w02.end+2' id='rcon01' />
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='rcon01.end' />
+</svg>
+<svg width='30' height='30' x='470' y='240' >
+<use xlink:href='#bit' />
+<text x='5' y='25' font-size='8' fill='black' >
+Rcon1
+</text>
+<animate attributeName='x' from='470' to='335' dur='2' begin='w83.end+2' id='rcon11' />
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='rcon11.end' />
+</svg>
 
 </g>
 </svg>
