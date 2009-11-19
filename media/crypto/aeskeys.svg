@@ -10,7 +10,7 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:xlink="http://www.w3.org/1999/xlink"
    width="650"
-   height="400"
+   height="450"
    id="svg2"
 >
 <script type="text/ecmascript" xlink:href="/content/smil.user.js" />
@@ -40,93 +40,171 @@
 <path d='M 441 1 l 90 0 m 0 40 l -90 0 m 0 40 l 90 0 m 0 40 l -90 0 m 0 40 l 90 0' stroke='black' stroke-dasharray='5, 5' />
 <path d='M 1 1 l 0 160 m 40 0 l 0 -160 m 40 0 l 0 160 m 40 0 l 0 -160 m 40 0 l 0 160 m 40 0 l 0 -160 m 40 0 l 0 160 m 40 0 l 0 -160 m 40 0 l 0 160 m 40 0 l 0 -160 m 40 0 l 0 160' stroke='black' />
 </svg>
-
+<text x='65' y='40' font-size='14' fill='black' >
+w<tspan baseline-shift = "sub" font-size='8' >0</tspan>
+</text>
+<text x='105' y='40' font-size='14' fill='black' >
+w<tspan baseline-shift = "sub" font-size='8' >1</tspan>
+</text>
+<text x='145' y='40' font-size='14' fill='black' >
+w<tspan baseline-shift = "sub" font-size='8' >2</tspan>
+</text>
+<text x='185' y='40' font-size='14' fill='black' >
+w<tspan baseline-shift = "sub" font-size='8' >3</tspan>
+</text>
+<text x='225' y='40' font-size='14' fill='black' >
+w<tspan baseline-shift = "sub" font-size='8' >4</tspan>
+</text>
+<text x='265' y='40' font-size='14' fill='black' >
+w<tspan baseline-shift = "sub" font-size='8' >5</tspan>
+</text>
+<text x='305' y='40' font-size='14' fill='black' >
+w<tspan baseline-shift = "sub" font-size='8' >6</tspan>
+</text>
+<text x='345' y='40' font-size='14' fill='black' >
+w<tspan baseline-shift = "sub" font-size='8' >7</tspan>
+</text>
+<text x='385' y='40' font-size='14' fill='black' >
+w<tspan baseline-shift = "sub" font-size='8' >8</tspan>
+</text>
+<text x='425' y='40' font-size='14' fill='black' >
+w<tspan baseline-shift = "sub" font-size='8' >9</tspan>
+</text>
 <!-- k -->
 <svg width='30' height='30' x='-50' y='120' >
 <use xlink:href='#bit' />
 <text x='5' y='25' font-size='14' fill='black' >
 k
 </text>
-<animate attributeName='x' from='-50' to='10' dur='2' begin='1' fill='freeze' id='k01' />
+<animate attributeName='x' from='-50' to='10' dur='2' begin='start.click' fill='freeze' id='k01' />
+<animate attributeName='opacity' from='1' to='1' begin='start.click' dur='0' fill='freeze' />
 <animate attributeName='opacity' from='1' to='0' begin='k01.end+1' dur='1' fill='freeze' />
 </svg>
 
 <use xlink:href='#bit' x='10' y='120' opacity='0' >
+<animate attributeName='opacity' from='0' to='0' begin='start.click' dur='0' fill='freeze' />
+<animate attributeName='x' from='10' to='10' begin='start.click' dur='0' fill='freeze' />
+<animate attributeName='y' from='120' to='120' begin='start.click' dur='0' fill='freeze' />
 <animate attributeName='opacity' from='0' to='1' begin='k01.end+1' dur='1' fill='freeze' />
 <animate attributeName='x' from='10' to='55' begin='k01.end+1' dur='2' fill='freeze' />
 <animate attributeName='y' from='120' to='175' begin='k01.end+1' dur='2' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='10' y='120' opacity='0' >
+<animate attributeName='opacity' from='0' to='0' begin='start.click' dur='0' fill='freeze' />
+<animate attributeName='x' from='10' to='10' begin='start.click' dur='0' fill='freeze' />
+<animate attributeName='y' from='120' to='120' begin='start.click' dur='0' fill='freeze' />
 <animate attributeName='opacity' from='0' to='1' begin='k01.end+1' dur='1' fill='freeze' />
 <animate attributeName='x' from='10' to='55' begin='k01.end+1' dur='2' fill='freeze' />
 <animate attributeName='y' from='120' to='135' begin='k01.end+1' dur='2' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='10' y='120' opacity='0' >
+<animate attributeName='opacity' from='0' to='0' begin='start.click' dur='0' fill='freeze' />
+<animate attributeName='x' from='10' to='10' begin='start.click' dur='0' fill='freeze' />
+<animate attributeName='y' from='120' to='120' begin='start.click' dur='0' fill='freeze' />
 <animate attributeName='opacity' from='0' to='1' begin='k01.end+1' dur='1' fill='freeze' />
 <animate attributeName='x' from='10' to='55' begin='k01.end+1' dur='2' fill='freeze' />
 <animate attributeName='y' from='120' to='95' begin='k01.end+1' dur='2' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='10' y='120' opacity='0' >
+<animate attributeName='opacity' from='0' to='0' begin='start.click' dur='0' fill='freeze' />
+<animate attributeName='x' from='10' to='10' begin='start.click' dur='0' fill='freeze' />
+<animate attributeName='y' from='120' to='120' begin='start.click' dur='0' fill='freeze' />
 <animate attributeName='opacity' from='0' to='1' begin='k01.end+1' dur='1' fill='freeze' />
 <animate attributeName='x' from='10' to='55' begin='k01.end+1' dur='2' fill='freeze'  />
 <animate attributeName='y' from='120' to='55' begin='k01.end+1' dur='2' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='10' y='120' opacity='0' >
+<animate attributeName='opacity' from='0' to='0' begin='start.click' dur='0' fill='freeze' />
+<animate attributeName='x' from='10' to='10' begin='start.click' dur='0' fill='freeze' />
+<animate attributeName='y' from='120' to='120' begin='start.click' dur='0' fill='freeze' />
 <animate attributeName='opacity' from='0' to='1' begin='k01.end+1' dur='1' fill='freeze' />
 <animate attributeName='x' from='10' to='95' begin='k01.end+1' dur='3' fill='freeze' />
 <animate attributeName='y' from='120' to='175' begin='k01.end+1' dur='3' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='10' y='120' opacity='0' >
+<animate attributeName='opacity' from='0' to='0' begin='start.click' dur='0' fill='freeze' />
+<animate attributeName='x' from='10' to='10' begin='start.click' dur='0' fill='freeze' />
+<animate attributeName='y' from='120' to='120' begin='start.click' dur='0' fill='freeze' />
 <animate attributeName='opacity' from='0' to='1' begin='k01.end+1' dur='1' fill='freeze' />
 <animate attributeName='x' from='10' to='95' begin='k01.end+1' dur='3' fill='freeze' />
 <animate attributeName='y' from='120' to='135' begin='k01.end+1' dur='3' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='10' y='120' opacity='0' >
+<animate attributeName='opacity' from='0' to='0' begin='start.click' dur='0' fill='freeze' />
+<animate attributeName='x' from='10' to='10' begin='start.click' dur='0' fill='freeze' />
+<animate attributeName='y' from='120' to='120' begin='start.click' dur='0' fill='freeze' />
 <animate attributeName='opacity' from='0' to='1' begin='k01.end+1' dur='1' fill='freeze' />
 <animate attributeName='x' from='10' to='95' begin='k01.end+1' dur='3' fill='freeze' />
 <animate attributeName='y' from='120' to='95' begin='k01.end+1' dur='3' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='10' y='120' opacity='0' >
+<animate attributeName='opacity' from='0' to='0' begin='start.click' dur='0' fill='freeze' />
+<animate attributeName='x' from='10' to='10' begin='start.click' dur='0' fill='freeze' />
+<animate attributeName='y' from='120' to='120' begin='start.click' dur='0' fill='freeze' />
 <animate attributeName='opacity' from='0' to='1' begin='k01.end+1' dur='1' fill='freeze' />
 <animate attributeName='x' from='10' to='95' begin='k01.end+1' dur='3' fill='freeze'  />
 <animate attributeName='y' from='120' to='55' begin='k01.end+1' dur='3' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='10' y='120' opacity='0' >
+<animate attributeName='opacity' from='0' to='0' begin='start.click' dur='0' fill='freeze' />
+<animate attributeName='x' from='10' to='10' begin='start.click' dur='0' fill='freeze' />
+<animate attributeName='y' from='120' to='120' begin='start.click' dur='0' fill='freeze' />
 <animate attributeName='opacity' from='0' to='1' begin='k01.end+1' dur='1' fill='freeze' />
 <animate attributeName='x' from='10' to='135' begin='k01.end+1' dur='4' fill='freeze' />
 <animate attributeName='y' from='120' to='175' begin='k01.end+1' dur='4' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='10' y='120' opacity='0' >
+<animate attributeName='opacity' from='0' to='0' begin='start.click' dur='0' fill='freeze' />
+<animate attributeName='x' from='10' to='10' begin='start.click' dur='0' fill='freeze' />
+<animate attributeName='y' from='120' to='120' begin='start.click' dur='0' fill='freeze' />
 <animate attributeName='opacity' from='0' to='1' begin='k01.end+1' dur='1' fill='freeze' />
 <animate attributeName='x' from='10' to='135' begin='k01.end+1' dur='4' fill='freeze' />
 <animate attributeName='y' from='120' to='135' begin='k01.end+1' dur='4' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='10' y='120' opacity='0' >
+<animate attributeName='opacity' from='0' to='0' begin='start.click' dur='0' fill='freeze' />
+<animate attributeName='x' from='10' to='10' begin='start.click' dur='0' fill='freeze' />
+<animate attributeName='y' from='120' to='120' begin='start.click' dur='0' fill='freeze' />
 <animate attributeName='opacity' from='0' to='1' begin='k01.end+1' dur='1' fill='freeze' />
 <animate attributeName='x' from='10' to='135' begin='k01.end+1' dur='4' fill='freeze' />
 <animate attributeName='y' from='120' to='95' begin='k01.end+1' dur='4' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='10' y='120' opacity='0' >
+<animate attributeName='opacity' from='0' to='0' begin='start.click' dur='0' fill='freeze' />
+<animate attributeName='x' from='10' to='10' begin='start.click' dur='0' fill='freeze' />
+<animate attributeName='y' from='120' to='120' begin='start.click' dur='0' fill='freeze' />
 <animate attributeName='opacity' from='0' to='1' begin='k01.end+1' dur='1' fill='freeze' />
 <animate attributeName='x' from='10' to='135' begin='k01.end+1' dur='4' fill='freeze'  />
 <animate attributeName='y' from='120' to='55' begin='k01.end+1' dur='4' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='10' y='120' opacity='0' >
+<animate attributeName='opacity' from='0' to='0' begin='start.click' dur='0' fill='freeze' />
+<animate attributeName='x' from='10' to='10' begin='start.click' dur='0' fill='freeze' />
+<animate attributeName='y' from='120' to='120' begin='start.click' dur='0' fill='freeze' />
 <animate attributeName='opacity' from='0' to='1' begin='k01.end+1' dur='1' fill='freeze' />
 <animate attributeName='x' from='10' to='175' begin='k01.end+1' dur='5' fill='freeze' />
 <animate attributeName='y' from='120' to='175' begin='k01.end+1' dur='5' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='10' y='120' opacity='0' >
+<animate attributeName='opacity' from='0' to='0' begin='start.click' dur='0' fill='freeze' />
+<animate attributeName='x' from='10' to='10' begin='start.click' dur='0' fill='freeze' />
+<animate attributeName='y' from='120' to='120' begin='start.click' dur='0' fill='freeze' />
 <animate attributeName='opacity' from='0' to='1' begin='k01.end+1' dur='1' fill='freeze' />
 <animate attributeName='x' from='10' to='175' begin='k01.end+1' dur='5' fill='freeze' />
 <animate attributeName='y' from='120' to='135' begin='k01.end+1' dur='5' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='10' y='120' opacity='0' >
+<animate attributeName='opacity' from='0' to='0' begin='start.click' dur='0' fill='freeze' />
+<animate attributeName='x' from='10' to='10' begin='start.click' dur='0' fill='freeze' />
+<animate attributeName='y' from='120' to='120' begin='start.click' dur='0' fill='freeze' />
 <animate attributeName='opacity' from='0' to='1' begin='k01.end+1' dur='1' fill='freeze' />
 <animate attributeName='x' from='10' to='175' begin='k01.end+1' dur='5' fill='freeze' />
 <animate attributeName='y' from='120' to='95' begin='k01.end+1' dur='5' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='10' y='120' opacity='0' >
+<animate attributeName='opacity' from='0' to='0' begin='start.click' dur='0' fill='freeze' />
+<animate attributeName='x' from='10' to='10' begin='start.click' dur='0' fill='freeze' />
+<animate attributeName='y' from='120' to='120' begin='start.click' dur='0' fill='freeze' />
 <animate attributeName='opacity' from='0' to='1' begin='k01.end+1' dur='1' fill='freeze' />
 <animate attributeName='x' from='10' to='175' begin='k01.end+1' dur='5' fill='freeze' id='k02' />
 <animate attributeName='y' from='120' to='55' begin='k01.end+1' dur='5' fill='freeze' />
@@ -135,24 +213,32 @@ k
 
 <!-- w0 -->
 <use xlink:href='#bit' x='55' y='175' opacity='0' >
+<animate attributeName='x' from='55' to='55' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='175' to='175' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='rot03.end+5' dur='0' fill='freeze' />
 <animate attributeName='y' from='175' to='300' begin='rot03.end+5' dur='2' fill='freeze' id='w01' />
 <animate attributeName='x' from='55' to='175' begin='w01.end+1' dur='3' fill='freeze' id='w02' />
 <animate attributeName='opacity' from='0' to='0' begin='w02.end' dur='0' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='55' y='135' opacity='0' >
+<animate attributeName='x' from='55' to='55' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='135' to='135' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='rot03.end+5' dur='0' fill='freeze' />
 <animate attributeName='y' from='135' to='280' begin='rot03.end+5' dur='2' fill='freeze' />
 <animate attributeName='x' from='55' to='175' begin='w01.end+1' dur='3' fill='freeze' />
 <animate attributeName='opacity' from='0' to='0' begin='w02.end' dur='0' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='55' y='95' opacity='0' >
+<animate attributeName='x' from='55' to='55' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='95' to='95' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='rot03.end+5' dur='0' fill='freeze' />
 <animate attributeName='y' from='95' to='260' begin='rot03.end+5' dur='2' fill='freeze' />
 <animate attributeName='x' from='55' to='175' begin='w01.end+1' dur='3' fill='freeze' />
 <animate attributeName='opacity' from='0' to='0' begin='w02.end' dur='0' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='55' y='55' opacity='0' >
+<animate attributeName='x' from='55' to='55' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='55' to='55' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='rot03.end+5' dur='0' fill='freeze' />
 <animate attributeName='y' from='55' to='240' begin='rot03.end+5' dur='2' fill='freeze' />
 <animate attributeName='x' from='55' to='175' begin='w01.end+1' dur='3' fill='freeze' />
@@ -162,6 +248,9 @@ k
 
 <!-- w3 -->
 <use xlink:href='#bit' x='205' y='240' opacity='0' >
+<animate attributeName='x' from='205' to='205' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='240' to='240' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='rot01.end' dur='0' fill='freeze' />
 <animate attributeName='y' from='240' to='300' begin='rot01.end' dur='2' fill='freeze' id='rot02' />
 <animate attributeName='x' from='205' to='175' begin='rot02.end' dur='1' fill='freeze' id='rot03' />
@@ -170,6 +259,9 @@ k
 </use>
 
 <use xlink:href='#bit' x='175' y='175' opacity='0' >
+<animate attributeName='x' from='175' to='175' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='175' to='175' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='k02.end' dur='0' fill='freeze' />
 <animate attributeName='y' from='175' to='300' begin='k02.end+1' dur='2' fill='freeze' id='k03' />
 <animate attributeName='y' from='300' to='280' begin='rot01.end' dur='2' fill='freeze' />
@@ -177,6 +269,9 @@ k
 <animate attributeName='y' from='280' to='135' begin='w41.end' dur='2' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='175' y='135' opacity='0' >
+<animate attributeName='x' from='175' to='175' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='135' to='135' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='k02.end' dur='0' fill='freeze' />
 <animate attributeName='y' from='135' to='280' begin='k02.end+1' dur='2' fill='freeze' />
 <animate attributeName='y' from='280' to='260' begin='rot01.end' dur='2' fill='freeze' />
@@ -184,6 +279,9 @@ k
 <animate attributeName='y' from='260' to='95' begin='w41.end' dur='2' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='175' y='95' opacity='0' >
+<animate attributeName='x' from='175' to='175' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='95' to='95' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='k02.end' dur='0' fill='freeze' />
 <animate attributeName='y' from='95' to='260' begin='k02.end+1' dur='2' fill='freeze' />
 <animate attributeName='y' from='260' to='240' begin='rot01.end' dur='2' fill='freeze' />
@@ -193,6 +291,8 @@ k
 
 
 <use xlink:href='#bit' x='175' y='55' opacity='0' >
+<animate attributeName='x' from='175' to='175' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='55' to='55' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='k02.end' dur='0' fill='freeze' />
 <animate attributeName='y' from='55' to='240' begin='k02.end+1' dur='2' fill='freeze' />
 <animate attributeName='x' from='175' to='205' begin='k03.end+2' dur='1' fill='freeze' id='rot01' />
@@ -227,24 +327,32 @@ k
 
 <!-- w5 -->
 <use xlink:href='#bit' x='95' y='175' opacity='0' >
+<animate attributeName='x' from='95' to='95' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='175' to='175' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='w42.end+1' dur='0' fill='freeze' />
 <animate attributeName='y' from='175' to='300' begin='w42.end+1' dur='2' fill='freeze' id='w51' />
 <animate attributeName='x' from='95' to='255' begin='w51.end' dur='3' fill='freeze' id='w52' />
 <animate attributeName='opacity' from='0' to='0' begin='w52.end' dur='0' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='95' y='135' opacity='0' >
+<animate attributeName='x' from='95' to='95' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='135' to='135' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='w42.end+1' dur='0' fill='freeze' />
 <animate attributeName='y' from='135' to='280' begin='w42.end+1' dur='2' fill='freeze' />
 <animate attributeName='x' from='95' to='255' begin='w51.end' dur='3' fill='freeze' />
 <animate attributeName='opacity' from='0' to='0' begin='w52.end' dur='0' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='95' y='95' opacity='0' >
+<animate attributeName='x' from='95' to='95' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='95' to='95' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='w42.end+1' dur='0' fill='freeze' />
 <animate attributeName='y' from='95' to='260' begin='w42.end+1' dur='2' fill='freeze' />
 <animate attributeName='x' from='95' to='255' begin='w51.end' dur='3' fill='freeze' />
 <animate attributeName='opacity' from='0' to='0' begin='w52.end' dur='0' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='95' y='55' opacity='0' >
+<animate attributeName='x' from='95' to='95' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='55' to='55' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='w42.end+1' dur='0' fill='freeze' />
 <animate attributeName='y' from='55' to='240' begin='w42.end+1' dur='2' fill='freeze' />
 <animate attributeName='x' from='95' to='255' begin='w51.end' dur='3' fill='freeze' />
@@ -252,24 +360,32 @@ k
 </use>
 
 <use xlink:href='#bit' x='215' y='175' opacity='0' >
+<animate attributeName='x' from='215' to='215' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='w42.end+1' dur='0' fill='freeze' />
 <animate attributeName='y' from='175' to='300' begin='w42.end+1' dur='2' fill='freeze' />
 <animate attributeName='x' from='215' to='255' begin='w51.end' dur='3' fill='freeze' />
 <animate attributeName='y' from='300' to='175' begin='w52.end+2' dur='2' fill='freeze' id='w53' />
 </use>
 <use xlink:href='#bit' x='215' y='135' opacity='0' >
+<animate attributeName='x' from='215' to='215' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='w42.end+1' dur='0' fill='freeze' />
 <animate attributeName='y' from='135' to='280' begin='w42.end+1' dur='2' fill='freeze' />
 <animate attributeName='x' from='215' to='255' begin='w51.end' dur='3' fill='freeze' />
 <animate attributeName='y' from='280' to='135' begin='w52.end+2' dur='2' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='215' y='95' opacity='0' >
+<animate attributeName='x' from='215' to='215' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='w42.end+1' dur='0' fill='freeze' />
 <animate attributeName='y' from='95' to='260' begin='w42.end+1' dur='2' fill='freeze' />
 <animate attributeName='x' from='215' to='255' begin='w51.end' dur='3' fill='freeze' />
 <animate attributeName='y' from='260' to='95' begin='w52.end+2' dur='2' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='215' y='55' opacity='0' >
+<animate attributeName='x' from='215' to='215' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='w42.end+1' dur='0' fill='freeze' />
 <animate attributeName='y' from='55' to='240' begin='w42.end+1' dur='2' fill='freeze' />
 <animate attributeName='x' from='215' to='255' begin='w51.end' dur='3' fill='freeze' />
@@ -301,24 +417,32 @@ k
 
 <!-- w6 -->
 <use xlink:href='#bit' x='135' y='175' opacity='0' >
+<animate attributeName='x' from='135' to='135' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='175' to='175' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='w53.end+2' dur='0' fill='freeze' />
 <animate attributeName='y' from='175' to='300' begin='w53.end+2' dur='2' fill='freeze' id='w61' />
 <animate attributeName='x' from='135' to='295' begin='w61.end' dur='3' fill='freeze' id='w62' />
 <animate attributeName='opacity' from='0' to='0' begin='w62.end' dur='0' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='135' y='135' opacity='0' >
+<animate attributeName='x' from='135' to='135' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='135' to='135' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='w53.end+2' dur='0' fill='freeze' />
 <animate attributeName='y' from='135' to='280' begin='w53.end+2' dur='2' fill='freeze' />
 <animate attributeName='x' from='135' to='295' begin='w61.end' dur='3' fill='freeze' />
 <animate attributeName='opacity' from='0' to='0' begin='w62.end' dur='0' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='135' y='95' opacity='0' >
+<animate attributeName='x' from='135' to='135' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='95' to='95' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='w53.end+2' dur='0' fill='freeze' />
 <animate attributeName='y' from='95' to='260' begin='w53.end+2' dur='2' fill='freeze' />
 <animate attributeName='x' from='135' to='295' begin='w61.end' dur='3' fill='freeze' />
 <animate attributeName='opacity' from='0' to='0' begin='w62.end' dur='0' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='135' y='55' opacity='0' >
+<animate attributeName='x' from='135' to='135' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='55' to='55' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='w53.end+2' dur='0' fill='freeze' />
 <animate attributeName='y' from='55' to='240' begin='w53.end+2' dur='2' fill='freeze' />
 <animate attributeName='x' from='135' to='295' begin='w61.end' dur='3' fill='freeze' />
@@ -326,24 +450,32 @@ k
 </use>
 
 <use xlink:href='#bit' x='255' y='175' opacity='0' >
+<animate attributeName='x' from='255' to='255' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='w53.end+2' dur='0' fill='freeze' />
 <animate attributeName='y' from='175' to='300' begin='w53.end+2' dur='2' fill='freeze' />
 <animate attributeName='x' from='255' to='295' begin='w61.end' dur='3' fill='freeze' />
 <animate attributeName='y' from='300' to='175' begin='w62.end+2' dur='2' fill='freeze' id='w63' />
 </use>
 <use xlink:href='#bit' x='255' y='135' opacity='0' >
+<animate attributeName='x' from='255' to='255' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='w53.end+2' dur='0' fill='freeze' />
 <animate attributeName='y' from='135' to='280' begin='w53.end+2' dur='2' fill='freeze' />
 <animate attributeName='x' from='255' to='295' begin='w61.end' dur='3' fill='freeze' />
 <animate attributeName='y' from='280' to='135' begin='w62.end+2' dur='2' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='255' y='95' opacity='0' >
+<animate attributeName='x' from='255' to='255' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='w53.end+2' dur='0' fill='freeze' />
 <animate attributeName='y' from='95' to='260' begin='w53.end+2' dur='2' fill='freeze' />
 <animate attributeName='x' from='255' to='295' begin='w61.end' dur='3' fill='freeze' />
 <animate attributeName='y' from='260' to='95' begin='w62.end+2' dur='2' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='255' y='55' opacity='0' >
+<animate attributeName='x' from='255' to='255' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='w53.end+2' dur='0' fill='freeze' />
 <animate attributeName='y' from='55' to='240' begin='w53.end+2' dur='2' fill='freeze' />
 <animate attributeName='x' from='255' to='295' begin='w61.end' dur='3' fill='freeze' />
@@ -374,24 +506,32 @@ k
 
 <!-- w7 -->
 <use xlink:href='#bit' x='175' y='175' opacity='0' >
+<animate attributeName='x' from='175' to='175' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='175' to='175' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='w63.end+2' dur='0' fill='freeze' />
 <animate attributeName='y' from='175' to='300' begin='w63.end+2' dur='2' fill='freeze' id='w71' />
 <animate attributeName='x' from='175' to='335' begin='w71.end' dur='3' fill='freeze' id='w72' />
 <animate attributeName='opacity' from='0' to='0' begin='w72.end' dur='0' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='175' y='135' opacity='0' >
+<animate attributeName='x' from='175' to='175' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='135' to='135' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='w63.end+2' dur='0' fill='freeze' />
 <animate attributeName='y' from='135' to='280' begin='w63.end+2' dur='2' fill='freeze' />
 <animate attributeName='x' from='175' to='335' begin='w71.end' dur='3' fill='freeze' />
 <animate attributeName='opacity' from='0' to='0' begin='w72.end' dur='0' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='175' y='95' opacity='0' >
+<animate attributeName='x' from='175' to='175' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='95' to='95' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='w63.end+2' dur='0' fill='freeze' />
 <animate attributeName='y' from='95' to='260' begin='w63.end+2' dur='2' fill='freeze' />
 <animate attributeName='x' from='175' to='335' begin='w71.end' dur='3' fill='freeze' />
 <animate attributeName='opacity' from='0' to='0' begin='w72.end' dur='0' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='175' y='55' opacity='0' >
+<animate attributeName='x' from='175' to='175' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='55' to='55' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='w63.end+2' dur='0' fill='freeze' />
 <animate attributeName='y' from='55' to='240' begin='w63.end+2' dur='2' fill='freeze' />
 <animate attributeName='x' from='175' to='335' begin='w71.end' dur='3' fill='freeze' />
@@ -399,24 +539,32 @@ k
 </use>
 
 <use xlink:href='#bit' x='295' y='175' opacity='0' >
+<animate attributeName='x' from='295' to='295' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='w63.end+2' dur='0' fill='freeze' />
 <animate attributeName='y' from='175' to='300' begin='w63.end+2' dur='2' fill='freeze' />
 <animate attributeName='x' from='295' to='335' begin='w71.end' dur='3' fill='freeze' />
 <animate attributeName='y' from='300' to='175' begin='w72.end+2' dur='2' fill='freeze' id='w73' />
 </use>
 <use xlink:href='#bit' x='295' y='135' opacity='0' >
+<animate attributeName='x' from='295' to='295' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='w63.end+2' dur='0' fill='freeze' />
 <animate attributeName='y' from='135' to='280' begin='w63.end+2' dur='2' fill='freeze' />
 <animate attributeName='x' from='295' to='335' begin='w71.end' dur='3' fill='freeze' />
 <animate attributeName='y' from='280' to='135' begin='w72.end+2' dur='2' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='295' y='95' opacity='0' >
+<animate attributeName='x' from='295' to='295' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='w63.end+2' dur='0' fill='freeze' />
 <animate attributeName='y' from='95' to='260' begin='w63.end+2' dur='2' fill='freeze' />
 <animate attributeName='x' from='295' to='335' begin='w71.end' dur='3' fill='freeze' />
 <animate attributeName='y' from='260' to='95' begin='w72.end+2' dur='2' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='295' y='55' opacity='0' >
+<animate attributeName='x' from='295' to='295' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='w63.end+2' dur='0' fill='freeze' />
 <animate attributeName='y' from='55' to='240' begin='w63.end+2' dur='2' fill='freeze' />
 <animate attributeName='x' from='295' to='335' begin='w71.end' dur='3' fill='freeze' />
@@ -448,24 +596,32 @@ k
 
 <!-- w8-2 -->
 <use xlink:href='#bit' x='215' y='175' opacity='0' >
+<animate attributeName='x' from='215' to='215' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='175' to='175' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='rot13.end+5' dur='0' fill='freeze' />
 <animate attributeName='y' from='175' to='300' begin='rot13.end+5' dur='2' fill='freeze' id='w82' />
 <animate attributeName='x' from='215' to='335' begin='w82.end+1' dur='3' fill='freeze' id='w83' />
 <animate attributeName='opacity' from='0' to='0' begin='w83.end' dur='0' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='215' y='135' opacity='0' >
+<animate attributeName='x' from='215' to='215' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='135' to='135' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='rot13.end+5' dur='0' fill='freeze' />
 <animate attributeName='y' from='135' to='280' begin='rot13.end+5' dur='2' fill='freeze' />
 <animate attributeName='x' from='215' to='335' begin='w82.end+1' dur='3' fill='freeze' />
 <animate attributeName='opacity' from='0' to='0' begin='w83.end' dur='0' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='215' y='95' opacity='0' >
+<animate attributeName='x' from='215' to='215' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='95' to='95' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='rot13.end+5' dur='0' fill='freeze' />
 <animate attributeName='y' from='95' to='260' begin='rot13.end+5' dur='2' fill='freeze' />
 <animate attributeName='x' from='215' to='335' begin='w82.end+1' dur='3' fill='freeze' />
 <animate attributeName='opacity' from='0' to='0' begin='w83.end' dur='0' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='215' y='55' opacity='0' >
+<animate attributeName='x' from='215' to='215' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='55' to='55' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='rot13.end+5' dur='0' fill='freeze' />
 <animate attributeName='y' from='55' to='240' begin='rot13.end+5' dur='2' fill='freeze' />
 <animate attributeName='x' from='215' to='335' begin='w82.end+1' dur='3' fill='freeze' />
@@ -475,6 +631,9 @@ k
 
 <!-- w8 -->
 <use xlink:href='#bit' x='365' y='240' opacity='0' >
+<animate attributeName='x' from='365' to='365' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='240' to='240' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='opacity' from='0' to='0' begin='start.click' dur='0' fill='freeze' />
 <animate attributeName='opacity' from='1' to='1' begin='rot11.end' dur='0' fill='freeze' />
 <animate attributeName='y' from='240' to='300' begin='rot11.end' dur='2' fill='freeze' id='rot12' />
 <animate attributeName='x' from='365' to='335' begin='rot12.end' dur='1' fill='freeze' id='rot13' />
@@ -483,6 +642,9 @@ k
 </use>
 
 <use xlink:href='#bit' x='335' y='175' opacity='0' >
+<animate attributeName='x' from='335' to='335' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='175' to='175' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='w73.end+2' dur='0' fill='freeze' />
 <animate attributeName='y' from='175' to='300' begin='w73.end+2' dur='2' fill='freeze' id='w81' />
 <animate attributeName='y' from='300' to='280' begin='rot11.end' dur='2' fill='freeze' />
@@ -490,6 +652,9 @@ k
 <animate attributeName='y' from='280' to='135' begin='w84.end' dur='2' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='335' y='135' opacity='0' >
+<animate attributeName='x' from='335' to='335' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='135' to='135' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='w73.end+2' dur='0' fill='freeze' />
 <animate attributeName='y' from='135' to='280' begin='w73.end+2' dur='2' fill='freeze' />
 <animate attributeName='y' from='280' to='260' begin='rot11.end' dur='2' fill='freeze' />
@@ -497,6 +662,9 @@ k
 <animate attributeName='y' from='260' to='95' begin='w84.end' dur='2' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='335' y='95' opacity='0' >
+<animate attributeName='x' from='335' to='335' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='95' to='95' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='w73.end+2' dur='0' fill='freeze' />
 <animate attributeName='y' from='95' to='260' begin='w73.end+2' dur='2' fill='freeze' />
 <animate attributeName='y' from='260' to='240' begin='rot11.end' dur='2' fill='freeze' />
@@ -506,6 +674,8 @@ k
 
 
 <use xlink:href='#bit' x='335' y='55' opacity='0' >
+<animate attributeName='x' from='335' to='335' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='55' to='55' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='w73.end+2' dur='0' fill='freeze' />
 <animate attributeName='y' from='55' to='240' begin='w73.end+2' dur='2' fill='freeze' />
 <animate attributeName='x' from='335' to='365' begin='w81.end+2' dur='1' fill='freeze' id='rot11' />
@@ -539,24 +709,32 @@ k
 
 <!-- w9 -->
 <use xlink:href='#bit' x='255' y='175' opacity='0' >
+<animate attributeName='x' from='255' to='255' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='175' to='175' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='w85.end+2' dur='0' fill='freeze' />
 <animate attributeName='y' from='175' to='300' begin='w85.end+2' dur='2' fill='freeze' id='w91' />
 <animate attributeName='x' from='255' to='415' begin='w91.end' dur='3' fill='freeze' id='w92' />
 <animate attributeName='opacity' from='0' to='0' begin='w92.end' dur='0' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='255' y='135' opacity='0' >
+<animate attributeName='x' from='255' to='255' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='135' to='135' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='w85.end+2' dur='0' fill='freeze' />
 <animate attributeName='y' from='135' to='280' begin='w85.end+2' dur='2' fill='freeze' />
 <animate attributeName='x' from='255' to='415' begin='w91.end' dur='3' fill='freeze' />
 <animate attributeName='opacity' from='0' to='0' begin='w92.end' dur='0' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='255' y='95' opacity='0' >
+<animate attributeName='x' from='255' to='255' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='95' to='95' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='w85.end+2' dur='0' fill='freeze' />
 <animate attributeName='y' from='95' to='260' begin='w85.end+2' dur='2' fill='freeze' />
 <animate attributeName='x' from='255' to='415' begin='w91.end' dur='3' fill='freeze' />
 <animate attributeName='opacity' from='0' to='0' begin='w92.end' dur='0' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='255' y='55' opacity='0' >
+<animate attributeName='x' from='255' to='255' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='55' to='55' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='w85.end+2' dur='0' fill='freeze' />
 <animate attributeName='y' from='55' to='240' begin='w85.end+2' dur='2' fill='freeze' />
 <animate attributeName='x' from='255' to='415' begin='w91.end' dur='3' fill='freeze' />
@@ -564,24 +742,32 @@ k
 </use>
 
 <use xlink:href='#bit' x='375' y='175' opacity='0' >
+<animate attributeName='x' from='375' to='375' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='w85.end+2' dur='0' fill='freeze' />
 <animate attributeName='y' from='175' to='300' begin='w85.end+2' dur='2' fill='freeze' />
 <animate attributeName='x' from='375' to='415' begin='w91.end' dur='3' fill='freeze' />
 <animate attributeName='y' from='300' to='175' begin='w92.end+2' dur='2' fill='freeze' id='w93' />
 </use>
 <use xlink:href='#bit' x='375' y='135' opacity='0' >
+<animate attributeName='x' from='375' to='375' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='w85.end+2' dur='0' fill='freeze' />
 <animate attributeName='y' from='135' to='280' begin='w85.end+2' dur='2' fill='freeze' />
 <animate attributeName='x' from='375' to='415' begin='w91.end' dur='3' fill='freeze' />
 <animate attributeName='y' from='280' to='135' begin='w92.end+2' dur='2' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='375' y='95' opacity='0' >
+<animate attributeName='x' from='375' to='375' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='w85.end+2' dur='0' fill='freeze' />
 <animate attributeName='y' from='95' to='260' begin='w85.end+2' dur='2' fill='freeze' />
 <animate attributeName='x' from='375' to='415' begin='w91.end' dur='3' fill='freeze' />
 <animate attributeName='y' from='260' to='95' begin='w92.end+2' dur='2' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='375' y='55' opacity='0' >
+<animate attributeName='x' from='375' to='375' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' begin='w85.end+2' dur='0' fill='freeze' />
 <animate attributeName='y' from='55' to='240' begin='w85.end+2' dur='2' fill='freeze' />
 <animate attributeName='x' from='375' to='415' begin='w91.end' dur='3' fill='freeze' />
@@ -639,19 +825,63 @@ s
 <!-- rcon -->
 <svg width='30' height='30' x='450' y='240' >
 <use xlink:href='#bit' />
-<text x='5' y='25' font-size='8' fill='black' >
-Rcon0
+<text x='2' y='25' font-size='10' fill='black' >
+RC<tspan baseline-shift = "sub" font-size='8' >0</tspan>
 </text>
+<animate attributeName='x' from='450' to='450' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='opacity' from='1' to='1' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='x' from='450' to='175' dur='4' begin='w02.end+2' id='rcon01' />
 <animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='rcon01.end' />
 </svg>
 <svg width='30' height='30' x='470' y='240' >
 <use xlink:href='#bit' />
-<text x='5' y='25' font-size='8' fill='black' >
-Rcon1
+<text x='2' y='25' font-size='10' fill='black' >
+RC<tspan baseline-shift = "sub" font-size='8' >1</tspan>
 </text>
+<animate attributeName='x' from='470' to='470' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='opacity' from='1' to='1' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='x' from='470' to='335' dur='2' begin='w83.end+2' id='rcon11' />
 <animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='rcon11.end' />
+</svg>
+<text x='510' y='260' font-size='14' fill='black' >
+...
+</text>
+<svg height='25' width='75' x='450' y='300' id='start' >
+<set attributeName='x' to='-100' begin='start.click' />
+<set attributeName='x' to='450' begin='w93.end' />
+<rect height='24' width='74' x='0.5' y='0.5' rx='5' ry='5' stroke='black' fill='white' />
+ <text fill='black' x='25' y='18' style="font-size:14px;" >
+Start
+</text>
+</svg>
+<!-- Legend -->
+<path d='M 0 350 l 600 0' stroke='black' stroke-dasharray='5,5' />
+<svg width='400' height='120' x='5' y='360' >
+<use xlink:href='#bit' x='5' y='5' />
+<text x='10' y='30' font-size='14' fill='black' >
+k
+</text>
+<text x='40' y='25' font-size='14' fill='black' >
+= 128 Bit AES-Schl&#252;ssel
+</text>
+<use xlink:href='#bit' x='5' y='45' />
+<text x='7' y='70' font-size='10' fill='black' >
+RC
+</text>
+<text x='40' y='65' font-size='14' fill='black' >
+= Rundenkonstante
+</text>
+<use xlink:href='#bit' x='200' y='5' />
+<text x='250' y='25' font-size='14' fill='black' >
+= Einzelnes Byte
+</text>
+<text x='215' y='65' font-size='14' fill='black' >
+s
+</text>
+<text x='250' y='65' font-size='14' fill='black' >
+= S-Box
+</text>
+
 </svg>
 
 </g>
