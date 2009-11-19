@@ -10,7 +10,7 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:xlink="http://www.w3.org/1999/xlink"
    width="650"
-   height="400"
+   height="480"
    id="svg2"
 >
 <script type="text/ecmascript" xlink:href="/content/smil.user.js" />
@@ -36,10 +36,12 @@
 <rect x='0' y='0' width='800' height='600' fill='white' />
 <text x='10' y='80' font-size='14' fill='black' >
 128-Bit-Klartextblock
+<animate attributeName='opacity' from='1' to='1' dur='0' begin='start.click' fill='freeze' />
 <animate attributeName='opacity' from='0' to='0' dur='0' begin='m01.end-1' fill='freeze' />
 </text>
 <text x='10' y='300' font-size='14' fill='black' >
 128-Bit-Sch&#252;ssel
+<animate attributeName='opacity' from='1' to='1' dur='0' begin='start.click' fill='freeze' />
 <animate attributeName='opacity' from='0' to='0' dur='0' begin='k03.end-1' fill='freeze' />
 </text> 
 
@@ -94,7 +96,10 @@ MC
 <text x='5' y='25' font-size='14' fill='black' >
 m
 <set attributeName='opacity' to='0' begin='k03.end' fill='freeze' />
+<animate attributeName='opacity' from='1' to='1' dur='0' begin='start.click' fill='freeze' />
 </text>
+<animate attributeName='x' from='50' to='50' dur='0' begin='start.click' fill='freeze' />
+<animate attributeName='y' from='100' to='100' dur='0' begin='start.click' fill='freeze' />
 <!-- round 1 -->
 <animate attributeName='x' from='50' to='150' dur='1.5s' begin='k03.end+2' fill='freeze' id='m01' />
 <set attributeName='opacity' to='0' dur='2' begin='m01.end' />
@@ -133,12 +138,15 @@ m
 <use xlink:href='#bit' x='0' y='0' />
 <text x='5' y='25' font-size='14' fill='black' >
 k<tspan baseline-shift = "sub" font-size='8' >R</tspan>
-<set attributeName='opacity' to='0' begin='kr1.end' fill='freeze' />
+<set attributeName='opacity' to='1' begin='start.click' dur='0' fill='freeze' />
+<set attributeName='opacity' to='0' begin='kr1.end' dur='0' fill='freeze' />
 </text>
 <text x='5' y='25' font-size='14' fill='black' opacity='0' >
 c
-<set attributeName='opacity' to='1' begin='kr1.end+1' fill='freeze' />
+<set attributeName='opacity' to='0' begin='start.click' dur='0' fill='freeze' />
+<set attributeName='opacity' to='1' begin='kr1.end+1' dur='0' fill='freeze' />
 </text>
+<set attributeName='opacity' to='0' dur='0' fill='freeze' begin='start.click' />
 <set attributeName='opacity' to='1' dur='0' fill='freeze' begin='k01.end+2' />
 <animate attributeName='x' from='150' to='200' dur='1s' begin='k01.end+2' fill='freeze' />
 <animate attributeName='y' from='240' to='270' dur='1s' begin='k01.end+2' fill='freeze' />
@@ -167,7 +175,9 @@ k<tspan baseline-shift = "sub" font-size='8' >2</tspan>
 <text x='5' y='25' font-size='14' fill='black'  >
 k<tspan baseline-shift = "sub" font-size='8' >0</tspan> 
 </text>
-<animate attributeName='y' from='240' to='100' dur='2s' begin='k02.end+2' fill='freeze' id='k03'/>
+<animate attributeName='opacity' from='1' to='1' dur='0' begin='start.click' fill='freeze' />
+<animate attributeName='y' from='240' to='240' dur='0' begin='start.click' />
+<animate attributeName='y' from='240' to='100' dur='2s' begin='k02.end+2' id='k03'/>
 <animate attributeName='opacity' from='0' to='0' dur='0' begin='k03.end' fill='freeze' />
 </svg>
 
@@ -273,7 +283,18 @@ Start
 
 
 <!-- Legend -->
-<path d='M 0 360 l 550 0' stroke='black' stroke-dasharray='5, 5' />
- 
+<path d='M 0 350 l 550 0' stroke='black' stroke-dasharray='5, 5' />
+<text fill='black' x='5' y='375' style="font-size:14px;" >
+S = S-Box
+</text>
+<text fill='black' x='5' y='395' style="font-size:14px;" >
+SR = Shift Rows
+</text>
+<text fill='black' x='150' y='375' style="font-size:14px;" >
+MC = Mix Columns
+</text>
+<text fill='black' x='150' y='395' style="font-size:14px;" >
+KE = Key Expansion
+</text>
 </g>
 </svg>
