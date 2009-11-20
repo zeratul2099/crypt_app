@@ -856,7 +856,7 @@ Start
 </svg>
 <!-- Legend -->
 <path d='M 0 350 l 600 0' stroke='black' stroke-dasharray='5,5' />
-<svg width='400' height='120' x='5' y='360' >
+<svg width='600' height='120' x='5' y='360' >
 <use xlink:href='#bit' x='5' y='5' />
 <text x='10' y='30' font-size='14' fill='black' >
 k
@@ -871,17 +871,23 @@ RC
 <text x='40' y='65' font-size='14' fill='black' >
 = Rundenkonstante
 </text>
-<use xlink:href='#bit' x='200' y='5' />
-<text x='250' y='25' font-size='14' fill='black' >
+<use xlink:href='#bit' x='220' y='5' />
+<text x='270' y='25' font-size='14' fill='black' >
 = Einzelnes Byte
 </text>
-<text x='215' y='65' font-size='14' fill='black' >
+<text x='235' y='65' font-size='14' fill='black' >
 s
 </text>
-<text x='250' y='65' font-size='14' fill='black' >
+<text x='270' y='65' font-size='14' fill='black' >
 = S-Box
 </text>
-
+<svg x='400' y='0' height='30' width='30'  >
+       <circle cx='10' cy='20' r='8' stroke='red' stroke-width='2' />
+       <path d="M 10 12 l 0 16 M 2 20 l 16 0" stroke='red' stroke-width='2' />
+</svg>
+<text x='430' y='25' font-size='14' fill='black' >
+= bitweises XOR
+</text>
 </svg>
 
 </g>

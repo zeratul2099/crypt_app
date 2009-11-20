@@ -9,8 +9,8 @@
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:xlink="http://www.w3.org/1999/xlink"
-   width="650"
-   height="480"
+   width="550"
+   height="400"
    id="svg2"
 >
 <script type="text/ecmascript" xlink:href="/content/smil.user.js" />
@@ -95,7 +95,7 @@ MC
 <use xlink:href='#bit' x='0' y='0' />
 <text x='5' y='25' font-size='14' fill='black' >
 m
-<set attributeName='opacity' to='0' begin='k03.end' fill='freeze' />
+<set attributeName='opacity' to='0' dur='0' begin='k03.end' fill='freeze' />
 <animate attributeName='opacity' from='1' to='1' dur='0' begin='start.click' fill='freeze' />
 </text>
 <animate attributeName='x' from='50' to='50' dur='0' begin='start.click' fill='freeze' />
@@ -231,7 +231,7 @@ k<tspan baseline-shift = "sub" font-size='8' >1</tspan>
 <text x='205' y='265' font-size='14' fill='black' opacity='0' >
 ...
 <set attributeName='opacity' to='1' begin='k02.end' fill='freeze' />
-<set attributeName='opacity' to='0' begin='kr1.end' fill='freeze' />
+<set attributeName='opacity' to='0' begin='mr4.end+1' fill='freeze' />
 </text>
 <text x='190' y='320' font-size='14' fill='black' opacity='0' >
 R Rundenschl&#252;ssel
@@ -259,7 +259,7 @@ Runde 2
 <set attributeName='opacity' to='1' begin='m07.end+2' fill='freeze' />
 <set attributeName='opacity' to='0' begin='m17.end' fill='freeze' />
 </text>
-<text x='300' y='280' font-size='22' fill='black' opacity='0' >
+<text x='270' y='280' font-size='22' fill='black' opacity='0' >
 Wiederhole R-1 Runden
 <set attributeName='opacity' to='1' begin='m17.end+2' fill='freeze' />
 <set attributeName='opacity' to='0' begin='m17.end+5' fill='freeze' />
@@ -285,13 +285,13 @@ Start
 <!-- Legend -->
 <path d='M 0 350 l 550 0' stroke='black' stroke-dasharray='5, 5' />
 <text fill='black' x='5' y='375' style="font-size:14px;" >
-S = S-Box
+S = SubBytes
 </text>
 <text fill='black' x='5' y='395' style="font-size:14px;" >
-SR = Shift Rows
+SR = ShiftRows
 </text>
 <text fill='black' x='150' y='375' style="font-size:14px;" >
-MC = Mix Columns
+MC = MixColumns
 </text>
 <text fill='black' x='150' y='395' style="font-size:14px;" >
 KE = Key Expansion
