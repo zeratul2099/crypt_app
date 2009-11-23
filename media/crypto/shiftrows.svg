@@ -9,8 +9,8 @@
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:xlink="http://www.w3.org/1999/xlink"
-   width="650"
-   height="450"
+   width="450"
+   height="300"
    id="svg2"
 >
 <script type="text/ecmascript" xlink:href="/content/smil.user.js" />
@@ -51,6 +51,18 @@ w<tspan baseline-shift = "sub" font-size='8' >2</tspan>
 <text x='185' y='40' font-size='14' fill='black' >
 w<tspan baseline-shift = "sub" font-size='8' >3</tspan>
 </text>
+<text x='250' y='80' font-size='14' fill='black' >
+l<tspan baseline-shift = "sub" font-size='8' >0</tspan>
+</text>
+<text x='250' y='120' font-size='14' fill='black' >
+l<tspan baseline-shift = "sub" font-size='8' >1</tspan>
+</text>
+<text x='250' y='160' font-size='14' fill='black' >
+l<tspan baseline-shift = "sub" font-size='8' >2</tspan>
+</text>
+<text x='250' y='200' font-size='14' fill='black' >
+l<tspan baseline-shift = "sub" font-size='8' >3</tspan>
+</text>
 <!-- row 0 -->
 <use xlink:href='#bit' x='55' y='55' ></use>
 <use xlink:href='#bit' x='95' y='55' ></use>
@@ -59,24 +71,25 @@ w<tspan baseline-shift = "sub" font-size='8' >3</tspan>
 
 <!-- row 1 -->
 <use xlink:href='#bit' x='55' y='95' >
-<animate attributeName='x' from='55' to='15' dur='1' begin='1' fill='freeze' id='r101' />
+<animate attributeName='x' from='55' to='15' dur='1' begin='start.click' fill='freeze' id='r101' />
 <animate attributeName='y' from='95' to='215' dur='1.5' begin='r101.end' fill='freeze' id='r102' />
 <animate attributeName='x' from='15' to='215' dur='2' begin='r102.end' fill='freeze' id='r103' />
 <animate attributeName='y' from='215' to='95' dur='1.5' begin='r103.end' fill='freeze' id='r104' />
 <animate attributeName='x' from='215' to='175' dur='1' begin='r104.end' fill='freeze' id='r105' />
 </use>
 <use xlink:href='#bit' x='95' y='95' >
-<animate attributeName='x' from='95' to='55' dur='1' begin='1' fill='freeze' />
+<animate attributeName='x' from='95' to='55' dur='1' begin='start.click' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='135' y='95' >
-<animate attributeName='x' from='135' to='95' dur='1' begin='1' fill='freeze' />
+<animate attributeName='x' from='135' to='95' dur='1' begin='start.click' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='175' y='95' >
-<animate attributeName='x' from='175' to='135' dur='1' begin='1' fill='freeze' />
+<animate attributeName='x' from='175' to='135' dur='1' begin='start.click' fill='freeze' />
 </use>
 
 <!-- row 2 -->
 <use xlink:href='#bit' x='55' y='135' >
+<animate attributeName='x' from='55' to='55' dur='0' begin='start.click' fill='freeze' />
 <animate attributeName='x' from='55' to='15' dur='1' begin='r105.end+2' fill='freeze' id='r201' />
 
 <animate attributeName='y' from='135' to='215' dur='1' begin='r201.end' fill='freeze' id='r202' />
@@ -86,24 +99,28 @@ w<tspan baseline-shift = "sub" font-size='8' >3</tspan>
 </use>
 
 <use xlink:href='#bit' x='95' y='135' >
+<animate attributeName='x' from='95' to='95' dur='0' begin='start.click' fill='freeze' />
 <animate attributeName='x' from='95' to='15' dur='2' begin='r105.end+2' fill='freeze' />
 
 <animate attributeName='y' from='135' to='215' dur='1' begin='r202.end' fill='freeze'  />
-<animate attributeName='x' from='15' to='215' dur='2' begin='r203.end-1' fill='freeze' />
+<animate attributeName='x' from='15' to='215' dur='2' begin='r202.end+1' fill='freeze' />
 <animate attributeName='y' from='215' to='135' dur='1' begin='r204.end' fill='freeze' />
-<animate attributeName='x' from='215' to='175' dur='1' begin='r205.end-1' fill='freeze' />
+<animate attributeName='x' from='215' to='175' dur='1' begin='r204.end+1' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='135' y='135' >
+<animate attributeName='x' from='135' to='135' dur='0' begin='start.click' fill='freeze' />
 <animate attributeName='x' from='135' to='55' dur='2' begin='r105.end+2' fill='freeze' />
 
 </use>
 <use xlink:href='#bit' x='175' y='135' >
+<animate attributeName='x' from='175' to='175' dur='0' begin='start.click' fill='freeze' />
 <animate attributeName='x' from='175' to='95' dur='2' begin='r105.end+2' fill='freeze' />
 
 </use>
 
 <!-- row 3 -->
 <use xlink:href='#bit' x='55' y='175' >
+<animate attributeName='x' from='55' to='55' dur='0' begin='start.click' fill='freeze' />
 <animate attributeName='x' from='55' to='15' dur='1' begin='r205.end+3' fill='freeze' id='r301' />
 <animate attributeName='y' from='175' to='215' dur='1' begin='r301.end' fill='freeze' id='r302' />
 <animate attributeName='x' from='15' to='215' dur='2' begin='r302.end' fill='freeze' id='r303' />
@@ -111,24 +128,40 @@ w<tspan baseline-shift = "sub" font-size='8' >3</tspan>
 <animate attributeName='x' from='215' to='95' dur='3' begin='r304.end' fill='freeze' id='r305' />
 </use>
 <use xlink:href='#bit' x='95' y='175' >
+<animate attributeName='x' from='95' to='95' dur='0' begin='start.click' fill='freeze' />
 <animate attributeName='x' from='95' to='15' dur='2' begin='r205.end+3' fill='freeze' />
 <animate attributeName='y' from='175' to='215' dur='1' begin='r302.end' fill='freeze' />
-<animate attributeName='x' from='15' to='215' dur='2' begin='r303.end-1' fill='freeze' />
+<animate attributeName='x' from='15' to='215' dur='2' begin='r302.end+1' fill='freeze' />
 <animate attributeName='y' from='215' to='175' dur='1' begin='r304.end' fill='freeze' />
-<animate attributeName='x' from='215' to='135' dur='2' begin='r305.end-2' fill='freeze' />
+<animate attributeName='x' from='215' to='135' dur='2' begin='r304.end+1' fill='freeze' />
 </use>
 <use xlink:href='#bit' x='135' y='175' >
-<animate attributeName='x' from='135' to='15' dur='3' begin='r205.end+3' fill='freeze' />
-<animate attributeName='y' from='175' to='215' dur='1' begin='r303.end-1' fill='freeze' />
+<animate attributeName='x' from='135' to='135' dur='0' begin='start.click' fill='freeze' />
+<animate attributeName='x' from='135' to='15' dur='3' begin='r205.end+3' fill='freeze' id='r331' />
+<animate attributeName='y' from='175' to='215' dur='1' begin='r331.end' fill='freeze' />
 <animate attributeName='x' from='15' to='215' dur='2' begin='r303.end' fill='freeze' />
 <animate attributeName='y' from='215' to='175' dur='1' begin='r303.end+2' fill='freeze' />
 <animate attributeName='x' from='215' to='175' dur='1' begin='r303.end+3' fill='freeze' />
 
 </use>
 <use xlink:href='#bit' x='175' y='175' >
+<animate attributeName='x' from='175' to='175' dur='0' begin='start.click' fill='freeze' />
 <animate attributeName='x' from='175' to='55' dur='3' begin='r205.end+3' fill='freeze' />
 </use>
 
-
+<svg height='25' width='75' x='90' y='250' id='start' >
+<set attributeName='x' to='-100' begin='start.click' />
+<set attributeName='x' to='90' begin='r305.end' />
+<rect height='24' width='74' x='0.5' y='0.5' rx='5' ry='5' stroke='black' fill='white' />
+ <text fill='black' x='25' y='18' style="font-size:14px;" >
+Start
+</text>
+</svg>
+<!-- Legend -->
+<path d='M 280 25 l 0 250' stroke='black' stroke-dasharray='5,5' />
+<use xlink:href='#bit' x='300' y='35' />
+ <text fill='black' x='340' y='50' style="font-size:14px;" >
+= Ein Byte
+</text>
 </g>
 </svg>
