@@ -59,6 +59,23 @@ n = p * q
 <animate attributeName='opacity' from='0' to='1' dur='1' fill='freeze' begin='prim04.end' />
 </text>
 
+<text x='300' y='225' fill='black' font-size='14' opacity='0'>
+1 &lt; f &lt; &#934;(n)
+<animate attributeName='opacity' from='0' to='1' dur='1' fill='freeze' begin='f01.end' />
+</text>
+<text x='300' y='240' fill='black' font-size='14' opacity='0'>
+ggT(f, &#934;(n)) = 1
+<animate attributeName='opacity' from='0' to='1' dur='1' fill='freeze' begin='f01.end' />
+</text>
+<text x='300' y='265' fill='black' font-size='14' opacity='0'>
+1 &lt; g &lt; &#934;(n)
+<animate attributeName='opacity' from='0' to='1' dur='1' fill='freeze' begin='g01.end' />
+</text>
+<text x='300' y='280' fill='black' font-size='14' opacity='0'>
+g = f<tspan baseline-shift = "super" font-size='8' >-1</tspan> mod (&#934;(n))
+<animate attributeName='opacity' from='0' to='1' dur='1' fill='freeze' begin='g01.end' />
+</text>
+
 <svg height='30' width='30' x='150' y='50' >
 <use xlink:href='#bit' />
 <text x='5' y='23' fill='black' font-size='14' >
@@ -97,12 +114,15 @@ p-1
 <animate attributeName='opacity' from='0' to='1' dur='1' fill='freeze' begin='prim02.end+5' />
 <animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='prim04.end' />
 </text>
-<text x='1' y='23' fill='black' font-size='12' opacity='0' >
-&#934;(n)
+<text x='5' y='23' fill='black' font-size='14' opacity='0' >
+f
 <animate attributeName='opacity' from='1' to='1' dur='0' fill='freeze' begin='prim04.end' />
 </text>
 <animate attributeName='y' from='50' to='150' dur='2' fill='freeze' begin='prim02.end+4' id='prim03' />
 <animate attributeName='x' from='150' to='200' dur='1' fill='freeze' begin='prim03.end+1' id='prim04' />
+<animate attributeName='x' from='200' to='150' dur='1' fill='freeze' begin='prim04.end+2' id='f01' />
+<animate attributeName='y' from='150' to='200' dur='1' fill='freeze' begin='prim04.end+2'  />
+
 </svg>
 <svg height='30' width='30' x='250' y='50' >
 <use xlink:href='#bit' />
@@ -113,12 +133,24 @@ q
 <text x='1' y='23' fill='black' font-size='12' opacity='0' >
 q-1
 <animate attributeName='opacity' from='0' to='1' dur='1' fill='freeze' begin='prim02.end+5' />
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='prim04.end' />
+</text>
+<text x='1' y='23' fill='black' font-size='12' opacity='0' >
+&#934;(n)
+<animate attributeName='opacity' from='1' to='1' dur='0' fill='freeze' begin='prim04.end' />
 </text>
 <animate attributeName='y' from='50' to='150' dur='2' fill='freeze' begin='prim02.end+4' />
 <animate attributeName='x' from='250' to='200' dur='1' fill='freeze' begin='prim03.end+1' />
-<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='prim04.end' />
 </svg>
 
-
+<svg height='30' width='30' x='200' y='150' opacity='0' >
+<use xlink:href='#bit' />
+<text x='5' y='23' fill='black' font-size='14' >
+g
+</text>
+<animate attributeName='x' from='200' to='250' dur='1' fill='freeze' begin='f01.end+2' id='g01' />
+<animate attributeName='y' from='150' to='200' dur='1' fill='freeze' begin='f01.end+2' />
+<animate attributeName='opacity' from='1' to='1' dur='1' fill='freeze' begin='f01.end+2' />
+</svg>
 </g>
 </svg>
