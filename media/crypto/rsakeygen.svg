@@ -39,41 +39,61 @@
 <text x='5' y='23' fill='black' fonz-size='14' >
 p
 </text>
+<animate attributeName='opacity' from='1' to='1' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='opacity' from='1' to='0' dur='1' fill='freeze' begin='priv02.end+2' />
 </svg>
 <svg height='30' width='30' x='250' y='50' >
 <use xlink:href='#bit' />
 <text x='5' y='23' fill='black' fonz-size='14' >
 q
 </text>
+<animate attributeName='opacity' from='1' to='1' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='opacity' from='1' to='0' dur='1' fill='freeze' begin='priv02.end+2' />
 </svg>
 <text x='300' y='75' fill='black' font-size='18' opacity='0'>
 Primzahlen p und q
-<animate attributeName='opacity' from='0' to='1' dur='1' fill='freeze' begin='1' id='prim01' />
+<animate attributeName='opacity' from='0' to='1' dur='1' fill='freeze' begin='start.click' id='prim01' />
 </text>
 <text x='300' y='125' fill='black' font-size='18' opacity='0'>
 n = p * q
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='0' to='1' dur='1' fill='freeze' begin='prim02.end' />
 </text>
 <text x='300' y='175' fill='black' font-size='18' opacity='0'>
 &#934;(n) = (p-1) * (q-1)
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='0' to='1' dur='1' fill='freeze' begin='prim04.end' />
 </text>
 
-<text x='300' y='225' fill='black' font-size='14' opacity='0'>
+<text x='10' y='215' fill='black' font-size='14' opacity='0'>
 1 &lt; f &lt; &#934;(n)
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='0' to='1' dur='1' fill='freeze' begin='f01.end' />
 </text>
-<text x='300' y='240' fill='black' font-size='14' opacity='0'>
+<text x='10' y='230' fill='black' font-size='14' opacity='0'>
 ggT(f, &#934;(n)) = 1
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='0' to='1' dur='1' fill='freeze' begin='f01.end' />
 </text>
-<text x='300' y='265' fill='black' font-size='14' opacity='0'>
+<text x='300' y='215' fill='black' font-size='14' opacity='0'>
 1 &lt; g &lt; &#934;(n)
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='0' to='1' dur='1' fill='freeze' begin='g01.end' />
 </text>
-<text x='300' y='280' fill='black' font-size='14' opacity='0'>
+<text x='300' y='230' fill='black' font-size='14' opacity='0'>
 g = f<tspan baseline-shift = "super" font-size='8' >-1</tspan> mod (&#934;(n))
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='0' to='1' dur='1' fill='freeze' begin='g01.end' />
+</text>
+<text x='70' y='270' fill='black' font-size='14' opacity='0'>
+&#214;ffentlicher Schl&#252;ssel
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='opacity' from='0' to='1' dur='1' fill='freeze' begin='pub01.end' />
+</text>
+<text x='230' y='270' fill='black' font-size='14' opacity='0'>
+Privater Schl&#252;ssel
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='opacity' from='0' to='1' dur='1' fill='freeze' begin='priv02.end' />
 </text>
 
 <svg height='30' width='30' x='150' y='50' >
@@ -81,6 +101,9 @@ g = f<tspan baseline-shift = "super" font-size='8' >-1</tspan> mod (&#934;(n))
 <text x='5' y='23' fill='black' font-size='14' >
 p
 </text>
+<animate attributeName='opacity' from='1' to='1' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='x' from='150' to='150' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='50' to='50' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='x' from='150' to='200' dur='2' begin='prim01.end+1' id='prim02' />
 <animate attributeName='y' from='50' to='100' dur='2' begin='prim01.end+1' />
 <animate attributeName='opacity' from='1' to='0' dur='1' fill='freeze' begin='prim01.end+2' />
@@ -90,6 +113,9 @@ p
 <text x='5' y='23' fill='black' font-size='14' >
 q
 </text>
+<animate attributeName='opacity' from='1' to='1' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='x' from='250' to='250' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='50' to='50' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='x' from='250' to='200' dur='2' begin='prim01.end+1' />
 <animate attributeName='y' from='50' to='100' dur='2' begin='prim01.end+1' />
 <animate attributeName='opacity' from='1' to='0' dur='1' fill='freeze' begin='prim01.end+2' />
@@ -99,14 +125,32 @@ q
 <text x='5' y='23' fill='black' font-size='14' >
 n
 </text>
-
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='x' from='200' to='200' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='100' to='100' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='0' to='1' dur='1' fill='freeze' begin='prim01.end+2' />
+<animate attributeName='x' from='200' to='230' dur='1' fill='freeze' begin='pub01.end+1' id='priv01' />
+<animate attributeName='y' from='100' to='200' dur='2' fill='freeze' begin='priv01.end' id='priv02' />
+</svg>
+
+<svg height='30' width='30' x='200' y='100' opacity='0' >
+<use xlink:href='#bit' />
+<text x='5' y='23' fill='black' font-size='14' >
+n
+</text>
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='x' from='200' to='200' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='100' to='100' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='opacity' from='0' to='1' dur='1' fill='freeze' begin='prim01.end+2' />
+<animate attributeName='x' from='200' to='130' dur='2' fill='freeze' begin='g01.end+2' id='pub01' />
+<animate attributeName='y' from='100' to='200' dur='2' fill='freeze' begin='g01.end+2' />
 </svg>
 
 <svg height='30' width='30' x='150' y='50' >
 <use xlink:href='#bit' />
 <text x='5' y='23' fill='black' font-size='14' >
 p
+<animate attributeName='opacity' from='1' to='1' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='0' dur='1' fill='freeze' begin='prim02.end+5' />
 </text>
 <text x='1' y='23' fill='black' font-size='12' opacity='0' >
@@ -116,8 +160,11 @@ p-1
 </text>
 <text x='5' y='23' fill='black' font-size='14' opacity='0' >
 f
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' dur='0' fill='freeze' begin='prim04.end' />
 </text>
+<animate attributeName='x' from='150' to='150' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='50' to='50' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='y' from='50' to='150' dur='2' fill='freeze' begin='prim02.end+4' id='prim03' />
 <animate attributeName='x' from='150' to='200' dur='1' fill='freeze' begin='prim03.end+1' id='prim04' />
 <animate attributeName='x' from='200' to='150' dur='1' fill='freeze' begin='prim04.end+2' id='f01' />
@@ -128,6 +175,7 @@ f
 <use xlink:href='#bit' />
 <text x='5' y='23' fill='black' font-size='14' >
 q
+<animate attributeName='opacity' from='1' to='1' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='0' dur='1' fill='freeze' begin='prim02.end+5' />
 </text>
 <text x='1' y='23' fill='black' font-size='12' opacity='0' >
@@ -137,10 +185,15 @@ q-1
 </text>
 <text x='1' y='23' fill='black' font-size='12' opacity='0' >
 &#934;(n)
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='opacity' from='1' to='1' dur='0' fill='freeze' begin='prim04.end' />
 </text>
+<animate attributeName='opacity' from='1' to='1' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='x' from='250' to='250' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='50' to='50' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='y' from='50' to='150' dur='2' fill='freeze' begin='prim02.end+4' />
 <animate attributeName='x' from='250' to='200' dur='1' fill='freeze' begin='prim03.end+1' />
+<animate attributeName='opacity' from='1' to='0' dur='1' fill='freeze' begin='priv02.end+2' />
 </svg>
 
 <svg height='30' width='30' x='200' y='150' opacity='0' >
@@ -148,9 +201,21 @@ q-1
 <text x='5' y='23' fill='black' font-size='14' >
 g
 </text>
+<animate attributeName='opacity' from='0' to='0' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='x' from='200' to='200' dur='0' fill='freeze' begin='start.click' />
+<animate attributeName='y' from='150' to='150' dur='0' fill='freeze' begin='start.click' />
 <animate attributeName='x' from='200' to='250' dur='1' fill='freeze' begin='f01.end+2' id='g01' />
 <animate attributeName='y' from='150' to='200' dur='1' fill='freeze' begin='f01.end+2' />
 <animate attributeName='opacity' from='1' to='1' dur='1' fill='freeze' begin='f01.end+2' />
+</svg>
+
+<svg height='25' width='75' x='175' y='150' id='start' >
+<set attributeName='x' to='-100' begin='start.click' />
+<set attributeName='x' to='175' begin='priv02.end+3' />
+<rect height='24' width='74' x='0.5' y='0.5' rx='5' ry='5' stroke='black' fill='white' />
+ <text fill='black' x='25' y='18' style="font-size:14px;" >
+Start
+</text>
 </svg>
 </g>
 </svg>
