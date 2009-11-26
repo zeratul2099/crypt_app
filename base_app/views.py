@@ -5,7 +5,11 @@ from django.template import Context, loader
 
 
 def base(request):
-    return render_to_response("base_app.html")
+    algos = {}
+    algos["crypto"] = Algo.objects.filter(type="crypto").order_by("order")
+    algos["stego"] = Algo.objects.filter(type="stego").order_by("order")
+    algos["hash"] = Algo.objects.filter(type="hash").order_by("order")
+    return render_to_response("base_app.html", algos)
 
 def list(request, algo_type):
     algos = Algo.objects.filter(type=algo_type).order_by("order")

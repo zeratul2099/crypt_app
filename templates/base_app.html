@@ -9,15 +9,60 @@
 <p class='nav' >
 &gt; Crypt App
 </p>
-<table width='400' class='leftspace' >
+<table width='100%' class='leftspace' cellpadding='10' >
     <tr>
-        <td><a href='{% url base_app.views.list algo_type="crypto" %}'>Kryptographie</a></td><td><a href='{% url base_app.views.info "crypto","overview" %}/'>Was ist das?</a></td>
+        <td width='250'>Kryptographie</td><td><a href='{% url base_app.views.info "crypto","overview" %}/'>Was ist das?</a></td>
     </tr>
     <tr>
-        <td><a href='{% url base_app.views.list algo_type="stego" %}'>Steganographie</a></td><td><a href='{% url base_app.views.info "stego","overview" %}/'>Was ist das?</a></td>
+        <td colspan='2' >
+            <table  class='leftspace' width='800' >
+                    {% for a in crypto %}
+    
+                <tr>
+                    <td width='50%'>{{ a.name }}:</td>
+                    <td width='25%'><a href='{% url base_app.views.info a.shortTitle "overview" %}/'>Was ist das?</a></td>
+                    <td width='25%'><a href='{% url crypto.views.algo a.shortTitle %}/'>Ausprobieren</a></td>
+                </tr>
+    
+    {% endfor %}
+            </table>
+        </td>
     </tr>
     <tr>
-        <td><a href='{% url base_app.views.list algo_type="hash" %}'>Hash-Algorithmen</a></td><td><a href='{% url base_app.views.info "hash","overview" %}/'>Was ist das?</a></td>
+        <td width='250'>Steganographie</td><td><a href='{% url base_app.views.info "stego","overview" %}/'>Was ist das?</a></td>
+    </tr>
+    <tr>
+        <td colspan='2' >
+            <table  class='leftspace' width='800' >
+                    {% for a in stego %}
+    
+                <tr>
+                    <td width='50%'>{{ a.name }}:</td>
+                    <td width='25%'><a href='{% url base_app.views.info a.shortTitle "overview" %}/'>Was ist das?</a></td>
+                    <td width='25%'><a href='{% url stego.views.algo a.shortTitle %}/'>Ausprobieren</a></td>
+                </tr>
+    
+    {% endfor %}
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td width='250'>Hash-Algorithmen</td><td><a href='{% url base_app.views.info "hash","overview" %}/'>Was ist das?</a></td>
+    </tr>
+    <tr>
+        <td colspan='2' >
+            <table  class='leftspace'  width='800' >
+                    {% for a in hash %}
+    
+                <tr>
+                    <td width='50%'>{{ a.name }}:</td>
+                    <td width='25%'><a href='{% url base_app.views.info a.shortTitle "overview" %}/'>Was ist das?</a></td>
+                    <td width='25%'><a href='{% url hash.views.algo a.shortTitle %}/'>Ausprobieren</a></td>
+                </tr>
+    
+    {% endfor %}
+            </table>
+        </td>
     </tr>
 </table>
 

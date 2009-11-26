@@ -8,7 +8,7 @@
 <a href='{% url base_app.views.info algo.shortTitle "overview" %}/'>Was ist das?</a>
 </div>
 <p class='nav' >
-&gt; <a href='{% url base_app.views.base %}'>Crypt App</a> &gt; <a href='{% url base_app.views.list "crypto" %}'>Kryptographie</a> &gt; <a href='{% url base_app.views.info algo.shortTitle "overview" %}/'>{{ algo.name }}</a> &gt; Ausprobieren
+&gt; <a href='{% url base_app.views.base %}'>Crypt App</a> &gt; <a href='{% url base_app.views.info "crypto" "overview" %}/'>Kryptographie</a> &gt; <a href='{% url base_app.views.info algo.shortTitle "overview" %}/'>{{ algo.name }}</a> &gt; Ausprobieren
 </p>
 {% ifequal algo 'rsa' %}
 <table class='info'>
