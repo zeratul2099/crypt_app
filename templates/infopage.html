@@ -28,15 +28,15 @@
 <p class='nav' >
 {% ifequal infopage.shortTitle "overview" %}
     {% ifequal infopage.algo.type "basics" %}
-&gt; <a href='{% url base_app.views.base %}'>Crypt App</a> &gt; {{ infopage.algo.name }}    
+&gt; <a href='{% url base_app.views.base %}'>Kryptos</a> &gt; {{ infopage.algo.name }}    
     {% else %}
-&gt; <a href='{% url base_app.views.base %}'>Crypt App</a> &gt; <a href='{% url base_app.views.info infopage.algo.type,"overview" %}/'>{{ algo_type }}</a> &gt; {{ infopage.algo.name }}
+&gt; <a href='{% url base_app.views.base %}'>Kryptos</a> &gt; <a href='{% url base_app.views.info infopage.algo.type,"overview" %}/'>{{ algo_type }}</a> &gt; {{ infopage.algo.name }}
     {% endifequal %}
 {% else %}
     {% ifequal infopage.algo.type "basics" %}
-&gt; <a href='{% url base_app.views.base %}'>Crypt App</a> &gt; <a href='{% url base_app.views.info infopage.algo.shortTitle "overview" %}/'>{{ infopage.algo.name }}</a> &gt; {{ infopage.title|safe }}
+&gt; <a href='{% url base_app.views.base %}'>Kryptos</a> &gt; <a href='{% url base_app.views.info infopage.algo.shortTitle "overview" %}/'>{{ infopage.algo.name }}</a> &gt; {{ infopage.title|safe }}
     {% else %}
-&gt; <a href='{% url base_app.views.base %}'>Crypt App</a> &gt; <a href='{% url base_app.views.info infopage.algo.type,"overview" %}/'>{{ algo_type }}</a> &gt; <a href='{% url base_app.views.info infopage.algo.shortTitle "overview" %}/'>{{ infopage.algo.name }}</a> &gt; {{ infopage.title|safe }}
+&gt; <a href='{% url base_app.views.base %}'>Kryptos</a> &gt; <a href='{% url base_app.views.info infopage.algo.type,"overview" %}/'>{{ algo_type }}</a> &gt; <a href='{% url base_app.views.info infopage.algo.shortTitle "overview" %}/'>{{ infopage.algo.name }}</a> &gt; {{ infopage.title|safe }}
     {% endifequal %}
 {% endifequal %}
 </p>
@@ -54,7 +54,7 @@
         {% endifequal %}
         </td>
     </tr><tr>
-        <td width='75%' valign='top'><div class='info'>{{ infopage.text|safe }}</div></td>
+        <td width='75%' valign='top'><div class='info'><span class='intext' >{{ infopage.text|safe }}</span></div></td>
     </tr>
 </table>
 </div>

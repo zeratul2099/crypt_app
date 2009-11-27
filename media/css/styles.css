@@ -49,13 +49,17 @@ p.content
             height:1.4em;
             #margin-top:-1.4em;
         }
-          a:link { font-style:bold;text-decoration:none; color:#666666;}
-          a:visited { font-style:bold;text-decoration:none;color:#666666; }
-          a:hover { color:green;}
-          a:active { text-decoration:none; }
-          a:focus { text-decoration:none; }
+.intext a:link { font-style:bold;text-decoration:none; color:green;}
+.intext a:visited { font-style:bold;text-decoration:none;color:green; }
+.intext a:hover { color:red;}
+.intext a:active { text-decoration:none; }
+.intext a:focus { text-decoration:none; }
 
-
+a:link { font-style:bold;text-decoration:none; color:#666666;}
+a:visited { font-style:bold;text-decoration:none;color:#666666; }
+a:hover { color:red;}
+a:active { text-decoration:none; }
+a:focus { text-decoration:none; }
         
 .external a:link { font-style:italic;text-decoration:none; color:blue;}
 .external a:visited { font-style:italic;text-decoration:none;color:blue; }

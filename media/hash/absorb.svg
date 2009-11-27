@@ -50,7 +50,7 @@
 <rect x='0' y='0' width='540' height='500' fill='white' />
 <!-- Message block -->
 <text fill='black' x='5' y='95' style=" font-size:18px;">
-Message p:
+Nachricht p:
 </text>
 
 
@@ -192,11 +192,11 @@ squeezing
 <use xlink:href="#bit" x='240' y='75' />
 <use xlink:href="#bit" x='260' y='75' /> 
 <text fill='black' x='30' y='320' style="font-size:14px;">
-f = Keccak-Permutation
+f = Keccak-f
 </text> 
 <use xlink:href="#bit" x='30' y='340' />
 <text fill='black' x='70' y='355' style="font-size:14px;">
-= Message block of length r
+= Nachrichtenblock der L&#228;nge r
 </text>
 <use xlink:href="#xor" x='30' y='380' />
 <text fill='black' x='70' y='400' style="font-size:14px;">
