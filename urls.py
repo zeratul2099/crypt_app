@@ -9,7 +9,8 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Example:
     # (r'^sym_gui/', include('sym_gui.foo.urls')),
-    (r'^crypt_app/$', 'base_app.views.base'),
+    (r'^kryptos/$', 'base_app.views.base'),
+    (r'^crypt_app/$', 'base_app.views.wrongUrl'),
         
     (r'^hash/algo/(?P<algo>\w*)/?$', 'hash.views.algo'),
     
@@ -17,7 +18,7 @@ urlpatterns = patterns('',
 
     (r'^stego/algo/(?P<algo>\w*)/?$', 'stego.views.algo'),
     (r'^crypto/algo/(?P<algo>\w*)/?$', 'crypto.views.algo'),
-    (r'^admin/(.*)', admin.site.root),
+    (r'^kryptos/admin/(.*)', admin.site.root),
     (r'^content/(?P<path>.*)$', 'django.views.static.serve',
         {'document_root': settings.STATIC_DOC_ROOT}),
     #(r'^(?P<algo_type>\w*)/$', 'base_app.views.list'),

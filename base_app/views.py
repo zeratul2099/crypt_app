@@ -4,6 +4,10 @@ from django.shortcuts import get_object_or_404, get_list_or_404, render_to_respo
 from django.template import Context, loader
 
 
+def wrongUrl(request):
+    return HttpResponseRedirect("/kryptos/")
+
+
 def base(request):
     algos = {}
     algos["crypto"] = Algo.objects.filter(type="crypto").order_by("order")
