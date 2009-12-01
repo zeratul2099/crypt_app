@@ -11,14 +11,27 @@
 &gt; <a href='{% url base_app.views.base %}'>Kryptos</a> &gt; <a href='{% url base_app.views.info "stego" "overview" %}'>Steganographie</a> &gt; <a href='{% url base_app.views.info algo.shortTitle "overview" %}/'>{{ algo.name }}</a> &gt; Ausprobieren
 </p>
     <table width='100%' class='leftspace' >
-        <tr><td>Einbetten</td><td>Ausbetten</td></tr>
+        <tr><td><img width='32' height='32' border='0' src='/content/icons/embed.png' ></img> Einbetten</td><td><img width='32' height='32' border='0' src='/content/icons/extract.png' ></img> Ausbetten</td></tr>
            
         
         <tr>
             <td width='50%' class='info' >
             <form method='post' action='.' enctype="multipart/form-data">
             <table>
-            {{ embedForm }}
+            {% for field in embedForm %}
+            <tr><td colspan='2' ><font color='red'>{{ field.errors }}</font></td></tr>
+            <tr><td>
+            {% ifequal field.name "message" %}
+            <img width='16' height='16' border='0' src='/content/icons/txt.png' ></img>
+            {% else %}{% ifequal field.name "pw" %}
+            <img width='16' height='16' border='0' src='/content/icons/key.png' ></img>
+            {% else %}{% ifequal field.name "file" %}
+            <img width='16' height='16' border='0' src='/content/icons/image.png' ></img>
+            {% else %}
+            <img width='16' height='16' border='0' src='/content/icons/empty.png' ></img>
+            {% endifequal %}{% endifequal %}{% endifequal %}
+            {{ field.label }}:</td><td>{{ field }}</td></tr>
+            {% endfor %}
             </table>
             <input type='submit' name='submit1' value='Abschicken' />
             </form>
@@ -26,7 +39,20 @@
             <td width='50%' class='info' >
             <form method='post' action='.' enctype="multipart/form-data">
             <table>
-            {{ extractForm }}
+            {% for field in extractForm %}
+            <tr><td colspan='2' ><font color='red'>{{ field.errors }}</font></td></tr>
+            <tr><td>
+            {% ifequal field.name "message" %}
+            <img width='16' height='16' border='0' src='/content/icons/txt.png' ></img>
+            {% else %}{% ifequal field.name "pw" %}
+            <img width='16' height='16' border='0' src='/content/icons/key.png' ></img>
+            {% else %}{% ifequal field.name "file" %}
+            <img width='16' height='16' border='0' src='/content/icons/image.png' ></img>
+            {% else %}
+            <img width='16' height='16' border='0' src='/content/icons/empty.png' ></img>
+            {% endifequal %}{% endifequal %}{% endifequal %}
+            {{ field.label }}:</td><td>{{ field }}</td></tr>
+            {% endfor %}
             </table>
             <input type='submit' name='submit2' value='Abschicken' />
             </form>

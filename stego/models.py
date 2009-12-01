@@ -50,8 +50,8 @@ class BattlestegEmbedForm(forms.Form):
     startbit_val = ((6,'6'),(7,'7'))
     move_away_val = ((1,'1'),(2,'2'),(3,'3'),(4,'4'),(5,'5'),(6,'6'),(7,'7'),(8,'8'),)
     range_val = ((1,'1'),(2,'2'),(3,'3'),(4,'4'),(5,'5'),(6,'6'),(7,'7'),(8,'8'),)
-    startbit = forms.ChoiceField(choices=startbit_val, label='Farbbits ignorieren')
-    move_away = forms.ChoiceField(choices=move_away_val, label='Wieviel Ranged Shots')
+    startbit = forms.ChoiceField(choices=startbit_val, label='Farbbits')
+    move_away = forms.ChoiceField(choices=move_away_val, label='Ranged Shots')
     range = forms.ChoiceField(choices=range_val, label='Range')
 
 class BattlestegExtractForm(forms.Form):
@@ -60,6 +60,6 @@ class BattlestegExtractForm(forms.Form):
     startbit_val = ((6,'6'),(7,'7'))
     move_away_val = ((1,'1'),(2,'2'),(3,'3'),(4,'4'),(5,'5'),(6,'6'),(7,'7'),(8,'8'),)
     range_val = ((1,'1'),(2,'2'),(3,'3'),(4,'4'),(5,'5'),(6,'6'),(7,'7'),(8,'8'),)
-    startbit = forms.ChoiceField(choices=startbit_val, label='Farbbits ignorieren')
-    move_away = forms.ChoiceField(choices=move_away_val, label='Wieviel Ranged Shots')
+    startbit = forms.ChoiceField(choices=startbit_val, label='Farbbits')
+    move_away = forms.ChoiceField(choices=move_away_val, label='Ranged Shots')
     range = forms.ChoiceField(choices=range_val, label='Range')

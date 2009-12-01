@@ -25,7 +25,7 @@
 
 {% endifequal %}
     <table width='100%'>
-        <tr><td><img width='16' height='16' border='0' src='/content/icons/encrypt.png' ></img> Verschl&uuml;sseln</td><td><img width='16' height='16' border='0' src='/content/icons/decrypt.png' ></img> Entschl&uuml;sseln</td></tr>
+        <tr><td><img width='32' height='32' border='0' src='/content/icons/encrypt.png' ></img> Verschl&uuml;sseln</td><td><img width='32' height='32' border='0' src='/content/icons/decrypt.png' ></img> Entschl&uuml;sseln</td></tr>
            
         
         <tr>
@@ -33,7 +33,7 @@
             <form method='post' action='.' enctype="multipart/form-data">
             <table>
             {% for field in cypherForm %}
-            <tr><td colspan='2' >{{ field.errors }}</td></tr>
+            <tr><td colspan='2' ><font color='red'>{{ field.errors }}</font></td></tr>
             <tr><td>
             {% ifequal field.name "message" %}
             <img width='16' height='16' border='0' src='/content/icons/txt.png' ></img>
@@ -54,7 +54,7 @@
             <form method='post' action='.' enctype="multipart/form-data">
             <table>
             {% for field in decypherForm %}
-            <tr><td colspan='2' >{{ field.errors }}</td></tr>
+            <tr><td colspan='2' ><font color='red'>{{ field.errors }}</font></td></tr>
             <tr><td>
             {% ifequal field.name "message" %}
             <img width='16' height='16' border='0' src='/content/icons/txt.png' ></img>
