@@ -1,0 +1,12 @@
+about: human, help-browser.svg, CCPL
+add: humanity, list-add.svg, GPL
+edit-undo, go-jump: humanity, edit-undo, go-jump, GPL
+external: gnome, applications-internet, GPL
+file: gnome, media-floppy, GPL
+image: gnome, emblem-photos, GPL
+txt: crystal, txt, LGPL
+encrypted: crystal, encrypted, LGPL
+key: crystalsvg, password, LGPL
+encrypt, decrypt: hicolor, gdu-encrypt-(un)lock, GPL
+try: gnome, applications-system, GPL
+
