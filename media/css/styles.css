@@ -61,7 +61,13 @@ a:hover { color:red;}
 a:active { text-decoration:none; }
 a:focus { text-decoration:none; }
         
-.external a:link { font-style:italic;text-decoration:none; color:blue;}
+.external a:link { 
+        font-style:italic;
+        text-decoration:none;
+        color:blue;
+        padding-left: 18px;
+        background: transparent url(/content/icons/external.png) no-repeat center left;}
+   
 .external a:visited { font-style:italic;text-decoration:none;color:blue; }
 .external a:hover { color:red;}
 .external a:active { text-decoration:none; }

@@ -17,11 +17,11 @@
 {# ausprobieren #}
 <div class='leftspace' >
 {% ifequal infopage.algo.type "crypto" %}
-<a href='{% url crypto.views.algo infopage.algo.shortTitle %}/'>{{ infopage.algo.name }} ausprobieren</a>
+<a href='{% url crypto.views.algo infopage.algo.shortTitle %}/'><img width='16' height='16' border='0' src='/content/icons/try.png' ></img> {{ infopage.algo.name }} ausprobieren</a>
 {% else %}{% ifequal infopage.algo.type "stego" %}
-<a href='{% url stego.views.algo infopage.algo.shortTitle %}/'>{{ infopage.algo.name }} ausprobieren</a>
+<a href='{% url stego.views.algo infopage.algo.shortTitle %}/'><img width='16' height='16' border='0' src='/content/icons/try.png' ></img> {{ infopage.algo.name }} ausprobieren</a>
 {% else %}{% ifequal infopage.algo.type "hash" %}
-<a href='{% url hash.views.algo infopage.algo.shortTitle %}/'>{{ infopage.algo.name }} ausprobieren</a>
+<a href='{% url hash.views.algo infopage.algo.shortTitle %}/'><img width='16' height='16' border='0' src='/content/icons/try.png' ></img> {{ infopage.algo.name }} ausprobieren</a>
 {% else %}<br>
 {% endifequal %}{% endifequal %}{% endifequal %}
 </div>

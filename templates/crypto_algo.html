@@ -5,7 +5,7 @@
 
 {% block content %}
 <div class='leftspace' >
-<a href='{% url base_app.views.info algo.shortTitle "overview" %}/'>Was ist das?</a>
+<a href='{% url base_app.views.info algo.shortTitle "overview" %}/'><img width='16' height='16' border='0' src='/content/icons/about.png' ></img> Was ist das?</a>
 </div>
 <p class='nav' >
 &gt; <a href='{% url base_app.views.base %}'>Kryptos</a> &gt; <a href='{% url base_app.views.info "crypto" "overview" %}/'>Kryptographie</a> &gt; <a href='{% url base_app.views.info algo.shortTitle "overview" %}/'>{{ algo.name }}</a> &gt; Ausprobieren
@@ -25,14 +25,27 @@
 
 {% endifequal %}
     <table width='100%'>
-        <tr><td>Verschl&uuml;sseln</td><td>Entschl&uuml;sseln</td></tr>
+        <tr><td><img width='16' height='16' border='0' src='/content/icons/encrypt.png' ></img> Verschl&uuml;sseln</td><td><img width='16' height='16' border='0' src='/content/icons/decrypt.png' ></img> Entschl&uuml;sseln</td></tr>
            
         
         <tr>
             <td width='50%' class='info' >
             <form method='post' action='.' enctype="multipart/form-data">
             <table>
-            {{ cypherForm }}
+            {% for field in cypherForm %}
+            <tr><td colspan='2' >{{ field.errors }}</td></tr>
+            <tr><td>
+            {% ifequal field.name "message" %}
+            <img width='16' height='16' border='0' src='/content/icons/txt.png' ></img>
+            {% else %}{% ifequal field.name "key" %}
+            <img width='16' height='16' border='0' src='/content/icons/key.png' ></img>
+            {% else %}{% ifequal field.name "cypher_text" %}
+            <img width='16' height='16' border='0' src='/content/icons/encrypted.png' ></img>
+            {% else %}
+            <img width='16' height='16' border='0' src='/content/icons/empty.png' ></img>
+            {% endifequal %}{% endifequal %}{% endifequal %}
+            {{ field.label }}:</td><td>{{ field }}</td></tr>
+            {% endfor %}
             </table>
             <input type='submit' name='submit1' value='Abschicken' />
             </form>
@@ -40,7 +53,20 @@
             <td width='50%' class='info' >
             <form method='post' action='.' enctype="multipart/form-data">
             <table>
-            {{ decypherForm }}
+            {% for field in decypherForm %}
+            <tr><td colspan='2' >{{ field.errors }}</td></tr>
+            <tr><td>
+            {% ifequal field.name "message" %}
+            <img width='16' height='16' border='0' src='/content/icons/txt.png' ></img>
+            {% else %}{% ifequal field.name "key" %}
+            <img width='16' height='16' border='0' src='/content/icons/key.png' ></img>
+            {% else %}{% ifequal field.name "cypher_text" %}
+            <img width='16' height='16' border='0' src='/content/icons/encrypted.png' ></img>
+            {% else %}
+            <img width='16' height='16' border='0' src='/content/icons/empty.png' ></img>
+            {% endifequal %}{% endifequal %}{% endifequal %}
+            {{ field.label }}:</td><td>{{ field }}</td></tr>
+            {% endfor %}
             </table>
             <input type='submit' name='submit2' value='Abschicken' />
             </form>
