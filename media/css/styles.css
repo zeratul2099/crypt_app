@@ -23,18 +23,23 @@ height:100%;
 
 #header
         {
-            margin: 0 0 0.7em;
+            margin-bottom: 10px;
             background:#1f1f1f;
             color:#f0f0f0;
             font-family:monospace;
             text-align:center;
-            padding:10px;
+            padding:5px;
+        }
+        
+.headline
+        {
+        font-size:2em;
         }
 p.content
         {
-            padding-bottom:3em;;
             font-size:100%;
             padding: 10px;
+            margin-bottom:20px;
 
         }
 #footer
@@ -47,7 +52,7 @@ p.content
             width:100%;
             font-size:1em;
             height:1.4em;
-            #margin-top:-1.4em;
+            margin-top:-1.4em;
         }
 .intext a:link { font-style:bold;text-decoration:none; color:green;}
 .intext a:visited { font-style:bold;text-decoration:none;color:green; }
@@ -61,14 +66,16 @@ a:hover { color:red;}
 a:active { text-decoration:none; }
 a:focus { text-decoration:none; }
         
-.external a:link { 
+.external a:link, .external a:visited { 
         font-style:italic;
         text-decoration:none;
         color:blue;
         padding-left: 18px;
-        background: transparent url(/content/icons/external.png) no-repeat center left;}
+        background: transparent url(/content/icons/external.png) no-repeat center left;
+        }
    
-.external a:visited { font-style:italic;text-decoration:none;color:blue; }
+
+        
 .external a:hover { color:red;}
 .external a:active { text-decoration:none; }
 .external a:focus { text-decoration:none; }
@@ -80,12 +87,15 @@ a:focus { text-decoration:none; }
 .source a:focus { text-decoration:none; }
 .source a:before {content: "Quelle: ";}
 
+
+
+
 .info {
 border: 2px outset black;
 background: #FAFAFA;
 padding: 30px;
 text-align: justify;
-margin: 10px;
+margin: 30px;
 
 }
 

@@ -22,7 +22,7 @@
 <a href='{% url stego.views.algo infopage.algo.shortTitle %}/'><img width='16' height='16' border='0' src='/content/icons/try.png' ></img> {{ infopage.algo.name }} ausprobieren</a>
 {% else %}{% ifequal infopage.algo.type "hash" %}
 <a href='{% url hash.views.algo infopage.algo.shortTitle %}/'><img width='16' height='16' border='0' src='/content/icons/try.png' ></img> {{ infopage.algo.name }} ausprobieren</a>
-{% else %}<br>
+{% else %}<img width='16' height='16' border='0' src='/content/icons/empty.png' ></img>
 {% endifequal %}{% endifequal %}{% endifequal %}
 </div>
 <p class='nav' >

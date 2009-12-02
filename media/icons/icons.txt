@@ -8,5 +8,5 @@ txt: crystal, txt, LGPL
 encrypted: crystal, encrypted, LGPL
 key: crystalsvg, password, LGPL
 encrypt, decrypt: hicolor, gdu-encrypt-(un)lock, GPL
-try: gnome, applications-system, GPL
-
+try: crystal, exec, LGPL
+indo: gnome, emblem-important, GPL

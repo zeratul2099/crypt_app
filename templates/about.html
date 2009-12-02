@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block titleline %}
+&Uuml;ber Kryptos
+{% endblock %}
+
+{% block title %}
+&Uuml;ber Kryptos
+{% endblock %}
+{% block content %}
+
+{# ausprobieren #}
+<div class='leftspace' >
+<br>
+</div>
+<p class='nav' >
+&gt; <a href='{% url base_app.views.base %}'>Kryptos</a> &gt; &Uuml;ber Kryptos   
+</p>
+<div class='info' >
+<table width='100%' >
+    <tr>
+        <td valign='top' >
+        Diese Webseite soll dem Nutzer die Kryptologie und einzelne ihrer
+        Teildisziplinen Kryptographie, Steganographie und Hash-Algorithmen
+        auf anschauliche Weise n&auml;herbringen und es
+        erm&ouml;glichen, eine Vielzahl von Algorithmen selbst auszuprobieren.
+        Unter "<img src='/content/icons/about.png'></img> Was ist das?"
+        werden die jeweiligen Algorithmen mit Text und Animationen 
+        erkl&auml;rt, unter "<img src='/content/icons/try.png'></img> Ausprobieren"
+        lassen sich diese dann selber testen.
+        <p>
+        Dabei ist anzumerken, dass Verschl&uuml;sselungen mit Kryptos oder
+        auf anderen Webseiten niemals mit wichtigen oder sicherheitskritischen
+        Daten stattfinden sollte, da die &Uuml;bertragung &uuml;ber ein Netzwerk,
+        besonders wenn diese unverschl&uuml;sselt geschieht, immer eine
+        Sicherheitsrisiko darstellt, da diese von Dritten mitgelesen werden
+        k&ouml;nnte. Auch der Webserver selbst k&ouml;nnte ungewollte Daten
+        mitprotokollieren. Sollen Daten verschl&uuml;sselt werden, sollte
+        dies immer mit Software, der man vertraut, auf dem eigenen Rechner
+        stattfinden. Krytos ist nur zum ausprobieren und "herumexperimentieren"
+        gedacht. Dies gilt auch f&uuml;r andere Dienste die Verschl&uuml;sselung
+        oder &auml;hnliches &uuml;ber das Internet anbieten.
+        <p>
+        Diese Webseite und ihr gesamter Inhalt ist, sofern nicht anders
+        angegeben, unter der <span class='external'>
+        <a target='_blank' href='http://www.gnu.org/licenses/gpl-3.0.txt'>GNU General Public License Version 3</a></span>
+        lizensiert.
+        </td>
+    </tr>
+</table>
+</div>
+
+{% endblock %}
+

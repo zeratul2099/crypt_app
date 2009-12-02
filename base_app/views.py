@@ -15,6 +15,9 @@ def base(request):
     algos["hash"] = Algo.objects.filter(type="hash").order_by("order")
     return render_to_response("base_app.html", algos)
 
+def about(request):
+    return render_to_response("about.html")
+
 def list(request, algo_type):
     algos = Algo.objects.filter(type=algo_type).order_by("order")
     if algo_type == "hash":
