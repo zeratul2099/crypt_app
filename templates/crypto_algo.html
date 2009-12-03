@@ -10,21 +10,21 @@
 <p class='nav' >
 &gt; <a href='{% url base_app.views.base %}'>Kryptos</a> &gt; <a href='{% url base_app.views.info "crypto" "overview" %}/'>Kryptographie</a> &gt; <a href='{% url base_app.views.info algo.shortTitle "overview" %}/'>{{ algo.name }}</a> &gt; Ausprobieren
 </p>
-{% ifequal algo 'rsa' %}
-<table class='info'>
-    <tr>
-        <td>2048-Bit-RSA-Schl&uuml;sselpaar generieren und als zip-Archiv herunterladen:</td>
-    </tr>
-    <tr>
-        <td><form method='post' action='.' enctype="multipart/form-data">
-            <input type='submit' name='keygen' value='Schl&uuml;sselpaar generieren' />
-        </form></td>
-    </tr>
-</table>
+{% ifequal algo.shortTitle 'rsa' %}
+<div class='info' >
+<div>
+2048-Bit-RSA-Schl&uuml;sselpaar generieren und als zip-Archiv herunterladen:
+</div>
+<div>
+<form method='post' action='.' enctype="multipart/form-data">
+<input type='submit' name='keygen' value='Schl&uuml;sselpaar generieren' />
+</form>
+</div>
+</div>
 <p>
 
 {% endifequal %}
-    <table width='100%'>
+    <table width='100%' class='leftspace' >
         <tr><td><b><img width='32' height='32' border='0' src='/content/icons/encrypt.png' ></img> Verschl&uuml;sseln</b></td><td><b><img width='32' height='32' border='0' src='/content/icons/decrypt.png' ></img> Entschl&uuml;sseln</b></td></tr>
            
         
