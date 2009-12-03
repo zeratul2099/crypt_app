@@ -9,4 +9,4 @@ encrypted: crystal, encrypted, LGPL
 key: crystalsvg, password, LGPL
 encrypt, decrypt: hicolor, gdu-encrypt-(un)lock, GPL
 try: crystal, exec, LGPL
-indo: gnome, emblem-important, GPL
+undo: gnome, emblem-important, GPL

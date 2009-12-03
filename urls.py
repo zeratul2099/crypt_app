@@ -12,13 +12,10 @@ urlpatterns = patterns('',
     (r'^kryptos/$', 'base_app.views.base'),
     (r'^kryptos/about/$', 'base_app.views.about'),
     (r'^crypt_app/$', 'base_app.views.wrongUrl'),
-        
-    (r'^hash/algo/(?P<algo>\w*)/?$', 'hash.views.algo'),
-    
-    (r'^info/(?P<algo>\w*)/(?P<page>\w*)/?$', 'base_app.views.info'),
-
-    (r'^stego/algo/(?P<algo>\w*)/?$', 'stego.views.algo'),
-    (r'^crypto/algo/(?P<algo>\w*)/?$', 'crypto.views.algo'),
+    (r'^kryptos/info/(?P<algo>\w*)/(?P<page>\w*)/?$', 'base_app.views.info'),        
+    (r'^kryptos/hash/algo/(?P<algo>\w*)/?$', 'hash.views.algo'),
+    (r'^kryptos/stego/algo/(?P<algo>\w*)/?$', 'stego.views.algo'),
+    (r'^kryptos/crypto/algo/(?P<algo>\w*)/?$', 'crypto.views.algo'),
     (r'^kryptos/admin/(.*)', admin.site.root),
     (r'^content/(?P<path>.*)$', 'django.views.static.serve',
         {'document_root': settings.STATIC_DOC_ROOT}),
