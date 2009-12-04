@@ -76,7 +76,10 @@ a:focus { text-decoration:none; }
    
 
         
-.external a:hover { color:red;}
+.external a:hover {
+        color:red;
+        background: transparent url(/content/icons/external_hover.png) no-repeat center left;
+        }
 .external a:active { text-decoration:none; }
 .external a:focus { text-decoration:none; }
 
