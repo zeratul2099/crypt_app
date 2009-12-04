@@ -5,7 +5,7 @@
 
 {% block content %}
 <div class='leftspace' >
-<a href='{% url base_app.views.info algo.shortTitle "overview" %}/'><img width='16' height='16' border='0' src='/content/icons/about.png' ></img> Was ist das?</a>
+<span class='infolink'><a href='{% url base_app.views.info algo.shortTitle "overview" %}/'>Was ist das?</a></span>
 </div>
 <p class='nav' >
 &gt; <a href='{% url base_app.views.base %}'>Kryptos</a> &gt; <a href='{% url base_app.views.info "crypto" "overview" %}/'>Kryptographie</a> &gt; <a href='{% url base_app.views.info algo.shortTitle "overview" %}/'>{{ algo.name }}</a> &gt; Ausprobieren

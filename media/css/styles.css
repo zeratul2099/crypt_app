@@ -87,8 +87,43 @@ a:focus { text-decoration:none; }
 .source a:focus { text-decoration:none; }
 .source a:before {content: "Quelle: ";}
 
+.infolink a:link, .infolink a:visited {
+    font-style:bold;
+    text-decoration:none;
+    color:#666666;
+    padding-left: 18px;
+    background: transparent url(/content/icons/about.png) no-repeat center left;
+    }
+.infolink a:hover {
+     color:red;
+     background: transparent url(/content/icons/about_hover.png) no-repeat center left;
+    }
 
+.aboutlink a:link, .aboutlink a:visited {
+    font-style:bold;
+    text-decoration:none;
+    color:#666666;
+    padding-left: 18px;
+    background: transparent url(/content/icons/info.png) no-repeat center left;
+    }
 
+.aboutlink a:hover {
+     color:red;
+     background: transparent url(/content/icons/info_hover.png) no-repeat center left;
+    }
+.trylink a:link, .trylink a:visited {
+    font-style:bold;
+    text-decoration:none;
+    color:#666666;
+    padding-left: 18px;
+    background: transparent url(/content/icons/try.png) no-repeat center left;
+    }
+.trylink a:hover {
+     color:red;
+     background: transparent url(/content/icons/try_hover.png) no-repeat center left;
+    }
+.infolink a:active, .aboutlink a:active, .trylink a:active { text-decoration:none; }
+.infolink a:focus, .aboutlink a:focus, .trylink a:focus { text-decoration:none; }
 
 .info {
 border: 2px outset black;
@@ -131,6 +166,7 @@ padding-left: 10px;
 #menu li#active {
     padding:0.5em;
     text-decoration:none;
+    color:red;
 }
 
 #menu a:link, #menu a:visited {

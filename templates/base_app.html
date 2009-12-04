@@ -14,10 +14,10 @@
 
 <table width='100%' class='leftspace' cellpadding='10' >
     <tr>
-        <td><a href='./about/'><img border='0' width='16' height='16' src='/content/icons/info.png'></img> &Uuml;ber Kryptos</a></td>
+        <td><span class='aboutlink'><a href='./about/'>&Uuml;ber Kryptos</a></span></td>
     </tr>
     <tr>
-        <td width='250'><b>Kryptographie</td><td><a href='{% url base_app.views.info "crypto","overview" %}/'><img width='16' height='16' border='0' src='/content/icons/about.png' ></img> Was ist das?</a></b></td>
+        <td width='250'><b>Kryptographie</b></td><td><span class='infolink'><a href='{% url base_app.views.info "crypto","overview" %}/'>Was ist das?</a></span></td>
     </tr>
     <tr>
         <td colspan='2' >
@@ -26,8 +26,8 @@
     
                 <tr>
                     <td width='50%'>{{ a.name }}:</td>
-                    <td width='25%'><a href='{% url base_app.views.info a.shortTitle "overview" %}/'><img width='16' height='16' border='0' src='/content/icons/about.png' ></img> Was ist das?</a></td>
-                    <td width='25%'><a href='{% url crypto.views.algo a.shortTitle %}/'><img width='16' height='16' border='0' src='/content/icons/try.png' ></img> Ausprobieren</a></td>
+                    <td width='25%'><span class='infolink'><a href='{% url base_app.views.info a.shortTitle "overview" %}/'>Was ist das?</a></span></td>
+                    <td width='25%'><span class='trylink'><a href='{% url crypto.views.algo a.shortTitle %}/'>Ausprobieren</a></span></td>
                 </tr>
     
     {% endfor %}
@@ -35,7 +35,7 @@
         </td>
     </tr>
     <tr>
-        <td width='250'><b>Steganographie</td><td><a href='{% url base_app.views.info "stego","overview" %}/'><img width='16' height='16' border='0' src='/content/icons/about.png' ></img> Was ist das?</a></b></td>
+        <td width='250'><b>Steganographie</b></td><td><span class='infolink'><a href='{% url base_app.views.info "stego","overview" %}/'>Was ist das?</a></span></td>
     </tr>
     <tr>
         <td colspan='2' >
@@ -44,8 +44,8 @@
     
                 <tr>
                     <td width='50%'>{{ a.name }}:</td>
-                    <td width='25%'><a href='{% url base_app.views.info a.shortTitle "overview" %}/'><img width='16' height='16' border='0' src='/content/icons/about.png' ></img> Was ist das?</a></td>
-                    <td width='25%'><a href='{% url stego.views.algo a.shortTitle %}/'><img width='16' height='16' border='0' src='/content/icons/try.png' ></img> Ausprobieren</a></td>
+                    <td width='25%'><span class='infolink'><a href='{% url base_app.views.info a.shortTitle "overview" %}/'>Was ist das?</a></span></td>
+                    <td width='25%'><span class='trylink'><a href='{% url stego.views.algo a.shortTitle %}/'>Ausprobieren</a></span></td>
                 </tr>
     
     {% endfor %}
@@ -53,7 +53,7 @@
         </td>
     </tr>
     <tr>
-        <td width='250'><b>Hash-Algorithmen</td><td><a href='{% url base_app.views.info "hash","overview" %}/'><img width='16' height='16' border='0' src='/content/icons/about.png' ></img> Was ist das?</a></b></td>
+        <td width='250'><b>Hash-Algorithmen</b></td><td><span class='infolink'><a href='{% url base_app.views.info "hash","overview" %}/'>Was ist das?</a></span></td>
     </tr>
     <tr>
         <td colspan='2' >
@@ -62,8 +62,8 @@
     
                 <tr>
                     <td width='50%'>{{ a.name }}:</td>
-                    <td width='25%'><a href='{% url base_app.views.info a.shortTitle "overview" %}/'><img width='16' height='16' border='0' src='/content/icons/about.png' ></img> Was ist das?</a></td>
-                    <td width='25%'><a href='{% url hash.views.algo a.shortTitle %}/'><img width='16' height='16' border='0' src='/content/icons/try.png' ></img> Ausprobieren</a></td>
+                    <td width='25%'><span class='infolink'><a href='{% url base_app.views.info a.shortTitle "overview" %}/'>Was ist das?</a></span></td>
+                    <td width='25%'><span class='trylink'><a href='{% url hash.views.algo a.shortTitle %}/'> Ausprobieren</a></span></td>
                 </tr>
     
     {% endfor %}
