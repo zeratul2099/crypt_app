@@ -138,4 +138,5 @@ def algo(request, algo):
                                             'output' : output,
                                             'cypher' : cypher,
                                             'decypherForm' : decypherForm, 
-                                            'cypherForm' : cypherForm,}) 
+                                            'cypherForm' : cypherForm,
+                                            'algo_type' : 'Kryptographie',}) 

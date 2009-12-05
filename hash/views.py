@@ -69,4 +69,5 @@ def algo(request, algo):
     return render_to_response("hash_algo.html", {'algo' : algo_object,
                                             'hashvalue' : output,
                                             'clear_text' : clear_text,
-                                            'form' : form,}) 
+                                            'form' : form,
+                                            'algo_type' : 'Hash-Algorihmen',}) 

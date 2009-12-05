@@ -135,7 +135,8 @@ def algo(request, algo):
     return render_to_response("stego_algo.html", {'algo' : algo_object,
                                             'embedForm' : embedForm, 
                                             'extractForm' : extractForm,
-                                            'text' : text}) 
+                                            'text' : text,
+                                            'algo_type' : 'Staganographie',}) 
 
 def createResponse(filename, type):
     wrapper = FileWrapper(file(filename))

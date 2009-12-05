@@ -1,15 +1,6 @@
-{% extends "base.html" %}
+{% extends "algo.html" %}
 
-{% block titleline %}{{ algo.name }}{% endblock %}
-{% block title %}{{ algo.name }}{% endblock %}
-
-{% block content %}
-<div class='leftspace' >
-<span class='infolink'><a href='{% url base_app.views.info algo.shortTitle "overview" %}/'>Was ist das?</a></span>
-</div>
-<p class='nav' >
-&gt; <a href='{% url base_app.views.base %}'>Kryptos</a> &gt; <a href='{% url base_app.views.info "stego" "overview" %}'>Steganographie</a> &gt; <a href='{% url base_app.views.info algo.shortTitle "overview" %}/'>{{ algo.name }}</a> &gt; Ausprobieren
-</p>
+{% block algo %}
     <table width='100%' class='leftspace' >
         <tr><td><b><img width='32' height='32' border='0' src='/content/icons/embed.png' ></img> Einbetten</b></td><td><b><img width='32' height='32' border='0' src='/content/icons/extract.png' ></img> Ausbetten</b></td></tr>
            

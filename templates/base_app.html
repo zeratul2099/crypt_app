@@ -17,7 +17,7 @@
         <td><span class='aboutlink'><a href='./about/'>&Uuml;ber Kryptos</a></span></td>
     </tr>
     <tr>
-        <td width='250'><b>Kryptographie</b></td><td><span class='infolink'><a href='{% url base_app.views.info "crypto","overview" %}/'>Was ist das?</a></span></td>
+        <td width='250'><b><a href='{% url base_app.views.list "crypto" %}'>Kryptographie</a></b></td><td><span class='infolink'><a href='{% url base_app.views.info "crypto","overview" %}/'>Was ist das?</a></span></td>
     </tr>
     <tr>
         <td colspan='2' >
@@ -35,7 +35,7 @@
         </td>
     </tr>
     <tr>
-        <td width='250'><b>Steganographie</b></td><td><span class='infolink'><a href='{% url base_app.views.info "stego","overview" %}/'>Was ist das?</a></span></td>
+        <td width='250'><b><a href='{% url base_app.views.list "stego" %}'>Steganographie</a></b></td><td><span class='infolink'><a href='{% url base_app.views.info "stego","overview" %}/'>Was ist das?</a></span></td>
     </tr>
     <tr>
         <td colspan='2' >
@@ -53,7 +53,7 @@
         </td>
     </tr>
     <tr>
-        <td width='250'><b>Hash-Algorithmen</b></td><td><span class='infolink'><a href='{% url base_app.views.info "hash","overview" %}/'>Was ist das?</a></span></td>
+        <td width='250'><b><a href='{% url base_app.views.list "hash" %}'>Hash-Algorithmen</a></b></td><td><span class='infolink'><a href='{% url base_app.views.info "hash","overview" %}/'>Was ist das?</a></span></td>
     </tr>
     <tr>
         <td colspan='2' >

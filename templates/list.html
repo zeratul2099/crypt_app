@@ -6,27 +6,39 @@
 
 {% block content %}
 <div class='leftspace' >
-<a href='{% url base_app.views.info algo_type "overview" %}/'>Was ist das?</a>
+<img src='/content/icons/empty.png'></img>
 </div>
 <p class='nav' >
-&gt; <a href='{% url base_app.views.base %}'>Crypt App</a> &gt; {{ title }}
+&gt; <a href='{% url base_app.views.base %}'>Kryptos</a> &gt; {{ title }}
 </p>
-<table width='600' class='leftspace' >
-    {% for a in algos %}
-    
+<table width='100%' class='leftspace' cellpadding='10'>
+
     <tr>
-        <td width='50%'>{{ a.name }}:</td>
-        <td width='25%'><a href='{% url base_app.views.info a.shortTitle "overview" %}/'>Was ist das?</a></td>
-        {% ifequal algo_type "crypto" %}
-        <td width='25%'><a href='{% url crypto.views.algo a.shortTitle %}/'>Ausprobieren</a></td>
-        {% else %}{% ifequal algo_type "stego" %}
-        <td width='25%'><a href='{% url stego.views.algo a.shortTitle %}/'>Ausprobieren</a></td>
-        {% else %}{% ifequal algo_type "hash" %}
-        <td width='25%'><a href='{% url hash.views.algo a.shortTitle %}/'>Ausprobieren</a></td>
-        {% endifequal %}{% endifequal %}{% endifequal %}
+    <td width='250'><b>{{ title }}</b></td><td><span class='infolink'><a href='{% url base_app.views.info algo_type,"overview" %}/'>Was ist das?</a></span></td>
     </tr>
+    <tr>
+        <td colspan='2' >
+            <table class='leftspace' width='800' >
+                    {% for a in algos %}
+                <tr>
+                    <td width='50%'>{{ a.name }}:</td>
+                    <td width='25%'><span class='infolink'><a href='{% url base_app.views.info a.shortTitle "overview" %}/'>Was ist das?</a></span></td>
+                    <td width='25%'><span class='trylink'>
+                    {% ifequal algo_type "crypto" %}
+                    <a href='{% url crypto.views.algo a.shortTitle %}/'>Ausprobieren</a>
+                    {% else %}{% ifequal algo_type "stego" %}
+                    <a href='{% url stego.views.algo a.shortTitle %}/'>Ausprobieren</a>
+                    {% else %}{% ifequal algo_type "hash" %}
+                    <a href='{% url hash.views.algo a.shortTitle %}/'>Ausprobieren</a>
+                    {% endifequal %}{% endifequal %}{% endifequal %}
+                    </span></td>
+                </tr>
     
     {% endfor %}
+            </table>
+        </td>
+    
+    </tr>
 </table>
 {% endblock %}
 

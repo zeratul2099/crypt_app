@@ -28,15 +28,15 @@
 <p class='nav' >
 {% ifequal infopage.shortTitle "overview" %}
     {% ifequal infopage.algo.type "basics" %}
-&gt; <a href='{% url base_app.views.base %}'>Kryptos</a> &gt; {{ infopage.algo.name }}    
+&gt; <a href='{% url base_app.views.base %}'>Kryptos</a> &gt; <a href='{% url base_app.views.list infopage.algo.shortTitle %}'>{{ infopage.algo.name }}</a> &gt; Grundlagen
     {% else %}
-&gt; <a href='{% url base_app.views.base %}'>Kryptos</a> &gt; <a href='{% url base_app.views.info infopage.algo.type,"overview" %}/'>{{ algo_type }}</a> &gt; {{ infopage.algo.name }}
+&gt; <a href='{% url base_app.views.base %}'>Kryptos</a> &gt; <a href='{% url base_app.views.list infopage.algo.type %}'>{{ algo_type }}</a> &gt; {{ infopage.algo.name }}
     {% endifequal %}
 {% else %}
     {% ifequal infopage.algo.type "basics" %}
-&gt; <a href='{% url base_app.views.base %}'>Kryptos</a> &gt; <a href='{% url base_app.views.info infopage.algo.shortTitle "overview" %}/'>{{ infopage.algo.name }}</a> &gt; {{ infopage.title|safe }}
+&gt; <a href='{% url base_app.views.base %}'>Kryptos</a> &gt; <a href='{% url base_app.views.list infopage.algo.shortTitle %}'>{{ infopage.algo.name }}</a> &gt; <a href='{% url base_app.views.info infopage.algo.shortTitle "overview" %}/'>Grundlagen</a> &gt; {{ infopage.title|safe }}
     {% else %}
-&gt; <a href='{% url base_app.views.base %}'>Kryptos</a> &gt; <a href='{% url base_app.views.info infopage.algo.type,"overview" %}/'>{{ algo_type }}</a> &gt; <a href='{% url base_app.views.info infopage.algo.shortTitle "overview" %}/'>{{ infopage.algo.name }}</a> &gt; {{ infopage.title|safe }}
+&gt; <a href='{% url base_app.views.base %}'>Kryptos</a> &gt; <a href='{% url base_app.views.list infopage.algo.type %}'>{{ algo_type }}</a> &gt; <a href='{% url base_app.views.info infopage.algo.shortTitle "overview" %}/'>{{ infopage.algo.name }}</a> &gt; {{ infopage.title|safe }}
     {% endifequal %}
 {% endifequal %}
 </p>
