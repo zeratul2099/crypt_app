@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block titleline %}{{ algo.name }}{% endblock %}
+{% block title %}{{ algo.name }}{% endblock %}
+
+{% block content %}
+<div class='leftspace' >
+<span class='infolink'><a href='{% url base_app.views.info algo.shortTitle "overview" %}/'>Was ist das?</a></span>
+</div>
+<p class='nav' >
+&gt; <a href='{% url base_app.views.base %}'>Kryptos</a> &gt; <a href='{% url base_app.views.list algo.type %}'>{{ algo_type }}</a> &gt; <a href='{% url base_app.views.info algo.shortTitle "overview" %}/'>{{ algo.name }}</a> &gt; Ausprobieren
+</p>
+{% block algo %}
+
+{% endblock %}
+{% endblock %}
+
