@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   width="650"
+   height="400"
+   id="svg2"
+>
+<script type="text/ecmascript" xlink:href="/content/smil.user2.js" />
+  <defs
+     id="defs4">
+       <svg width="30" height="30" id="bit"  >
+            <rect y="10" x="0.1" width="19.9" height="19.9" fill="white" stroke="black" />
+            <polygon fill="white" stroke="black" 
+                points="0.1 10, 10 0.1, 29.9 0.1, 20 10" />
+            <polygon fill="white" stroke="black" 
+                points="29.9 0.1, 29.9 20, 20 29.9, 20 10" />
+            
+       </svg>
+
+
+  </defs>
+
+    <g
+       
+       style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;font-family:'sans';"
+       id="g2383 " transform="scale(1)"
+       >
+<rect x='0' y='0' width='800' height='600' fill='white' />
+<!-- matrix 1 -->
+<svg width='240' height='240' x='150' y='10' >
+<animate attributeName='opacity' from='0' to='0' begin='rot1.end' dur='0' fill='freeze' />
+<path d='M 39 39 l 160 0 m 0 40 l -160 0 m 0 40 l 160 0 m 0 40 l -160 0 m 0 40 l 160 0' stroke='black' >
+<animateTransform attributeName='transform' type='rotate' from='0, 120, 120' to='90, 120, 120' dur='2' begin='e02.end+1' fill='freeze' id='rot1' />
+<animateTransform attributeName='transform' type='rotate' from='90, 120, 120' to='180, 120, 120' dur='2' begin='n01.end+1' fill='freeze' id='rot2' />
+<animateTransform attributeName='transform' type='rotate' from='180, 120, 120' to='270, 120, 120' dur='2' begin='r01.end+1' fill='freeze' id='rot3' />
+</path>
+<path d='M 39 39 l 0 160 m 40 0 l 0 -160 m 40 0 l 0 160 m 40 0 l 0 -160 m 40 0 l 0 160' stroke='black' >
+<animateTransform attributeName='transform' type='rotate' from='0, 120, 120' to='90, 120, 120' dur='2' begin='e02.end+1' fill='freeze' />
+<animateTransform attributeName='transform' type='rotate' from='90, 120, 120' to='180, 120, 120' dur='2' begin='n01.end+1' fill='freeze' />
+<animateTransform attributeName='transform' type='rotate' from='180, 120, 120' to='270, 120, 120' dur='2' begin='r01.end+1' fill='freeze' />
+</path>
+<rect width='160' height='40' x='39' y='39' fill='black' opacity='0.5' >
+<animateTransform attributeName='transform' type='rotate' from='0, 120, 120' to='90, 120, 120' dur='2' begin='e02.end+1' fill='freeze' />
+<animateTransform attributeName='transform' type='rotate' from='90, 120, 120' to='180, 120, 120' dur='2' begin='n01.end+1' fill='freeze' />
+<animateTransform attributeName='transform' type='rotate' from='180, 120, 120' to='270, 120, 120' dur='2' begin='r01.end+1' fill='freeze' />
+</rect>
+<rect width='40' height='40' x='79' y='79' fill='black' opacity='0.5' >
+<animateTransform attributeName='transform' type='rotate' from='0, 120, 120' to='90, 120, 120' dur='2' begin='e02.end+1' fill='freeze' />
+<animateTransform attributeName='transform' type='rotate' from='90, 120, 120' to='180, 120, 120' dur='2' begin='n01.end+1' fill='freeze' />
+<animateTransform attributeName='transform' type='rotate' from='180, 120, 120' to='270, 120, 120' dur='2' begin='r01.end+1' fill='freeze' />
+</rect>
+<rect width='40' height='40' x='159' y='79' fill='black' opacity='0.5' >
+<animateTransform attributeName='transform' type='rotate' from='0, 120, 120' to='90, 120, 120' dur='2' begin='e02.end+1' fill='freeze' />
+<animateTransform attributeName='transform' type='rotate' from='90, 120, 120' to='180, 120, 120' dur='2' begin='n01.end+1' fill='freeze' />
+<animateTransform attributeName='transform' type='rotate' from='180, 120, 120' to='270, 120, 120' dur='2' begin='r01.end+1' fill='freeze' />
+</rect>
+<rect width='120' height='40' x='79' y='119' fill='black' opacity='0.5' >
+<animateTransform attributeName='transform' type='rotate' from='0, 120, 120' to='90, 120, 120' dur='2' begin='e02.end+1' fill='freeze' />
+<animateTransform attributeName='transform' type='rotate' from='90, 120, 120' to='180, 120, 120' dur='2' begin='n01.end+1' fill='freeze' />
+<animateTransform attributeName='transform' type='rotate' from='180, 120, 120' to='270, 120, 120' dur='2' begin='r01.end+1' fill='freeze' />
+</rect>
+<rect width='120' height='40' x='39' y='159' fill='black' opacity='0.5' >
+<animateTransform attributeName='transform' type='rotate' from='0, 120, 120' to='90, 120, 120' dur='2' begin='e02.end+1' fill='freeze' />
+<animateTransform attributeName='transform' type='rotate' from='90, 120, 120' to='180, 120, 120' dur='2' begin='n01.end+1' fill='freeze' />
+<animateTransform attributeName='transform' type='rotate' from='180, 120, 120' to='270, 120, 120' dur='2' begin='r01.end+1' fill='freeze' />
+</rect>
+</svg>
+<!-- matrix 2 -->
+<svg width='240' height='240' x='150' y='10'  opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='rot1.end' dur='0' fill='freeze'/>
+<animate attributeName='opacity' from='0' to='0' begin='rot2.end' dur='0' fill='freeze'/>
+<path d='M 39 39 l 160 0 m 0 40 l -160 0 m 0 40 l 160 0 m 0 40 l -160 0 m 0 40 l 160 0' stroke='black' >
+<animateTransform attributeName='transform' type='rotate' from='0, 120, 120' to='90, 120, 120' dur='2' begin='n01.end+1' fill='freeze' id='rot2' />
+</path>
+<path d='M 39 39 l 0 160 m 40 0 l 0 -160 m 40 0 l 0 160 m 40 0 l 0 -160 m 40 0 l 0 160' stroke='black' >
+<animateTransform attributeName='transform' type='rotate' from='0, 120, 120' to='90, 120, 120' dur='2' begin='n01.end+1' fill='freeze' />
+</path>
+<rect width='40' height='40' x='39' y='39' fill='black' opacity='0.5' >
+<animateTransform attributeName='transform' type='rotate' from='0, 120, 120' to='90, 120, 120' dur='2' begin='n01.end+1' fill='freeze' />
+</rect>
+<rect width='40' height='40' x='159' y='39' fill='black' opacity='0.5' >
+<animateTransform attributeName='transform' type='rotate' from='0, 120, 120' to='90, 120, 120' dur='2' begin='n01.end+1' fill='freeze' />
+</rect>
+<rect width='160' height='40' x='39' y='79' fill='black' opacity='0.5' >
+<animateTransform attributeName='transform' type='rotate' from='0, 120, 120' to='90, 120, 120' dur='2' begin='n01.end+1' fill='freeze' />
+</rect>
+<rect width='80' height='40' x='39' y='119' fill='black' opacity='0.5' >
+<animateTransform attributeName='transform' type='rotate' from='0, 120, 120' to='90, 120, 120' dur='2' begin='n01.end+1' fill='freeze' />
+</rect>
+<rect width='40' height='40' x='159' y='119' fill='black' opacity='0.5' >
+<animateTransform attributeName='transform' type='rotate' from='0, 120, 120' to='90, 120, 120' dur='2' begin='n01.end+1' fill='freeze' />
+</rect>
+<rect width='120' height='40' x='79' y='159' fill='black' opacity='0.5' >
+<animateTransform attributeName='transform' type='rotate' from='0, 120, 120' to='90, 120, 120' dur='2' begin='n01.end+1' fill='freeze' />
+</rect>
+</svg>
+<!-- matrix 3 -->
+<svg width='240' height='240' x='150' y='10'  opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='rot2.end' dur='0' fill='freeze'/>
+<animate attributeName='opacity' from='0' to='0' begin='rot3.end' dur='0' fill='freeze'/>
+<path d='M 39 39 l 160 0 m 0 40 l -160 0 m 0 40 l 160 0 m 0 40 l -160 0 m 0 40 l 160 0' stroke='black' >
+<animateTransform attributeName='transform' type='rotate' from='0, 120, 120' to='90, 120, 120' dur='2' begin='r01.end+1' fill='freeze' id='rot3' />
+</path>
+<path d='M 39 39 l 0 160 m 40 0 l 0 -160 m 40 0 l 0 160 m 40 0 l 0 -160 m 40 0 l 0 160' stroke='black' >
+<animateTransform attributeName='transform' type='rotate' from='0, 120, 120' to='90, 120, 120' dur='2' begin='r01.end+1' fill='freeze' />
+</path>
+<rect width='120' height='40' x='79' y='39' fill='black' opacity='0.5' >
+<animateTransform attributeName='transform' type='rotate' from='0, 120, 120' to='90, 120, 120' dur='2' begin='r01.end+1' fill='freeze' />
+</rect>
+<rect width='120' height='40' x='39' y='79' fill='black' opacity='0.5' >
+<animateTransform attributeName='transform' type='rotate' from='0, 120, 120' to='90, 120, 120' dur='2' begin='r01.end+1' fill='freeze' />
+</rect>
+<rect width='40' height='40' x='39' y='119' fill='black' opacity='0.5' >
+<animateTransform attributeName='transform' type='rotate' from='0, 120, 120' to='90, 120, 120' dur='2' begin='r01.end+1' fill='freeze' />
+</rect>
+<rect width='40' height='40' x='119' y='119' fill='black' opacity='0.5' >
+<animateTransform attributeName='transform' type='rotate' from='0, 120, 120' to='90, 120, 120' dur='2' begin='r01.end+1' fill='freeze' />
+</rect>
+<rect width='160' height='40' x='39' y='159' fill='black' opacity='0.5' >
+<animateTransform attributeName='transform' type='rotate' from='0, 120, 120' to='90, 120, 120' dur='2' begin='r01.end+1' fill='freeze' />
+</rect>
+</svg>
+
+<!-- matrix 4 -->
+<svg width='240' height='240' x='150' y='10'  opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='rot3.end' dur='0' fill='freeze'/>
+<animate attributeName='opacity' from='1' to='0' begin='t01.end+1' dur='1' fill='freeze'/>
+<path d='M 39 39 l 160 0 m 0 40 l -160 0 m 0 40 l 160 0 m 0 40 l -160 0 m 0 40 l 160 0' stroke='black' >
+</path>
+<path d='M 39 39 l 0 160 m 40 0 l 0 -160 m 40 0 l 0 160 m 40 0 l 0 -160 m 40 0 l 0 160' stroke='black' >
+</path>
+<rect width='120' height='40' x='39' y='39' fill='black' opacity='0.5' >
+</rect>
+<rect width='40' height='40' x='39' y='79' fill='black' opacity='0.5' >
+</rect>
+
+<rect width='80' height='40' x='119' y='79' fill='black' opacity='0.5' >
+</rect>
+
+<rect width='160' height='40' x='39' y='119' fill='black' opacity='0.5' >
+</rect>
+<rect width='40' height='40' x='39' y='159' fill='black' opacity='0.5' >
+</rect>
+<rect width='40' height='40' x='159' y='159' fill='black' opacity='0.5' >
+</rect>
+
+</svg>
+<text x='5' y='60' font-size='18' fill='black' >
+G
+<animate attributeName='x' from='5' to='200' begin='1' dur='2' fill='freeze' id='g01' />
+<animate attributeName='y' from='60' to='115' begin='1' dur='2' fill='freeze' />
+</text>
+<text x='20' y='60' font-size='18' fill='black' >
+E
+<animate attributeName='x' from='20' to='280' begin='g01.end+1' dur='2' fill='freeze' id='e01' />
+<animate attributeName='y' from='60' to='115' begin='g01.end+1' dur='2' fill='freeze' />
+</text>
+<text x='35' y='60' font-size='18' fill='black' >
+H
+<animate attributeName='x' from='35' to='200' begin='e01.end+1' dur='2' fill='freeze' id='h01' />
+<animate attributeName='y' from='60' to='155' begin='e01.end+1' dur='2' fill='freeze' />
+</text>
+
+<text x='50' y='60' font-size='18' fill='black' >
+E
+<animate attributeName='x' from='50' to='320' begin='h01.end+1' dur='2' fill='freeze' id='e02' />
+<animate attributeName='y' from='60' to='195' begin='h01.end+1' dur='2' fill='freeze' />
+</text>
+<text x='65' y='60' font-size='18' fill='black' >
+I
+<animate attributeName='x' from='65' to='245' begin='rot1.end+1' dur='2' fill='freeze' id='i01' />
+<animate attributeName='y' from='60' to='75' begin='rot1.end+1' dur='2' fill='freeze' />
+</text>
+<text x='75' y='60' font-size='18' fill='black' >
+M
+<animate attributeName='x' from='75' to='280' begin='i01.end+1' dur='2' fill='freeze' id='m01' />
+<animate attributeName='y' from='60' to='75' begin='i01.end+1' dur='2' fill='freeze' />
+</text>
+<text x='95' y='60' font-size='18' fill='black' >
+E
+<animate attributeName='x' from='95' to='280' begin='m01.end+1' dur='2' fill='freeze' id='e03' />
+<animate attributeName='y' from='60' to='155' begin='m01.end+1' dur='2' fill='freeze' />
+</text>
+<text x='110' y='60' font-size='18' fill='black' >
+N
+<animate attributeName='x' from='110' to='200' begin='e03.end+1' dur='2' fill='freeze' id='n01' />
+<animate attributeName='y' from='60' to='195' begin='e03.end+1' dur='2' fill='freeze' />
+</text>
+<text x='5' y='90' font-size='18' fill='black' >
+A
+<animate attributeName='x' from='5' to='200' begin='rot2.end+1' dur='2' fill='freeze' id='a01' />
+<animate attributeName='y' from='90' to='75' begin='rot2.end+1' dur='2' fill='freeze' />
+</text>
+<text x='20' y='90' font-size='18' fill='black' >
+C
+<animate attributeName='x' from='20' to='320' begin='a01.end+1' dur='2' fill='freeze' id='c01' />
+<animate attributeName='y' from='90' to='115' begin='a01.end+1' dur='2' fill='freeze' />
+</text>
+<text x='35' y='90' font-size='18' fill='black' >
+H
+<animate attributeName='x' from='35' to='240' begin='c01.end+1' dur='2' fill='freeze' id='h02' />
+<animate attributeName='y' from='90' to='155' begin='c01.end+1' dur='2' fill='freeze' />
+</text>
+<text x='50' y='90' font-size='18' fill='black' >
+R
+<animate attributeName='x' from='50' to='320' begin='h02.end+1' dur='2' fill='freeze' id='r01' />
+<animate attributeName='y' from='90' to='155' begin='h02.end+1' dur='2' fill='freeze' />
+</text>
+<text x='68' y='90' font-size='18' fill='black' >
+I
+<animate attributeName='x' from='68' to='325' begin='rot3.end+1' dur='2' fill='freeze' id='i02' />
+<animate attributeName='y' from='90' to='75' begin='rot3.end+1' dur='2' fill='freeze' />
+</text>
+<text x='80' y='90' font-size='18' fill='black' >
+C
+<animate attributeName='x' from='80' to='240' begin='i02.end+1' dur='2' fill='freeze' id='c02' />
+<animate attributeName='y' from='90' to='115' begin='i02.end+1' dur='2' fill='freeze' />
+</text>
+<text x='95' y='90' font-size='18' fill='black' >
+H
+<animate attributeName='x' from='95' to='240' begin='c02.end+1' dur='2' fill='freeze' id='h03' />
+<animate attributeName='y' from='90' to='195' begin='c02.end+1' dur='2' fill='freeze' />
+</text>
+<text x='110' y='90' font-size='18' fill='black' >
+T
+<animate attributeName='x' from='110' to='280' begin='h03.end+1' dur='2' fill='freeze' id='t01' />
+<animate attributeName='y' from='90' to='195' begin='h03.end+1' dur='2' fill='freeze' />
+</text>
+
+</g>
+</svg>
