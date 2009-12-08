@@ -7,6 +7,7 @@ from django.core.servers.basehttp import FileWrapper
 from Crypto.Cipher import AES, DES, XOR
 from Crypto.Util import number
 from M2Crypto import RSA
+from atbasch import atbasch
 import zipfile, os
 
 def algo(request, algo):
@@ -82,7 +83,13 @@ def algo(request, algo):
                         cypher = number.bytes_to_long(PubKey.public_encrypt(plain_text, 1))
                     except RSA.RSAError, e:
                         output = e
-                    
+            elif algo == 'atbasch':
+                cypherForm = SimpleEncryptForm(request.POST)
+                decypherForm = None
+                if cypherForm.is_valid():
+                    output = "Klartext:\n%s\n\n" %(plain_text)
+                    output += "Atbasch-verschluesselt:\n"
+                    cypher = atbasch(plain_text)
             else:
                 output += "Invalid algorithm"
         # decrypt
@@ -133,6 +140,8 @@ def algo(request, algo):
         elif algo == 'rsa':
             cypherForm = RSAEncryptForm()
             decypherForm = RSADecryptForm()
+        elif algo == 'atbasch':
+            cypherForm = SimpleEncryptForm()
     
     return render_to_response("crypto_algo.html", {'algo' : algo_object,
                                             'output' : output,
