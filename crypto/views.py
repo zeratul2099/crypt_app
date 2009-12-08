@@ -1,4 +1,4 @@
-from crypt_app.crypto.models import AESEncryptForm, AESDecryptForm, SimpleEncryptForm, SimpleDecryptForm, RSAEncryptForm, RSADecryptForm
+from crypt_app.crypto.models import AESEncryptForm, AESDecryptForm, SimpleEncryptForm, SimpleDecryptForm, RSAEncryptForm, RSADecryptForm, SimplestForm, CaesarEncryptForm, CaesarDecryptForm
 from crypt_app.base_app.models import Algo
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render_to_response
@@ -7,7 +7,7 @@ from django.core.servers.basehttp import FileWrapper
 from Crypto.Cipher import AES, DES, XOR
 from Crypto.Util import number
 from M2Crypto import RSA
-from atbasch import atbasch
+from classic import atbasch, caesar
 import zipfile, os
 
 def algo(request, algo):
@@ -84,12 +84,19 @@ def algo(request, algo):
                     except RSA.RSAError, e:
                         output = e
             elif algo == 'atbasch':
-                cypherForm = SimpleEncryptForm(request.POST)
+                cypherForm = SimplestForm(request.POST)
                 decypherForm = None
                 if cypherForm.is_valid():
                     output = "Klartext:\n%s\n\n" %(plain_text)
                     output += "Atbasch-verschluesselt:\n"
                     cypher = atbasch(plain_text)
+            elif algo == 'caesar':
+                cypherForm = CaesarEncryptForm(request.POST)
+                decypherForm = CaesarDecryptForm()
+                if cypherForm.is_valid():
+                    output = "Klartext:\n%s\n\n" %(plain_text)
+                    output += "ROT%s-verschluesselt:\n"%(request.POST["key"])
+                    cypher = caesar(plain_text, int(request.POST["key"]), True)
             else:
                 output += "Invalid algorithm"
         # decrypt
@@ -128,6 +135,12 @@ def algo(request, algo):
                         cypher = PrivKey.private_decrypt(number.long_to_bytes(request.POST["cypher_text"]), 1).replace('\0','')
                     except RSA.RSAError, e:
                         output = e
+            elif algo == 'caesar':
+                cypherForm = CaesarEncryptForm()
+                decypherForm = CaesarDecryptForm(request.POST)
+                if decypherForm.is_valid():
+                    output = "Entschluesselter Klartext:\n"
+                    cypher = caesar(request.POST["cypher_text"], int(request.POST['key']), False)
             else:
                 output += "Invalid algorithm"
     else:
@@ -141,8 +154,12 @@ def algo(request, algo):
             cypherForm = RSAEncryptForm()
             decypherForm = RSADecryptForm()
         elif algo == 'atbasch':
-            cypherForm = SimpleEncryptForm()
-    
+            cypherForm = SimplestForm()
+            decypherForm = None
+        elif algo == 'caesar':
+            cypherForm = CaesarEncryptForm()
+            decypherForm = CaesarDecryptForm()
+                
     return render_to_response("crypto_algo.html", {'algo' : algo_object,
                                             'output' : output,
                                             'cypher' : cypher,
