@@ -166,7 +166,7 @@ padding-left: 10px;
     font-size:0.9em;
 }
 
-#menu li#active {
+#menu #active {
     padding:0.5em;
     text-decoration:none;
     color:red;

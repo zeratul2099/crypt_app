@@ -1,4 +1,4 @@
-from crypt_app.crypto.models import AESEncryptForm, AESDecryptForm, SimpleEncryptForm, SimpleDecryptForm, RSAEncryptForm, RSADecryptForm, SimplestForm, CaesarEncryptForm, CaesarDecryptForm
+from crypt_app.crypto.models import AESEncryptForm, AESDecryptForm, SimpleEncryptForm, SimpleDecryptForm, RSAEncryptForm, RSADecryptForm, SimplestForm, CaesarEncryptForm, CaesarDecryptForm, AffineEncryptForm, AffineDecryptForm
 from crypt_app.base_app.models import Algo
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render_to_response
@@ -7,7 +7,7 @@ from django.core.servers.basehttp import FileWrapper
 from Crypto.Cipher import AES, DES, XOR
 from Crypto.Util import number
 from M2Crypto import RSA
-from classic import atbasch, caesar
+from classic import atbasch, caesar, affineEnc, affineDec
 import zipfile, os
 
 def algo(request, algo):
@@ -97,6 +97,13 @@ def algo(request, algo):
                     output = "Klartext:\n%s\n\n" %(plain_text)
                     output += "ROT%s-verschluesselt:\n"%(request.POST["key"])
                     cypher = caesar(plain_text, int(request.POST["key"]), True)
+            elif algo == 'affine':
+                cypherForm = AffineEncryptForm(request.POST)
+                decypherForm = AffineDecryptForm()
+                if cypherForm.is_valid():
+                    output = "Klartext:\n%s\n\n" %(plain_text)
+                    output += "(%s, %s)-verschluesselt:\n"%(request.POST["keyA"], request.POST["keyB"])
+                    cypher = affineEnc(plain_text, int(request.POST["keyA"]), int(request.POST["keyB"]))
             else:
                 output += "Invalid algorithm"
         # decrypt
@@ -141,6 +148,12 @@ def algo(request, algo):
                 if decypherForm.is_valid():
                     output = "Entschluesselter Klartext:\n"
                     cypher = caesar(request.POST["cypher_text"], int(request.POST['key']), False)
+            elif algo == 'affine':
+                cypherForm = AffineEncryptForm()
+                decypherForm = AffineDecryptForm(request.POST)
+                if decypherForm.is_valid():
+                    output = "Entschluesselter Klartext:\n"
+                    cypher = affineDec(request.POST["cypher_text"], int(request.POST['keyA']), int(request.POST['keyB']))
             else:
                 output += "Invalid algorithm"
     else:
@@ -159,6 +172,10 @@ def algo(request, algo):
         elif algo == 'caesar':
             cypherForm = CaesarEncryptForm()
             decypherForm = CaesarDecryptForm()
+        elif algo == 'affine':
+            cypherForm = AffineEncryptForm()
+            decypherForm = AffineDecryptForm()
+
                 
     return render_to_response("crypto_algo.html", {'algo' : algo_object,
                                             'output' : output,

@@ -13,7 +13,7 @@
 {% endifequal %}
 {% endblock %}
 {% block content %}
-
+<link rel="index" href="../overview/"/>
 {# ausprobieren #}
 <div class='leftspace' >
 {% ifequal infopage.algo.type "crypto" %}
@@ -43,7 +43,14 @@
 <div class='content' >
 <table width='100%' >
     <tr>
-        <th width='25%' rowspan='3' valign='top' align='left' ><ul></ul>{{ nav|safe }}</ul></th>
+        <th width='25%' rowspan='3' valign='top' align='left' >
+        <ul id='menu'>
+    {% autoescape off %}
+    {{ navlist|unordered_list }}
+    {% endautoescape %}
+    </ul>
+        
+        </th>
         {% if infopage.i_caption %}
         <td width='75%' valign='top' align='center' ><h3>{{ infopage.i_caption|safe }}</h3></td></tr>
         <tr>{% endif %}<td width='75%' valign='top' align='center' >
@@ -55,6 +62,10 @@
         </td>
     </tr><tr>
         <td width='75%' valign='top'><div class='info'><span class='intext' >{{ infopage.text|safe }}</span></div></td>
+    </tr>
+    <tr><td>
+
+    </td>
     </tr>
 </table>
 </div>

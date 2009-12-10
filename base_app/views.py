@@ -45,30 +45,47 @@ def info(request, algo, page):
     svg = info_page.image+"."+pictype
     main_page = get_list_or_404(InfoPage, masterPage=None, algo=algo_object)[0]
 
-    nav = "<ul id='menu'>"
+    #~ nav = "<ul id='menu'>"
+    #~ if page == "overview":
+        #~ nav +="<li id='active' >"+main_page.title+"</li><ul>"
+    #~ else:
+        #~ nav +="<li><a href='../../"+algo_object.shortTitle+"/"
+        #~ nav += main_page.shortTitle+"/'>"+main_page.title+"</a></li><ul>"
+    #~ for p in InfoPage.objects.filter(algo=algo_object, masterPage=main_page).order_by("order"):
+        #~ if p.shortTitle == page:
+            #~ nav +="<li id='active'>"+p.title+"</li><ul>"
+        #~ else:
+            #~ nav += "<li><a href='../../"+algo_object.shortTitle+"/"
+            #~ nav += p.shortTitle+"/'>"+p.title+"</a></li><ul>"
+        #~ for q in InfoPage.objects.filter(algo=algo_object, masterPage=p).order_by("order"):
+            #~ if q.shortTitle == page:
+                #~ nav += "<li id='active'>"+q.title+"</li>"
+            #~ else:
+                #~ nav += "<li><a href='../../"+algo_object.shortTitle+"/"
+                #~ nav += q.shortTitle+"/'>"+q.title+"</a></li>"
+        #~ nav += "</ul>"
+    #~ nav += "</ul></ul>"
+
+    # generating menu list
+    nav_list = []
     if page == "overview":
-        nav +="<li id='active' >"+main_page.title+"</li><ul>"
+        nav_list.append("<li id='active' >"+main_page.title+"</li>")
     else:
-        nav +="<li><a href='../../"+algo_object.shortTitle+"/"
-        nav += main_page.shortTitle+"/'>"+main_page.title+"</a></li><ul>"
+        nav_list.append("<li><a href='../"+main_page.shortTitle+"/'>"+main_page.title+"</a></li>")
+    nav_list.append([])
     for p in InfoPage.objects.filter(algo=algo_object, masterPage=main_page).order_by("order"):
         if p.shortTitle == page:
-            nav +="<li id='active'>"+p.title+"</li><ul>"
+            nav_list[1].append("<li id='active'>"+p.title+"</li>")
         else:
-            nav += "<li><a href='../../"+algo_object.shortTitle+"/"
-            nav += p.shortTitle+"/'>"+p.title+"</a></li><ul>"
+            nav_list[1].append("<li><a href='../"+p.shortTitle+"/'>"+p.title+"</a></li>")
+        sublist = []
         for q in InfoPage.objects.filter(algo=algo_object, masterPage=p).order_by("order"):
             if q.shortTitle == page:
-                nav += "<li id='active'>"+q.title+"</li>"
+                sublist.append("<li id='active'>"+q.title+"</li>")
             else:
-                nav += "<li><a href='../../"+algo_object.shortTitle+"/"
-                nav += q.shortTitle+"/'>"+q.title+"</a></li>"
-        nav += "</ul>"
-    nav += "</ul></ul>"
-    nav_list = [];
-    # doesn't work because of urls inside list :(
-    #for p in InfoPage.objects.filter(algo=algo_object, masterPage=main_page):
-    #   nav_list.append("<a href='/"+algo_object.type+"/info/"+algo_object.shortTitle+"/"+p.shortTitle+"/'>"+p.title+"</a>")
+                sublist.append("<li><a href='../../"+algo_object.shortTitle+"/"+ q.shortTitle+"/'>"+q.title+"</a></li>")
+        if sublist:
+            nav_list[1].append(sublist)
     type_long = ""
     if algo_object.type == 'crypto':
         type_long = "Kryptographie"
@@ -79,7 +96,7 @@ def info(request, algo, page):
     return render_to_response("infopage.html", { 'infopage' : info_page,
                                                 'svg' : svg,
                                                 'pictype' : pictype,
-                                                'nav' : nav,
+                                                'navlist':nav_list,
                                                 'algo_type' : type_long,
                                                 'user_agent' : user_agent,
                                                 })
