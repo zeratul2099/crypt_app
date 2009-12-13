@@ -32,7 +32,7 @@ def affineEnc(cleartext, a, b):
     num = 0
     for letter in cleartext.lower():
         if 97 <= ord(letter) <= 122:
-            num = (a*((ord(letter)-97)+b)) % 26
+            num = ((a*(ord(letter)-97))+b) % 26
             cypher+=chr(num+97)
         elif ord(letter) == 32:
             cypher+= " "
@@ -43,7 +43,7 @@ def affineDec(cypher, a, b):
     num = 0
     for letter in cypher.lower():
         if 97 <= ord(letter) <= 122:
-            num = (((ord(letter)-97)-b)/a) % 26
+            num = (((ord(letter)-97)-b)*a) % 26
             cleartext+=chr(num+97)
         elif ord(letter) == 32:
             cleartext+= " "
