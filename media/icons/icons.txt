@@ -10,3 +10,5 @@ key: crystalsvg, password, LGPL
 encrypt, decrypt: hicolor, gdu-encrypt-(un)lock, GPL
 try: crystal, exec, LGPL
 info: gnome, emblem-important, GPL
+clue: gnome, dialog-information, GPL
+blocks: hicolor, ksquares, GPL
