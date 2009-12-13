@@ -1,5 +1,5 @@
 from crypt_app.crypto.models import AESEncryptForm, AESDecryptForm, SimpleEncryptForm, SimpleDecryptForm, RSAEncryptForm, RSADecryptForm, SimplestForm, CaesarEncryptForm, CaesarDecryptForm, AffineEncryptForm, AffineDecryptForm
-from crypt_app.base_app.models import Algo
+from crypt_app.base_app.models import Algo, ManPage
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render_to_response
 from django.template import Context, loader
@@ -14,6 +14,7 @@ def algo(request, algo):
     output = ""
     cypher = ""
     algo_object = get_object_or_404(Algo, shortTitle=algo)
+    manual = get_object_or_404(ManPage, algo=algo_object)
     if request.method == 'POST':
         if "keygen" in request.POST:
             RSAKey = RSA.gen_key(2048, 1023)
@@ -182,4 +183,5 @@ def algo(request, algo):
                                             'cypher' : cypher,
                                             'decypherForm' : decypherForm, 
                                             'cypherForm' : cypherForm,
-                                            'algo_type' : 'Kryptographie',}) 
+                                            'algo_type' : 'Kryptographie',
+                                            'manual' : manual,}) 

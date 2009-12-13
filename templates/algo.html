@@ -10,8 +10,19 @@
 <p class='nav' >
 &gt; <a href='{% url base_app.views.base %}'>Kryptos</a> &gt; <a href='{% url base_app.views.list algo.type %}'>{{ algo_type }}</a> &gt; <a href='{% url base_app.views.info algo.shortTitle "overview" %}/'>{{ algo.name }}</a> &gt; Ausprobieren
 </p>
+
+
 {% block algo %}
 
 {% endblock %}
+<p>
+<table class='leftspace' width='100%' >
+    <tr>
+        <td><b>Hinweise</b></td>
+    </tr>
+    <tr>
+        <td class='manual'><span class='intext'>{{ manual.text|safe }}</span></td>
+    </tr>
+</table>
 {% endblock %}
 

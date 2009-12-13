@@ -5,16 +5,18 @@
 
 {% block algo %}
 {% ifequal algo.shortTitle 'rsa' %}
-<div class='info' >
-<div>
-2048-Bit-RSA-Schl&uuml;sselpaar generieren und als zip-Archiv herunterladen:
-</div>
-<div>
-<form method='post' action='.' enctype="multipart/form-data">
-<input type='submit' name='keygen' value='Schl&uuml;sselpaar generieren' />
-</form>
-</div>
-</div>
+
+<table width='100%' class='leftspace'>
+    <tr>
+        <td class='info' >2048-Bit-RSA-Schl&uuml;sselpaar generieren:
+        <p>
+        <form method='post' action='.' enctype="multipart/form-data">
+        <input type='submit' name='keygen' value='Schl&uuml;sselpaar generieren' />
+        </form>
+        </td>
+    </tr>
+</table>
+
 <p>
 
 {% endifequal %}
@@ -83,13 +85,14 @@
             {% endif %}
         </tr>
     </table>{% if output %}
-     <table class='info'>
+     <table width='100%' class='leftspace'>
         <tr>
-            <td>{{ output|escape|linebreaksbr }}</td>
+            <td class='info' >{{ output|escape|linebreaksbr }}
+            <p>
+            {{ cypher|force_escape|linebreaksbr }}
+            </td>
         </tr>
-        <tr>
-            <td>{{ cypher|force_escape|linebreaksbr }}</td>
-        </tr>
+
     </table>{% endif %}
  </td>
     </tr>

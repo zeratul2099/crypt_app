@@ -1,5 +1,5 @@
 from crypt_app.hash.models import HashForm
-from crypt_app.base_app.models import Algo, InfoPage
+from crypt_app.base_app.models import Algo, InfoPage, ManPage
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render_to_response
 from django.template import Context, loader
@@ -18,6 +18,8 @@ def algo(request, algo):
     salt = 0
     salt_str = ''
     algo_object = get_object_or_404(Algo, shortTitle=algo)
+    manual = get_object_or_404(ManPage, algo=algo_object)
+    
     if request.method == 'POST':
         
         if request.FILES:
@@ -70,4 +72,5 @@ def algo(request, algo):
                                             'hashvalue' : output,
                                             'clear_text' : clear_text,
                                             'form' : form,
-                                            'algo_type' : 'Hash-Algorihmen',}) 
+                                            'algo_type' : 'Hash-Algorihmen',
+                                            'manual' : manual,}) 

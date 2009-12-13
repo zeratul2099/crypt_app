@@ -3,7 +3,7 @@ from crypt_app.stego.models import F5EmbedForm, F5ExtractForm
 from crypt_app.stego.models import LsbEmbedForm, LsbExtractForm
 from crypt_app.stego.models import GifShuffleEmbedForm, GifShuffleExtractForm
 from crypt_app.stego.models import BattlestegEmbedForm, BattlestegExtractForm
-from crypt_app.base_app.models import Algo, InfoPage
+from crypt_app.base_app.models import Algo, InfoPage, ManPage
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render_to_response
 from django.template import Context, loader
@@ -16,6 +16,7 @@ def algo(request, algo):
     text = ""
     type = ""
     algo_object = get_object_or_404(Algo, shortTitle=algo)
+    manual = get_object_or_404(ManPage, algo=algo_object)
     if request.method == 'POST':
         q = Queue()
         # embedding
@@ -136,7 +137,8 @@ def algo(request, algo):
                                             'embedForm' : embedForm, 
                                             'extractForm' : extractForm,
                                             'text' : text,
-                                            'algo_type' : 'Staganographie',}) 
+                                            'algo_type' : 'Staganographie',
+                                            'manual' : manual,}) 
 
 def createResponse(filename, type):
     wrapper = FileWrapper(file(filename))

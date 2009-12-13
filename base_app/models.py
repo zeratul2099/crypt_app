@@ -25,4 +25,9 @@ class InfoPage(models.Model):
     def __unicode__(self):
         return self.algo.name+": "+self.title
     
-        
+class ManPage(models.Model):
+    
+    algo = models.ForeignKey(Algo, unique=True)
+    text = models.TextField()
+    def __unicode__(self):
+        return self.algo.name

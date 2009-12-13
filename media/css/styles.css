@@ -134,7 +134,17 @@ background: #FAFAFA;
 padding: 30px;
 text-align: justify;
 margin: 30px;
-line-height: 1.9;
+line-height: 1.8;
+font-size: 14px;
+}
+
+.manual {
+border: 2px outset black;
+background: #FAFAFA;
+padding: 20px;
+text-align: justify;
+margin: 20px;
+font-size: 14px;
 
 }
 
