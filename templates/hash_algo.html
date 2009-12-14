@@ -1,5 +1,5 @@
 {% extends "algo.html" %}
-
+{% load moretags %}
 {% block algo %}
 <table width='100%' class='leftspace'>
     <tr>
@@ -21,7 +21,7 @@
             {% else %}
             <img width='16' height='16' border='0' src='/content/icons/empty.png' ></img>
             {% endifequal %}{% endifequal %}{% endifequal %}
-            {{ field.label }}:</td><td>{{ field }}</td></tr>
+            {{ field.label|umlauts|safe }}:</td><td>{{ field }}</td></tr>
         {% endfor %} 
         <tr>
             <td><input type='submit' name='submit' value='Abschicken' /></td>

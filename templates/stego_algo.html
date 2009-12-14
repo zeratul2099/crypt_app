@@ -1,5 +1,5 @@
 {% extends "algo.html" %}
-
+{% load moretags %}
 {% block algo %}
     <table width='100%' class='leftspace' >
         <tr><td><b><img width='32' height='32' border='0' src='/content/icons/embed.png' ></img> Einbetten</b></td><td><b><img width='32' height='32' border='0' src='/content/icons/extract.png' ></img> Ausbetten</b></td></tr>
@@ -25,7 +25,7 @@
             {% else %}
             <img width='16' height='16' border='0' src='/content/icons/empty.png' ></img>
             {% endifequal %}{% endifequal %}{% endifequal %}{% endifequal %}{% endifequal %}
-            {{ field.label }}:</td><td>{{ field }}</td></tr>
+            {{ field.label|umlauts|safe }}:</td><td>{{ field }}</td></tr>
             {% endfor %}
             </table>
             <input type='submit' name='submit1' value='Abschicken' />
@@ -50,7 +50,7 @@
             {% else %}
             <img width='16' height='16' border='0' src='/content/icons/empty.png' ></img>
             {% endifequal %}{% endifequal %}{% endifequal %}{% endifequal %}{% endifequal %}
-            {{ field.label }}:</td><td>{{ field }}</td></tr>
+            {{ field.label|umlauts|safe }}:</td><td>{{ field }}</td></tr>
             {% endfor %}
             </table>
             <input type='submit' name='submit2' value='Abschicken' />

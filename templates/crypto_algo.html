@@ -1,8 +1,5 @@
 {% extends "algo.html" %}
-
-
-
-
+{% load moretags %}
 {% block algo %}
 {% ifequal algo.shortTitle 'rsa' %}
 
@@ -52,7 +49,7 @@
             {% else %}
             <img width='16' height='16' border='0' src='/content/icons/empty.png' ></img>
             {% endifequal %}{% endifequal %}{% endifequal %}{% endifequal %}{% endifequal %}{% endifequal %}
-            {{ field.label }}:</td><td>{{ field }}</td></tr>
+            {{ field.label|umlauts|safe }}:</td><td>{{ field }}</td></tr>
             {% endfor %}
             </table>
             <input type='submit' name='submit1' value='Abschicken' />
@@ -80,7 +77,7 @@
             {% else %}
             <img width='16' height='16' border='0' src='/content/icons/empty.png' ></img>
             {% endifequal %}{% endifequal %}{% endifequal %}{% endifequal %}{% endifequal %}{% endifequal %}
-            {{ field.label }}:</td><td>{{ field }}</td></tr>
+            {{ field.label|umlauts|safe }}:</td><td>{{ field }}</td></tr>
             {% endfor %}
             </table>
             <input type='submit' name='submit2' value='Abschicken' />
@@ -96,7 +93,7 @@
             <td><b><img width='32' height='32' border='0' src='/content/icons/document.png' ></img> Ver-/Entschl&uuml;sselte Nachricht</b></td>
         </tr>
         <tr>
-            <td class='info' >{{ output|escape|linebreaksbr }}
+            <td class='info' >{{ output|umlauts|safe|linebreaksbr }}
             <p>
             {{ cypher|force_escape|linebreaksbr }}
             </td>
