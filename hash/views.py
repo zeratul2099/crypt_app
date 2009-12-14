@@ -1,3 +1,4 @@
+# encoding: utf-8
 from crypt_app.hash.models import HashForm
 from crypt_app.base_app.models import Algo, InfoPage, ManPage
 from django.http import HttpResponse, Http404, HttpResponseRedirect
@@ -60,9 +61,9 @@ def algo(request, algo):
             output += "\n\nSHA-2-512-Hash:\n"
             output += hashlib.sha512(clear_text).hexdigest()   
         else:
-            output += "Invalid algorithm"
+            output += u"Ungültiger Algorithmus"
         if 'withSalt' in request.POST:
-            output += "\n\nSalt:\n"
+            output += "\n\nSalz:\n"
             output += repr(salt_str)
     else:
         clear_text = ""

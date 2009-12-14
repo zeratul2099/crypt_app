@@ -32,7 +32,7 @@
         
         <tr>
             <td class='info' >
-            <form method='post' action='.' enctype="multipart/form-data">
+            <form method='post' action='.' enctype="multipart/form-data" accept-charset="utf-8" >
             <table>
             {% for field in cypherForm %}
             <tr><td colspan='2' ><font color='red'>{{ field.errors }}</font></td></tr>
@@ -88,8 +88,13 @@
             </td>
             {% endif %}
         </tr>
-    </table>{% if output %}
+    </table>
+    {% if output or cypher %}
+    <p>
      <table width='100%' class='leftspace'>
+         <tr>
+            <td><b><img width='32' height='32' border='0' src='/content/icons/document.png' ></img> Ver-/Entschl&uuml;sselte Nachricht</b></td>
+        </tr>
         <tr>
             <td class='info' >{{ output|escape|linebreaksbr }}
             <p>

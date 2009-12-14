@@ -1,3 +1,4 @@
+# encoding: utf-8
 from crypt_app.crypto.models import AESEncryptForm, AESDecryptForm, SimpleEncryptForm, SimpleDecryptForm, RSAEncryptForm, RSADecryptForm, SimplestForm, CaesarEncryptForm, CaesarDecryptForm, AffineEncryptForm, AffineDecryptForm
 from crypt_app.base_app.models import Algo, ManPage
 from django.http import HttpResponse, Http404, HttpResponseRedirect
@@ -11,8 +12,8 @@ from classic import atbasch, caesar, affineEnc, affineDec
 import zipfile, os
 
 def algo(request, algo):
-    output = ""
-    cypher = ""
+    output = u""
+    cypher = u""
     algo_object = get_object_or_404(Algo, shortTitle=algo)
     manual = get_object_or_404(ManPage, algo=algo_object)
     if request.method == 'POST':
@@ -35,7 +36,9 @@ def algo(request, algo):
 
         # encrypt
         if "submit1" in request.POST:
+            plain_text = u""
             plain_text = request.POST["message"]
+            plain_text = plain_text
             if algo == 'aes':
                 cypherForm = AESEncryptForm(request.POST)
                 decypherForm = AESDecryptForm()
@@ -43,10 +46,11 @@ def algo(request, algo):
                     extend = 16 - (len(plain_text) % 16)
                     for i in range(extend):
                         plain_text += "X"
-                    output = "Klartext (erweitert):\n%s\n\n" %(plain_text)
+                    #plain_text = plain_text.encode("utf-8")
+                    #output = u"Klartext (erweitert):\n%s\n\n" %(plain_text)
                     key = number.long_to_bytes(request.POST["key"], 16)[0:32]
-                    output += "Key: %s\n\n"%(request.POST["key"])
-                    output += "AES-verschluesselt:\n"
+                    output += u"Schlüssel: %s\n\n"%(request.POST["key"])
+                    output += u"AES-verschlüsselt:\n"
                     aesObject = AES.new(key, int(request.POST["block_mode"]))
                     cypher = number.bytes_to_long(aesObject.encrypt(plain_text))
             elif algo == 'des':
@@ -56,10 +60,10 @@ def algo(request, algo):
                     extend = 8 - (len(plain_text) % 8)
                     for i in range(extend):
                         plain_text += "X"
-                    output = "Klartext (erweitert):\n%s\n\n" %(plain_text)
+                    output = u"Klartext (erweitert):\n%s\n\n" %(plain_text)
                     key = number.long_to_bytes(request.POST["key"], 8)[0:8]
-                    output += "Key: %s\n\n"%(request.POST["key"])
-                    output += "DES-verschluesselt:\n"
+                    output += u"Schlüssel: %s\n\n"%(request.POST["key"])
+                    output += u"DES-verschlüsselt:\n"
                     desObject = DES.new(key, int(request.POST["block_mode"]))
                     cypher = number.bytes_to_long(desObject.encrypt(plain_text))
 
@@ -67,18 +71,18 @@ def algo(request, algo):
                 cypherForm = SimpleEncryptForm(request.POST)
                 decypherForm = SimpleDecryptForm()
                 if cypherForm.is_valid():
-                    output = "Klartext:\n%s\n\n" %(plain_text)
+                    output = u"Klartext:\n%s\n\n" %(plain_text)
                     key = number.long_to_bytes(request.POST["key"], 0)
-                    output += "Key: %s\n\n"%(request.POST["key"])
-                    output += "XOR-verschluesselt:\n"
+                    output += u"Schlüssel: %s\n\n"%(request.POST["key"])
+                    output += u"XOR-verschlüsselt:\n"
                     xorObject = XOR.new(key)
                     cypher = number.bytes_to_long(xorObject.encrypt(plain_text))
             elif algo == 'rsa':
                 cypherForm = RSAEncryptForm(request.POST, request.FILES)
                 decypherForm = RSADecryptForm()
                 if cypherForm.is_valid():
-                    output = "Klartext:\n%s\n\n" %(plain_text)
-                    output += "RSA-verschluesselt:\n"
+                    output = u"Klartext:\n%s\n\n" %(plain_text)
+                    output += u"RSA-verschlüsselt:\n"
                     try:
                         PubKey = RSA.load_pub_key(request.FILES['key'].temporary_file_path())
                         cypher = number.bytes_to_long(PubKey.public_encrypt(plain_text, 1))
@@ -88,25 +92,25 @@ def algo(request, algo):
                 cypherForm = SimplestForm(request.POST)
                 decypherForm = None
                 if cypherForm.is_valid():
-                    output = "Klartext:\n%s\n\n" %(plain_text)
-                    output += "Atbasch-verschluesselt:\n"
+                    output = u"Klartext:\n%s\n\n" %(plain_text)
+                    output += u"Atbasch-verschlüsselt:\n"
                     cypher = atbasch(plain_text)
             elif algo == 'caesar':
                 cypherForm = CaesarEncryptForm(request.POST)
                 decypherForm = CaesarDecryptForm()
                 if cypherForm.is_valid():
-                    output = "Klartext:\n%s\n\n" %(plain_text)
-                    output += "ROT%s-verschluesselt:\n"%(request.POST["key"])
+                    output = u"Klartext:\n%s\n\n" %(plain_text)
+                    output += u"ROT%s-verschlüsselt:\n"%(request.POST["key"])
                     cypher = caesar(plain_text, int(request.POST["key"]), True)
             elif algo == 'affine':
                 cypherForm = AffineEncryptForm(request.POST)
                 decypherForm = AffineDecryptForm()
                 if cypherForm.is_valid():
-                    output = "Klartext:\n%s\n\n" %(plain_text)
-                    output += "(%s, %s)-verschluesselt:\n"%(request.POST["keyA"], request.POST["keyB"])
+                    output = u"Klartext:\n%s\n\n" %(plain_text)
+                    output += u"(%s, %s)-verschlüsselt:\n"%(request.POST["keyA"], request.POST["keyB"])
                     cypher = affineEnc(plain_text, int(request.POST["keyA"]), int(request.POST["keyB"]))
             else:
-                output += "Invalid algorithm"
+                output += u"Ungültiger Algorithmus"
         # decrypt
         elif "submit2" in request.POST:
             if algo == 'aes':
@@ -114,7 +118,6 @@ def algo(request, algo):
                 decypherForm = AESDecryptForm(request.POST)
                 if decypherForm.is_valid():
                     key = number.long_to_bytes(request.POST["key"], 16)[0:32]
-                    output = "Klartext:\n"
                     aesObject = AES.new(key, int(request.POST["block_mode"]))
                     cypher = aesObject.decrypt(number.long_to_bytes(request.POST["cypher_text"]))
             elif algo == 'des':
@@ -122,7 +125,6 @@ def algo(request, algo):
                 decypherForm = AESDecryptForm(request.POST)
                 if decypherForm.is_valid():
                     key = number.long_to_bytes(request.POST["key"], 8)[0:8]
-                    output = "Entschluesselter Klartext:\n"
                     desObject = DES.new(key, int(request.POST["block_mode"]))
                     cypher = desObject.decrypt(number.long_to_bytes(request.POST["cypher_text"]))                
             elif algo == 'xor':
@@ -130,7 +132,6 @@ def algo(request, algo):
                 decypherForm = SimpleDecryptForm(request.POST)
                 if decypherForm.is_valid():
                     key = number.long_to_bytes(request.POST["key"], 0)
-                    output = "Entschluesselter Klartext:\n"
                     xorObject = XOR.new(key)
                     cypher = xorObject.decrypt(number.long_to_bytes(request.POST["cypher_text"]))   
             elif algo == 'rsa':
@@ -138,7 +139,6 @@ def algo(request, algo):
                 decypherForm = RSADecryptForm(request.POST, request.FILES)
                 if decypherForm.is_valid():
                     try:
-                        output = "Entschluesselter Klartext:\n"
                         PrivKey = RSA.load_key(request.FILES['key'].temporary_file_path())
                         cypher = PrivKey.private_decrypt(number.long_to_bytes(request.POST["cypher_text"]), 1).replace('\0','')
                     except RSA.RSAError, e:
@@ -147,13 +147,11 @@ def algo(request, algo):
                 cypherForm = CaesarEncryptForm()
                 decypherForm = CaesarDecryptForm(request.POST)
                 if decypherForm.is_valid():
-                    output = "Entschluesselter Klartext:\n"
                     cypher = caesar(request.POST["cypher_text"], int(request.POST['key']), False)
             elif algo == 'affine':
                 cypherForm = AffineEncryptForm()
                 decypherForm = AffineDecryptForm(request.POST)
                 if decypherForm.is_valid():
-                    output = "Entschluesselter Klartext:\n"
                     cypher = affineDec(request.POST["cypher_text"], int(request.POST['keyA']), int(request.POST['keyB']))
             else:
                 output += "Invalid algorithm"

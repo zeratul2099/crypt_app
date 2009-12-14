@@ -1,3 +1,4 @@
+# encoding: utf-8
 from crypt_app.stego.models import CPTEmbedForm, CPTExtractForm
 from crypt_app.stego.models import F5EmbedForm, F5ExtractForm
 from crypt_app.stego.models import LsbEmbedForm, LsbExtractForm
@@ -62,9 +63,9 @@ def algo(request, algo):
                     retval = -2
                 p.join()
                 if retval == -1:
-                    text += "No %s file or %s file could not be read."%(type, type)
+                    text += "%s-Datei nicht gefunden oder fehlerhaft."%(type)
                 elif retval == -2:
-                    text += "Error on embedding. Try another image or different parameter."
+                    text += "Fehler beim Einbetten. Anderes Bild oder andere Parameter versuchen."
                 else:
                     return createResponse(retval, type)
         # extracting        
@@ -89,7 +90,6 @@ def algo(request, algo):
                 p = Process(target=lsbExtract, args=(q, ))
 
             elif algo == "gifshuffle":
-                print "gifshuffle extracting..."
                 embedForm = GifShuffleEmbedForm()
                 extractForm = GifShuffleExtractForm(request.POST, request.FILES)
                 type = "gif"
@@ -110,9 +110,9 @@ def algo(request, algo):
                     retval = -2
                 p.join()
                 if retval == -1:
-                    text += "\nNo %s file or %s file could not be read."%(type, type)
+                    text += "%s-Datei nicht gefunden oder fehlerhaft."%(type)
                 elif retval == -2:
-                    text += "Error on extracting. Try another image or different parameter."
+                    text += "Fehler beim Ausbetten. Anderes Bild oder andere Parameter versuchen."
                 else:
                     text += retval
     # empty form

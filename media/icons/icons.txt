@@ -12,3 +12,7 @@ try: crystal, exec, LGPL
 info: gnome, emblem-important, GPL
 clue: gnome, dialog-information, GPL
 blocks: hicolor, ksquares, GPL
+document: crystal, document2, LGPL
+hash: crystal, kcalc, LGPL
+hash-value: crystal, binary, LGPL
+
