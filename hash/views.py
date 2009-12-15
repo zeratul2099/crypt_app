@@ -20,7 +20,7 @@ def algo(request, algo):
     salt_str = ''
     algo_object = get_object_or_404(Algo, shortTitle=algo)
     manual = get_object_or_404(ManPage, algo=algo_object)
-    
+    hash_val = ""
     if request.method == 'POST':
         
         if request.FILES:
@@ -47,7 +47,8 @@ def algo(request, algo):
             output += KeccakHash(repr(clear_text)).hexdigest()
         elif algo == "md5":
             output += "MD5-Hash:\n"
-            output += hashlib.md5(clear_text).hexdigest() 
+            hash_val = hashlib.md5(clear_text).hexdigest()
+            output += hash_val 
         elif algo == "sha1":
             output += "SHA-1-Hash:\n"
             output += hashlib.sha1(clear_text).hexdigest()        
@@ -71,6 +72,7 @@ def algo(request, algo):
         form = HashForm()
     return render_to_response("hash_algo.html", {'algo' : algo_object,
                                             'hashvalue' : output,
+                                            'hash' : hash_val,
                                             'clear_text' : clear_text,
                                             'form' : form,
                                             'algo_type' : 'Hash-Algorihmen',
