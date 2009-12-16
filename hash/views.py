@@ -1,5 +1,5 @@
 # encoding: utf-8
-from crypt_app.hash.models import HashForm
+from crypt_app.hash.models import HashForm, Sha2Form
 from crypt_app.base_app.models import Algo, InfoPage, ManPage
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render_to_response
@@ -7,12 +7,6 @@ from django.template import Context, loader
 from KeccakHash import KeccakHash
 from datetime import datetime
 import hashlib, random, sys
-
-
-def hash(request):
-    algos = Algo.objects.filter(type='hash')
-        
-    return render_to_response("hash.html", { "algos" : algos })
 
 
 def algo(request, algo):
@@ -44,23 +38,30 @@ def algo(request, algo):
         form = HashForm(request.POST, request.FILES)
         if algo == "keccak":   
             output += "Keccak[800]-224-Hash:\n"
-            output += KeccakHash(repr(clear_text)).hexdigest()
+            hash_val = KeccakHash(repr(clear_text)).hexdigest()
         elif algo == "md5":
             output += "MD5-Hash:\n"
             hash_val = hashlib.md5(clear_text).hexdigest()
-            output += hash_val 
+            #output += hash_val 
         elif algo == "sha1":
             output += "SHA-1-Hash:\n"
-            output += hashlib.sha1(clear_text).hexdigest()        
+            hash_val = hashlib.sha1(clear_text).hexdigest()
+            #output += hash_val
         elif algo == "sha2":
-            output += "SHA-2-224-Hash:\n"
-            output += hashlib.sha224(clear_text).hexdigest()   
-            output += "\n\nSHA-2-256-Hash:\n"
-            output += hashlib.sha256(clear_text).hexdigest()   
-            output += "\n\nSHA-2-384-Hash:\n"
-            output += hashlib.sha384(clear_text).hexdigest()   
-            output += "\n\nSHA-2-512-Hash:\n"
-            output += hashlib.sha512(clear_text).hexdigest()   
+            form = Sha2Form(request.POST, request.FILES)
+            hashlen = request.POST['hashlen']
+            if hashlen == '1':
+                output += "SHA-2-224-Hash:\n"
+                hash_val = hashlib.sha224(clear_text).hexdigest()
+            elif hashlen == '2':
+                output += "SHA-2-256-Hash:\n"
+                hash_val = hashlib.sha256(clear_text).hexdigest()
+            elif hashlen == '3':
+                output += "SHA-2-384-Hash:\n"
+                hash_val = hashlib.sha384(clear_text).hexdigest()
+            elif hashlen == '4':
+                output += "SHA-2-512-Hash:\n"
+                hash_val = hashlib.sha512(clear_text).hexdigest()   
         else:
             output += u"Ungültiger Algorithmus"
         if 'withSalt' in request.POST:
@@ -69,7 +70,10 @@ def algo(request, algo):
     else:
         clear_text = ""
         output = ''
-        form = HashForm()
+        if algo == 'sha2':
+            form = Sha2Form()
+        else:
+            form = HashForm()
     return render_to_response("hash_algo.html", {'algo' : algo_object,
                                             'hashvalue' : output,
                                             'hash' : hash_val,
