@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   width="550"
+   height="250"
+   id="svg2"
+>
+<script type="text/ecmascript" xlink:href="/content/smil.user.js" />
+  <defs
+     id="defs4">
+
+    <linearGradient id="v1"
+      x1="0" y1="0" x2="0" y2="1">
+      <stop offset=".2" stop-color="gold" />
+      <stop offset="1" stop-color="olive" />
+    </linearGradient>
+    <linearGradient id="v2"
+      x1="0" y1="0" x2="0" y2="1">
+      <stop offset=".2" stop-color="grey" />
+      <stop offset="1" stop-color="darkgrey" />
+    </linearGradient>
+    
+<svg width='32' height='32' id='document' >
+<path d='M 5 2 l 13 0 5 5 0 20 -18 0 0 -25' stroke='black' stroke-width='1' />
+<path d='M 18 2 l 0 5 5 0' stroke='black' stroke-width='1' />
+<path d='M 7 7 l 9 0' stroke='black' stroke-width='1' />
+<path d='M 7 10 l 14 0' stroke='black' stroke-width='1' />
+<path d='M 7 13 l 14 0' stroke='black' stroke-width='1' />
+<path d='M 7 16 l 14 0' stroke='black' stroke-width='1' />
+<path d='M 7 19 l 14 0' stroke='black' stroke-width='1' />
+<path d='M 7 22 l 14 0' stroke='black' stroke-width='1' />
+<path d='M 6 28 l 1 1 18 0 0 -20 -1 -1' stroke='grey' stroke-width='3' opacity='0.5' />
+</svg>
+
+<svg width='32' height='32' id='encrypted' >
+<path d='M 5 2 l 13 0 5 5 0 20 -18 0 0 -25' stroke='black' stroke-width='1' />
+<path d='M 18 2 l 0 5 5 0' stroke='black' stroke-width='1' />
+<rect x='2' y='12' width='12' height='12' fill='url(#v1)' stroke='#928811' />
+<path d='M 3 12 C 3 4 12 4 12 12' stroke='#818181' stroke-width='2' />  
+<path d='M 6 28 l 1 1 18 0 0 -20 -1 -1' stroke='grey' stroke-width='3' opacity='0.5' />
+</svg>
+
+<svg width='32' height='32' id='private_key'>
+<circle cx='8' cy='16' r='7' fill='url(#v1)' stroke='black' />
+<circle cx='5' cy='16' r='1' fill='white' stroke='black' />
+<path d='M 15 13 l 12 0 2 2.5 -2 2.5 -3 0 -1 -1 -1 1 -2 0 -1 1 -2 -2 -1 1 -1 1' stroke='black' fill='url(#v1)'/>
+</svg>
+
+<svg width='32' height='32' id='public_key' >
+<circle cx='8' cy='16' r='7' fill='url(#v2)' stroke='black' />
+<circle cx='5' cy='16' r='1' fill='white' stroke='black' />
+<path d='M 15 13 l 12 0 2 2.5 -2 2.5 -3 0 -1 -1 -1 1 -2 0 -1 1 -2 -2 -1 1 -1 1' stroke='black' fill='url(#v2)'/>
+</svg>
+
+
+  </defs>
+
+    <g
+       
+       style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1;font-family:'sans';"
+       id="g2383 " transform="scale(1)"
+       >
+<rect x='0' y='0' width='800' height='600' fill='white' />
+<svg x='50' y='100' width='50' height='50' >
+<image x="5" y="0" width="32" height="32"
+    xlink:href="/content/basics/alice.png">
+    <title>alicenbob/alice.png</title>
+</image>
+<text x='5' y='45' fill='black' font-size='14'>
+Alice
+</text>
+</svg>
+<svg x='450' y='100' width='50' height='150' >
+
+<image x="5" y="0" width="32" height="32"
+    xlink:href="/content/basics/bob.png">
+    <title>alicenbob/bob.png</title>
+</image>
+<text x='9' y='45' fill='black' font-size='14'>
+Bob
+</text>
+</svg>
+
+<svg  width='32' height='32' opacity='0' x='460' y='110' >
+<use xlink:href='#document' x='0' y='0'>
+
+<animate attributeName='opacity' from='0' to='0' begin='keys03.end' dur='0' fill='freeze' />
+<animate attributeName='opacity' from='1' to='1' begin='keys05.end' dur='0' fill='freeze' />
+</use>
+<use xlink:href='#encrypted' x='0' y='0' opacity='0' >
+<animate attributeName='opacity' from='1' to='1' begin='keys03.end' dur='0' fill='freeze' />
+<animate attributeName='opacity' from='0' to='0' begin='keys05.end' dur='0' fill='freeze' />
+</use>
+<animate attributeName='opacity' from='0' to='0' begin='start.click' dur='0' fill='freeze' />
+<animate attributeName='x' from='460' to='460' begin='start.click' dur='0' fill='freeze' />
+<animate attributeName='y' from='110' to='110' begin='start.click' dur='0' fill='freeze' />
+<animate attributeName='y' from='110' to='160' begin='keys02.end+2' dur='2' fill='freeze' id='plain01' />
+<animate attributeName='opacity' from='0' to='1' begin='keys02.end+2' dur='1' fill='freeze' />
+<animate attributeName='x' from='460' to='60' begin='keys04.end+1' dur='5' fill='freeze' id='enc01' />
+</svg>
+
+<svg x='50' y='100' width='55' height='45' opacity='0'>
+<use xlink:href='#private_key' x='0' y='0' />
+<text x='0' y='32' fill='black' font-size='10'>
+Alices
+</text>
+<text x='0' y='42' fill='black' font-size='10'>
+Private Key
+</text>
+<animate attributeName='x' from='50' to='10' begin='start.click' fill='freeze' dur='1' id='keys01' />
+<animate attributeName='y' from='100' to='160' begin='start.click' fill='freeze' dur='1' />
+<animate attributeName='opacity' from='0' to='1' begin='start.click' fill='freeze' dur='1' />
+<animate attributeName='x' from='10' to='60' begin='enc01.end+1' dur='1' fill='freeze' id='keys05' />
+<animate attributeName='x' from='60' to='10' begin='enc01.end+2' dur='1' fill='freeze' id='keys06' />
+</svg>
+
+
+<svg x='50' y='100' width='55' height='45' opacity='0'>
+<use xlink:href='#public_key' x='0' y='0'/>
+<text x='0' y='32' fill='black' font-size='10'>
+Alices
+</text>
+<text x='0' y='42' fill='black' font-size='10'>
+Public Key
+</text>
+<animate attributeName='x' from='50' to='490' begin='start.click' dur='5' fill='freeze' id='keys02' />
+<animate attributeName='y' from='100' to='160' begin='start.click' dur='1' fill='freeze' />
+<animate attributeName='opacity' from='0' to='1' begin='start.click' dur='2' fill='freeze' />
+<animate attributeName='x' from='490' to='455' begin='plain01.end+1' dur='1' fill='freeze' id='keys03' />
+<animate attributeName='x' from='455' to='490' begin='plain01.end+2' dur='1' fill='freeze' id='keys04' />
+</svg>
+
+<svg height='25' width='75' x='220' y='150' id='start' >
+<set attributeName='x' to='-100' begin='start.click' />
+<set attributeName='x' to='220' begin='keys06.end' />
+<rect height='24' width='74' x='0.5' y='0.5' rx='5' ry='5' stroke='black' fill='white' />
+ <text fill='black' x='25' y='18' style="font-size:14px;" >
+Start
+</text>
+</svg>
+</g>
+</svg>
