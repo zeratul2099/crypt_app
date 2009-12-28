@@ -133,10 +133,10 @@ c
 <!-- p1 -->
 
 <use xlink:href="#bit" x='140' y='75' >
-<animate attributeName="opacity" from="1" to="01" begin='start.click' dur="0" />
+<animate attributeName="opacity" from="1" to="1" begin='start.click' dur="0" fill='freeze'/>
 <animate attributeName="x" from="140" to="190" begin='p02.end+4' dur="2s" id='p03' />
 <animate attributeName="y" from="75" to="140" begin='p02.end+4' dur="2s" />
-<animate attributeName="opacity" from="0" to="0" begin='p03.end' dur="0" />
+<animate attributeName="opacity" from="0" to="0" begin='p03.end' dur="0" fill='freeze' />
 </use>
 <use xlink:href="#xor" x='-90' y='140'>
 <animate attributeName="x" from="190" to="225" begin="p03.end" dur="1s" id='p04' />

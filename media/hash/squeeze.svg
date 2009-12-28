@@ -83,7 +83,7 @@ absorbing
 
 
 <use xlink:href="#bit" x='-145' y='140' >
-    <set attributeName="x" begin="start.click" to="-135" />
+    <set attributeName="x" begin="start.click" to="-135" dur='0' fill='freeze' />
     <animate attributeName='x' begin='start.click+2' from='145' to='130' dur='2' fill='freeze' id='p01' />
     <animate attributeName='y' begin='start.click+2' from='140' to='50' dur='2' fill='freeze' />
 </use>
@@ -120,7 +120,7 @@ absorbing
     <set attributeName="x" begin="p01.end+4" to="245" />
 </use>
 <use xlink:href="#bit" x='-55' y='140' >
-    <set attributeName="x" begin="start.click" to="-135" />
+    <set attributeName="x" begin="start.click" to="-135" dur='0' fill='freeze' />
     <animate attributeName='x' begin='p01.end+5' from='255' to='150' dur='2' fill='freeze' id='p02' />
     <animate attributeName='y' begin='p01.end+5' from='140' to='50' dur='2' fill='freeze' />
 </use>
@@ -155,15 +155,15 @@ absorbing
     <set attributeName="x" begin="p02.end+4" to="355" />
 </use>
 
-<use xlink:href="#bit" x='-55' y='140' >
-    <set attributeName="x" begin="start.click" to="-135" />
+<use xlink:href="#bit" x='-55' y='140'  >
+    <set attributeName="x" begin="start.click" to="-135" dur='0' fill='freeze'/>
     <animate attributeName='x' begin='p02.end+5' from='370' to='170' dur='2' fill='freeze' id='p03' />
     <animate attributeName='y' begin='p02.end+5' from='140' to='50' dur='2' fill='freeze' />
 </use>
 <text fill='black' x='-420' y='200' style="font-size:18px;" >
 ...
 <set attributeName="x" begin="start.click" to="-135" />
-<set attributeName="x" begin="p03.end+1" to="420" />
+<set attributeName="x" begin="p03.end+1" to="420" dur='0' fill='freeze' />
 </text>
 
 <text fill='black' x='-210' y='70' style="font-size:18px;" >
@@ -177,7 +177,7 @@ f = Keccak-Permutation
 </text> 
 <use xlink:href="#bit" x='30' y='370' />
 <text fill='black' x='70' y='385' style="font-size:14px;" >
-= Hash block of length r
+= Hashblock der L&#228;nge r
 </text>
 <rect x='260' y='300' width='20' height='50' fill='white' stroke='black' />
 <rect x='260' y='350' width='20' height='100' fill='white' stroke='black' />
@@ -186,8 +186,8 @@ f = Keccak-Permutation
 </text>
 
 <svg height='25' width='75' x='320' y='300' id='start' >
-<set attributeName='x' to='-100' begin='start.click' />
-<set attributeName='x' to='320' begin='p03.end+2' />
+<set attributeName='x' to='-100' begin='start.click' dur='0' fill='freeze' />
+<set attributeName='x' to='320' begin='p03.end+2' dur='0' fill='freeze'  />
 <rect height='24' width='74' x='0.5' y='0.5' rx='5' ry='5' stroke='black' fill='white' />
  <text fill='black' x='25' y='18' style="font-size:14px;" >
 Start
