@@ -56,10 +56,10 @@ Hashausgabe z:
 
 
 <use xlink:href="#arrow0" x='-65' y='155' >
-    <set attributeName="x" begin="1" to="65" />
+    <set attributeName="x" begin="start.click" to="65" />
 </use>
 <use xlink:href="#arrow0" x='-65' y='230' >
-    <set attributeName="x" begin="1" to="65" />
+    <set attributeName="x" begin="start.click" to="65" />
 </use>
 
 <path d="M 90 110 l 0 200" stroke="black" stroke-dasharray="10,10" />
@@ -73,33 +73,38 @@ absorbing
 </svg>
 
 <use xlink:href="#arrow0" x='-135' y='155' >
-    <set attributeName="x" begin="2" to="135" />
+    <set attributeName="x" begin="start.click" to="-135" />
+    <set attributeName="x" begin="start.click+1" to="135" />
 </use>
 <use xlink:href="#arrow0" x='-135' y='230' >
-    <set attributeName="x" begin="2" to="135" />
+    <set attributeName="x" begin="start.click" to="-135" />
+    <set attributeName="x" begin="start.click+1" to="135" />
 </use>
 
 
 <use xlink:href="#bit" x='-145' y='140' >
-    <animate attributeName='x' begin='3' from='145' to='130' dur='2' fill='freeze' />
-    <animate attributeName='y' begin='3' from='140' to='50' dur='2' fill='freeze' />
+    <set attributeName="x" begin="start.click" to="-135" />
+    <animate attributeName='x' begin='start.click+2' from='145' to='130' dur='2' fill='freeze' id='p01' />
+    <animate attributeName='y' begin='start.click+2' from='140' to='50' dur='2' fill='freeze' />
 </use>
 
 <svg id='f0' x='185' y='130' width="20" height="150">
         <rect x='0.5' width="19" height="149" rx="10" ry="10"
                 fill="white" stroke="black" >
-            <animateColor attributeName="fill" begin='6' dur='1' from='#ffffff' to='#ff0000' />
-            <animateColor attributeName="fill" begin='7' dur='1' from='#ff0000' to='#ffffff' fill='freeze' />
+            <animateColor attributeName="fill" begin='p01.end+1' dur='1' from='#ffffff' to='#ff0000' />
+            <animateColor attributeName="fill" begin='p01.end+2' dur='1' from='#ff0000' to='#ffffff' fill='freeze' />
         </rect>
         <text fill='black' x='8' y='75'>
         f
         </text>
 </svg>
 <use xlink:href="#arrow1" x='-135' y='155' >
-    <set attributeName="x" begin="8" to="205" />
+    <set attributeName="x" begin="start.click" to="-135" />
+    <set attributeName="x" begin="p01.end+3" to="205" />
 </use>
 <use xlink:href="#arrow1" x='-135' y='230' >
-    <set attributeName="x" begin="8" to="205" />
+    <set attributeName="x" begin="start.click" to="-135" />
+    <set attributeName="x" begin="p01.end+3" to="205" />
 </use>
 <svg  x='225' y='130' width='22' height='150'>
     <rect x='1' y='0' width='20' height='50' fill='white' stroke='black' />
@@ -107,54 +112,64 @@ absorbing
 </svg>
 
 <use xlink:href="#arrow0" x='-135' y='155' >
-    <set attributeName="x" begin="9" to="245" />
+    <set attributeName="x" begin="start.click" to="-135" />
+    <set attributeName="x" begin="p01.end+4" to="245" />
 </use>
 <use xlink:href="#arrow0" x='-135' y='230' >
-    <set attributeName="x" begin="9" to="245" />
+    <set attributeName="x" begin="start.click" to="-135" />
+    <set attributeName="x" begin="p01.end+4" to="245" />
 </use>
 <use xlink:href="#bit" x='-55' y='140' >
-    <animate attributeName='x' begin='10' from='255' to='150' dur='2' fill='freeze' />
-    <animate attributeName='y' begin='10' from='140' to='50' dur='2' fill='freeze' />
+    <set attributeName="x" begin="start.click" to="-135" />
+    <animate attributeName='x' begin='p01.end+5' from='255' to='150' dur='2' fill='freeze' id='p02' />
+    <animate attributeName='y' begin='p01.end+5' from='140' to='50' dur='2' fill='freeze' />
 </use>
 <svg id='f1' x='295' y='130' width="20" height="150">
         <rect x='0.5' width="19" height="149" rx="10" ry="10"
                 fill="white" stroke="black" >
-            <animateColor attributeName="fill" begin='13' dur='1' from='#ffffff' to='#ff0000' />
-            <animateColor attributeName="fill" begin='14' dur='1' from='#ff0000' to='#ffffff' fill='freeze' />
+            <animateColor attributeName="fill" begin='p02.end+1' dur='1' from='#ffffff' to='#ff0000' />
+            <animateColor attributeName="fill" begin='p02.end+2' dur='1' from='#ff0000' to='#ffffff' fill='freeze' />
         </rect>
         <text fill='black' x='8' y='75'>
         f
         </text>
 </svg>
 <use xlink:href="#arrow1" x='-135' y='155' >
-    <set attributeName="x" begin="15" to="315" />
+    <set attributeName="x" begin="start.click" to="-135" />
+    <set attributeName="x" begin="p02.end+3" to="315" />
 </use>
 <use xlink:href="#arrow1" x='-135' y='230' >
-    <set attributeName="x" begin="15" to="315" />
+    <set attributeName="x" begin="start.click" to="-135" />
+    <set attributeName="x" begin="p02.end+3" to="315" />
 </use>
 <svg  x='335' y='130' width='22' height='150'>
 <rect x='1' y='0' width='20' height='50' fill='white' stroke='black' />
 <rect x='1' y='50' width='20' height='98' fill='white' stroke='black' />
 </svg>
 <use xlink:href="#arrow0" x='-135' y='155' >
-    <set attributeName="x" begin="16" to="355" />
+    <set attributeName="x" begin="start.click" to="-135" />
+    <set attributeName="x" begin="p02.end+4" to="355" />
 </use>
 <use xlink:href="#arrow0" x='-135' y='230' >
-    <set attributeName="x" begin="16" to="355" />
+    <set attributeName="x" begin="start.click" to="-135" />
+    <set attributeName="x" begin="p02.end+4" to="355" />
 </use>
 
 <use xlink:href="#bit" x='-55' y='140' >
-    <animate attributeName='x' begin='17' from='370' to='170' dur='2' fill='freeze' />
-    <animate attributeName='y' begin='17' from='140' to='50' dur='2' fill='freeze' />
+    <set attributeName="x" begin="start.click" to="-135" />
+    <animate attributeName='x' begin='p02.end+5' from='370' to='170' dur='2' fill='freeze' id='p03' />
+    <animate attributeName='y' begin='p02.end+5' from='140' to='50' dur='2' fill='freeze' />
 </use>
 <text fill='black' x='-420' y='200' style="font-size:18px;" >
 ...
-<set attributeName="x" begin="20" to="420" />
+<set attributeName="x" begin="start.click" to="-135" />
+<set attributeName="x" begin="p03.end+1" to="420" />
 </text>
 
 <text fill='black' x='-210' y='70' style="font-size:18px;" >
 ...
-<set attributeName="x" begin="20" to="210" />
+<set attributeName="x" begin="start.click" to="-135" />
+<set attributeName="x" begin="p03.end+1" to="210" />
 </text>
 <!-- Legend -->
 <text fill='black' x='30' y='350' style="font-size:14px;" >
@@ -168,6 +183,17 @@ f = Keccak-Permutation
 <rect x='260' y='350' width='20' height='100' fill='white' stroke='black' />
 <text fill='black' x='290' y='375' style="font-size:14px;" >
 = Keccak-State
-</text>       
+</text>
+
+<svg height='25' width='75' x='320' y='300' id='start' >
+<set attributeName='x' to='-100' begin='start.click' />
+<set attributeName='x' to='320' begin='p03.end+2' />
+<rect height='24' width='74' x='0.5' y='0.5' rx='5' ry='5' stroke='black' fill='white' />
+ <text fill='black' x='25' y='18' style="font-size:14px;" >
+Start
+</text>
+</svg>
+
+       
 </g>
 </svg>
