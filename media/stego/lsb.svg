@@ -157,7 +157,7 @@
 <set attributeName='opacity' to='0' begin='m110.end+1' fill='freeze' />
 <set attributeName='opacity' to='1' begin='red300.end' fill='freeze' />
 <set attributeName='opacity' to='0' begin='m114.end+1' fill='freeze' />
-Red
+Rot
 </text>
 
 <!-- green -->
@@ -230,7 +230,7 @@ Red
 <set attributeName='opacity' to='0' begin='m110.end+1' fill='freeze' />
 <set attributeName='opacity' to='1' begin='green300.end' fill='freeze' />
 <set attributeName='opacity' to='0' begin='m114.end+1' fill='freeze' />
-Green
+Gr&#252;n
 </text>
 
 
@@ -303,7 +303,9 @@ Green
 <set attributeName='opacity' to='0' begin='m104.end+1' fill='freeze' />
 <set attributeName='opacity' to='1' begin='blue200.end' fill='freeze' />
 <set attributeName='opacity' to='0' begin='m110.end+1' fill='freeze' />
-Blue
+<set attributeName='opacity' to='1' begin='blue400.end' fill='freeze' />
+<set attributeName='opacity' to='0' begin='m114.end+1' fill='freeze' />
+Blau
 </text>
 
 <!-- red 2 -->
@@ -628,6 +630,78 @@ Blue
 </use>
 
 
+<!-- blue 3 -->
+<use xlink:href='#one' x='-100' y='300' >
+<set attributeName='opacity' to='1' begin='green200.end+1' fill='freeze' />
+<animate attributeName='x' from='270' to='380' begin='green300.end+1' dur='1' fill='freeze' id='blue314' />
+<animate attributeName='y' from='330' to='250' begin='green300.end+1' dur='1' fill='freeze' id='blue315' />
+<animate attributeName='x' from='380' to='270' begin='m114.end+1' dur='1' fill='freeze'  />
+<animate attributeName='y' from='250' to='330' begin='m114.end+1' dur='1' fill='freeze'  />
+<set attributeName='opacity' to='0' begin='red316.end' fill='freeze' />
+</use>
+<use xlink:href='#one' x='-100' y='300' >
+<set attributeName='opacity' to='1' begin='green200.end+1' fill='freeze' />
+<animate attributeName='x' from='270' to='400' begin='green300.end+1' dur='1' fill='freeze' id='blue312' />
+<animate attributeName='y' from='330' to='250' begin='green300.end+1' dur='1' fill='freeze' id='blue313' />
+<animate attributeName='x' from='400' to='270' begin='m114.end+1' dur='1' fill='freeze'  />
+<animate attributeName='y' from='250' to='330' begin='m114.end+1' dur='1' fill='freeze'  />
+<set attributeName='opacity' to='0' begin='red316.end' fill='freeze' />
+</use>
+<use xlink:href='#one' x='-100' y='300' >
+<set attributeName='opacity' to='1' begin='green200.end+1' fill='freeze' />
+<animate attributeName='x' from='270' to='420' begin='green300.end+1' dur='1' fill='freeze' id='blue310' />
+<animate attributeName='y' from='330' to='250' begin='green300.end+1' dur='1' fill='freeze' id='blue311' />
+<animate attributeName='x' from='420' to='270' begin='m114.end+1' dur='1' fill='freeze'  />
+<animate attributeName='y' from='250' to='330' begin='m114.end+1' dur='1' fill='freeze'  />
+<set attributeName='opacity' to='0' begin='red316.end' fill='freeze' />
+</use>
+<use xlink:href='#one' x='-100' y='300' >
+<set attributeName='opacity' to='1' begin='green200.end+1' fill='freeze' />
+<animate attributeName='x' from='270' to='440' begin='green300.end+1' dur='1' fill='freeze' id='blue308' />
+<animate attributeName='y' from='330' to='250' begin='green300.end+1' dur='1' fill='freeze' id='blue309' />
+<animate attributeName='x' from='440' to='270' begin='m114.end+1' dur='1' fill='freeze'  />
+<animate attributeName='y' from='250' to='330' begin='m114.end+1' dur='1' fill='freeze'  />
+<set attributeName='opacity' to='0' begin='red316.end' fill='freeze' />
+</use>
+<use xlink:href='#one' x='-100' y='300' >
+<set attributeName='opacity' to='1' begin='green200.end+1' fill='freeze' />
+<animate attributeName='x' from='270' to='460' begin='green300.end+1' dur='1' fill='freeze' id='blue306' />
+<animate attributeName='y' from='330' to='250' begin='green300.end+1' dur='1' fill='freeze' id='blue307' />
+<animate attributeName='x' from='460' to='270' begin='m114.end+1' dur='1' fill='freeze'  />
+<animate attributeName='y' from='250' to='330' begin='m114.end+1' dur='1' fill='freeze'  />
+<set attributeName='opacity' to='0' begin='red316.end' fill='freeze' />
+</use>
+<use xlink:href='#one' x='-100' y='300' >
+<set attributeName='opacity' to='1' begin='green200.end+1' fill='freeze' />
+<animate attributeName='x' from='270' to='480' begin='green300.end+1' dur='1' fill='freeze' id='blue304' />
+<animate attributeName='y' from='330' to='250' begin='green300.end+1' dur='1' fill='freeze' id='blue305' />
+<animate attributeName='x' from='480' to='270' begin='m114.end+1' dur='1' fill='freeze'  />
+<animate attributeName='y' from='250' to='330' begin='m114.end+1' dur='1' fill='freeze'  />
+<set attributeName='opacity' to='0' begin='red316.end' fill='freeze' />
+</use>
+<use xlink:href='#one' x='-100' y='300' >
+<set attributeName='opacity' to='1' begin='green200.end+1' fill='freeze' />
+<animate attributeName='x' from='270' to='500' begin='green300.end+1' dur='1' fill='freeze' id='blue302' />
+<animate attributeName='y' from='330' to='250' begin='green300.end+1' dur='1' fill='freeze' id='blue303' />
+<animate attributeName='x' from='500' to='270' begin='m114.end+1' dur='1' fill='freeze'  />
+<animate attributeName='y' from='250' to='330' begin='m114.end+1' dur='1' fill='freeze'  />
+<set attributeName='opacity' to='0' begin='red316.end' fill='freeze' />
+</use>
+<use xlink:href='#one' x='-100' y='300' >
+<set attributeName='opacity' to='1' begin='green200.end+1' fill='freeze' />
+<animate attributeName='x' from='270' to='520' begin='green300.end+1' dur='1' fill='freeze' id='blue300' />
+<animate attributeName='y' from='330' to='250' begin='green300.end+1' dur='1' fill='freeze' id='blue301' />
+<animate attributeName='x' from='520' to='270' begin='m114.end+1' dur='1' fill='freeze'  />
+<animate attributeName='y' from='250' to='330' begin='m114.end+1' dur='1' fill='freeze'  />
+<set attributeName='opacity' to='0' begin='red316.end' fill='freeze' />
+</use>
+
+
+
+
+
+
+
 <!-- message -->
 <use xlink:href='#zero' x='100' y='150' >
 <set attributeName='x' to='100' begin='start.click' fill='freeze' />
@@ -694,8 +768,8 @@ Blue
 <set attributeName='x' to='400' begin='start.click' fill='freeze' />
 <set attributeName='y' to='150' begin='start.click' fill='freeze' />
 <set attributeName='opacity' to='1' begin='start.click' fill='freeze' />
-<animate attributeName='x' from='400' to='160' begin='green300.end+2' dur='1' fill='freeze' id='m112' />
-<animate attributeName='y' from='150' to='250' begin='green300.end+2' dur='1' fill='freeze' id='m113' />
+<animate attributeName='x' from='400' to='160' begin='blue300.end+2' dur='1' fill='freeze' id='m112' />
+<animate attributeName='y' from='150' to='250' begin='blue300.end+2' dur='1' fill='freeze' id='m113' />
 <animate attributeName='x' from='160' to='270' begin='m114.end+1' dur='1' fill='freeze'  />
 <animate attributeName='y' from='250' to='330' begin='m114.end+1' dur='1' fill='freeze'  />
 <set attributeName='opacity' to='0' begin='red316.end' fill='freeze' />
@@ -710,11 +784,18 @@ Blue
 <animate attributeName='y' from='250' to='330' begin='m114.end+1' dur='1' fill='freeze'  />
 <set attributeName='opacity' to='0' begin='red316.end' fill='freeze' />
 </use>
+
+
+
+
+
+
+
 <text x='250' y='100' fill='black' style="font-size:18px;" >
-Message m
+Nachricht m
 </text>
 <text x='240' y='500' fill='black' style="font-size:18px;" >
-Pixel of picture
+Bildpixel
 </text>
 <svg height='25' width='75' x='5' y='425' id='start' >
 <set attributeName='x' to='-100' begin='start.click' />
