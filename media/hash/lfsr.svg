@@ -24,67 +24,7 @@
                 points="29.9 0.1, 29.9 20, 20 29.9, 20 10" />
        </svg>
        
-       <path id='arrow0' d='m 0 0 l 50 0 -4 -4 m 4 4 l -4 4' stroke='black' />
-       <path id='arrow1' d='m 0 0 l 20 0 -4 -4 m 4 4 l -4 4' stroke='black' />
-       
-       <svg width="100" height="100" id="lane" >
-        <use xlink:href="#bit" x='70' y='0' />
-        <use xlink:href="#bit" x='60' y='10' />
-        <use xlink:href="#bit" x='50' y='20' />
-        <use xlink:href="#bit" x='40' y='30' />
-        <use xlink:href="#bit" x='30' y='40' />
-        <use xlink:href="#bit" x='20' y='50' />
-        <use xlink:href="#bit" x='10' y='60' />
-        <use xlink:href="#bit" x='0' y='70' />
-       </svg>
-       
-       <svg width="180" height="100" id="plane">
-       <use xlink:href="#lane" x='0' y='0' />
-       <use xlink:href="#lane" x='20' y='0' />
-       <use xlink:href="#lane" x='40' y='0' />
-       <use xlink:href="#lane" x='60' y='0' />
-       <use xlink:href="#lane" x='80' y='0' />
-       </svg>
-       
-       <svg width="180" height="180" id="state">
-       <use xlink:href="#plane" x='0' y='80' />
-       <use xlink:href="#plane" x='0' y='60' />
-       <use xlink:href="#plane" x='0' y='40' />
-       <use xlink:href="#plane" x='0' y='20' />
-       <use xlink:href="#plane" x='0' y='0' />
-       </svg>
-       
-       <svg width="110" height="30" id="row">
-        <use xlink:href="#bit" x='0' y='0' />
-        <use xlink:href="#bit" x='20' y='0' />
-        <use xlink:href="#bit" x='40' y='0' />
-        <use xlink:href="#bit" x='60' y='0' />
-        <use xlink:href="#bit" x='80' y='0' />
-       </svg>
-       
-       <svg width="30" height="110" id="column">
-        <use xlink:href="#bit" x='0' y='80' />
-        <use xlink:href="#bit" x='0' y='60' />
-        <use xlink:href="#bit" x='0' y='40' />
-        <use xlink:href="#bit" x='0' y='20' />
-        <use xlink:href="#bit" x='0' y='0' />
-       </svg>
-       
-       <svg width="110" height="110" id="slice" >
-       <use xlink:href="#row" x='0' y='80' />
-       <use xlink:href="#row" x='0' y='60' />
-       <use xlink:href="#row" x='0' y='40' />
-       <use xlink:href="#row" x='0' y='20' />
-       <use xlink:href="#row" x='0' y='0' />
-       </svg>
-       
-       <svg width="100" height="180" id="sheet" >
-        <use xlink:href="#lane" x='0' y='80' />
-        <use xlink:href="#lane" x='0' y='60' />
-        <use xlink:href="#lane" x='0' y='40' />
-        <use xlink:href="#lane" x='0' y='20' />
-        <use xlink:href="#lane" x='0' y='0' />
-       </svg>
+
        <svg id='xor' width="20" height="20" >
        <circle cx='10' cy='10' r='8' stroke='red' stroke-width='2' />
        <path d="M 10 2 l 0 16 M 2 10 l 16 0" stroke='red' stroke-width='2' />
@@ -101,34 +41,34 @@
 
 
        <use xlink:href="#bit" x='250' y='50' >
-        <animate attributeName="y" from="50" to="100" begin="1" dur="2s" fill='freeze' />
-        <animate attributeName="x" from="250" to="50" begin="12" dur="4s" fill='freeze' />
-        <animate attributeName="y" from="100" to="50" begin="17" dur="2s" fill='freeze' />
+        <animate attributeName="y" from="50" to="100" begin="start.click" dur="2s" fill='freeze' id='down' />
+        <animate attributeName="x" from="250" to="50" begin="l03.end+1" dur="4s" fill='freeze' id='l04'/>
+        <animate attributeName="y" from="100" to="50" begin="l04.end+1" dur="2s" fill='freeze' id='up'/>
        </use>
        <use xlink:href="#bit" x='290' y='50' >
-        <animate attributeName="y" from="50" to="100" begin="1" dur="2s" fill='freeze' />
-        <animate attributeName="x" from="290" to="250" begin="9" dur="2s" fill='freeze' />
-        <animate attributeName="x" from="-50" to="-50" begin="11" dur='0' fill='freeze' />
+        <animate attributeName="y" from="50" to="100" begin="start.click" dur="2s" fill='freeze' />
+        <animate attributeName="x" from="290" to="250" begin="l02.end+1" dur="2s" fill='freeze' id='l03'/>
+        <animate attributeName="x" from="-50" to="-50" begin="l03.end" dur='0' fill='freeze' />
        </use>
        <use xlink:href="#bit" x='310' y='50' >
-        <animate attributeName="y" from="50" to="100" begin="1" dur="2s" fill='freeze' />
-        <animate attributeName="x" from="310" to="290" begin="7" dur="1s" fill='freeze' />
-        <animate attributeName="x" from="-50" to="-50" begin="8" dur='0' fill='freeze' />
+        <animate attributeName="y" from="50" to="100" begin="start.click" dur="2s" fill='freeze' />
+        <animate attributeName="x" from="310" to="290" begin="l01.end+1" dur="1s" fill='freeze' id='l02'/>
+        <animate attributeName="x" from="-50" to="-50" begin="l02.end" dur='0' fill='freeze' />
        </use>
        <use xlink:href="#bit" x='350' y='50' >
-        <animate attributeName="y" from="50" to="100" begin="1" dur="2s" fill='freeze' />
-        <animate attributeName="x" from="350" to="310" begin="4" dur="2s" fill='freeze' />
-        <animate attributeName="x" from="-50" to="-50" begin="6" dur='0' fill='freeze' />
+        <animate attributeName="y" from="50" to="100" begin="start.click" dur="2s" fill='freeze' />
+        <animate attributeName="x" from="350" to="310" begin="down.end+2" dur="2s" fill='freeze' id='l01' />
+        <animate attributeName="x" from="-50" to="-50" begin="l01.end" dur='0' fill='freeze' />
         
        </use>
        <use xlink:href="#xor" x='-50' y='-50' >
-        <animate attributeName="x" from="310" to="310" begin="6" dur='0' fill='freeze' /> 
-        <animate attributeName="y" from="110" to="110" begin="6" dur='0' fill='freeze' /> 
-        <animate attributeName="x" from="-50" to="-50" begin="7" dur='0' fill='freeze' /> 
-        <animate attributeName="x" from="290" to="290" begin="8" dur='0' fill='freeze' /> 
-        <animate attributeName="x" from="-50" to="-50" begin="9" dur='0' fill='freeze' /> 
-        <animate attributeName="x" from="250" to="250" begin="11" dur='0' fill='freeze' /> 
-        <animate attributeName="x" from="-50" to="-50" begin="12" dur='0' fill='freeze' /> 
+        <animate attributeName="x" from="310" to="310" begin="l01.end" dur='0' fill='freeze' /> 
+        <animate attributeName="y" from="110" to="110" begin="l01.end" dur='0' fill='freeze' /> 
+        <animate attributeName="x" from="-50" to="-50" begin="l01.end+1" dur='0' fill='freeze' /> 
+        <animate attributeName="x" from="290" to="290" begin="l02.end" dur='0' fill='freeze' /> 
+        <animate attributeName="x" from="-50" to="-50" begin="l02.end+1" dur='0' fill='freeze' /> 
+        <animate attributeName="x" from="250" to="250" begin="l03.end" dur='0' fill='freeze' /> 
+        <animate attributeName="x" from="-50" to="-50" begin="l03.end+1" dur='0' fill='freeze' /> 
        </use>
 
 
@@ -138,65 +78,65 @@
        
        
        <use xlink:href="#bit" x='50' y='50' >
-        <animate attributeName="x" from="50" to="70" begin="16" dur='1' fill='freeze' />
+        <animate attributeName="x" from="50" to="70" begin="l04.end" dur='1' fill='freeze' />
        </use>
        <use xlink:href="#bit" x='70' y='50' >
-        <animate attributeName="x" from="70" to="90" begin="16" dur='1' fill='freeze' />
+        <animate attributeName="x" from="70" to="90" begin="l04.end" dur='1' fill='freeze' />
        </use>
        <use xlink:href="#bit" x='90' y='50' >
-        <animate attributeName="x" from="90" to="110" begin="16" dur='1' fill='freeze' />
+        <animate attributeName="x" from="90" to="110" begin="l04.end" dur='1' fill='freeze' />
        </use>
        <use xlink:href="#bit" x='110' y='50' >
-        <animate attributeName="x" from="110" to="130" begin="16" dur='1' fill='freeze' />
+        <animate attributeName="x" from="110" to="130" begin="l04.end" dur='1' fill='freeze' />
        </use>
        <use xlink:href="#bit" x='130' y='50' >
-        <animate attributeName="x" from="130" to="150" begin="16" dur='1' fill='freeze' />
+        <animate attributeName="x" from="130" to="150" begin="l04.end" dur='1' fill='freeze' />
        </use>
        <use xlink:href="#bit" x='150' y='50' >
-        <animate attributeName="x" from="150" to="170" begin="16" dur='1' fill='freeze' />
+        <animate attributeName="x" from="150" to="170" begin="l04.end" dur='1' fill='freeze' />
        </use>
        <use xlink:href="#bit" x='170' y='50' >
-        <animate attributeName="x" from="170" to="190" begin="16" dur='1' fill='freeze' />
+        <animate attributeName="x" from="170" to="190" begin="l04.end" dur='1' fill='freeze' />
        </use>
        <use xlink:href="#bit" x='190' y='50' >
-        <animate attributeName="x" from="190" to="210" begin="16" dur='1' fill='freeze' />
+        <animate attributeName="x" from="190" to="210" begin="l04.end" dur='1' fill='freeze' />
        </use>
        <use xlink:href="#bit" x='210' y='50' >
-        <animate attributeName="x" from="210" to="230" begin="16" dur='1' fill='freeze' />
+        <animate attributeName="x" from="210" to="230" begin="l04.end" dur='1' fill='freeze' />
        </use>
        <use xlink:href="#bit" x='230' y='50' >
-        <animate attributeName="x" from="230" to="250" begin="16" dur='1' fill='freeze' />
+        <animate attributeName="x" from="230" to="250" begin="l04.end" dur='1' fill='freeze' />
        </use>
        <use xlink:href="#bit" x='250' y='50' >
-        <animate attributeName="x" from="250" to="270" begin="16" dur='1' fill='freeze' />
+        <animate attributeName="x" from="250" to="270" begin="l04.end" dur='1' fill='freeze' />
        </use>
        <use xlink:href="#bit" x='270' y='50' >
-        <animate attributeName="x" from="270" to="290" begin="16" dur='1' fill='freeze' />
+        <animate attributeName="x" from="270" to="290" begin="l04.end" dur='1' fill='freeze' />
        </use>
        <use xlink:href="#bit" x='290' y='50' >
-        <animate attributeName="x" from="290" to="310" begin="16" dur='1' fill='freeze' />
+        <animate attributeName="x" from="290" to="310" begin="l04.end" dur='1' fill='freeze' />
        </use>
        <use xlink:href="#bit" x='310' y='50' >
-        <animate attributeName="x" from="310" to="330" begin="16" dur='1' fill='freeze' />
+        <animate attributeName="x" from="310" to="330" begin="l04.end" dur='1' fill='freeze' />
        </use>
        <use xlink:href="#bit" x='330' y='50' >
-        <animate attributeName="x" from="330" to="350" begin="16" dur='1' fill='freeze' />
+        <animate attributeName="x" from="330" to="350" begin="l04.end" dur='1' fill='freeze' />
        </use>
        <use xlink:href="#bit" x='350' y='50' >
-        <animate attributeName="x" from="350" to="410" begin="16" dur='3' fill='freeze' />
+        <animate attributeName="x" from="350" to="410" begin="l04.end" dur='3' fill='freeze' />
        </use>
        
        <text fill='black' x='150' y='30' style="font-size:18px;">
-       Old register state
-       <animate attributeName="y" begin='19' from='-30' to='-30' dur='0' fill='freeze' />
+       Alter Registerzustand
+       <animate attributeName="y" begin='up.end' from='-30' to='-30' dur='0' fill='freeze' />
        </text>
        <text fill='black' x='150' y='-30' style="font-size:18px;">
-       New register state
-       <animate attributeName="y" begin='19' from='30' to='30' dur='0' fill='freeze' />
+       Neuer Registerzustand
+       <animate attributeName="y" begin='up.end' from='30' to='30' dur='0' fill='freeze' />
        </text>
        <text fill='black' x='400' y='-30' style="font-size:18px;">
-       Output
-       <animate attributeName="y" begin='19' from='30' to='30' dur='0' fill='freeze' />
+       Ausgabe
+       <animate attributeName="y" begin='up.end' from='30' to='30' dur='0' fill='freeze' />
        </text>
        
         <use xlink:href="#bit" x='60' y='170' />
@@ -207,12 +147,22 @@
         <use xlink:href="#bit" x='140' y='170' />
         <use xlink:href="#bit" x='160' y='170' /> 
        <text fill='black' x='200' y='190' style="font-size:18px;">
-       = LFSR of length n
+       = LFSR der L&#228;nge n
        </text>
        <use xlink:href="#bit" x='160' y='230' />
        <use xlink:href="#xor" x='160' y='240' />
        <text fill='black' x='200' y='250' style="font-size:18px;">
        = XOR-Operation
        </text>
+       
+       <svg height='25' width='75' x='167' y='110' id='start' >
+        <set attributeName='x' to='-100' begin='start.click' dur='0' fill='freeze' />
+        <set attributeName='x' to='167' begin='up.end+1' dur='0' fill='freeze'  />
+        <rect height='24' width='74' x='0.5' y='0.5' rx='5' ry='5' stroke='black' fill='white' />
+         <text fill='black' x='25' y='18' style="font-size:14px;" >
+        Start
+        </text>
+        </svg>
+       
 </g>
 </svg>
