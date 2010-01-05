@@ -41,21 +41,25 @@
 
 
        <use xlink:href="#bit" x='250' y='50' >
+        <animate attributeName="x" from="250" to="250" begin="start.click" dur="0" fill='freeze' />
         <animate attributeName="y" from="50" to="100" begin="start.click" dur="2s" fill='freeze' id='down' />
         <animate attributeName="x" from="250" to="50" begin="l03.end+1" dur="4s" fill='freeze' id='l04'/>
         <animate attributeName="y" from="100" to="50" begin="l04.end+1" dur="2s" fill='freeze' id='up'/>
        </use>
        <use xlink:href="#bit" x='290' y='50' >
+        <animate attributeName="x" from="290" to="290" begin="start.click" dur="0" fill='freeze' />
         <animate attributeName="y" from="50" to="100" begin="start.click" dur="2s" fill='freeze' />
         <animate attributeName="x" from="290" to="250" begin="l02.end+1" dur="2s" fill='freeze' id='l03'/>
         <animate attributeName="x" from="-50" to="-50" begin="l03.end" dur='0' fill='freeze' />
        </use>
        <use xlink:href="#bit" x='310' y='50' >
+        <animate attributeName="x" from="310" to="310" begin="start.click" dur="0" fill='freeze' />
         <animate attributeName="y" from="50" to="100" begin="start.click" dur="2s" fill='freeze' />
         <animate attributeName="x" from="310" to="290" begin="l01.end+1" dur="1s" fill='freeze' id='l02'/>
         <animate attributeName="x" from="-50" to="-50" begin="l02.end" dur='0' fill='freeze' />
        </use>
        <use xlink:href="#bit" x='350' y='50' >
+        <animate attributeName="x" from="350" to="350" begin="start.click" dur="0" fill='freeze' />
         <animate attributeName="y" from="50" to="100" begin="start.click" dur="2s" fill='freeze' />
         <animate attributeName="x" from="350" to="310" begin="down.end+2" dur="2s" fill='freeze' id='l01' />
         <animate attributeName="x" from="-50" to="-50" begin="l01.end" dur='0' fill='freeze' />
@@ -78,65 +82,84 @@
        
        
        <use xlink:href="#bit" x='50' y='50' >
+        <set attributeName="x" to="50" begin="start.click" dur="0" fill='freeze' />
         <animate attributeName="x" from="50" to="70" begin="l04.end" dur='1' fill='freeze' />
        </use>
        <use xlink:href="#bit" x='70' y='50' >
+        <set attributeName="x" to="70" begin="start.click" dur="0" fill='freeze' />
         <animate attributeName="x" from="70" to="90" begin="l04.end" dur='1' fill='freeze' />
        </use>
        <use xlink:href="#bit" x='90' y='50' >
+        <set attributeName="x" to="90" begin="start.click" dur="0" fill='freeze' />
         <animate attributeName="x" from="90" to="110" begin="l04.end" dur='1' fill='freeze' />
        </use>
        <use xlink:href="#bit" x='110' y='50' >
+        <set attributeName="x" to="110" begin="start.click" dur="0" fill='freeze' />
         <animate attributeName="x" from="110" to="130" begin="l04.end" dur='1' fill='freeze' />
        </use>
        <use xlink:href="#bit" x='130' y='50' >
+        <set attributeName="x" to="130" begin="start.click" dur="0" fill='freeze' />
         <animate attributeName="x" from="130" to="150" begin="l04.end" dur='1' fill='freeze' />
        </use>
        <use xlink:href="#bit" x='150' y='50' >
+        <set attributeName="x" to="150" begin="start.click" dur="0" fill='freeze' />
         <animate attributeName="x" from="150" to="170" begin="l04.end" dur='1' fill='freeze' />
        </use>
        <use xlink:href="#bit" x='170' y='50' >
+        <set attributeName="x" to="170" begin="start.click" dur="0" fill='freeze' />
         <animate attributeName="x" from="170" to="190" begin="l04.end" dur='1' fill='freeze' />
        </use>
        <use xlink:href="#bit" x='190' y='50' >
+        <set attributeName="x" to="190" begin="start.click" dur="0" fill='freeze' />
         <animate attributeName="x" from="190" to="210" begin="l04.end" dur='1' fill='freeze' />
        </use>
        <use xlink:href="#bit" x='210' y='50' >
+        <set attributeName="x" to="210" begin="start.click" dur="0" fill='freeze' />
         <animate attributeName="x" from="210" to="230" begin="l04.end" dur='1' fill='freeze' />
        </use>
        <use xlink:href="#bit" x='230' y='50' >
+        <set attributeName="x" to="230" begin="start.click" dur="0" fill='freeze' />
         <animate attributeName="x" from="230" to="250" begin="l04.end" dur='1' fill='freeze' />
        </use>
        <use xlink:href="#bit" x='250' y='50' >
+        <set attributeName="x" to="250" begin="start.click" dur="0" fill='freeze' />
         <animate attributeName="x" from="250" to="270" begin="l04.end" dur='1' fill='freeze' />
        </use>
        <use xlink:href="#bit" x='270' y='50' >
+        <set attributeName="x" to="270" begin="start.click" dur="0" fill='freeze' />
         <animate attributeName="x" from="270" to="290" begin="l04.end" dur='1' fill='freeze' />
        </use>
        <use xlink:href="#bit" x='290' y='50' >
+        <set attributeName="x" to="290" begin="start.click" dur="0" fill='freeze' />
         <animate attributeName="x" from="290" to="310" begin="l04.end" dur='1' fill='freeze' />
        </use>
        <use xlink:href="#bit" x='310' y='50' >
+        <set attributeName="x" to="310" begin="start.click" dur="0" fill='freeze' />
         <animate attributeName="x" from="310" to="330" begin="l04.end" dur='1' fill='freeze' />
        </use>
        <use xlink:href="#bit" x='330' y='50' >
+        <set attributeName="x" to="330" begin="start.click" dur="0" fill='freeze' />
         <animate attributeName="x" from="330" to="350" begin="l04.end" dur='1' fill='freeze' />
        </use>
        <use xlink:href="#bit" x='350' y='50' >
+        <set attributeName="x" to="350" begin="start.click" dur="0" fill='freeze' />
         <animate attributeName="x" from="350" to="410" begin="l04.end" dur='3' fill='freeze' />
        </use>
        
        <text fill='black' x='150' y='30' style="font-size:18px;">
        Alter Registerzustand
-       <animate attributeName="y" begin='up.end' from='-30' to='-30' dur='0' fill='freeze' />
+       <set attributeName="opacity" to="1" begin="start.click" dur="0" fill='freeze' />
+       <set attributeName="opacity" begin='up.end'  to='0' dur='0' fill='freeze' />
        </text>
-       <text fill='black' x='150' y='-30' style="font-size:18px;">
+       <text fill='black' x='150' y='30' style="font-size:18px;" opacity='0' >
        Neuer Registerzustand
-       <animate attributeName="y" begin='up.end' from='30' to='30' dur='0' fill='freeze' />
+       <set attributeName="opacity" to="0" begin="start.click" dur="0" fill='freeze' />
+       <set attributeName="opacity" begin='up.end'  to='1' dur='0' fill='freeze' />
        </text>
-       <text fill='black' x='400' y='-30' style="font-size:18px;">
+       <text fill='black' x='400' y='30' style="font-size:18px;" opacity='0' >
        Ausgabe
-       <animate attributeName="y" begin='up.end' from='30' to='30' dur='0' fill='freeze' />
+       <set attributeName="opacity" to="0" begin="start.click" dur="0" fill='freeze' />
+       <set attributeName="opacity" begin='up.end'  to='1' dur='0' fill='freeze' />
        </text>
        
         <use xlink:href="#bit" x='60' y='170' />

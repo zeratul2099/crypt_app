@@ -95,7 +95,7 @@
        >
 <rect x='0' y='0' width='800' height='800' fill='white' />
 <text fill='black' x='10' y='30' style="font-size:16px;">
-Single Bit:
+Bit:
 </text>
 <use xlink:href="#bit" x='100' y='10' />
 
