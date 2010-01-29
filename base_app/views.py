@@ -34,7 +34,6 @@ def list(request, algo_type):
 def info(request, algo, page):
     title = ''
     text = ''
-    svg = ''
     user_agent = request.META['HTTP_USER_AGENT']
     if (user_agent.find('WebKit') != -1 or user_agent.find('Presto') != -1 or user_agent.find('Gecko') != -1):
         pictype = "svg"
@@ -42,7 +41,6 @@ def info(request, algo, page):
         pictype = "gif"
     algo_object = get_object_or_404(Algo, shortTitle=algo)
     info_page = get_list_or_404(InfoPage, algo=algo_object, shortTitle=page)[0]
-    svg = info_page.image+"."+pictype
     main_page = get_list_or_404(InfoPage, masterPage=None, algo=algo_object)[0]
 
     # generating menu list
@@ -73,7 +71,6 @@ def info(request, algo, page):
     elif algo_object.type == 'hash':
         type_long = "Hash-Algorithmen"
     return render_to_response("infopage.html", { 'infopage' : info_page,
-                                                'svg' : svg,
                                                 'pictype' : pictype,
                                                 'navlist':nav_list,
                                                 'algo_type' : type_long,

@@ -56,9 +56,9 @@
         <td width='75%' valign='top' align='center' ><h3>{{ infopage.i_caption|umlauts|safe }}</h3></td></tr>
         <tr>{% endif %}<td width='75%' valign='top' align='center' >
         {% ifequal pictype "svg" %}
-        <object type="image/svg+xml" data='/content/{{ infopage.algo.type }}/{{ svg }}' width="{{ infopage.i_width }}" height="{{ infopage.i_height }}"></object>
+        <object type="image/svg+xml" data='/content/{{ infopage.algo.type }}/{{ infopage.image }}.{{ pictype }}' width="{{ infopage.i_width }}" height="{{ infopage.i_height }}"></object>
         {% else %}
-        <img src='/content/{{ infopage.algo.type }}/{{ svg }}' width="{{ infopage.i_width }}" height="{{ infopage.i_height }}" ></img>
+        <img src='/content/{{ infopage.algo.type }}/{{ infopage.image }}.{{ pictype }}' width="{{ infopage.i_width }}" height="{{ infopage.i_height }}" ></img>
         {% endifequal %}
         </td>
     </tr><tr>
