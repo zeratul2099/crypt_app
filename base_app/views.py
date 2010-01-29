@@ -45,27 +45,6 @@ def info(request, algo, page):
     svg = info_page.image+"."+pictype
     main_page = get_list_or_404(InfoPage, masterPage=None, algo=algo_object)[0]
 
-    #~ nav = "<ul id='menu'>"
-    #~ if page == "overview":
-        #~ nav +="<li id='active' >"+main_page.title+"</li><ul>"
-    #~ else:
-        #~ nav +="<li><a href='../../"+algo_object.shortTitle+"/"
-        #~ nav += main_page.shortTitle+"/'>"+main_page.title+"</a></li><ul>"
-    #~ for p in InfoPage.objects.filter(algo=algo_object, masterPage=main_page).order_by("order"):
-        #~ if p.shortTitle == page:
-            #~ nav +="<li id='active'>"+p.title+"</li><ul>"
-        #~ else:
-            #~ nav += "<li><a href='../../"+algo_object.shortTitle+"/"
-            #~ nav += p.shortTitle+"/'>"+p.title+"</a></li><ul>"
-        #~ for q in InfoPage.objects.filter(algo=algo_object, masterPage=p).order_by("order"):
-            #~ if q.shortTitle == page:
-                #~ nav += "<li id='active'>"+q.title+"</li>"
-            #~ else:
-                #~ nav += "<li><a href='../../"+algo_object.shortTitle+"/"
-                #~ nav += q.shortTitle+"/'>"+q.title+"</a></li>"
-        #~ nav += "</ul>"
-    #~ nav += "</ul></ul>"
-
     # generating menu list
     nav_list = []
     if page == "overview":
