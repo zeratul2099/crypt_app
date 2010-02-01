@@ -15,59 +15,114 @@
 {% endblock %}
 {% block content %}
 <link rel="index" href="../overview/"/>
+
 {# ausprobieren #}
 <div class='leftspace' >
 {% ifequal infopage.algo.type "crypto" %}
-<span class='trylink'><a href='{% url crypto.views.algo infopage.algo.shortTitle %}/'>{{ infopage.algo.name }} ausprobieren</a></span>
+<span class='trylink'>
+    <a href='{% url crypto.views.algo infopage.algo.shortTitle %}/'>
+        {{ infopage.algo.name }} ausprobieren
+    </a>
+</span>
 {% else %}{% ifequal infopage.algo.type "stego" %}
-<span class='trylink'><a href='{% url stego.views.algo infopage.algo.shortTitle %}/'>{{ infopage.algo.name }} ausprobieren</a></span>
+<span class='trylink'>
+    <a href='{% url stego.views.algo infopage.algo.shortTitle %}/'>
+        {{ infopage.algo.name }} ausprobieren
+    </a>
+</span>
 {% else %}{% ifequal infopage.algo.type "hash" %}
-<span class='trylink'><a href='{% url hash.views.algo infopage.algo.shortTitle %}/'>{{ infopage.algo.name }} ausprobieren</a></span>
+<span class='trylink'>
+    <a href='{% url hash.views.algo infopage.algo.shortTitle %}/'>
+        {{ infopage.algo.name }} ausprobieren
+    </a>
+</span>
 {% else %}<br>
 {% endifequal %}{% endifequal %}{% endifequal %}
 </div>
+
+{# breadcrumbsnavigation #}
 <p class='nav' >
 {% ifequal infopage.shortTitle "overview" %}
     {% ifequal infopage.algo.type "basics" %}
-&gt; <a href='{% url base_app.views.base %}'>Kryptos</a> &gt; <a href='{% url base_app.views.list infopage.algo.shortTitle %}'>{{ infopage.algo.name }}</a> &gt; Grundlagen
+    &gt; <a href='{% url base_app.views.base %}'>Kryptos</a> 
+    &gt; <a href='{% url base_app.views.list infopage.algo.shortTitle %}'>
+            {{ infopage.algo.name }}
+        </a> 
+    &gt; Grundlagen
     {% else %}
-&gt; <a href='{% url base_app.views.base %}'>Kryptos</a> &gt; <a href='{% url base_app.views.list infopage.algo.type %}'>{{ algo_type }}</a> &gt; {{ infopage.algo.name }}
+    &gt; <a href='{% url base_app.views.base %}'>Kryptos</a> 
+    &gt; <a href='{% url base_app.views.list infopage.algo.type %}'>
+            {{ algo_type }}
+        </a> 
+    &gt; {{ infopage.algo.name }}
     {% endifequal %}
 {% else %}
     {% ifequal infopage.algo.type "basics" %}
-&gt; <a href='{% url base_app.views.base %}'>Kryptos</a> &gt; <a href='{% url base_app.views.list infopage.algo.shortTitle %}'>{{ infopage.algo.name }}</a> &gt; <a href='{% url base_app.views.info infopage.algo.shortTitle "overview" %}/'>Grundlagen</a> &gt; {{ infopage.title|safe }}
+    &gt; <a href='{% url base_app.views.base %}'>Kryptos</a> 
+    &gt; <a href='{% url base_app.views.list infopage.algo.shortTitle %}'>
+            {{ infopage.algo.name }}
+         </a> 
+    &gt; <a href='{% url base_app.views.info infopage.algo.shortTitle "overview" %}/'>
+            Grundlagen
+        </a> 
+    &gt; {{ infopage.title|safe }}
     {% else %}
-&gt; <a href='{% url base_app.views.base %}'>Kryptos</a> &gt; <a href='{% url base_app.views.list infopage.algo.type %}'>{{ algo_type }}</a> &gt; <a href='{% url base_app.views.info infopage.algo.shortTitle "overview" %}/'>{{ infopage.algo.name }}</a> &gt; {{ infopage.title|safe }}
+    &gt; <a href='{% url base_app.views.base %}'>Kryptos</a> 
+    &gt; <a href='{% url base_app.views.list infopage.algo.type %}'>
+            {{ algo_type }}
+        </a> 
+    &gt; <a href='{% url base_app.views.info infopage.algo.shortTitle "overview" %}/'>
+            {{ infopage.algo.name }}
+        </a> 
+    &gt; {{ infopage.title|safe }}
     {% endifequal %}
 {% endifequal %}
 </p>
+
+{# content #}
 <div class='content' >
 <table width='100%' >
     <tr>
+    
+        {# menu #}
         <th width='25%' rowspan='3' valign='top' align='left' >
-        <ul id='menu'>
-    {% autoescape off %}
-    {{ navlist|unordered_list|umlauts }}
-    {% endautoescape %}
-    </ul>
+            <ul id='menu'>
+                {% autoescape off %}
+                {{ navlist|unordered_list|umlauts }}
+                {% endautoescape %}
+            </ul>
         
         </th>
+        {# caption of image #}
         {% if infopage.i_caption %}
-        <td width='75%' valign='top' align='center' ><h3>{{ infopage.i_caption|umlauts|safe }}</h3></td></tr>
-        <tr>{% endif %}<td width='75%' valign='top' align='center' >
+        <td width='75%' valign='top' align='center' >
+            <h3>{{ infopage.i_caption|umlauts|safe }}</h3>
+        </td>
+    </tr>
+    <tr>{% endif %}
+        <td width='75%' valign='top' align='center' >
+        
+        {# choose image type #}
         {% ifequal pictype "svg" %}
-        <object type="image/svg+xml" data='/content/{{ infopage.algo.type }}/{{ infopage.image }}.{{ pictype }}' width="{{ infopage.i_width }}" height="{{ infopage.i_height }}"></object>
+            <object type="image/svg+xml" 
+                    data='/content/{{ infopage.algo.type }}/{{ infopage.image }}.{{ pictype }}' 
+                    width="{{ infopage.i_width }}" height="{{ infopage.i_height }}">
+            </object>
         {% else %}
-        <img src='/content/{{ infopage.algo.type }}/{{ infopage.image }}.{{ pictype }}' width="{{ infopage.i_width }}" height="{{ infopage.i_height }}" ></img>
+        <img src='/content/{{ infopage.algo.type }}/{{ infopage.image }}.{{ pictype }}' 
+             width="{{ infopage.i_width }}" height="{{ infopage.i_height }}" >
+        </img>
         {% endifequal %}
         </td>
-    </tr><tr>
-        <td width='75%' valign='top'><div class='info'><span class='intext' >{{ infopage.text|umlauts|safe }}</span></div></td>
     </tr>
-    <tr><td>
+    <tr>
+        <td width='75%' valign='top'>
+            
+            {# the textbox #}
+            <div class='info'><span class='intext' >{{ infopage.text|umlauts|safe }}</span></div>
+        </td>
+    </tr>
 
-    </td>
-    </tr>
 </table>
 </div>
 
