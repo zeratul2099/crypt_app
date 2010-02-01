@@ -1,7 +1,6 @@
 # encoding: utf-8
 from django import template
 
-
 def umlauts(var):
     var = var.replace(u"ü", u"&uuml;")
     var = var.replace(u"Ü", u"&Uuml;")
