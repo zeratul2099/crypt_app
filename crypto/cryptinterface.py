@@ -27,6 +27,7 @@ def keygen():
 
 
 def aesEncrypt(request):
+    print "call"
     plain_text = request.POST["message"]
     extend = 16 - (len(plain_text) % 16)
     for i in range(extend):
