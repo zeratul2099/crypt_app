@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+{% load moretags %}
 {% block titleline %}{{ algo.name }}{% endblock %}
 {% block title %}{{ algo.name }}{% endblock %}
 
@@ -21,7 +21,7 @@
         <td><b><img width='32' height='32' border='0' src='/content/icons/clue.png' ></img> Hinweise</b></td>
     </tr>
     <tr>
-        <td class='manual'><span class='intext'>{{ manual.text|safe }}</span></td>
+        <td class='manual'><span class='intext'>{{ manual.text|umlauts|safe }}</span></td>
     </tr>
 </table>
 {% endblock %}
