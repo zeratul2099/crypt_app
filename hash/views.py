@@ -42,11 +42,9 @@ def algo(request, algo):
         elif algo == "md5":
             output += "MD5-Hash:\n"
             hash_val = hashlib.md5(clear_text).hexdigest()
-            #output += hash_val 
         elif algo == "sha1":
             output += "SHA-1-Hash:\n"
             hash_val = hashlib.sha1(clear_text).hexdigest()
-            #output += hash_val
         elif algo == "sha2":
             form = Sha2Form(request.POST, request.FILES)
             hashlen = request.POST['hashlen']
