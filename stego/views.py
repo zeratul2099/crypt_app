@@ -38,10 +38,9 @@ def algo(request, algo):
                'bs' : "png", }
     
     if request.method == 'POST':
+        
         q = Queue()
         # embedding
-
-        
         if "submit1" in request.POST:
             
             algoDict = { 'cpt' : cptEmbed,
@@ -73,7 +72,7 @@ def algo(request, algo):
                     return createResponse(retval, type)
         # extracting        
         elif "submit2" in request.POST:
-            
+             
             algoDict = { 'cpt' : cptExtract,
                            'f5' : f5Extract,
                            'lsb' : lsbExtract,
