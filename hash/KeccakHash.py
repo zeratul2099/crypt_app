@@ -6,10 +6,10 @@ from KeccakState import KeccakState as State
 class KeccakHash(object):
     #number of bytes per integer, on 32bit platforms this is 4
     num_b_i = 4
-    r = 224
+    r = 256
     rb = r/8
     ri = rb/num_b_i
-    c = 576
+    c = 544
     d = 28
     hash_len = 224
     num_rounds = 22
@@ -24,8 +24,8 @@ class KeccakHash(object):
     def kezzak_f(self, state):
         # 22 rounds of kezzak
         for i in range(self.num_rounds):
-            state.apply_chi()
             state.apply_theta()
+            state.apply_chi()
             state.apply_pi()
             state.apply_rho()
             state.apply_iota(i)
