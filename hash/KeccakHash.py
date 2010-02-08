@@ -19,16 +19,12 @@ class KeccakHash(object):
     def __init__(self, message):
         print message
         self.state = State(self.r, self.c, self.d, self.num_b_i, self.num_rounds, self.hash_len)
-        #file = open(self.filename, "rb").read()
-        #message = "Hello World! This is an test-message with Spam & Eggs and many vikings"
-        #message ="\x01\x01"
-        #state.set_lane(3,3,0x12345678)
         self.absorb(self.state, message)
         self.squeeze(self.state)
         print self.state.digest
     
     def kezzak_f(self, state):
-        # 18 rounds of kezzak
+        # 22 rounds of kezzak
         for i in range(self.num_rounds):
             state.apply_chi()
             state.apply_theta()
@@ -99,7 +95,6 @@ class KeccakHash(object):
     
     def hexdigest(self):
         hex_dig = ""
-        # TODO
         for h in self.state.digest:
             hex_dig += hex(h).lstrip('0x').rstrip('L')
         return hex_dig
