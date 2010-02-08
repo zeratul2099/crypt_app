@@ -4,7 +4,6 @@ import numpy as np
 from KeccakState import KeccakState as State
 
 class KeccakHash(object):
-
     #number of bytes per integer, on 32bit platforms this is 4
     num_b_i = 4
     r = 224
@@ -14,8 +13,7 @@ class KeccakHash(object):
     d = 28
     hash_len = 224
     num_rounds = 22
-    filename = "views.pyc"
-    #filename = "test.pdf"
+
     def __init__(self, message):
         print message
         self.state = State(self.r, self.c, self.d, self.num_b_i, self.num_rounds, self.hash_len)
@@ -51,7 +49,6 @@ class KeccakHash(object):
                 d_enc = d_enc << 1
                 rb_dec = rb_dec >> 1
                 rb_enc = rb_enc << 1
-        
         message += chr(d_enc)
         message += chr(rb_enc)
         # filling message to a multipy of r
@@ -86,9 +83,6 @@ class KeccakHash(object):
     def squeeze(self, state):
         if self.hash_len <= self.r:
            self.state.digest = np.uint32(self.state.state[0:7]) 
-        #for z in range(hash_len/8)
-        #pass
-
 
     def digest(self):
         return self.state.digest
