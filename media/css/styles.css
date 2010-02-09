@@ -54,8 +54,8 @@ p.content
             height:1.4em;
             margin-top:-1.4em;
         }
-.intext a:link { font-style:bold;text-decoration:none; color:green;}
-.intext a:visited { font-style:bold;text-decoration:none;color:green; }
+.intext a:link { font-style:bold;text-decoration:none; color:blue;}
+.intext a:visited { font-style:bold;text-decoration:none;color:blue; }
 .intext a:hover { color:red;}
 .intext a:active { text-decoration:none; }
 .intext a:focus { text-decoration:none; }
