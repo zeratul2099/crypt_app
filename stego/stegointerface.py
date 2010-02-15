@@ -4,17 +4,14 @@ import Queue as Q
 import libstego, libstegofile
 
 def cptEmbed(q):
-    print "Child process"
     post, filename = q.get()
     rgb_data = libstegofile.rgb_data_t()
     stego_data = libstegofile.rgb_data_t()
     png_struct = libstegofile.png_internal_data_t()
-    print "received request, opening file..."
     retcode = libstegofile.io_png_read(filename,rgb_data, png_struct)
     if retcode == 0:
         pass
     else:
-        print "File open failed"
         q.put(-1)
         return -1
     para = libstegofile.cpt_parameter()
@@ -23,14 +20,10 @@ def cptEmbed(q):
     para.pwlen = len(para.password)
     para.block_width = int(post['width'])
     para.block_height = int(post['height'])
-    print "file opened, embedding..."
     retcode = libstego.cpt_embed(rgb_data, stego_data, message, len(message), para)
-    print "integrating..."
     libstegofile.io_png_integrate(png_struct, stego_data)
-    print "writing..."
     libstegofile.io_png_write(filename, png_struct)
     q.put(filename)
-    print "Child process finished"
                     
 
 
@@ -161,7 +154,6 @@ def gifShuffleEmbed(q):
     q.put(filename)
 
 def gifShuffleExtract(q):
-    print "GifExtract..."
     post, filename = q.get()
     palette_data = libstegofile.palette_data_t()
     gif_struct = libstegofile.gif_internal_data_t()
@@ -173,12 +165,9 @@ def gifShuffleExtract(q):
     retcode = libstegofile.io_gif_read(filename, palette_data, gif_struct)
     if retcode == 0:
         pass
-        print "Valid gif at extracting"
     else:
         return -1
-    print "Extracting..."
     libstego.gifshuffle_extract(palette_data, stegomsg, stegolen, para)
-    print "Message: "+ str(libstego.charp_value(stegomsg))
     q.put(str(libstego.charp_value(stegomsg)))
 
 def bsEmbed(q):
