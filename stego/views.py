@@ -10,6 +10,8 @@ from django.shortcuts import get_object_or_404, render_to_response
 from django.template import Context, loader
 from django.core.servers.basehttp import FileWrapper
 from processing import Process, Pipe, Queue
+# alternative for python 2.6
+#from multiprocessing import Process, Pipe, Queue
 import Queue as Q
 import os
 from stegointerface import *
