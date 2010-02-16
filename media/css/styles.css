@@ -71,15 +71,16 @@ a:focus { text-decoration:none; }
         text-decoration:none;
         color:blue;
         padding-left: 18px;
+        display: inline-block;
         background: transparent url(/content/icons/external.png) no-repeat center left;
         }
    
-
         
 .external a:hover {
         color:red;
         background: transparent url(/content/icons/external_hover.png) no-repeat center left;
         }
+
 .external a:active { text-decoration:none; }
 .external a:focus { text-decoration:none; }
 
@@ -93,8 +94,9 @@ a:focus { text-decoration:none; }
 .infolink a:link, .infolink a:visited {
     font-style:bold;
     text-decoration:none;
-    color:#666666;
+    #color:#666666;
     padding-left: 18px;
+    display: inline-block;
     background: transparent url(/content/icons/about.png) no-repeat center left;
     }
 .infolink a:hover {
@@ -107,6 +109,7 @@ a:focus { text-decoration:none; }
     text-decoration:none;
     color:#666666;
     padding-left: 18px;
+    display: inline-block;
     background: transparent url(/content/icons/info.png) no-repeat center left;
     }
 
@@ -117,8 +120,9 @@ a:focus { text-decoration:none; }
 .trylink a:link, .trylink a:visited {
     font-style:bold;
     text-decoration:none;
-    color:#666666;
+    #color:#666666;
     padding-left: 18px;
+    display: inline-block;
     background: transparent url(/content/icons/try.png) no-repeat center left;
     }
 .trylink a:hover {

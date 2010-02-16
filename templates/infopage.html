@@ -4,13 +4,13 @@
 {% ifequal infopage.shortTitle "overview" %}
 {{ infopage.algo.name }}
 {% else %}
-{{ infopage.algo.name }}: {{ infopage.title|safe }}
+{{ infopage.algo.name }}: {{ infopage.title|umlauts|safe }}
 {% endifequal %}
 {% endblock %}
 
 {% block title %}
 {% ifequal infopage.shortTitle "overview" %}{{ infopage.algo.name }}{% else %}
-{{ infopage.algo.name }}: {{ infopage.title|safe }}
+{{ infopage.algo.name }}: {{ infopage.title|umlauts|safe }}
 {% endifequal %}
 {% endblock %}
 {% block content %}
@@ -65,7 +65,7 @@
     &gt; <a href='{% url base_app.views.info infopage.algo.shortTitle "overview" %}/'>
             Grundlagen
         </a> 
-    &gt; {{ infopage.title|safe }}
+    &gt; {{ infopage.title|umlauts|safe }}
     {% else %}
     &gt; <a href='{% url base_app.views.base %}'>Kryptos</a> 
     &gt; <a href='{% url base_app.views.list infopage.algo.type %}'>
@@ -74,7 +74,7 @@
     &gt; <a href='{% url base_app.views.info infopage.algo.shortTitle "overview" %}/'>
             {{ infopage.algo.name }}
         </a> 
-    &gt; {{ infopage.title|safe }}
+    &gt; {{ infopage.title|umlauts|safe }}
     {% endifequal %}
 {% endifequal %}
 </p>
