@@ -1,6 +1,4 @@
 #!/bin/bash
 
-git archive --output=../crypt_app.tar master
-cd ..
-bzip2 crypt_app.tar
+git archive --output=../test/crypt_app.tar master
 exit 0

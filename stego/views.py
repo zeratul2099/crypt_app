@@ -12,7 +12,7 @@ from django.core.servers.basehttp import FileWrapper
 try:
     from processing import Process, Pipe, Queue
 except ImportError:
-    from multiprocessing import Process, Pipe, Queue
+    from multiprocessing import Process, Pipe, Queue as Q
 
 import Queue as Q
 import os

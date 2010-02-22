@@ -215,3 +215,4 @@ def bsExtract(q):
     libstego.battlesteg_extract(rgb_data, stegomsg, stegolen, para)
     msglen = libstego.intp_value(stegolen)
     q.put((str(libstego.charp_value(stegomsg)))[0:msglen])
+
