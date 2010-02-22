@@ -1,5 +1,8 @@
 # encoding: utf-8
-from processing import Process, Pipe, Queue
+try:
+    from processing import Process, Pipe, Queue
+except ImportError:
+    from multiprocessing import Process, Pipe, Queue
 import Queue as Q
 import libstego, libstegofile
 
