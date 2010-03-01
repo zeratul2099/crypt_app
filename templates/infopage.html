@@ -109,13 +109,9 @@
                     width="{{ infopage.i_width }}" height="{{ infopage.i_height }}">
             </object>
         {% else %}
-        <script src="/content/svg.js" data-path="/content/" ></script>
-        <object id="testSVG" src="/content/{{ infopage.algo.type }}/{{ infopage.image }}.svg"
-        classid="image/svg+xml" width="{{ infopage.i_width }}" height="{{ infopage.i_height }}">
-        <!--<img src='/content/{{ infopage.algo.type }}/{{ infopage.image }}.{{ pictype }}' 
+        <img src='/content/{{ infopage.algo.type }}/{{ infopage.image }}.{{ pictype }}' 
              width="{{ infopage.i_width }}" height="{{ infopage.i_height }}" >
-        </img>-->
-        </object>
+        </img>
         {% endifequal %}
         </td>
     </tr>
