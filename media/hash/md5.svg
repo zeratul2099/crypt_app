@@ -257,7 +257,7 @@
 16*32 Bit der
 </text>
 <text fill='black' x='5' y='210' style="font-size:12px;">
-Nachricht (512 bit)
+Nachricht (512 Bit)
 </text>
 <use xlink:href='#mn' x='5' y='220' />
 <text fill='black' x='45' y='240'>
@@ -278,7 +278,7 @@ Nachricht (512 bit)
 16*32 Bit
 </text>
 <text fill='black' x='5' y='290' style="font-size:12px;">
-Konstanten (512 bit)
+Konstanten (512 Bit)
 </text>
 <use xlink:href='#kn' x='5' y='300' />
 <text fill='black' x='45' y='320'>
@@ -321,28 +321,8 @@ Neue Runde
 = MD5-Zustand/Hash-Wert
 </text>
 <text fill='black' x='685' y='140' style="font-size:14px;" >
-(128 bit)
+(128 Bit)
 </text>
-<!--
-<use xlink:href='#m' x='550' y='150' />
-<text fill='black' x='580' y='170'>
-...
-</text>
-<use xlink:href='#m' x='590' y='150' />
-<use xlink:href='#m' x='610' y='150' />
-<text fill='black' x='645' y='170' style="font-size:14px;" >
-= 512 bit message block
-</text>
-
-<use xlink:href='#k' x='550' y='200' />
-<text fill='black' x='580' y='220'>
-...
-</text>
-<use xlink:href='#k' x='590' y='200' />
-<use xlink:href='#k' x='610' y='200' />
-<text fill='black' x='645' y='220' style="font-size:14px;" >
-= 512 bit constant block
-</text>-->
 
 <rect x='550' y='250' width="20" height="100" rx="10" ry="10"
       fill="white" stroke="black" />
@@ -353,7 +333,7 @@ Neue Runde
 
 <use xlink:href='#add' x='550' y='150' />
 <text fill='black' x='645' y='170' style="font-size:14px;" >
-= modulo 2^32 Addition
+= Modulo 2^32 Addition
 </text>
 
 <use xlink:href='#shift' x='550' y='200' />

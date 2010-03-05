@@ -9,7 +9,7 @@
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:xlink="http://www.w3.org/1999/xlink"
-   width="200mm"
+   width="203mm"
    height="135mm"
    id="svg2"
 >
@@ -248,10 +248,10 @@
 
 <!-- message -->
 <text fill='black' x='510' y='280' style="font-size:12px;">
-16*32 bit of
+16*32 Bit der
 </text>
 <text fill='black' x='510' y='290' style="font-size:12px;">
-message (512 bit)
+Nachricht (512 Bit)
 </text>
 <use xlink:href='#m0' x='510' y='300' >
 <animate attributeName='x' from='510' to='510' begin='start.begin' dur='0' fill='freeze' />
@@ -272,7 +272,7 @@ message (512 bit)
 </use>
 <!-- constant -->
 <text fill='black' x='510' y='360' style="font-size:12px;">
-16*32 bit constant
+16*32-Bit-Konstante
 </text>
 <text fill='black' x='510' y='370' style="font-size:12px;">
 k = 0x5A827999
@@ -321,23 +321,23 @@ k = 0xCA62C1D6
 
 
 <text fill='black' x='200' y='15'  style="font-size:18px;" >
-Old state
+Alter Zustand
 </text>
 <text fill='black' x='120' y='520' opacity='0' style="font-size:18px;" >
 <set attributeName='opacity' to='0' begin='start.begin' />
 <set attributeName='opacity' to='1' begin='a08x.end' />
-New state for next round
+Neuer Zustand für n&#228;chste Runde
 </text>
 <text fill='black' x='140' y='190' opacity='0' style="font-size:38px;" >
 <set attributeName='opacity' to='0' begin='start.begin' />
 <set attributeName='opacity' to='1' begin='a09.end' />
-New round
+Neue Runde
 </text>
 <!-- Legend -->
 
 <use xlink:href='#bit' x='600' y='50' />
 <text fill='black' x='645' y='70' style="font-size:14px;" >
-= 32 bit value
+= 32-Bit-Wert
 </text>
 
 <use xlink:href='#a' x='520' y='100' />
@@ -347,23 +347,23 @@ New round
 <use xlink:href='#e' x='600' y='100' />
 
 <text fill='black' x='645' y='120' style="font-size:14px;" >
-= SHA-1 state / hash value
+= SHA-1-Zustand/Hash-Wert
 </text>
 <text fill='black' x='685' y='140' style="font-size:14px;" >
-(128 bit)
+(128 Bit)
 </text>
    
 <path d='M 500 5 l 0 255 350 0' stroke='black' stroke-dasharray="10,10" />
 
 <use xlink:href='#add' x='600' y='170' />
 <text fill='black' x='645' y='185' style="font-size:14px;" >
-= modulo 2<tspan style="baseline-shift:super;font-size:10px">32</tspan> addition
+= Modulo 2<tspan style="baseline-shift:super;font-size:10px">32</tspan> Addition
 </text>
 
 <use xlink:href='#shift' x='600' y='220' />
 
 <text fill='black' x='645' y='235' style="font-size:14px;" >
-= Leftrotation
+= Linksrotation
 </text>
 <svg x='0' y='0' width='1' height='1' >
 <set attributeName='x' to='0' dur='1' id='start' begin='round1.click;round2.click;round3.click;round4.click' />
@@ -374,7 +374,7 @@ New round
 <set attributeName='x' to='5' begin='a09.end' />
 <rect height='24' width='99' x='0.5' y='0.5' rx='5' ry='5' stroke='black' fill='white' />
  <text fill='black' x='5' y='18' style="font-size:14px;" >
-Round 0-19
+Runde 0-19
 </text>
 </svg>
 
@@ -383,7 +383,7 @@ Round 0-19
 <set attributeName='x' to='115' begin='a09.end' />
 <rect height='24' width='99' x='0.5' y='0.5' rx='5' ry='5' stroke='black' fill='white' />
  <text fill='black' x='5' y='18' style="font-size:14px;" >
-Round 20-39
+Runde 20-39
 </text>
 </svg>
 
@@ -392,7 +392,7 @@ Round 20-39
 <set attributeName='x' to='225' begin='a09.end' />
 <rect height='24' width='99' x='0.5' y='0.5' rx='5' ry='5' stroke='black' fill='white' />
  <text fill='black' x='5' y='18' style="font-size:14px;" >
-Round 40-59
+Runde 40-59
 </text>
 </svg>
 
@@ -401,7 +401,7 @@ Round 40-59
 <set attributeName='x' to='335' begin='a09.end' />
 <rect height='24' width='99' x='0.5' y='0.5' rx='5' ry='5' stroke='black' fill='white' />
  <text fill='black' x='5' y='18' style="font-size:14px;" >
-Round 60-79
+Runde 60-79
 </text>
 </svg>
 </g>

@@ -210,7 +210,10 @@ f = Keccak-f
 </text> 
 <use xlink:href="#bit" x='30' y='340' />
 <text fill='black' x='70' y='355' style="font-size:14px;">
-= Nachrichtenblock der L&#228;nge r
+= Nachrichtenblock
+</text>
+<text fill='black' x='85' y='370' style="font-size:14px;">
+der L&#228;nge r
 </text>
 <use xlink:href="#xor" x='30' y='380' />
 <text fill='black' x='70' y='400' style="font-size:14px;">

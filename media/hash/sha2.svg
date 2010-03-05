@@ -398,17 +398,17 @@
 </use>
 <!-- text  -->
 <text fill='black' x='200' y='15'  style="font-size:18px;" >
-Old state
+Alter Zustand
 </text>
 <text fill='black' x='120' y='550' opacity='0' style="font-size:18px;" >
 <set attributeName='opacity' to='0' begin='start.begin' />
 <set attributeName='opacity' to='1' begin='a06x.end' />
-New state for next round
+Neuer Zustand f&#252;r n&#228;chste Runde
 </text>
 <text fill='black' x='140' y='190' opacity='0' style="font-size:38px;" >
 <set attributeName='opacity' to='0' begin='start.begin' />
 <set attributeName='opacity' to='1' begin='a08.end' />
-New round
+Neue Runde
 </text>
 <svg x='0' y='0' width='1' height='1' >
 <set attributeName='x' to='0' dur='1' id='start' begin='round1.click' />
@@ -427,7 +427,7 @@ Start
 
 <use xlink:href='#bit' x='560' y='230' />
 <text fill='black' x='665' y='250' style="font-size:14px;" >
-= 32/64 bit value
+= 32/64-Bit-Wert
 </text>
 
 <use xlink:href='#a' x='560' y='280' />
@@ -438,19 +438,19 @@ Start
 <use xlink:href='#h' x='630' y='280' />
 
 <text fill='black' x='665' y='300' style="font-size:14px;" >
-= SHA-2 state / hash
+= SHA-2-Zustand / Hash-
 </text>
 <text fill='black' x='685' y='320' style="font-size:14px;" >
-value (256/512 bit)
+Wert (256/512 Bit)
 </text>
 
 <use xlink:href='#add' x='560' y='330' />
 <text fill='black' x='665' y='350' style="font-size:14px;font-family:sans;" >
-= modulo 2<tspan style="baseline-shift:8;font-size:10px">32</tspan>/2<tspan style="baseline-shift:8;font-size:10px">64</tspan> addition
+= Modulo 2<tspan style="baseline-shift:8;font-size:10px">32</tspan>/2<tspan style="baseline-shift:8;font-size:10px">64</tspan> Addition
 </text>
 <use xlink:href='#mnn' x='560' y='380' />
 <text fill='black' x='665' y='400' style="font-size:14px;" >
-= 32/64 bit message
+= 32/64 Bit Nachrichten-
 </text>
 <text fill='black' x='685' y='420' style="font-size:14px;" >
 block
@@ -458,7 +458,7 @@ block
 
 <use xlink:href='#knn' x='560' y='430' />
 <text fill='black' x='665' y='450' style="font-size:14px;" >
-= 32/64 bit constant
+= 32/64 Bit Konstanten-
 </text>
 <text fill='black' x='685' y='470' style="font-size:14px;" >
 block
@@ -467,7 +467,10 @@ block
 <rect x='560' y='480' width="24" height="50" rx="10" ry="10"
       fill="white" stroke="black" />
 <text fill='black' x='665' y='510' style="font-size:14px;" >
-= Functions Ch, &#931;1, Maj, &#931;0
+= Funktionen Ch, &#931;1,
+</text>
+<text fill='black' x='685' y='525' style="font-size:14px;" >
+Maj, &#931;0
 </text>
 
 </g>

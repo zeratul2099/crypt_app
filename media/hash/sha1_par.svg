@@ -9,7 +9,7 @@
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:xlink="http://www.w3.org/1999/xlink"
-   width="130mm"
+   width="133mm"
    height="70mm"
    id="svg2"
 >
@@ -140,8 +140,8 @@
 <!-- Legende -->
 <path d='M 220 15 l 0 150' stroke='black' stroke-dasharray="10,10"/>
 <use xlink:href='#xor' x='230' y='25' />
-<text fill='black' x='270' y='45' style="font-size:14px;" >
-= Logic XOR
+<text fill='black' x='270' y='45' style="font-size:12px;" >
+= Logisches XOR
 </text>
 
 <svg height='25' width='75' x='5' y='150' id='start' >

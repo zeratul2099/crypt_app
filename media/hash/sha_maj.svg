@@ -9,7 +9,7 @@
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:xlink="http://www.w3.org/1999/xlink"
-   width="130mm"
+   width="133mm"
    height="70mm"
    id="svg2"
 >
@@ -199,14 +199,14 @@
 <svg width='15' height='15' x='232' y='38' opacity='1' >
 <path d='M 0 15 L 7.5 0 15 15' stroke='red' stroke-width='2' />
 </svg>
-<text fill='black' x='270' y='45' style="font-size:14px;" >
-= Logic AND
+<text fill='black' x='270' y='45' style="font-size:12px;" >
+= Logisches AND
 </text>
 
 <use xlink:href='#xor' x='230' y='75' />
 
-<text fill='black' x='270' y='94' style="font-size:14px;" >
-= Logic XOR
+<text fill='black' x='270' y='94' style="font-size:12px;" >
+= Logisches XOR
 </text>
 <svg height='25' width='75' x='5' y='150' id='start' >
 <set attributeName='x' to='-100' begin='start.click' />
