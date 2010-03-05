@@ -48,7 +48,7 @@
 
 <!-- scala -->
 <text x='20' y='10' fill='black' font-size='14' font-family='sans' >
-Natural order
+Nat&#252;rliche Ordnung
 </text>
 <text x='20' y='23' fill='black' font-size='14' font-family='sans' >
 Index i
@@ -83,7 +83,7 @@ stroke='black' />
 </svg>
 
 <text x='400' y='10' fill='black' font-size='14' >
-Stego order
+Stegoordnung
 </text>
 <text x='400' y='23' fill='black' font-size='14' >
 Index p
@@ -207,27 +207,27 @@ stroke='black' />
 <text x='200' y='10' fill='black' font-size='14' >
 <animate attributeName='opacity' from='1' to='1' begin='start.click' dur='0' fill='freeze' />
 <animate attributeName='opacity' from='0' to='0' dur='0' begin='yellow02.end+2' fill='freeze' />
-Message m = 101101
+Nachricht m = 101101
 </text>
 <text x='200' y='10' fill='black' font-size='14' opacity='0' >
 <animate attributeName='opacity' from='1' to='1' dur='0' begin='yellow02.end+2' fill='freeze' />
 <animate attributeName='opacity' from='0' to='0' dur='0' begin='pink02.end+2' fill='freeze' />
-Message m = 10110
+Nachricht m = 10110
 </text>
 <text x='200' y='10' fill='black' font-size='14' opacity='0' >
 <animate attributeName='opacity' from='1' to='1' dur='0' begin='pink02.end+2' fill='freeze' />
 <animate attributeName='opacity' from='0' to='0' dur='0' begin='red02.end+2' fill='freeze' />
-Message m = 111
+Nachricht m = 111
 </text>
 <text x='200' y='10' fill='black' font-size='14' opacity='0' >
 <animate attributeName='opacity' from='1' to='1' dur='0' begin='red02.end+2' fill='freeze' />
 <animate attributeName='opacity' from='0' to='0' dur='0' begin='cyan02.end+2' fill='freeze' />
-Message m = 1
+Nachricht m = 1
 </text>
 <text x='200' y='10' fill='black' font-size='14' opacity='0' >
 <animate attributeName='opacity' from='0' to='0' begin='start.click' dur='0' fill='freeze' />
 <animate attributeName='opacity' from='1' to='1' dur='0' begin='cyan02.end+2' fill='freeze' />
-Message m = 0
+Nachricht m = 0
 </text>
 <!-- k -->
 <text x='200' y='40' fill='black' font-size='14' >

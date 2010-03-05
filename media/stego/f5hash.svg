@@ -170,7 +170,7 @@
 <animate attributeName='x' from='260' to='20' dur='9' begin='mult07.end+1' fill='freeze' id='xor06' />
 </use>
 <text x='80' y='35' fill='black' font-size='18px' >
-n JPEG-coefficients
+n JPEG-Koeffizienten
 </text>
 <use xlink:href='#one' x='20' y='80' opacity='0'>
 <animate attributeName='opacity' from='0' to='1' dur='1' begin='start.click' fill='freeze' id='fade01' />
@@ -234,12 +234,12 @@ n JPEG-coefficients
        <path d="M 10 12 l 0 16 M 2 20 l 16 0" stroke='red' stroke-width='2' />
 </svg>
 <text x='60' y='100' fill='black' font-size='14px' opacity='0' >
-hash of length k
+Hash der L&#228;nge k
 <set attributeName='opacity' to='0' dur='0' fill='freeze' begin='start.click' />
 <set attributeName='opacity' to='1' dur='0' fill='freeze' begin='xor06.end+1' />
 </text>
 <text x='120' y='125' fill='black' font-size='18px' opacity='0' >
-iterator i
+Iterator i
 <animate attributeName='opacity' from='0' to='0' dur='0' begin='start.click' fill='freeze' />
 <animate attributeName='opacity' from='0' to='1' dur='1' begin='fade01.begin' fill='freeze' />
 </text>
@@ -249,32 +249,32 @@ iterator i
 <!-- legend -->
 <path d='M 5 140 l 300 0' stroke='black' stroke-dasharray='5,5' />
 
-<svg width='120' height='20' x='5' y='150' >
+<svg width='170' height='20' x='5' y='150' >
 <path d='M 1 15 L 6 4 11 15' stroke='red' stroke-width='2' />
 <text x='12' y='15' fill='red' font-size='16px' >
 1
 </text>
-<text x='25' y='15' fill='black' font-size='16px' >
-= logic AND 1
+<text x='25' y='15' fill='black' font-size='14px' >
+= Logisches AND 1
 </text>
 </svg>
 <svg width='150' height='20' x='5' y='180' >
 <circle cx='10' cy='10' r='5' fill='red' />
-<text x='25' y='15' fill='black' font-size='16px' >
-= multiplication
+<text x='25' y='15' fill='black' font-size='14px' >
+= Multiplikation
 </text>
 </svg>
 <svg width='150' height='30' x='5' y='200' >
 <circle cx='10' cy='20' r='8' stroke='red' stroke-width='2' />
 <path d="M 10 12 l 0 16 M 2 20 l 16 0" stroke='red' stroke-width='2' />
-<text x='25' y='25' fill='black' font-size='16px' >
-= logic XOR
+<text x='25' y='25' fill='black' font-size='14px' >
+= Logisches XOR
 </text>
 </svg>
-<text x='200' y='165' fill='black' font-size='16px' >
+<text x='200' y='165' fill='black' font-size='14px' >
 k = 3
 </text>
-<text x='200' y='195' fill='black' font-size='16px' >
+<text x='200' y='195' fill='black' font-size='14px' >
 n = 7
 </text>
 <svg height='25' width='75' x='200' y='210' id='start' >

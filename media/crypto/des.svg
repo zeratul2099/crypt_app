@@ -35,21 +35,21 @@
        >
 <rect x='0' y='0' width='800' height='600' fill='white' />
 <text x='10' y='80' font-size='14' fill='black' >
-64 bit message block
+64-Bit-Klartextblock
 </text>
 <text x='10' y='200' font-size='14' fill='black' >
-64 bit key
+64-Bit-Schl&#252;ssel
 </text> 
 <text x='10' y='215' font-size='12' fill='black' >
-(56 bit + 8 bit parity)
+(56 Bit + 8 Bit Parit&#228;t)
 </text> 
 <text x='540' y='70' font-size='14' fill='black' opacity='0' >
-64 bit cipher
+64-Bit-Geheim-
 <set attributeName='opacity' to='0' fill='freeze' begin='start.click' />
 <set attributeName='opacity' to='1' fill='freeze' begin='m09.end' />
 </text> 
 <text x='540' y='90' font-size='14' fill='black' opacity='0' >
-block
+textblock
 <set attributeName='opacity' to='0' fill='freeze' begin='start.click' />
 <set attributeName='opacity' to='1' fill='freeze' begin='m09.end' />
 </text> 
@@ -201,67 +201,67 @@ c<tspan baseline-shift = "sub" font-size='8' >j</tspan>
 </svg>
 
 <text x='350' y='240' font-size='22' fill='black' opacity='0' >
-round 1
+Runde 1
 <set attributeName='opacity' to='1' begin='m02.end+1' dur='8.5' />
 </text>
 <text x='350' y='240' font-size='22' fill='black' opacity='0' >
-round 2
+Runde 2
 <set attributeName='opacity' to='1' begin='m04d.end+1' dur='8.5' />
 </text>
 <text x='350' y='240' font-size='22' fill='black' opacity='0' >
-round 3
+Runde 3
 <set attributeName='opacity' to='1' begin='m06d.end+1' dur='0.5' />
 </text>
 <text x='350' y='240' font-size='22' fill='black' opacity='0' >
-round 4
+Runde 4
 <set attributeName='opacity' to='1' begin='m06d.end+1.5' dur='0.5' />
 </text>
 <text x='350' y='240' font-size='22' fill='black' opacity='0' >
-round 5
+Runde 5
 <set attributeName='opacity' to='1' begin='m06d.end+2' dur='0.5' />
 </text>
 <text x='350' y='240' font-size='22' fill='black' opacity='0' >
-round 6
+Runde 6
 <set attributeName='opacity' to='1' begin='m06d.end+2.5' dur='0.5' />
 </text>
 <text x='350' y='240' font-size='22' fill='black' opacity='0' >
-round 7
+Runde 7
 <set attributeName='opacity' to='1' begin='m06d.end+3' dur='0.5' />
 </text>
 <text x='350' y='240' font-size='22' fill='black' opacity='0' >
-round 8
+Runde 8
 <set attributeName='opacity' to='1' begin='m06d.end+3.5' dur='0.5' />
 </text>
 <text x='350' y='240' font-size='22' fill='black' opacity='0' >
-round 9
+Runde 9
 <set attributeName='opacity' to='1' begin='m06d.end+4' dur='0.5' />
 </text>
 <text x='350' y='240' font-size='22' fill='black' opacity='0' >
-round 10
+Runde 10
 <set attributeName='opacity' to='1' begin='m06d.end+4.5' dur='0.5' />
 </text>
 <text x='350' y='240' font-size='22' fill='black' opacity='0' >
-round 11
+Runde 11
 <set attributeName='opacity' to='1' begin='m06d.end+5' dur='0.5' />
 </text>
 <text x='350' y='240' font-size='22' fill='black' opacity='0' >
-round 12
+Runde 12
 <set attributeName='opacity' to='1' begin='m06d.end+5.5' dur='0.5' />
 </text>
 <text x='350' y='240' font-size='22' fill='black' opacity='0' >
-round 13
+Runde 13
 <set attributeName='opacity' to='1' begin='m06d.end+6' dur='0.5' />
 </text>
 <text x='350' y='240' font-size='22' fill='black' opacity='0' >
-round 14
+Runde 14
 <set attributeName='opacity' to='1' begin='m06d.end+6.5' dur='0.5' />
 </text>
 <text x='350' y='240' font-size='22' fill='black' opacity='0' >
-round 15
+Runde 15
 <set attributeName='opacity' to='1' begin='m06d.end+7' dur='0.5' />
 </text>
 <text x='350' y='240' font-size='22' fill='black' opacity='0' >
-round 16
+Runde 16
 <set attributeName='opacity' to='0' begin='start.click' fill='freeze' />
 <set attributeName='opacity' to='1' begin='m06d.end+7.5' dur='5' />
 </text>
@@ -273,13 +273,13 @@ round 16
 <set attributeName='opacity' to='1' begin='k02.end' fill='freeze' />
 <set attributeName='opacity' to='0' begin='m06d.end+7.5' fill='freeze' />
 </text>
-<text x='240' y='320' font-size='14' fill='black' opacity='0' >
-16 round keys
+<text x='240' y='330' font-size='14' fill='black' opacity='0' >
+16 Rundenschl&#252;ssel
 <set attributeName='opacity' to='0' begin='start.click' fill='freeze' />
 <set attributeName='opacity' to='1' begin='k02.end' fill='freeze' />
 </text>
-<text x='240' y='335' font-size='14' fill='black' opacity='0' >
-48 bit each
+<text x='240' y='345' font-size='14' fill='black' opacity='0' >
+je 48 Bit
 <set attributeName='opacity' to='0' begin='start.click' fill='freeze' />
 <set attributeName='opacity' to='1' begin='k02.end' fill='freeze' />
 </text>
@@ -298,7 +298,7 @@ Start
 IP = Initiale Permutation
 </text>
  <text fill='black' x='15' y='350' style="font-size:14px;" >
-IP<tspan baseline-shift = "super" font-size='8' >-1</tspan> = Inverse IP
+IP<tspan baseline-shift = "super" font-size='8' >-1</tspan> = Inverses IP
 </text>
  <text fill='black' x='15' y='370' style="font-size:14px;" >
 PC = Permuted Choice

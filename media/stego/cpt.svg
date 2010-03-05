@@ -169,7 +169,7 @@
 </svg>
 </svg>
 <text x='410' y='65' fill='black' style="font-size:12px;" >
-m x n block of image
+m x n Bildblock
 </text>
 
 <!-- key matrix -->
@@ -352,7 +352,7 @@ m x n block of image
 </circle>
 </svg>
 <text x='250' y='65' fill='black' style="font-size:12px;" >
-key matrix
+Schl&#252;sselmatrix
 </text>
 <rect x='150' y='15' rx='10' ry='20' width='100' height='25' stroke='black' >
 <animate attributeName='fill' from='white' to='red' dur='1' fill='freeze' begin='fade.end+1' id='prng01' />
@@ -424,7 +424,7 @@ PRNG
 </svg>
 </svg>
 <text x='50' y='65' fill='black' style="font-size:12px;" >
-weight matrix
+Gewichtsmatrix
 </text>
 <path d='M 200 260 l -35 0 25 25 -25 25 35 0' stroke='black' stroke-width='2' opacity='0'>
 <animate attributeName='opacity' from='0' to='1' dur='1' begin='mult02.end+2' fill='freeze' id='sum01' />
@@ -441,8 +441,8 @@ mod 2^r
 <animate attributeName='opacity' from='0' to='0' dur='0' begin='start.click' fill='freeze' />
 <animate attributeName='opacity' from='0' to='1' dur='1' begin='sum02.end' fill='freeze' />
 </text>
-<text x='120' y='285' fill='black' style="font-size:18px;" opacity='0'>
-weight of block = 
+<text x='70' y='285' fill='black' style="font-size:18px;" opacity='0'>
+Gewicht des Blocks = 
 <animate attributeName='opacity' from='0' to='0' dur='0' begin='start.click' fill='freeze' />
 <animate attributeName='opacity' from='0' to='1' dur='1' begin='sum02.end' fill='freeze' />
 </text>
@@ -454,7 +454,7 @@ weight of block =
 		=
 		</text>
        <text x='50' y='13' fill='black' style="font-size:12px;" >
-		Elementwise
+		Elementweise
 		</text>
        <text x='50' y='27' fill='black' style="font-size:12px;" >
 		XOR-Operation
@@ -466,10 +466,10 @@ weight of block =
 		=
 		</text>
        <text x='50' y='13' fill='black' style="font-size:12px;" >
-		Elementwise
+		Elementweise
 		</text>
        <text x='50' y='27' fill='black' style="font-size:12px;" >
-		Multiplication
+		Multiplikation
 		</text>
 </svg>
 <svg x='500' y='300' height='30' width='150' >
@@ -478,7 +478,7 @@ weight of block =
 		=
 		</text>
        <text x='50' y='13' fill='black' style="font-size:12px;" >
-		Elementwise
+		Elementweise
 		</text>
        <text x='50' y='27' fill='black' style="font-size:12px;" >
 		Addition

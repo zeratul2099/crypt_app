@@ -9,7 +9,7 @@
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:xlink="http://www.w3.org/1999/xlink"
-   width="160mm"
+   width="165mm"
    height="100mm"
    id="svg2"
 >
@@ -278,22 +278,22 @@
 
 <!-- Legend -->
 <text x='70' y='330' fill='black' >
-Original Image
+Originalbild
 </text>
 <text x='270' y='330' fill='black' >
-Filter Image
+Filterbild
 </text>
 <path d="M 420 5 l 0 350" stroke='black' stroke-dasharray="10,10" />
 <rect x='430' y='20' width='30' height='30' stroke='black' fill='white' />
 <text x='470' y='40' fill='black' font-size='12' >
-= single pixel
+= Pixel
 </text>
 <rect x='430' y='60' width='30' height='30' stroke='grey' fill='white' />
 <text x='470' y='80' fill='black' font-size='12' >
 =
 </text>
 <text x='487' y='72' fill='black' font-size='12' >
-filter value
+Filterwert
 </text>
 <text x='487' y='88' fill='black' font-size='12' >
 0..255
@@ -304,10 +304,10 @@ filter value
 =
 </text>
 <text x='487' y='112' fill='black' font-size='12' >
-pixel to calculate
+Pixel, dessen Filter-
 </text>
 <text x='487' y='128' fill='black' font-size='12' >
-filter value from
+wert berechnet wird
 </text>
 
 <svg x='430' y='140' width='30' height='30' stroke-width='2' >
@@ -318,10 +318,10 @@ filter value from
 =
 </text>
 <text x='487' y='152' fill='black' font-size='12' >
-addition of
+Addition von
 </text>
-<text x='487' y='178' fill='black' font-size='12' >
-color values
+<text x='487' y='168' fill='black' font-size='12' >
+Farbwerten
 </text>
 
 
@@ -332,10 +332,10 @@ color values
 =
 </text>
 <text x='487' y='192' fill='black' font-size='12' >
-subtraction of
+Subtraktion von
 </text>
 <text x='487' y='208' fill='black' font-size='12' >
-color values
+Farbwerten
 </text>
 
 <!-- start -->

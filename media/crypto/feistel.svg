@@ -73,7 +73,7 @@ P
 <animate attributeName='opacity' from='0' to='1' begin='r06.end+5' dur='1' fill='freeze' />
 </use>
 <text x='130' y='40' font-size='14' fill='black' >
-message block m
+Klartextblock m
 <animate attributeName='opacity' from='1' to='1' begin='start.click' dur='0' fill='freeze' />
 <animate attributeName='opacity' from='0' to='0' begin='r01.end' dur='0' fill='freeze' />
 </text>
@@ -356,7 +356,7 @@ r<tspan baseline-shift = "sub" font-size='8' >i+1</tspan>
        <path d="M 10 12 l 0 16 M 2 20 l 16 0" stroke='red' stroke-width='2' transform='scale(0.85)'/>
 </svg>
 <text x='130' y='220' font-size='28' fill='black' opacity='0' >
-repeat 16 rounds
+Wiederhole 16 Runden
 <set attributeName='opacity' to='1' dur='3' begin='r06.end' />
 </text>
 <!-- Legend -->
@@ -364,31 +364,31 @@ repeat 16 rounds
 <svg height='40' width='150' x='460' y='10' >
 <use xlink:href='#bit64' />
 <text x='45' y='20' font-size='14' fill='black'  >
-= 64 bit block
+= 64-Bit-Block
 </text>
 </svg>
 <svg height='40' width='150' x='460' y='60' >
 <use xlink:href='#bit48' />
 <text x='45' y='20' font-size='14' fill='black'  >
-= 48 bit block
+= 48-Bit-Block
 </text>
 </svg>
 <svg height='40' width='150' x='460' y='100' >
 <use xlink:href='#bit32' />
 <text x='45' y='20' font-size='14' fill='black'  >
-= 32 bit block
+= 32-Bit-Block
 </text>
 </svg>
 <svg height='40' width='150' x='460' y='135' >
 <use xlink:href='#bit6' />
 <text x='45' y='15' font-size='14' fill='black'  >
-= 6 bit block
+= 6-Bit-Block
 </text>
 </svg>
 <svg height='40' width='150' x='460' y='155' >
 <use xlink:href='#bit4' y='5' />
 <text x='45' y='15' font-size='14' fill='black'  >
-= 4 bit block
+= 4-Bit-Block
 </text>
 </svg>
 <svg height='40' width='150' x='460' y='200' >
@@ -399,12 +399,12 @@ E =
 Expansion
 </text>
 <text x='28' y='28' font-size='14' fill='black'  >
-32 -&gt; 48 bit
+32 -&gt; 48 Bit
 </text>
 </svg>
 <svg height='40' width='150' x='460' y='230' >
 <text x='0' y='20' font-size='14' fill='black'  >
-s = s-box 
+s = S-Box 
 </text>
 </svg>
 <svg height='40' width='150' x='460' y='260' >

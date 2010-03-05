@@ -251,12 +251,12 @@
 <text x='5' y='25' fill='black' opacity='0' >
 <animate attributeName='opacity' from='0' to='1' dur='0.5' begin='square.end+3.5' fill='freeze' id='norm01' />
 <animate attributeName='opacity' from='1' to='0' dur='0.5' begin='shot01.end+3' fill='freeze' />
-Normal shot
+Normal Shot
 </text>
 <text x='5' y='25' fill='black' opacity='0' >
 <animate attributeName='opacity' from='0' to='0' dur='0' begin='start.click' fill='freeze' />
 <animate attributeName='opacity' from='0' to='1' dur='0.5' begin='shot01.end+3' fill='freeze' id='ranged01' />
-Ranged shot
+Ranged Shot
 </text>
 <text x='250' y='25' fill='black' opacity='0' >
 <animate attributeName='opacity' from='0' to='1' dur='0.1' begin='norm01.end' fill='freeze' id='norm02' />
@@ -293,20 +293,20 @@ x = -2 y = -3
 <set attributeName='opacity'  to='1' dur='1' begin='shot03.end' />
 <set attributeName='opacity'  to='1' dur='1' begin='shot04.end' />
 <set attributeName='opacity'  to='1' dur='1' begin='shot06.end' />
-Hit
+Treffer
 </text>
 <text x='250' y='40' opacity='0' fill='green' >
 <set attributeName='opacity'  to='1' dur='1' begin='shot02.end' />
 <set attributeName='opacity'  to='1' dur='1' begin='shot05.end' />
-Miss
+Verfehlt
 </text>
 <text x='300' y='100' opacity='0' fill='black' >
-Shots left
+Shots &#252;brig
 </text>
 <text x='270' y='100' opacity='0' fill='black' >
 <animate attributeName='opacity' from='0' to='0' dur='0' begin='start.click' fill='freeze' />
 <animate attributeName='opacity' from='0' to='1' dur='0.1' begin='norm01.end' fill='freeze' />
-Shots left
+Shots &#252;brig
 </text>
 <text x='270' y='120' opacity='0' fill='black' >
 <animate attributeName='opacity' from='0' to='1' dur='0.01' begin='norm01.end' fill='freeze' />
@@ -352,15 +352,15 @@ Range
 
 <rect width='13' height='13' x='55' y='270' fill='white' stroke='black' />
 <text x='75' y='280' fill='black' font-size='12' >
-= single pixel
+= Pixel
 </text>
 <rect width='13' height='13' x='55' y='295' fill='red' stroke='black' />
 <text x='75' y='305' fill='black' font-size='12' >
-= edge here, embed message bit via LSB
+= Kante, Nachrichtenbit via LSB einbetten
 </text>
 <rect width='13' height='13' x='55' y='320' fill='green' stroke='black' />
 <text x='75' y='330' fill='black' font-size='12' >
-= no edge here, do not embed
+= keine Kante, nicht einbetten
 </text>
 
 <svg height='25' width='75' x='125' y='35' id='start' >

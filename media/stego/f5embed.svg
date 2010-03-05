@@ -146,7 +146,7 @@ f
 <animate attributeName='opacity' from='0' to='0' begin='msg01.end+1' fill='freeze' dur='0' />
 </use>
  <text x='175' y='35' fill='black' style="font-size:14px;" >
-codeword N (n Bytes)
+Kodewort N (n Bytes)
 </text>
 
 
@@ -159,7 +159,7 @@ codeword N (n Bytes)
 <animate attributeName='opacity' from='0' to='0' begin='msg01.end' fill='freeze' dur='0' />
 </use>
  <text x='290' y='200' fill='black' style="font-size:14px;" >
-messageblock K (k Bits)
+Nachrichtenblock K (k Bits)
 </text>
 <!-- XOR -->
 <svg id='xor' width="30" height="30" x='200' y='180' opacity='0'>
@@ -179,28 +179,28 @@ s
 </text>
 </svg>
 <!-- text -->
-<svg width='150' height='70' x='80' y='230' opacity='0' >
+<svg width='200' height='70' x='80' y='235' opacity='0' >
 <animate attributeName='opacity' from='0' to='0' begin='start.click' fill='freeze' dur='0' />
 <animate attributeName='opacity' from='1' to='1' begin='s01.end' fill='freeze' dur='0' />
 <text x='0' y='20' fill='black' style="font-size:14px;"  >
-if s == 0:
+wenn s == 0:
 </text>
 <text x='10' y='40' fill='black' style="font-size:14px;"  >
-next codeword
+n&#228;chstes Kodewort
 </text>
 <text x='10' y='60' fill='black' style="font-size:14px;"  >
-next messageblock
+n&#228;chster Nachrichtenblock
 </text>
 </svg>
 
-<svg width='150' height='70' x='250' y='230' opacity='0' >
+<svg width='150' height='70' x='250' y='235' opacity='0' >
 <animate attributeName='opacity' from='0' to='0' begin='start.click' fill='freeze' dur='0' />
 <animate attributeName='opacity' from='1' to='1' begin='s01.end+2' fill='freeze' dur='0' />
 <text x='0' y='20' fill='black' style="font-size:14px;"  >
-else:
+andernfalls:
 </text>
 <text x='10' y='40' fill='black' style="font-size:14px;"  >
-codeword[s-1] -= 1
+Kodewort[s-1] -= 1
 </text>
 </svg>
 

@@ -183,13 +183,13 @@
 <animate attributeName='fill' from='red' to='white' dur='1' begin='d43.end+1' fill='freeze' />
 </rect>
 
-<text x='170' y='225' fill='black' font-size='14px' >
-calculate weight
+<text x='160' y='225' fill='black' font-size='12px' >
+Gewicht berechnen
 </text>
-<text x='70' y='225' fill='black' font-size='14px' >
-switch bit
+<text x='70' y='225' fill='black' font-size='12px' >
+Bit kippen
 </text>
-<text x='290' y='225' fill='black' font-size='14px' >
+<text x='290' y='225' fill='black' font-size='12px' >
 w - &#x0394;w
 </text>
 <text x='300' y='15' fill='black' font-size='14px' >
@@ -242,7 +242,7 @@ d = w - p = -4
 
 <use xlink:href='#mat' x='400' y='150' />
 <text x='400' y='140' fill='black' font-size='14px' >
-difference matrix
+Differenzenmatrix
 </text>
 <use xlink:href='#bit' x='-50' y='135' >
 <animate attributeName='x' from='5' to='100' dur='2' begin='d01.end' id='d02' />
@@ -306,8 +306,8 @@ difference matrix
 <animate attributeName='x' from='300' to='405' dur='2' begin='d43.end+2' fill='freeze' id='d44' />
 <animate attributeName='y' from='150' to='202' dur='2' begin='d43.end+2' fill='freeze' />
 </text>
-<text x='370' y='230' fill='black' font-size='14px' opacity='0'>
-switch this bit in original block
+<text x='370' y='230' fill='black' font-size='12px' opacity='0'>
+Kippe dieses Bit im Originalblock
 <animate attributeName='opacity' from='0' to='0' dur='0' begin='start.click' fill='freeze' />
 <animate attributeName='opacity' from='1' to='1' dur='0' begin='mark.end' fill='freeze' />
 
@@ -316,11 +316,11 @@ switch this bit in original block
 <path d='M 5 250 l 380 0' stroke-dasharray='5,5' stroke='black' />
 <use xlink:href='#bit' x='10' y='260' />
 <text x='50' y='280' fill='black' font-size='14px' >
-= image block
+= Bildblock
 </text>
 <use xlink:href='#n' x='10' y='300' />
 <text x='50' y='320' fill='black' font-size='14px' >
-= block with bit n switched
+= Block mit Bit n gekippt
 </text>
 <svg height='25' width='75' x='250' y='280' id='start' >
 <set attributeName='x' to='-100' begin='start.click' />

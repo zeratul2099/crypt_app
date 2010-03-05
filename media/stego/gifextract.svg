@@ -47,10 +47,10 @@
 <rect x='0' y='0' width='800' height='600' fill='white' />
 
 <!-- scala -->
-<text x='20' y='45' fill='black' font-size='14' >
-Stego order
+<text x='20' y='45' fill='black' font-size='12' >
+Stegoordnung
 </text>
-<text x='20' y='60' fill='black' font-size='14' >
+<text x='20' y='60' fill='black' font-size='12' >
 Index p
 </text>
 <svg x='25' y='75' height='242' width='20' >
@@ -90,10 +90,13 @@ stroke='black' />
 </text>
 </svg>
 
-<text x='400' y='45' fill='black' font-size='14' >
-Natural order
+<text x='400' y='30' fill='black' font-size='12' >
+Nat&#252;rliche
 </text>
-<text x='400' y='60' fill='black' font-size='14' >
+<text x='400' y='45' fill='black' font-size='12' >
+Ordnung
+</text>
+<text x='400' y='60' fill='black' font-size='12' >
 Index i
 </text>
 <svg x='424' y='74' height='242' width='50' >
@@ -218,27 +221,27 @@ stroke='black' />
 <text x='200' y='10' fill='black' font-size='14' >
 <animate attributeName='opacity' from='1' to='1' begin='start.click' dur='0' fill='freeze' />
 <animate attributeName='opacity' from='0' to='0' dur='0' begin='cyan02.end' fill='freeze' />
-Message m = 0
+Nachricht m = 0
 </text>
 <text x='200' y='10' fill='black' font-size='14' opacity='0' >
 <animate attributeName='opacity' from='1' to='1' dur='0' begin='cyan02.end' fill='freeze' />
 <animate attributeName='opacity' from='0' to='0' dur='0' begin='red02.end+5' fill='freeze' />
-Message m = 1
+Nachricht m = 1
 </text>
 <text x='200' y='10' fill='black' font-size='14' opacity='0' >
 <animate attributeName='opacity' from='1' to='1' dur='0' begin='red02.end+5' fill='freeze' />
 <animate attributeName='opacity' from='0' to='0' dur='0' begin='pink02.end' fill='freeze' />
-Message m = 7 (111)
+Nachricht m = 7 (111)
 </text>
 <text x='200' y='10' fill='black' font-size='14' opacity='0' >
 <animate attributeName='opacity' from='1' to='1' dur='0' begin='pink02.end' fill='freeze' />
 <animate attributeName='opacity' from='0' to='0' dur='0' begin='yellow02.end+5' fill='freeze' />
-Message m = 22 (10110)
+Nachricht m = 22 (10110)
 </text>
 <text x='200' y='10' fill='black' font-size='14' opacity='0' >
 <animate attributeName='opacity' from='0' to='0' begin='start.click' dur='0' fill='freeze' />
 <animate attributeName='opacity' from='1' to='1' dur='0' begin='yellow02.end+5' fill='freeze' />
-Message m = 45 (101101)
+Nachricht m = 45 (101101)
 </text>
 <!-- k -->
 <text x='200' y='40' fill='black' font-size='14' >

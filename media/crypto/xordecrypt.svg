@@ -37,7 +37,7 @@
 
 <!-- key k -->
 <text x='45' y='200' fill='black' style="font-size:14px;" >
-key k
+Schl&#252;ssel k
 </text>
 <text x='45' y='170' fill='black' style="font-size:12px;" >
 ...
@@ -95,7 +95,7 @@ k<tspan baseline-shift = "sub" font-size='8' >0</tspan>
 
 <!-- message m -->
 <text x='45' y='40' fill='black' style="font-size:14px;" >
-cipher text c
+Geheimtext c
 </text>
 <text x='45' y='70' fill='black' style="font-size:12px;" >
 ...
@@ -185,7 +185,7 @@ m<tspan baseline-shift = "sub" font-size='8' >0</tspan>
 
 <!-- cipher text -->
 <text x='245' y='90' fill='black' style="font-size:14px;" opacity='0'>
-message m
+Klartext m
 <set attributeName='opacity' to='0' begin='start.click' dur='0' fill='freeze' />
 <set attributeName='opacity' to='1' begin='mn3.end' dur='0' fill='freeze' />
 </text>
@@ -199,7 +199,7 @@ message m
 m
 </text>
 <text x='40' y='22' fill='black' style="font-size:12px;" >
-= single bit of message
+= Bit des Klartexts
 </text>
 </svg>
 
@@ -209,7 +209,7 @@ m
 k
 </text>
 <text x='40' y='22' fill='black' style="font-size:12px;" >
-= single bit of key
+= Bit des Schl&#252;ssels
 </text>
 </svg>
 
@@ -219,7 +219,7 @@ k
 c
 </text>
 <text x='40' y='22' fill='black' style="font-size:12px;" >
-= single bit of cipher text
+= Bit des Geheimtexts
 </text>
 </svg>
 
@@ -227,7 +227,7 @@ c
 <circle cx='10' cy='20' r='8' stroke='red' stroke-width='2' />
 <path d="M 10 12 l 0 16 M 2 20 l 16 0" stroke='red' stroke-width='2' />
 <text x='40' y='22' fill='black' style="font-size:12px;" >
-= XOR operation
+= XOR-Operation
 </text>
 </svg>
 
