@@ -303,7 +303,7 @@ Gr&#252;n
 <set attributeName='opacity' to='0' begin='m104.end+1' fill='freeze' />
 <set attributeName='opacity' to='1' begin='blue200.end' fill='freeze' />
 <set attributeName='opacity' to='0' begin='m110.end+1' fill='freeze' />
-<set attributeName='opacity' to='1' begin='blue400.end' fill='freeze' />
+<set attributeName='opacity' to='1' begin='blue300.end' fill='freeze' />
 <set attributeName='opacity' to='0' begin='m114.end+1' fill='freeze' />
 Blau
 </text>
