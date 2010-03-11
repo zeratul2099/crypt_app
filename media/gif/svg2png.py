@@ -2,9 +2,9 @@
 
 import os
 
-name = "feistel"
+name = "aeskeys"
 
-for i in range(0, 200, 2):
+for i in range(0, 480, 2):
     os.system("rasterizer -d png/%s%3.3d.png -snapshotTime %f %s.svg &"%(name, i, float(i)/4, name))
     os.system("rasterizer -d png/%s%3.3d.png -snapshotTime %f %s.svg"%(name, i+1, float(i+1)/4, name))
 os.chdir("png")
