@@ -2,9 +2,9 @@
 
 import os
 
-name = "f5embed"
+name = "sha2_sigma1"
 
-for i in range(60, 70, 2):
+for i in range(0, 68, 2):
     os.system("rasterizer -d png/%s%3.3d.png -snapshotTime %f %s.svg &"%(name, i, float(i)/4, name))
     os.system("rasterizer -d png/%s%3.3d.png -snapshotTime %f %s.svg"%(name, i+1, float(i+1)/4, name))
 os.chdir("png")
