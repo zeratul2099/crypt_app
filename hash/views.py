@@ -1,4 +1,4 @@
-# encoding: utf-8
+# -*- coding: utf-8 -*-
 #
 #       This program is free software; you can redistribute it and/or modify
 #       it under the terms of the GNU General Public License as published by
@@ -34,12 +34,12 @@ def algo(request, algo):
     if request.method == 'POST':
         
         if request.FILES:
-            if request.FILES['file'].size > 10000 and algo=="keccak":
+            if request.FILES['fileH'].size > 10000 and algo=="keccak":
                 form = HashForm()
                 return render_to_response("hash_algo.html", {'hashvalue' : 'Datei zu gross',  'form' : form}) 
-            clear_text = request.FILES['file'].read()
-            output = "Eingabedatei:\n%s (%s Bytes)\n" %(request.FILES['file'].name,
-                                                      request.FILES['file'].size)
+            clear_text = request.FILES['fileH'].read()
+            output = "Eingabedatei:\n%s (%s Bytes)\n" %(request.FILES['fileH'].name,
+                                                      request.FILES['fileH'].size)
         else:
             clear_text = request.POST.get("clear", "")
             output = "Eingabestring:\n%s\n\n" %(clear_text)

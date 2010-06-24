@@ -12,19 +12,7 @@
             {% for field in embedForm %}
             <tr><td colspan='2' ><font color='red'>{{ field.errors }}</font></td></tr>
             <tr><td>
-            {% ifequal field.name "message" %}
-            <img width='16' height='16' border='0' src='/content/icons/txt.png' ></img>
-            {% else %}{% ifequal field.name "pw" %}
-            <img width='16' height='16' border='0' src='/content/icons/key.png' ></img>
-            {% else %}{% ifequal field.name "file" %}
-            <img width='16' height='16' border='0' src='/content/icons/image.png' ></img>
-            {% else %}{% ifequal field.name "width" %}
-            <img width='16' height='16' border='0' src='/content/icons/blocks.png' ></img>
-            {% else %}{% ifequal field.name "height" %}
-            <img width='16' height='16' border='0' src='/content/icons/blocks.png' ></img>
-            {% else %}
-            <img width='16' height='16' border='0' src='/content/icons/empty.png' ></img>
-            {% endifequal %}{% endifequal %}{% endifequal %}{% endifequal %}{% endifequal %}
+	    {{field.name|setIcon|safe}}
             {{ field.label|umlauts|safe }}:</td><td>{{ field }}</td></tr>
             {% endfor %}
             </table>
@@ -37,19 +25,7 @@
             {% for field in extractForm %}
             <tr><td colspan='2' ><font color='red'>{{ field.errors }}</font></td></tr>
             <tr><td>
-            {% ifequal field.name "message" %}
-            <img width='16' height='16' border='0' src='/content/icons/txt.png' ></img>
-            {% else %}{% ifequal field.name "pw" %}
-            <img width='16' height='16' border='0' src='/content/icons/key.png' ></img>
-            {% else %}{% ifequal field.name "file" %}
-            <img width='16' height='16' border='0' src='/content/icons/image.png' ></img>
-            {% else %}{% ifequal field.name "width" %}
-            <img width='16' height='16' border='0' src='/content/icons/blocks.png' ></img>
-            {% else %}{% ifequal field.name "height" %}
-            <img width='16' height='16' border='0' src='/content/icons/blocks.png' ></img>
-            {% else %}
-            <img width='16' height='16' border='0' src='/content/icons/empty.png' ></img>
-            {% endifequal %}{% endifequal %}{% endifequal %}{% endifequal %}{% endifequal %}
+	    {{field.name|setIcon|safe}}
             {{ field.label|umlauts|safe }}:</td><td>{{ field }}</td></tr>
             {% endfor %}
             </table>

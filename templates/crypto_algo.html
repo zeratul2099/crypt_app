@@ -34,21 +34,7 @@
             {% for field in cypherForm %}
             <tr><td colspan='2' ><font color='red'>{{ field.errors }}</font></td></tr>
             <tr><td>
-            {% ifequal field.name "message" %}
-            <img width='16' height='16' border='0' src='/content/icons/txt.png' ></img>
-            {% else %}{% ifequal field.name "key" %}
-            <img width='16' height='16' border='0' src='/content/icons/key.png' ></img>
-            {% else %}{% ifequal field.name "keyA" %}
-            <img width='16' height='16' border='0' src='/content/icons/key.png' ></img>
-            {% else %}{% ifequal field.name "keyB" %}
-            <img width='16' height='16' border='0' src='/content/icons/key.png' ></img>
-            {% else %}{% ifequal field.name "cypher_text" %}
-            <img width='16' height='16' border='0' src='/content/icons/encrypted.png' ></img>
-            {% else %}{% ifequal field.name "block_mode" %}
-            <img width='16' height='16' border='0' src='/content/icons/blocks.png' ></img>
-            {% else %}
-            <img width='16' height='16' border='0' src='/content/icons/empty.png' ></img>
-            {% endifequal %}{% endifequal %}{% endifequal %}{% endifequal %}{% endifequal %}{% endifequal %}
+	    {{field.name|setIcon|safe}}
             {{ field.label|umlauts|safe }}:</td><td>{{ field }}</td></tr>
             {% endfor %}
             </table>
@@ -62,21 +48,7 @@
             {% for field in decypherForm %}
             <tr><td colspan='2' ><font color='red'>{{ field.errors }}</font></td></tr>
             <tr><td>
-            {% ifequal field.name "message" %}
-            <img width='16' height='16' border='0' src='/content/icons/txt.png' ></img>
-            {% else %}{% ifequal field.name "key" %}
-            <img width='16' height='16' border='0' src='/content/icons/key.png' ></img>
-            {% else %}{% ifequal field.name "keyA" %}
-            <img width='16' height='16' border='0' src='/content/icons/key.png' ></img>
-            {% else %}{% ifequal field.name "keyB" %}
-            <img width='16' height='16' border='0' src='/content/icons/key.png' ></img>
-            {% else %}{% ifequal field.name "cypher_text" %}
-            <img width='16' height='16' border='0' src='/content/icons/encrypted.png' ></img>
-            {% else %}{% ifequal field.name "block_mode" %}
-            <img width='16' height='16' border='0' src='/content/icons/blocks.png' ></img>
-            {% else %}
-            <img width='16' height='16' border='0' src='/content/icons/empty.png' ></img>
-            {% endifequal %}{% endifequal %}{% endifequal %}{% endifequal %}{% endifequal %}{% endifequal %}
+	    {{field.name|setIcon|safe}}
             {{ field.label|umlauts|safe }}:</td><td>{{ field }}</td></tr>
             {% endfor %}
             </table>

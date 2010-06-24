@@ -12,15 +12,7 @@
         {% for field in form %}
             <tr><td  colspan='2' ><font color='red'>{{ field.errors }}</font></td></tr>
             <tr><td>
-            {% ifequal field.name "clear" %}
-            <img width='16' height='16' border='0' src='/content/icons/txt.png' ></img>
-            {% else %}{% ifequal field.name "withSalt" %}
-            <img width='16' height='16' border='0' src='/content/icons/add.png' ></img>
-            {% else %}{% ifequal field.name "file" %}
-            <img width='16' height='16' border='0' src='/content/icons/file.png' ></img>
-            {% else %}
-            <img width='16' height='16' border='0' src='/content/icons/empty.png' ></img>
-            {% endifequal %}{% endifequal %}{% endifequal %}
+	    {{field.name|setIcon|safe}}
             {{ field.label|umlauts|safe }}:</td><td>{{ field }}</td></tr>
         {% endfor %} 
         <tr>
