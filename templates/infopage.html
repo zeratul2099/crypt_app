@@ -101,18 +101,22 @@
     </tr>
     <tr>{% endif %}
         <td width='75%' valign='top' align='center' >
-        
+        {% ifnotequal infopage.image " " %}
         {# choose image type #}
         {% ifequal pictype "svg" %}
             <object type="image/svg+xml" 
                     data='/content/{{ infopage.algo.type }}/{{ infopage.image }}.{{ pictype }}' 
                     width="{{ infopage.i_width }}" height="{{ infopage.i_height }}">
             </object>
+        
+            <a href='/content/{{ infopage.algo.type}}/{{ infopage.image}}.gif' target='_blank' >GIF-Animation</a>
+        
         {% else %}
         <img src='/content/{{ infopage.algo.type }}/{{ infopage.image }}.{{ pictype }}' 
              width="{{ infopage.i_width }}" height="{{ infopage.i_height }}" >
         </img>
         {% endifequal %}
+        {% endifnotequal %}
         </td>
     </tr>
     <tr>

@@ -20,24 +20,24 @@ from django import forms
 
 class AESEncryptForm(forms.Form):
     message = forms.CharField(label='Klartext', required=True)
-    key = forms.IntegerField(label=u'Schlüssel (große Zahl)', required=True)
+    key = forms.CharField(label=u'Schlüssel', required=True)
     block_values = ((1,'ECB'),(2,'CBC'),(3,'CFB')) 
     block_mode = forms.ChoiceField(choices=block_values, label='Blockmodus')
 
 class AESDecryptForm(forms.Form):
     cypher_text = forms.IntegerField(label='Geheimtext', required=True)
-    key = forms.IntegerField(label=u'Schlüssel (große Zahl)', required=True)
+    key = forms.CharField(label=u'Schlüssel', required=True)
     block_values = ((1,'ECB'),(2,'CBC'),(3,'CFB')) 
     block_mode = forms.ChoiceField(choices=block_values, label='Blockmodus')
 
 
 class SimpleEncryptForm(forms.Form):
     message = forms.CharField(label='Klartext', required=True)
-    key = forms.IntegerField(label=u'Schlüssel (große Zahl)', required=True)
+    key = forms.CharField(label=u'Schlüssel', required=True)
 
 class SimpleDecryptForm(forms.Form):
     cypher_text = forms.IntegerField(label='Geheimtext', required=True)
-    key = forms.IntegerField(label=u'Schlüssel (große Zahl)', required=True)
+    key = forms.CharField(label=u'Schlüssel', required=True)
 
 class RSAEncryptForm(forms.Form):
     message = forms.CharField(label='Klartext', required=True)

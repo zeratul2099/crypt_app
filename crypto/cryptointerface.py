@@ -23,7 +23,7 @@ from Crypto.Util import number
 from M2Crypto import RSA
 from classic import *
 import zipfile, os
-
+import hashlib
 
 def keygen():
     RSAKey = RSA.gen_key(2048, 1023)
@@ -50,7 +50,7 @@ def aesEncrypt(request):
     for i in range(extend):
         plain_text += "X"
     output = u"Klartext (erweitert):\n%s\n\n" %(plain_text)
-    key = number.long_to_bytes(request.POST["key"], 16)[0:32]
+    key = hashlib.sha256(request.POST["key"]).digest()
     output += u"Schlüssel: %s\n\n"%(request.POST["key"])
     output += u"AES-verschlüsselt:\n"
     aesObject = AES.new(key, int(request.POST["block_mode"]))
@@ -63,7 +63,7 @@ def desEncrypt(request):
     for i in range(extend):
         plain_text += "X"
     output = u"Klartext (erweitert):\n%s\n\n" %(plain_text)
-    key = number.long_to_bytes(request.POST["key"], 8)[0:8]
+    key = hashlib.sha256(request.POST["key"]).digest()[0:8]
     output += u"Schlüssel: %s\n\n"%(request.POST["key"])
     output += u"DES-verschlüsselt:\n"
     desObject = DES.new(key, int(request.POST["block_mode"]))
@@ -73,7 +73,7 @@ def desEncrypt(request):
 def xorEncrypt(request):
     plain_text = request.POST["message"]
     output = u"Klartext:\n%s\n\n" %(plain_text)
-    key = number.long_to_bytes(request.POST["key"], 0)
+    key = hashlib.sha256(request.POST["key"]).digest()
     output += u"Schlüssel: %s\n\n"%(request.POST["key"])
     output += u"XOR-verschlüsselt:\n"
     xorObject = XOR.new(key)
@@ -115,17 +115,17 @@ def affineEncrypt(request):
     return ( output, cypher )
     
 def aesDecrypt(request):
-    key = number.long_to_bytes(request.POST["key"], 16)[0:32]
+    key = hashlib.sha256(request.POST["key"]).digest()
     aesObject = AES.new(key, int(request.POST["block_mode"]))
     return aesObject.decrypt(number.long_to_bytes(request.POST["cypher_text"]))
     
 def desDecrypt(request):
-    key = number.long_to_bytes(request.POST["key"], 8)[0:8]
+    key = hashlib.sha256(request.POST["key"]).digest()[0:8]
     desObject = DES.new(key, int(request.POST["block_mode"]))
     return desObject.decrypt(number.long_to_bytes(request.POST["cypher_text"])) 
     
 def xorDecrypt(request):
-    key = number.long_to_bytes(request.POST["key"], 0)
+    key = hashlib.sha256(request.POST["key"]).digest()
     xorObject = XOR.new(key)
     return xorObject.decrypt(number.long_to_bytes(request.POST["cypher_text"])) 
     
