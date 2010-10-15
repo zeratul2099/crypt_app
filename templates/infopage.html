@@ -102,16 +102,32 @@
     <tr>{% endif %}
         <td width='75%' valign='top' align='center' >
         {% ifnotequal infopage.image " " %}
+
         {# choose image type #}
         {% ifequal pictype "svg" %}
+             <div id='hiddendiv'>
+            <a onclick="$('#hiddendiv').toggle('drop', 'slow');" id='close'>[X]</a>
+            <img src='/content/{{ infopage.algo.type }}/{{ infopage.image }}.gif' 
+             width="{{ infopage.i_width }}" height="{{ infopage.i_height }}" >
+            </img>
+            <div><small>Diese GIF-Animation hat eine niedrigere Qualit&auml;t und l&auml;ngere Ladezeit als
+                die in der Webseite eingebettete SVG-Animation, ist aber m&ouml;glicherweise
+                kompatibler zu &auml;lteren Browsern.</small></div>
+            <script type='text/javascript'>
+            $(document).ready(function() {
+            $('#close').position({of: $('#hiddendiv'),
+                                  my: 'right top',
+                                  at: 'right top'});
+            });
+            </script>
+            </div>
             <object type="image/svg+xml" 
                     data='/content/{{ infopage.algo.type }}/{{ infopage.image }}.{{ pictype }}' 
                     width="{{ infopage.i_width }}" height="{{ infopage.i_height }}">
             </object>
-        
-            <a href='/content/{{ infopage.algo.type}}/{{ infopage.image}}.gif' target='_blank' >GIF-Animation</a>
-        
-        {% else %}
+
+        <a href='/content/{{ infopage.algo.type}}/{{ infopage.image}}.gif' target='_blank' onclick="$('#hiddendiv').toggle('drop', 'slow'); return false;" >GIF-Animation</a>
+        {% else %} 
         <img src='/content/{{ infopage.algo.type }}/{{ infopage.image }}.{{ pictype }}' 
              width="{{ infopage.i_width }}" height="{{ infopage.i_height }}" >
         </img>

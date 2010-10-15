@@ -35,7 +35,7 @@
         </tr>
     </table>
     {% if text %}
-    <p>
+    <div id='fadein'>
      <table width='100%' class='leftspace'>
         <tr>
             <td><b><img width='32' height='32' border='0' src='/content/icons/document.png' ></img> Ausgebettete Nachricht</b></td>
@@ -43,7 +43,7 @@
         <tr>
             <td class='info' >{{ text|escape|linebreaksbr }}</td>
         </tr>
-    </table>{% endif %}
+    </table></div>{% endif %}
   
 
 {% endblock %}

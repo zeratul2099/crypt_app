@@ -256,3 +256,15 @@ select {
    width: 50px;
    border: 1px solid #bbb;
 }
+
+div #hiddendiv {
+    border:3px outset #aeaeae;
+    padding-left:10px;
+    margin-left:0.5em;
+    margin-right:0.5em;
+    background-color: white;
+    display: none;
+    position: absolute;
+    left: 25%;
+    
+}

@@ -24,5 +24,11 @@
         <td class='manual'><span class='intext'>{{ manual.text|umlauts|safe }}</span></td>
     </tr>
 </table>
+<script type='text/javascript' >
+$(document).ready(function() {
+$('#fadein').hide();
+$('#fadein').show('fold', 'slow');
+});
+</script>
 {% endblock %}
 
