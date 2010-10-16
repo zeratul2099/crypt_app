@@ -37,7 +37,6 @@ def umlauts(var):
     var = var.replace(u"ß", u"&szlig;")
     var = var.replace(u"ç", u"&ccedil;")
     var = var.replace(u"Ç", u"&Ccedil;")
-    print var;
     return var
 
 def setIcon(var):
