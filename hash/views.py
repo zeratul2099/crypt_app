@@ -15,7 +15,7 @@
 #
 #       Copyright 2009 2010 by Marko Krause <zeratul2099@googlemail.com>
 
-from crypt_app.hash.models import HashForm, Sha2Form
+from crypt_app.hash.models import HashForm, Sha2Form, KeccakForm
 from crypt_app.base_app.models import Algo, InfoPage, ManPage
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render_to_response
@@ -23,7 +23,7 @@ from django.template import Context, loader
 from KeccakHash import KeccakHash
 from datetime import datetime
 import hashlib, random, sys
-
+import keccak.Keccak
 
 def algo(request, algo):
     salt = 0
@@ -34,9 +34,9 @@ def algo(request, algo):
     if request.method == 'POST':
         
         if request.FILES:
-            if request.FILES['fileH'].size > 10000 and algo=="keccak":
-                form = HashForm()
-                return render_to_response("hash_algo.html", {'hashvalue' : 'Datei zu gross',  'form' : form}) 
+            #if request.FILES['fileH'].size > 10000 and algo=="keccak":
+            #    form = HashForm()
+            #    return render_to_response("hash_algo.html", {'hashvalue' : 'Datei zu gross',  'form' : form}) 
             clear_text = request.FILES['fileH'].read()
             output = "Eingabedatei:\n%s (%s Bytes)\n" %(request.FILES['fileH'].name,
                                                       request.FILES['fileH'].size)
@@ -52,9 +52,20 @@ def algo(request, algo):
             clear_text += salt_str
             
         form = HashForm(request.POST, request.FILES)
-        if algo == "keccak":   
-            output += "Keccak[800]-224-Hash:\n"
-            hash_val = KeccakHash(repr(clear_text)).hexdigest()
+        if algo == "keccak":
+            form = KeccakForm(request.POST, request.FILES)
+            params = {"1":(1152,448,28,224),
+                      "2":(1088,512,32,256),
+                      "3":(832,768,48,384),
+                      "4":(576,1024,64,512),
+                      }
+            l = request.POST["hashlen"]
+            output += "Keccak[1600]-"+str(params[l][3])+"-Hash:\n"
+            #hash_val = KeccakHash(repr(clear_text)).hexdigest()
+            myKeccak=keccak.Keccak.Keccak()
+            inputHex = clear_text.encode("hex")
+
+            hash_val = myKeccak.Keccak((4*len(inputHex),inputHex),params[l][0],params[l][1],params[l][2],params[l][3])
         elif algo == "md5":
             output += "MD5-Hash:\n"
             hash_val = hashlib.md5(clear_text).hexdigest()
@@ -86,6 +97,8 @@ def algo(request, algo):
         output = ''
         if algo == 'sha2':
             form = Sha2Form()
+        elif algo == 'keccak':
+            form = KeccakForm()
         else:
             form = HashForm()
     return render_to_response("hash_algo.html", {'algo' : algo_object,

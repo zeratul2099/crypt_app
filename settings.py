@@ -86,4 +86,5 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.admin',
     'crypt_app.base_app',
+    'crypt_app.hash',
 )

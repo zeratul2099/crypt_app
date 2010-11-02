@@ -31,3 +31,10 @@ class Sha2Form(forms.Form):
     lenvals = ((1,'224'),(2,'256'),(3,'384'),(4,'512'),) 
     hashlen = forms.ChoiceField(choices=lenvals, label='Hashlänge')
 
+class KeccakForm(forms.Form):
+    clear = forms.CharField(label='Eingabe', required=False)
+    fileH = forms.FileField(required=False, label='Datei')
+    withSalt = forms.BooleanField(label='Mit Salz', required=False)
+    lenvals = ((1,'224'),(2,'256'),(3,'384'),(4,'512'),) 
+    hashlen = forms.ChoiceField(choices=lenvals, label='Hashlänge')
+    #keccakvar = (()()())
