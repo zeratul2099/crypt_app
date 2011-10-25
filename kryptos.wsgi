@@ -6,7 +6,7 @@ sys.stdout = sys.stderr
 
 # append project dir to path
 PROJ_DIR = os.path.dirname(os.path.abspath(__file__))
-vepath = PROJ_DIR + '/../venv/lib/python2.7/site-packages'
+vepath = PROJ_DIR + '/venv/lib/python2.7/site-packages'
 
 site.addsitedir(vepath)
 
