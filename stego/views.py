@@ -118,6 +118,7 @@ def algo(request, algo):
                 elif retval == -2:
                     text += "Fehler beim Ausbetten. Anderes Bild oder andere Parameter versuchen."
                 else:
+                    #print retval
                     text += retval
     # empty form
     else:

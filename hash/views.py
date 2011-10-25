@@ -20,7 +20,7 @@ from crypt_app.base_app.models import Algo, InfoPage, ManPage
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render_to_response
 from django.template import Context, loader
-from KeccakHash import KeccakHash
+#from KeccakHash import KeccakHash
 from datetime import datetime
 import hashlib, random, sys
 import keccak.Keccak
