@@ -22,7 +22,7 @@ sys.path[:0] = new_sys_path
 
 os.environ['DJANGO_SETTINGS_MODULE'] = 'crypt_app.settings'
 os.environ['SETTINGS_MODULE'] = 'crypt_app.settings'
-
+os.environ['PYTHON_EGG_CACHE'] = PROJ_DIR + '/venv/egg_cache'
 import django.core.handlers.wsgi
 application = django.core.handlers.wsgi.WSGIHandler()
 
