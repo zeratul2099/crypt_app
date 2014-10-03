@@ -36,7 +36,7 @@ class SimpleEncryptForm(forms.Form):
     key = forms.CharField(label=u'Schlüssel', required=True)
 
 class SimpleDecryptForm(forms.Form):
-    cypher_text = forms.IntegerField(label='Geheimtext', required=True)
+    cypher_text = forms.CharField(label='Geheimtext', required=True)
     key = forms.CharField(label=u'Schlüssel', required=True)
 
 class RSAEncryptForm(forms.Form):
@@ -44,7 +44,7 @@ class RSAEncryptForm(forms.Form):
     key = forms.FileField(label=u'Öffentlicher Schlüssel', required=True)
 
 class RSADecryptForm(forms.Form):
-    cypher_text = forms.IntegerField(label='Geheimtext', required=True)
+    cypher_text = forms.CharField(label='Geheimtext', required=True)
     key = forms.FileField(label=u'Privater Schluessel', required=True)
 
 class SimplestForm(forms.Form):
