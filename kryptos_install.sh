@@ -10,8 +10,7 @@
 #apache2
 #libapache2-mod-wsgi
 
-#git clone git://gitorious.org/kryptos/crypt_app.git
-
+# git clone https://github.com/zeratul2099/crypt_app.git
 
 cwd=`pwd`
 # cleaning up first
