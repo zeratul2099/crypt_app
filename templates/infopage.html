@@ -26,9 +26,6 @@
 </span>
 {% else %}{% ifequal infopage.algo.type "stego" %}
 <span class='trylink'>
-    <a href='{% url "stego.views.algo" infopage.algo.shortTitle %}/'>
-        {{ infopage.algo.name }} ausprobieren
-    </a>
 </span>
 {% else %}{% ifequal infopage.algo.type "hash" %}
 <span class='trylink'>

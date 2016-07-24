@@ -47,7 +47,6 @@
                 <tr>
                     <td width='50%'>{{ a.name }}:</td>
                     <td width='25%'><span class='infolink'><a href='{% url "base_app.views.info" a.shortTitle "overview" %}/'>Was ist das?</a></span></td>
-                    <td width='25%'><span class='trylink'><a href='{% url "stego.views.algo" a.shortTitle %}/'>Ausprobieren</a></span></td>
                 </tr>
     
     {% endfor %}

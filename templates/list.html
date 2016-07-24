@@ -27,7 +27,6 @@
                     {% ifequal algo_type "crypto" %}
                     <a href='{% url "crypto.views.algo" a.shortTitle %}/'>Ausprobieren</a>
                     {% else %}{% ifequal algo_type "stego" %}
-                    <a href='{% url "stego.views.algo" a.shortTitle %}/'>Ausprobieren</a>
                     {% else %}{% ifequal algo_type "hash" %}
                     <a href='{% url "hash.views.algo" a.shortTitle %}/'>Ausprobieren</a>
                     {% endifequal %}{% endifequal %}{% endifequal %}
