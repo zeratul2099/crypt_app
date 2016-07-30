@@ -1,4 +1,3 @@
-# encoding: utf-8
 #
 #       This program is free software; you can redistribute it and/or modify
 #       it under the terms of the GNU General Public License as published by
@@ -16,8 +15,8 @@
 #       Copyright 2009 2010 by Marko Krause <zeratul2099@googlemail.com>
 
 
+from wsgiref.util import FileWrapper
 from django.http import HttpResponse
-from django.core.servers.basehttp import FileWrapper
 from Crypto.Cipher import AES, DES, XOR
 from Crypto.Util import number
 from M2Crypto import RSA

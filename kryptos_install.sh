@@ -25,7 +25,7 @@ pip install --upgrade pip
 
 pip install django==1.9.8
 pip install pycrypto==2.6.1
-pip install m2crypto==0.25.1
+pip download m2crypto==0.25.1
 #cp remove-sslv2.patch venv/build/m2crypto
 #cd venv/build/m2crypto
 #patch -p0 < remove-sslv2.patch
