@@ -20,7 +20,7 @@ from crypt_app.base_app.models import Algo, ManPage
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render_to_response
 from django.template import Context, loader
-from cryptointerface import *
+from crypt_app.crypto.cryptointerface import *
 
 def algo(request, algo):
     output = u""
