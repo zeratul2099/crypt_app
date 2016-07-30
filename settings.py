@@ -3,6 +3,7 @@ import os
 
 PROJ_DIR = os.path.dirname(os.path.abspath(__file__))
 
+print('****'+PROJ_DIR)
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -81,12 +82,12 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'crypt_app.urls'
 
-TEMPLATE_DIRS = (
+TEMPLATE_DIRS = [(
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
      os.path.join(PROJ_DIR, 'templates/')
-)
+)]
 
 STATIC_DOC_ROOT =  os.path.join(PROJ_DIR, 'media/')
 

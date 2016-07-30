@@ -15,13 +15,17 @@
 cwd=`pwd`
 # cleaning up first
 rm -rf venv/
-virtualenv --no-site-packages --python=python2.7 venv
+pyvenv venv
 
 echo 'virtualenv created. Use it by executing "source venv/bin/activate"'
 source venv/bin/activate
-pip install django==1.2.7
-pip install pycrypto==2.4.1
-pip install m2crypto==0.24
+
+# upgrade pip first
+pip install --upgrade pip
+
+pip install django==1.9.8
+pip install pycrypto==2.6.1
+pip install m2crypto==0.25.1
 #cp remove-sslv2.patch venv/build/m2crypto
 #cd venv/build/m2crypto
 #patch -p0 < remove-sslv2.patch

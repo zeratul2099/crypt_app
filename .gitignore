@@ -3,4 +3,4 @@
 stego/_*
 stego/libstego.py
 stego/libstegofile.py
-
+venv
