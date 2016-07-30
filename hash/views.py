@@ -22,7 +22,7 @@ from django.template import Context, loader
 #from KeccakHash import KeccakHash
 from datetime import datetime
 import hashlib, random, sys
-from . import keccak.Keccak
+from crypt_app.hash import keccak
 
 def algo(request, algo):
     salt = 0
