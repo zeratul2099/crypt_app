@@ -67,25 +67,25 @@ def algo(request, algo):
             hash_val = myKeccak.Keccak((4*len(inputHex),inputHex),params[l][0],params[l][1],params[l][2],params[l][3])
         elif algo == "md5":
             output += "MD5-Hash:\n"
-            hash_val = hashlib.md5(clear_text).hexdigest()
+            hash_val = hashlib.md5(clear_text.encode('utf8')).hexdigest()
         elif algo == "sha1":
             output += "SHA-1-Hash:\n"
-            hash_val = hashlib.sha1(clear_text).hexdigest()
+            hash_val = hashlib.sha1(clear_text.encode('utf8')).hexdigest()
         elif algo == "sha2":
             form = Sha2Form(request.POST, request.FILES)
             hashlen = request.POST['hashlen']
             if hashlen == '1':
                 output += "SHA-2-224-Hash:\n"
-                hash_val = hashlib.sha224(clear_text).hexdigest()
+                hash_val = hashlib.sha224(clear_text.encode('utf8')).hexdigest()
             elif hashlen == '2':
                 output += "SHA-2-256-Hash:\n"
-                hash_val = hashlib.sha256(clear_text).hexdigest()
+                hash_val = hashlib.sha256(clear_text.encode('utf8')).hexdigest()
             elif hashlen == '3':
                 output += "SHA-2-384-Hash:\n"
-                hash_val = hashlib.sha384(clear_text).hexdigest()
+                hash_val = hashlib.sha384(clear_text.encode('utf8')).hexdigest()
             elif hashlen == '4':
                 output += "SHA-2-512-Hash:\n"
-                hash_val = hashlib.sha512(clear_text).hexdigest()   
+                hash_val = hashlib.sha512(clear_text.encode('utf8')).hexdigest()   
         else:
             output += "Ungültiger Algorithmus"
         if 'withSalt' in request.POST:

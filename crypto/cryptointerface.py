@@ -34,8 +34,8 @@ def keygen():
     zipF.close()
     os.remove("private.pem")
     os.remove("public.pem")
-    wrapper = FileWrapper(file("keys.zip"))
-    response = HttpResponse(wrapper, mimetype='application/zip')
+    wrapper = FileWrapper(open("keys.zip", 'rb'))
+    response = HttpResponse(wrapper, content_type='application/zip')
     response['Content-Length'] = os.path.getsize("keys.zip")
     response['Content-Disposition'] = 'attachment; filename=keys.zip'
     os.remove("keys.zip")
@@ -49,7 +49,7 @@ def aesEncrypt(request):
     for i in range(extend):
         plain_text += "X"
     output = "Klartext (erweitert):\n%s\n\n" %(plain_text)
-    key = hashlib.sha256(request.POST["key"]).digest()
+    key = hashlib.sha256(request.POST["key"].encode('utf8')).digest()
     output += "Schlüssel: %s\n\n"%(request.POST["key"])
     output += "AES-verschlüsselt:\n"
     aesObject = AES.new(key, int(request.POST["block_mode"]))
@@ -62,7 +62,7 @@ def desEncrypt(request):
     for i in range(extend):
         plain_text += "X"
     output = "Klartext (erweitert):\n%s\n\n" %(plain_text)
-    key = hashlib.sha256(request.POST["key"]).digest()[0:8]
+    key = hashlib.sha256(request.POST["key"].encode('utf8')).digest()[0:8]
     output += "Schlüssel: %s\n\n"%(request.POST["key"])
     output += "DES-verschlüsselt:\n"
     desObject = DES.new(key, int(request.POST["block_mode"]))
@@ -114,12 +114,12 @@ def affineEncrypt(request):
     return ( output, cypher )
     
 def aesDecrypt(request):
-    key = hashlib.sha256(request.POST["key"]).digest()
+    key = hashlib.sha256(request.POST["key"].encode('utf8')).digest()
     aesObject = AES.new(key, int(request.POST["block_mode"]))
     return aesObject.decrypt(number.long_to_bytes(request.POST["cypher_text"]))
     
 def desDecrypt(request):
-    key = hashlib.sha256(request.POST["key"]).digest()[0:8]
+    key = hashlib.sha256(request.POST["key"].encode('utf8')).digest()[0:8]
     desObject = DES.new(key, int(request.POST["block_mode"]))
     return desObject.decrypt(number.long_to_bytes(request.POST["cypher_text"])) 
     
