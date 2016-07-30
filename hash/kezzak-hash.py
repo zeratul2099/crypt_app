@@ -87,5 +87,5 @@ message = "Hello World! This is an test-message with Spam & Eggs and many viking
 #state.set_lane(3,3,0x12345678)
 absorb(state, file)
 squeeze(state)
-print state.digest
+print(state.digest)
 

@@ -16,7 +16,7 @@
 
 import sys, os
 import numpy as np
-from KeccakState import KeccakState as State
+from .KeccakState import KeccakState as State
 
 class KeccakHash(object):
     #number of bytes per integer, on 32bit platforms this is 4
@@ -30,11 +30,11 @@ class KeccakHash(object):
     num_rounds = 22
 
     def __init__(self, message):
-        print message
+        print(message)
         self.state = State(self.r, self.c, self.d, self.num_b_i, self.num_rounds, self.hash_len)
         self.absorb(self.state, message)
         self.squeeze(self.state)
-        print self.state.digest
+        print(self.state.digest)
     
     def kezzak_f(self, state):
         # 22 rounds of kezzak
@@ -47,7 +47,7 @@ class KeccakHash(object):
         return state
 
     def absorb(self, state, message):
-        print message
+        print(message)
         message += '\x80'
         d_dec = state.d
         rb_dec = state.r / 8

@@ -135,12 +135,12 @@ class Keccak:
         state: state of the sponge function
         info: a string of characters used as identifier"""
 
-        print("Current value of state: %s" % (info))
+        print(("Current value of state: %s" % (info)))
         for y in range(5):
             line=[]
             for x in range(5):
                  line.append(hex(state[x][y]))
-            print('\t%s' % line)
+            print(('\t%s' % line))
 
     ### Conversion functions String <-> Table (and vice-versa)
 
@@ -312,7 +312,7 @@ class Keccak:
         self.setB(r+c)
 
         if verbose:
-            print("Create a Keccak function with (r=%d, c=%d, d=%d (i.e. w=%d))" % (r,c,d,(r+c)//25))
+            print(("Create a Keccak function with (r=%d, c=%d, d=%d (i.e. w=%d))" % (r,c,d,(r+c)//25)))
 
         #Compute lane length (in bits)
         w=(r+c)//25
@@ -329,7 +329,7 @@ class Keccak:
         P=self.pad([8*len(P)//2,P],r)
 
         if verbose:
-            print("String ready to be absorbed: %s (will be completed by %d x '00')" % (P, c//8))
+            print(("String ready to be absorbed: %s (will be completed by %d x '00')" % (P, c//8)))
 
         #Absorbing phase
         for i in range((len(P)*8//2)//r):
@@ -341,7 +341,7 @@ class Keccak:
             S = self.KeccakF(S, verbose)
 
         if verbose:
-            print("Value after absorption : %s" % (self.convertTableToStr(S)))
+            print(("Value after absorption : %s" % (self.convertTableToStr(S))))
 
         #Squeezing phase
         Z = ''
@@ -357,6 +357,6 @@ class Keccak:
             #     is not a multiple of r
 
         if verbose:
-            print("Value after squeezing : %s" % (self.convertTableToStr(S)))
+            print(("Value after squeezing : %s" % (self.convertTableToStr(S))))
 
         return Z[:2*n//8]

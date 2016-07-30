@@ -23,7 +23,7 @@ class CPTEmbedForm(forms.Form):
     file = forms.FileField(required=True, label='PNG-Datei')
     pw = forms.CharField(label='Passwort',widget=forms.PasswordInput(render_value=False))
     matrix_values = ((1,'1'),(2,'2'),(3,'3'),(4,'4'),(5,'5'),) 
-    height = forms.ChoiceField(choices=matrix_values, label=u'Blockhöhe')
+    height = forms.ChoiceField(choices=matrix_values, label='Blockhöhe')
     width = forms.ChoiceField(choices=matrix_values, label='Blockbreite')
 
 class CPTExtractForm(forms.Form):

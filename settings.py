@@ -3,7 +3,7 @@ import os
 
 PROJ_DIR = os.path.dirname(os.path.abspath(__file__))
 
-print('****'+PROJ_DIR)
+print(('****'+PROJ_DIR))
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 

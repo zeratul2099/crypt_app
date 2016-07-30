@@ -21,7 +21,7 @@ from django.core.servers.basehttp import FileWrapper
 from Crypto.Cipher import AES, DES, XOR
 from Crypto.Util import number
 from M2Crypto import RSA
-from classic import *
+from .classic import *
 import zipfile, os
 import hashlib
 
@@ -44,15 +44,15 @@ def keygen():
 
 
 def aesEncrypt(request):
-    print "call"
+    print("call")
     plain_text = request.POST["message"]
     extend = 16 - (len(plain_text) % 16)
     for i in range(extend):
         plain_text += "X"
-    output = u"Klartext (erweitert):\n%s\n\n" %(plain_text)
+    output = "Klartext (erweitert):\n%s\n\n" %(plain_text)
     key = hashlib.sha256(request.POST["key"]).digest()
-    output += u"Schlüssel: %s\n\n"%(request.POST["key"])
-    output += u"AES-verschlüsselt:\n"
+    output += "Schlüssel: %s\n\n"%(request.POST["key"])
+    output += "AES-verschlüsselt:\n"
     aesObject = AES.new(key, int(request.POST["block_mode"]))
     cypher = number.bytes_to_long(aesObject.encrypt(plain_text))
     return ( output, cypher )
@@ -62,55 +62,55 @@ def desEncrypt(request):
     extend = 8 - (len(plain_text) % 8)
     for i in range(extend):
         plain_text += "X"
-    output = u"Klartext (erweitert):\n%s\n\n" %(plain_text)
+    output = "Klartext (erweitert):\n%s\n\n" %(plain_text)
     key = hashlib.sha256(request.POST["key"]).digest()[0:8]
-    output += u"Schlüssel: %s\n\n"%(request.POST["key"])
-    output += u"DES-verschlüsselt:\n"
+    output += "Schlüssel: %s\n\n"%(request.POST["key"])
+    output += "DES-verschlüsselt:\n"
     desObject = DES.new(key, int(request.POST["block_mode"]))
     cypher = number.bytes_to_long(desObject.encrypt(plain_text))
     return ( output, cypher )
     
 def xorEncrypt(request):
     plain_text = request.POST["message"]
-    output = u"Klartext:\n%s\n\n" %(plain_text)
+    output = "Klartext:\n%s\n\n" %(plain_text)
     key = hashlib.sha256(request.POST["key"]).digest()
-    output += u"Schlüssel: %s\n\n"%(request.POST["key"])
-    output += u"XOR-verschlüsselt:\n"
+    output += "Schlüssel: %s\n\n"%(request.POST["key"])
+    output += "XOR-verschlüsselt:\n"
     xorObject = XOR.new(key)
     cypher = number.bytes_to_long(xorObject.encrypt(plain_text))
     return ( output, cypher )
     
 def rsaEncrypt(request):
     plain_text = request.POST["message"]
-    output = u"Klartext:\n%s\n\n" %(plain_text)
-    output += u"RSA-verschlüsselt:\n"
+    output = "Klartext:\n%s\n\n" %(plain_text)
+    output += "RSA-verschlüsselt:\n"
     try:
         PubKey = RSA.load_pub_key(request.FILES['key'].temporary_file_path())
         cypher = number.bytes_to_long(PubKey.public_encrypt(plain_text, 1))
-    except RSA.RSAError, e:
+    except RSA.RSAError as e:
         output = str(e)
         cypher = ""
     return ( output, cypher )
     
 def atbaschEncrypt(request):
     plain_text = request.POST["message"]
-    output = u"Klartext:\n%s\n\n" %(plain_text)
-    output += u"Atbasch-verschlüsselt:\n"
+    output = "Klartext:\n%s\n\n" %(plain_text)
+    output += "Atbasch-verschlüsselt:\n"
     cypher = atbasch(plain_text)
     return ( output, cypher )
     
     
 def caesarEncrypt(request):
     plain_text = request.POST["message"]
-    output = u"Klartext:\n%s\n\n" %(plain_text)
-    output += u"ROT%s-verschlüsselt:\n"%(request.POST["key"])
+    output = "Klartext:\n%s\n\n" %(plain_text)
+    output += "ROT%s-verschlüsselt:\n"%(request.POST["key"])
     cypher = caesar(plain_text, int(request.POST["key"]), True)
     return ( output, cypher )
     
 def affineEncrypt(request):
     plain_text = request.POST["message"]
-    output = u"Klartext:\n%s\n\n" %(plain_text)
-    output += u"(%s, %s)-verschlüsselt:\n"%(request.POST["keyA"], request.POST["keyB"])
+    output = "Klartext:\n%s\n\n" %(plain_text)
+    output += "(%s, %s)-verschlüsselt:\n"%(request.POST["keyA"], request.POST["keyB"])
     cypher = affineEnc(plain_text, int(request.POST["keyA"]), int(request.POST["keyB"]))
     return ( output, cypher )
     
@@ -133,7 +133,7 @@ def rsaDecrypt(request):
     try:
         PrivKey = RSA.load_key(request.FILES['key'].temporary_file_path())
         return PrivKey.private_decrypt(number.long_to_bytes(request.POST["cypher_text"]), 1).replace('\0','')
-    except RSA.RSAError, e:
+    except RSA.RSAError as e:
         return str(e)
     
 def caesarDecrypt(request):

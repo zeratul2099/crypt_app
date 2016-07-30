@@ -19,7 +19,7 @@ try:
     from processing import Process, Pipe, Queue
 except ImportError:
     from multiprocessing import Process, Pipe, Queue
-import Queue as Q
+import queue as Q
 import libstego, libstegofile
 
 def cptEmbed(q):

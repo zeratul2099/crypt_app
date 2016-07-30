@@ -30,9 +30,9 @@ try:
 except ImportError:
     from multiprocessing import Process, Pipe, Queue as Q
 
-import Queue as Q
+import queue as Q
 import os
-from stegointerface import *
+from .stegointerface import *
 
 def algo(request, algo):
     text = ""

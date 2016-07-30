@@ -23,7 +23,7 @@ from django.template import Context, loader
 #from KeccakHash import KeccakHash
 from datetime import datetime
 import hashlib, random, sys
-import keccak.Keccak
+from . import keccak.Keccak
 
 def algo(request, algo):
     salt = 0
@@ -46,7 +46,7 @@ def algo(request, algo):
             
         if 'withSalt' in request.POST:
             rand = random.Random(datetime.now().strftime('%s'))
-            salt = rand.randint(0, sys.maxint)
+            salt = rand.randint(0, sys.maxsize)
             for i in range(4):
                 salt_str += chr((salt%(1<<(8*(i+1))))>>((i*8)+1))
             clear_text += salt_str
@@ -88,7 +88,7 @@ def algo(request, algo):
                 output += "SHA-2-512-Hash:\n"
                 hash_val = hashlib.sha512(clear_text).hexdigest()   
         else:
-            output += u"Ungültiger Algorithmus"
+            output += "Ungültiger Algorithmus"
         if 'withSalt' in request.POST:
             output += "\n\nSalz:\n"
             output += repr(salt_str)

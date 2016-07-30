@@ -23,8 +23,8 @@ from django.template import Context, loader
 from crypt_app.crypto.cryptointerface import *
 
 def algo(request, algo):
-    output = u""
-    cypher = u""
+    output = ""
+    cypher = ""
     algo_object = get_object_or_404(Algo, shortTitle=algo)
     manual = get_object_or_404(ManPage, algo=algo_object)
     

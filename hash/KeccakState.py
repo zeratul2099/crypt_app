@@ -96,7 +96,7 @@ class KeccakState(object):
             
     def set_sheet(self, x, sheet):
         for i in range(5):
-            print self.state[(x%5)+(i*5)]
+            print(self.state[(x%5)+(i*5)])
             self.state[(x%5)+(i*5)] = sheet[i]
 
     def set_bit(self, x, y, z, bit):
