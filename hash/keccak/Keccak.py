@@ -175,7 +175,7 @@ class Keccak:
         if self.w%8!= 0:
             raise KeccakError.KeccakError("w is not a multiple of 8")
         if (len(table)!=5) or (False in [len(row)==5 for row in table]):
-	    raise KeccakError.KeccakError("table must be 5×5")
+            raise KeccakError.KeccakError("table must be 5×5")
 
         #Convert
         output=['']*25

@@ -14,15 +14,18 @@
 #
 #       Copyright 2009 2010 by Marko Krause <zeratul2099@googlemail.com>
 
-from crypt_app.hash.models import HashForm, Sha2Form, KeccakForm
-from crypt_app.base_app.models import Algo, InfoPage, ManPage
+import binascii
+from datetime import datetime
+import hashlib, random, sys
+
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render_to_response
 from django.template import Context, loader
+
+from crypt_app.hash.models import HashForm, Sha2Form, KeccakForm
+from crypt_app.base_app.models import Algo, InfoPage, ManPage
 #from KeccakHash import KeccakHash
-from datetime import datetime
-import hashlib, random, sys
-from crypt_app.hash import keccak
+from crypt_app.hash.keccak import Keccak
 
 def algo(request, algo):
     salt = 0
@@ -61,8 +64,8 @@ def algo(request, algo):
             l = request.POST["hashlen"]
             output += "Keccak[1600]-"+str(params[l][3])+"-Hash:\n"
             #hash_val = KeccakHash(repr(clear_text)).hexdigest()
-            myKeccak=keccak.Keccak.Keccak()
-            inputHex = clear_text.encode("hex")
+            myKeccak= Keccak.Keccak()
+            inputHex = binascii.hexlify(str.encode(clear_text)).decode()
 
             hash_val = myKeccak.Keccak((4*len(inputHex),inputHex),params[l][0],params[l][1],params[l][2],params[l][3])
         elif algo == "md5":
