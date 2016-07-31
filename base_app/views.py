@@ -51,11 +51,12 @@ def list(request, algo_type):
 def info(request, algo, page):
     title = ''
     text = ''
-    user_agent = request.META['HTTP_USER_AGENT']
-    if (user_agent.find('WebKit') != -1 or user_agent.find('Presto') != -1 or user_agent.find('Gecko') != -1):
-        pictype = "svg"
-    else:
-        pictype = "gif"
+#    user_agent = request.META['HTTP_USER_AGENT']
+#    if (user_agent.find('WebKit') != -1 or user_agent.find('Presto') != -1 or user_agent.find('Gecko') != -1):
+#        pictype = "svg"
+#    else:
+#        pictype = "gif"
+    pictype = "svg"
     algo_object = get_object_or_404(Algo, shortTitle=algo)
     info_page = get_list_or_404(InfoPage, algo=algo_object, shortTitle=page)[0]
     main_page = get_list_or_404(InfoPage, masterPage=None, algo=algo_object)[0]
