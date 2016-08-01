@@ -28,15 +28,14 @@ pip install pycrypto==2.6.1
 
 # m2crypto from git python3 branch
 cd venv
-git clone https://gitlab.com/m2crypto/m2crypto.git
-cd m2crypto
-git checkout python3
+wget https://gitlab.com/m2crypto/m2crypto/repository/archive.tar.bz2?ref=python3 -O M2Crypto.tar.bz2
+tar xjf M2Crypto.tar.bz2
+cd m2crypto-python3-*
 python setup.py build
 python setup.py install
-# setup.py seem not to copy the libs correctly to site-packages, do it manually
-cd build
-cd lib*
-cp -r M2Crypto ../../../lib/python3*/site-packages/
+cd ..
+rm -rf m2crypto-python3-*
+
 #git clone https://github.com/zeratul2099/libstego.git
 #cd libstego
 #cmake -DPYTHON_LIBRARY=$cwd/venv/include/python2.7 -DCMAKE_CXX_COMPILER=gcc .
