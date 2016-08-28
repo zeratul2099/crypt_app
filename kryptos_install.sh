@@ -25,6 +25,7 @@ pip install --upgrade pip
 
 pip install django==1.9.8
 pip install pycrypto==2.6.1
+pip install uwsgi
 
 # m2crypto from git python3 branch
 cd venv
