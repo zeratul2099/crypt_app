@@ -46,11 +46,23 @@ rm -rf m2crypto-python3-*
 #cp src/libstego/libstego.so ../../
 #cp src/libstegofile/libstegofile.so ../../
 
-#echo 'build finished, please add:'
-#echo
-#echo 'Alias /content/ ${cwd}/media/'
-#echo 'Alias /media/ ${cwd}/venv/lib/python2.7/site-packages/django/contrib/admin/media/'
-#echo 'WSGIScriptAlias / ${cwd}/kryptos.wsgi'
-#echo 'WSGIRestrictStdin Off'
-#echo
-#echo 'to your httpd.conf and make sure that ${cwd} and ${cwd}/db are readable/writable by the webserver'
+# nginx configuration
+echo 'build finished, please add:'
+echo
+echo 'location /kryptos {'
+echo '	uwsgi_pass django;'
+echo '	include ${cwd}/uwsgi_params;'
+echo ''
+echo ''
+echo '}'
+echo ''
+echo 'location /content {'
+echo '	alias ${cwd}/media;'
+echo '}'
+
+echo
+echo 'and start the uswgi process with'
+echo
+echo 'uwsgi --socket=127.0.0.1:8000 --module wsgi:application --home=${cwd}/venv --master --vacuum --env PYTHONPATH=..:. --env DJANGO_SETTINGS_MODULE=crypt_app.settings -p 3'
+
+echo 'from your virtual env'
