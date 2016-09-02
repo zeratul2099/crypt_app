@@ -20,7 +20,7 @@ from django.http import HttpResponse
 from Crypto.Cipher import AES, DES, XOR
 from Crypto.Util import number
 from M2Crypto import RSA
-from .classic import *
+from .classic import atbasch, caesar, affineEnc, affineDec 
 import zipfile, os
 import hashlib
 
@@ -52,7 +52,8 @@ def aesEncrypt(request):
     key = hashlib.sha256(request.POST["key"].encode('utf8')).digest()
     output += "Schlüssel: %s\n\n"%(request.POST["key"])
     output += "AES-verschlüsselt:\n"
-    aesObject = AES.new(key, int(request.POST["block_mode"]))
+    # use first part of key as IV. Probably no good idea, but will work for now
+    aesObject = AES.new(key, mode=int(request.POST["block_mode"]), IV=key[:16])
     cypher = number.bytes_to_long(aesObject.encrypt(plain_text))
     return ( output, cypher )
 
@@ -65,7 +66,8 @@ def desEncrypt(request):
     key = hashlib.sha256(request.POST["key"].encode('utf8')).digest()[0:8]
     output += "Schlüssel: %s\n\n"%(request.POST["key"])
     output += "DES-verschlüsselt:\n"
-    desObject = DES.new(key, int(request.POST["block_mode"]))
+    # use key as IV. Probably no good idea, but will work for now
+    desObject = DES.new(key, mode=int(request.POST["block_mode"]), IV=key)
     cypher = number.bytes_to_long(desObject.encrypt(plain_text))
     return ( output, cypher )
     
@@ -115,12 +117,14 @@ def affineEncrypt(request):
     
 def aesDecrypt(request):
     key = hashlib.sha256(request.POST["key"].encode('utf8')).digest()
-    aesObject = AES.new(key, int(request.POST["block_mode"]))
+    # use first part of key as IV. Probably no good idea, but will work for now
+    aesObject = AES.new(key, mode=int(request.POST["block_mode"]), IV=key[:16])
     return aesObject.decrypt(number.long_to_bytes(request.POST["cypher_text"]))
     
 def desDecrypt(request):
     key = hashlib.sha256(request.POST["key"].encode('utf8')).digest()[0:8]
-    desObject = DES.new(key, int(request.POST["block_mode"]))
+    # use key as IV. Probably no good idea, but will work for now
+    desObject = DES.new(key, mode=int(request.POST["block_mode"]), IV=key)
     return desObject.decrypt(number.long_to_bytes(request.POST["cypher_text"])) 
     
 def xorDecrypt(request):
