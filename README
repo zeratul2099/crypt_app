@@ -5,94 +5,51 @@
 Kryptos
 -------
 
-Abhängigkeiten
+System dependencies
 
-Um zu funktionieren, hat Kryptos einige Abhängigkeiten. Zunächst sollte der Pythoninterpreter mit seiner Standardbibliothek installiert sein. Dabei sollte es sich mindesten um Version 2.4 handeln. Mit älteren Versionen wurde Kryptos nicht getestet. Auch Version 3.0 oder später ist ungetestet. Python ist auf allen gängigen Linux-Distributionen vorinstalliert, Quellcode oder Binärdateien für andere Plattformen sind unter http://python.org/download/ zu finden.
+- git
+- python 3
+- python virtualenv
+- gcc
+- (optional) nginx
 
-Das Webframework Django ist zentraler Bestandteil von Kryptos, und muss ebenfalls installiert sein. Dabei sollte es sich mindestens um Version 1.1.1 handeln. Django ist ebenfalls Teil vieler Distributionen und kann als das Paket python-django nachinstalliert werden. Alternativ kann es unter http://www.djangoproject.com/download/ von der Entwicklerwebseite heruntergeladen werden.
+Installation
 
-Darüber hinaus benötigt Kryptos einige weitere Python-Bibliotheken. Zunächst sind das die Krypto-Bibiliotheken Python Cryptography Toolkit und M2Crypto. Die Bibliothek Python Cryptography Toolkit ist auch unter dem Namen python-crypto oder pycrypto zu finden und wurde mit Version 2.0.1 getestet. Die Bibliothek python-m2crypto oder m2crypto wurde mit den Versionen 0.18.2 und 0.19.1 getestet. Beide Bibliotheken lassen sich über die Paketmanager aller gängigen Linuxdistributionen installieren und sind alternativ unter http://www.dlitz.net/software/pycrypto/ bzw. http://chandlerproject.org/bin/view/Projects/MeTooCrypto zu finden.
+create environment and checkout
 
-Des weiteren wird die Bibliothek python-processing oder python-multiprocessing benötigt, welche in Version 0.52 bzw. 2.6 getestet wurde. Die Bibliothek python-multiprocessing ist ab Python-Version 2.6 ein Teil der Python-Standardbibliothek. Diese hat eine kompatible API zu python-processing. Ist python-processing nicht installiert, versucht Kryptos automatisch python-multiprocessing zu laden. Wird eine Python-Version vor 2.6 verwendet, muss python-processing installiert sein.
+`mkdir kryptos`
+`cd kryptos`
+`git clone https://github.com/zeratul2099/crypt_app.git`
+`cd crypt_app`
 
-Des weiteren wird die Bibliothek numpy oder python-numpy benötigt. Diese wurde ab Version 1.1 getestet und lässt sich ebenfalls über den Paketmanager installieren. Alternativ ist sie unter http://new.scipy.org/download.html zu finden.
+use refactor branch
+`git checkout refactor`
 
-Schließlich wird die Bibliothek libstego benötigt. Diese liegt im Linux-Binärformat für die Prozessorarchitekturen x86 im 32- und 64-Bit-Format und für PowerPC im 32-Bit-Format Kryptos bei. Zur Installation muss das entsprechende Archiv im gleichen Verzeichnis wie Kryptos entpackt werden. Die Bibliothek libstego selbst hat folgende Abhängigkeiten:
+create virtual env
+`pyenv venv`
 
-- libpng
-- libjpeg
-- giflib
-- libxml2
-- libgmp oder gmp
-- libsndfile
-- libgsl oder gsl
+activate virtual env
+`source venv/bin/activate`
 
-Alternativ kann libstego selbst kompiliert werden. Dazu müssen zusätzlich git, cmake und swig sowie die Entwicklungspakete der Abhängigkeiten von libstego installiert sein. Der Quellcode kann mit der Zeile
+upgrade pip first
+`pip install --upgrade pip`
 
-git clone git://git.berlios.de/libstego
+install dependencies
+`pip install django==1.9.8`
+`pip install pycrypto==2.6.1`
+`pip install uwsgi`
 
-heruntergeladen werden. Im Quellverzeichnis wird die Bibliothek mit
+install m2crypto from git python3 branch
+`cd venv`
+`wget https://gitlab.com/m2crypto/m2crypto/repository/archive.tar.bz2?ref=python3 -O M2Crypto.tar.bz2`
+`tar xjf M2Crypto.tar.bz2`
+`cd m2crypto-python3-*`
+`python setup.py build`
+`python setup.py install`
+`cd ..`
+`rm -rf m2crypto-python3-*`
 
-cmake .
-make
-
-kompiliert. Sind alle Abhängigkeiten für libstego erfüllt, befinden sich nach den Kompilieren von libstego die Dateien libstego.py, libstegofile.py, _libstego.so und _libstegofile.so im Verzeichnis swig_bindings/ sowie die Dateien libstego.so bzw. libstegofile.so in den Verzeichnisses src/libstego/ bzw. src/libstegofile/. Die Dateien libstego.py, libstegofile.py, _libstego.so und _libstegofile.so müssen ins Verzeichnis crypt_app/stego/, sowie die Dateien libstego.so und libstegofile.so ins Verzeichnis crypt_app/ kopiert werden.
-
-Alternativ kann libstego nach dem Kompilieren mit
-
-make install
-
-als Nutzer mit Administrationsprivilegien systemweit installiert werden.
-
-Installation mit dem Django-Webserver
-
-Ein Django-Projekt kann auf zwei Weisen installiert werden. Einerseits bringt Django selbst einen eigenen Webserver mit, welcher für Entwicklungszwecke und nicht für den produktiven Einsatz gedacht ist. Andererseits kann ein Django-Projekt in einen gängigen Webserver wie beispielsweise Apache integriert werden.
-
-Die Installation mit dem Entwicklungswebserver gestaltet sich einfach. Nachdem alle Abhängigkeiten installiert sind, wird die bereitgestellte Kryptos-Archivdatei und das entsprechende libstego-Archiv in das Verzeichnis crypt_app/ entpackt.
-
-Alternativ kann Kryptos mit den Befehlen
-
-git clone git://gitorious.org/kryptos/crypt_app.git
-git clone git://gitorious.org/kryptos/libstego_binaries.git
-
-aus dem Internet heruntergeladen werden. Anschließend befindet sich Kryptos im Verzeichnis crypt_app/ und das libstego-Archiv im Verzeichnis libstego_binaries/. Letzteres muss ins Verzeichnis crypt_app/ entpackt werden.
-
-Der Webserver kann nun durch ein Aufruf von
-
-env LD_LIBRARY_PATH=. ./manage.py runserver $hostname:$port
-
-im Verzeichnis crypt_app/ gestartet werden, wobei $hostname der Name des Rechners oder die IP-Adresse der Netzwerkschnittstelle, über die Kryptos erreichbar sein soll, ist. Der Port, über den Kryptos erreichbar sein soll wird mit $port festgelegt.
-
-Werden beide Parameter weggelassen wird automatisch localhost:8000 gewählt. Zu berücksichtigen ist, dass das Belegen von Ports unter 1024 Administrationsprivilegien benötigt. Durch einen Aufruf von
-
-http://$hostname:$port/
-
-im Browser gelangt man auf die Eingangsseite von Kryptos.
-
- Ist libstego systemweit installiert, genügt
-
-./manage.py runserver $hostname:$port
-
-zum Starten des Servers.
-
-Installation mit Apache 2
-
-Um Kryptos in einem Apache-2-Webserver zu installieren, muss neben Apache das Webservermodul mod_wsgi installiert sein, welches die Kommunikation zwischen dem Webserver und Python ermöglicht. In der Konfigurationsdatei httpd.conf müssen folgende Zeilen hinzugefügt werden:
-
-Alias /content/ $ProjectPath/media/
-Alias /media/ /usr/share/pyshared/django/contrib/admin/media/
-WSGIScriptAlias / $ProjectPath/kryptos.wsgi
-WSGIRestrictStdin Off
-
-Dabei muss $ProjectPath an beiden Stellen durch den absoluten Pfad zum crypt_app-Verzeichnis ersetzt werden. Die Ausdrücke in den Zeilen 1 und 2 weisen den Pfad zu den statischen Webseitendokumenten, wie Grafiken, CSS-Dateien und Javascript-Programmen. Zeile 2 ist für diejenigen zuständig, die zur Administrationsoberfläche gehören. Hierbei ist zu beachten, dass der Webserver-Benutzername Leserecht auf diese Dateien haben muss. Darüber hinaus muss er Schreibrecht auf das Projektverzeichnis und auf die Datenbankdatei db haben. Der Ausdruck in Zeile 3 weist den Webserver an, bei einem Aufruf des URL-Pfads / die WSGI-Konfigurationsdatei von Kryptos aufzurufen. Zeile 4 aktiviert die Benutzung von stdin für WSGI. Dies ist für die Bibliothek libstego notwendig. Im Betrieb mit Apache-2-Webserver ist es nötig, dass libstego systemweit installiert ist. Wurde libstego selbst kompiliert, wird dies, wie oben beschrieben, durch
-
-make install
-
-als Administrator erreicht. Bei Verwendung der mitgelieferten Binärdateien, müssen die Dateien libstego.so und libstegofile.so in das Verzeichnis /usr/local/lib/ und die Dateien libstego.py, libstegofile.py, _libstego.so und _libstegofile.so in das dist-packages-Verzeichnis der Pythoninstallation kopiert werden (beispielsweise /usr/lib/python2.6/dist-packages/).
-
-Wird jetzt der Webserver gestartet, ist Kryptos unter dem URL-Pfad / erreichbar.
+now you can start the testing development server with:
+`PYTHONPATH=..:. DJANGO_SETTINGS_MODULE=crypt_app.settings django-admin runserver`
 
 
-Die Zugangsdaten für die Datenbank und den Administrationsbereich von Kryptos sind:
-Login: kryptos
-Passwort: kryptos
