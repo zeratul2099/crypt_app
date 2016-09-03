@@ -1,7 +1,8 @@
 Kryptos
--------
+=======
 
 System dependencies
+-------------------
 
 - git
 - python 3
@@ -10,6 +11,9 @@ System dependencies
 - (optional) nginx
 
 Installation
+------------
+
+Tested on Ubuntu 16.04
 
 create environment and checkout
 
@@ -43,7 +47,7 @@ install dependencies
 
     pip install django==1.9.8
     pip install pycrypto==2.6.1
-    pip install uwsgi
+    pip install uwsgi==2.0.13.1
 
 
 install m2crypto from git python3 branch
