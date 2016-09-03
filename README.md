@@ -84,26 +84,26 @@ Nginx configuration
 Add this to your nginx site config:
 
 
-`upstream django {`
+    `upstream django {`
 
-`    server 127.0.0.1:8000;`
+    `    server 127.0.0.1:8000;`
 
-`}`
+    `}`
 
 
-`location /kryptos {`
+    `location /kryptos {`
 
-`	uwsgi_pass django;`
+    `	uwsgi_pass django;`
 
-`	include <crypt_app dir>/uwsgi_params;`
+    `	include <crypt_app dir>/uwsgi_params;`
 
-`}`
+    `}`
 
-`location /content {`
+    `location /content {`
 
-`	alias <crypt_app dir>/media;`
+    `	alias <crypt_app dir>/media;`
 
-`}`
+    `}`
 
 
 and start the uswgi process with
