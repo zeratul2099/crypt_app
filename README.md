@@ -13,13 +13,10 @@ Installation
 
 create environment and checkout
 
-`mkdir kryptos`
-
-`cd kryptos`
-
-`git clone https://github.com/zeratul2099/crypt_app.git`
-
-`cd crypt_app`
+    mkdir kryptos
+    cd kryptos
+    git clone https://github.com/zeratul2099/crypt_app.git
+    cd crypt_app
 
 
 use refactor branch
@@ -44,30 +41,21 @@ upgrade pip first
 
 install dependencies
 
-`pip install django==1.9.8`
-
-`pip install pycrypto==2.6.1`
-
-`pip install uwsgi`
+    pip install django==1.9.8
+    pip install pycrypto==2.6.1
+    pip install uwsgi
 
 
 install m2crypto from git python3 branch
 
-`cd venv`
-
-`wget https://gitlab.com/m2crypto/m2crypto/repository/archive.tar.bz2?ref=python3 -O M2Crypto.tar.bz2`
-
-`tar xjf M2Crypto.tar.bz2`
-
-`cd m2crypto-python3-*`
-
-`python setup.py build`
-
-`python setup.py install`
-
-`cd ..`
-
-`rm -rf m2crypto-python3-*`
+    cd venv
+    wget https://gitlab.com/m2crypto/m2crypto/repository/archive.tar.bz2?ref=python3 -O M2Crypto.tar.bz2
+    tar xjf M2Crypto.tar.bz2
+    cd m2crypto-python3-*
+    python setup.py build
+    python setup.py install
+    cd ..
+    rm -rf m2crypto-python3-*
 
 
 Django development server
@@ -84,26 +72,18 @@ Nginx configuration
 Add this to your nginx site config:
 
 
-    `upstream django {`
+    upstream django {
+        server 127.0.0.1:8000;
+    }
 
-    `    server 127.0.0.1:8000;`
+    location /kryptos {
+        uwsgi_pass django;
+        include <crypt_app dir>/uwsgi_params;
+    }
 
-    `}`
-
-
-    `location /kryptos {`
-
-    `	uwsgi_pass django;`
-
-    `	include <crypt_app dir>/uwsgi_params;`
-
-    `}`
-
-    `location /content {`
-
-    `	alias <crypt_app dir>/media;`
-
-    `}`
+    location /content {
+        alias <crypt_app dir>/media;
+    }
 
 
 and start the uswgi process with
