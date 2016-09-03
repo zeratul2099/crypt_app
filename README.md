@@ -21,22 +21,22 @@ create environment and checkout
 
 use refactor branch
 
-`git checkout refactor`
+    git checkout refactor
 
 
 create virtual env
 
-`pyenv venv`
+    pyenv venv
 
 
 activate virtual env
 
-`source venv/bin/activate`
+    source venv/bin/activate
 
 
 upgrade pip first
 
-`pip install --upgrade pip`
+    pip install --upgrade pip
 
 
 install dependencies
@@ -63,7 +63,7 @@ Django development server
 
 Now you can start the testing development server with:
 
-`PYTHONPATH=..:. DJANGO_SETTINGS_MODULE=crypt_app.settings django-admin runserver`
+    PYTHONPATH=..:. DJANGO_SETTINGS_MODULE=crypt_app.settings django-admin runserver
 
 
 Nginx configuration
@@ -88,7 +88,7 @@ Add this to your nginx site config:
 
 and start the uswgi process with
 
-`uwsgi --socket=127.0.0.1:8000 --module wsgi:application --home=<crypt_app dir>/venv --master --vacuum --env PYTHONPATH=..:. --env DJANGO_SETTINGS_MODULE=crypt_app.settings -p 3`
+    uwsgi --socket=127.0.0.1:8000 --module wsgi:application --home=<crypt_app dir>/venv --master --vacuum --env PYTHONPATH=..:. --env DJANGO_SETTINGS_MODULE=crypt_app.settings -p 3
 
 from your virtual env
 
