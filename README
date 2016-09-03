@@ -18,7 +18,7 @@ Installation
 
 create environment and checkout
 
-`mkdir kryptos`
+_mkdir kryptos_
 `cd kryptos`
 `git clone https://github.com/zeratul2099/crypt_app.git`
 `cd crypt_app`
