@@ -51,7 +51,7 @@ def list(request, algo_type):
 def info(request, algo, page):
     title = ''
     text = ''
-#    user_agent = request.META['HTTP_USER_AGENT']
+    user_agent = request.META['HTTP_USER_AGENT']
 #    if (user_agent.find('WebKit') != -1 or user_agent.find('Presto') != -1 or user_agent.find('Gecko') != -1):
 #        pictype = "svg"
 #    else:

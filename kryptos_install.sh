@@ -15,40 +15,54 @@
 cwd=`pwd`
 # cleaning up first
 rm -rf venv/
-virtualenv --no-site-packages --python=python2.7 venv
+pyvenv venv
 
 echo 'virtualenv created. Use it by executing "source venv/bin/activate"'
 source venv/bin/activate
-pip install django==1.2.7
-pip install pycrypto==2.4.1
-pip install m2crypto==0.24
-#cp remove-sslv2.patch venv/build/m2crypto
-#cd venv/build/m2crypto
-#patch -p0 < remove-sslv2.patch
-#if [ $1 == 'fedora' ]
-#then
-#echo 'building fedora version'
-#bash fedora_setup.sh build
-#bash fedora_setup.sh install
-#else
-#python setup.py build
-#python setup.py install
-#fi
-#cd ../../
-git clone https://github.com/zeratul2099/libstego.git
-cd libstego
-cmake -DPYTHON_LIBRARY=$cwd/venv/include/python2.7 -DCMAKE_CXX_COMPILER=gcc .
-make
-cp swig_bindings/_libstego* ../../stego/
-cp swig_bindings/libstego*.py ../../stego/
-cp src/libstego/libstego.so ../../
-cp src/libstegofile/libstegofile.so ../../
 
+# upgrade pip first
+pip install --upgrade pip
+
+pip install django==1.9.8
+pip install pycrypto==2.6.1
+pip install uwsgi
+
+# m2crypto from git python3 branch
+cd venv
+wget https://gitlab.com/m2crypto/m2crypto/repository/archive.tar.bz2?ref=python3 -O M2Crypto.tar.bz2
+tar xjf M2Crypto.tar.bz2
+cd m2crypto-python3-*
+python setup.py build
+python setup.py install
+cd ..
+rm -rf m2crypto-python3-*
+
+#git clone https://github.com/zeratul2099/libstego.git
+#cd libstego
+#cmake -DPYTHON_LIBRARY=$cwd/venv/include/python2.7 -DCMAKE_CXX_COMPILER=gcc .
+#make
+#cp swig_bindings/_libstego* ../../stego/
+#cp swig_bindings/libstego*.py ../../stego/
+#cp src/libstego/libstego.so ../../
+#cp src/libstegofile/libstegofile.so ../../
+
+# nginx configuration
 echo 'build finished, please add:'
 echo
-echo 'Alias /content/ ${cwd}/media/'
-echo 'Alias /media/ ${cwd}/venv/lib/python2.7/site-packages/django/contrib/admin/media/'
-echo 'WSGIScriptAlias / ${cwd}/kryptos.wsgi'
-echo 'WSGIRestrictStdin Off'
+echo 'location /kryptos {'
+echo '	uwsgi_pass django;'
+echo '	include ${cwd}/uwsgi_params;'
+echo ''
+echo ''
+echo '}'
+echo ''
+echo 'location /content {'
+echo '	alias ${cwd}/media;'
+echo '}'
+
 echo
-echo 'to your httpd.conf and make sure that ${cwd} and ${cwd}/db are readable/writable by the webserver'
+echo 'and start the uswgi process with'
+echo
+echo 'uwsgi --socket=127.0.0.1:8000 --module wsgi:application --home=${cwd}/venv --master --vacuum --env PYTHONPATH=..:. --env DJANGO_SETTINGS_MODULE=crypt_app.settings -p 3'
+
+echo 'from your virtual env'

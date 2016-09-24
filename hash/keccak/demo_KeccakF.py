@@ -9,7 +9,7 @@
 # For more information, feedback or questions, please refer to our website:
 # http://keccak.noekeon.org/
 
-import Keccak
+from . import Keccak
 
 A=[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]]
 

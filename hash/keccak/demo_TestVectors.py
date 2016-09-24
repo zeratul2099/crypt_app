@@ -9,7 +9,7 @@
 # For more information, feedback or questions, please refer to our website:
 # http://keccak.noekeon.org/
 
-import Keccak
+from . import Keccak
 import os
 
 ## Iterate through the files 'Short... and LongMsgKAT_XXX.txt' containing the
@@ -50,13 +50,13 @@ myKeccak=Keccak.Keccak()
 for instance in instances:
     [suffix, r, c, d, n] = instance
     for fileType in fileTypes:
-        print('Processing file: %sMsgKAT_%s.txt...' % (fileType, suffix))
+        print(('Processing file: %sMsgKAT_%s.txt...' % (fileType, suffix)))
 
         #Open the corresponding file
         try:
             reference=open(os.path.join(dirTestVector,fileType+('MsgKAT_%s.txt' % suffix)), 'r')
         except IOError:
-            print("Error: test vector files must be stored in %s" % (dirTestVector))
+            print(("Error: test vector files must be stored in %s" % (dirTestVector)))
             exit()
 
         #Parse the document line by line (works only for Short and Long files)
@@ -79,7 +79,7 @@ for instance in instances:
 
                 #Compare the results
                 if not sameString(MD_comp,MD_ref):
-                    print('ERROR: \n\t type=%s\n\t length=%d\n\t message=%s\n\t reference=%s\n\t computed=%s' % (suffix, Len, Msg, MD_ref, MD_comp))
+                    print(('ERROR: \n\t type=%s\n\t length=%d\n\t message=%s\n\t reference=%s\n\t computed=%s' % (suffix, Len, Msg, MD_ref, MD_comp)))
                     exit()
 
         print("OK\n")
