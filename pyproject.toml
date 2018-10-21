@@ -11,6 +11,7 @@ django = "=1.11.16"
 pycrypto = "^2.6"
 m2crypto = "^0.30.1"
 uwsgi = "^2.0"
+six = "^1.11"
 
 [tool.poetry.dev-dependencies]
 pylint = "^2.1"

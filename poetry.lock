@@ -101,7 +101,7 @@ python-versions = "*"
 version = "2018.5"
 
 [[package]]
-category = "dev"
+category = "main"
 description = "Python 2 and 3 compatibility utilities"
 name = "six"
 optional = false
@@ -142,7 +142,7 @@ python-versions = "*"
 version = "1.10.11"
 
 [metadata]
-content-hash = "40afc02687ac5b7ec9c758d92c3b621472d7ed6d87908e66fa8a6a62cf654772"
+content-hash = "60bbcfc4e15f55f9210788fea75686b584f24715ba9dbddfdb48abc68c7a1d0b"
 python-versions = "^3.5"
 
 [metadata.hashes]
