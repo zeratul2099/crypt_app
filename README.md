@@ -1,13 +1,14 @@
 Kryptos
 =======
 
+[![Build Status](https://travis-ci.com/zeratul2099/crypt_app.svg?branch=master)](https://travis-ci.com/zeratul2099/crypt_app)
+
 System dependencies
 -------------------
 
 - git
-- python 3
-- python virtualenv
-- gcc
+- python 3.5+
+- poetry
 - (optional) nginx
 
 Installation
