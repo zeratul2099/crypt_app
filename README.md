@@ -54,5 +54,5 @@ Add this to your nginx site config:
 
 and start the uswgi process with
 
-    poetry run uwsgi --socket=127.0.0.1:8000 --module wsgi:application --home=<crypt_app dir>/venv --master --vacuum --env PYTHONPATH=. --env DJANGO_SETTINGS_MODULE=settings -p 3
+    poetry run uwsgi --socket=127.0.0.1:8000 --module wsgi:application --master --vacuum --env PYTHONPATH=. --env DJANGO_SETTINGS_MODULE=settings -p 3
 
