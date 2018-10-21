@@ -1,0 +1,18 @@
+language: python
+python:
+    - "3.5"
+    - "3.6"
+    - "3.7-dev"
+
+cache: pip
+
+before_install:
+    - "pip install poetry"
+
+install:
+    - "poetry install --no-dev"
+#    - "pip install pylint"
+
+script:
+    - "poetry run python -m py_compile *.py"
+#    - "poetry run pylint *.py -f colorized"
