@@ -10,7 +10,7 @@ ADMINS = (
     # ('Your Name', 'your_email@domain.com'),
 )
 
-ALLOWED_HOSTS = ["0.0.0.0", "ganymed"]
+ALLOWED_HOSTS = []
 
 DEFAULT_CHARSET = 'utf-8'
 MANAGERS = ADMINS
@@ -67,7 +67,7 @@ MEDIA_URL = ''
 ADMIN_MEDIA_PREFIX = '/media/'
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = 'b09v7_i9#k75m8-5az+-ym&6ptmg752dbco%258ns1m2tt=h8p'
+SECRET_KEY = ''
 
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
