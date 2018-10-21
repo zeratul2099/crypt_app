@@ -20,7 +20,7 @@
 <div class='leftspace' >
 {% ifequal infopage.algo.type "crypto" %}
 <span class='trylink'>
-    <a href='{% url "crypto.views.algo" infopage.algo.shortTitle %}/'>
+    <a href='{% url "crypto_algo" infopage.algo.shortTitle %}/'>
         {{ infopage.algo.name }} ausprobieren
     </a>
 </span>
@@ -29,7 +29,7 @@
 </span>
 {% else %}{% ifequal infopage.algo.type "hash" %}
 <span class='trylink'>
-    <a href='{% url "hash.views.algo" infopage.algo.shortTitle %}/'>
+    <a href='{% url "hash_algo" infopage.algo.shortTitle %}/'>
         {{ infopage.algo.name }} ausprobieren
     </a>
 </span>
@@ -41,34 +41,34 @@
 <p class='nav' >
 {% ifequal infopage.shortTitle "overview" %}
     {% ifequal infopage.algo.type "basics" %}
-    &gt; <a href='{% url "base_app.views.base" %}'>Kryptos</a> 
-    &gt; <a href='{% url "base_app.views.list" infopage.algo.shortTitle %}'>
+    &gt; <a href='{% url "base" %}'>Kryptos</a> 
+    &gt; <a href='{% url "list" infopage.algo.shortTitle %}'>
             {{ infopage.algo.name }}
         </a> 
     &gt; Grundlagen
     {% else %}
-    &gt; <a href='{% url "base_app.views.base" %}'>Kryptos</a> 
-    &gt; <a href='{% url "base_app.views.list" infopage.algo.type %}'>
+    &gt; <a href='{% url "base" %}'>Kryptos</a> 
+    &gt; <a href='{% url "list" infopage.algo.type %}'>
             {{ algo_type }}
         </a> 
     &gt; {{ infopage.algo.name }}
     {% endifequal %}
 {% else %}
     {% ifequal infopage.algo.type "basics" %}
-    &gt; <a href='{% url "base_app.views.base" %}'>Kryptos</a> 
-    &gt; <a href='{% url "base_app.views.list" infopage.algo.shortTitle %}'>
+    &gt; <a href='{% url "base" %}'>Kryptos</a> 
+    &gt; <a href='{% url "list" infopage.algo.shortTitle %}'>
             {{ infopage.algo.name }}
          </a> 
-    &gt; <a href='{% url "base_app.views.info" infopage.algo.shortTitle "overview" %}/'>
+    &gt; <a href='{% url "info" infopage.algo.shortTitle "overview" %}/'>
             Grundlagen
         </a> 
     &gt; {{ infopage.title|umlauts|safe }}
     {% else %}
-    &gt; <a href='{% url "base_app.views.base" %}'>Kryptos</a> 
-    &gt; <a href='{% url "base_app.views.list" infopage.algo.type %}'>
+    &gt; <a href='{% url "base" %}'>Kryptos</a> 
+    &gt; <a href='{% url "list" infopage.algo.type %}'>
             {{ algo_type }}
         </a> 
-    &gt; <a href='{% url "base_app.views.info" infopage.algo.shortTitle "overview" %}/'>
+    &gt; <a href='{% url "info" infopage.algo.shortTitle "overview" %}/'>
             {{ infopage.algo.name }}
         </a> 
     &gt; {{ infopage.title|umlauts|safe }}

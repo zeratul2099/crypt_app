@@ -15,12 +15,12 @@
 #
 #       Copyright 2009 2010 by Marko Krause <zeratul2099@googlemail.com>
 
-from crypt_app.stego.models import CPTEmbedForm, CPTExtractForm
-from crypt_app.stego.models import F5EmbedForm, F5ExtractForm
-from crypt_app.stego.models import LsbEmbedForm, LsbExtractForm
-from crypt_app.stego.models import GifShuffleEmbedForm, GifShuffleExtractForm
-from crypt_app.stego.models import BattlestegEmbedForm, BattlestegExtractForm
-from crypt_app.base_app.models import Algo, InfoPage, ManPage
+from stego.models import CPTEmbedForm, CPTExtractForm
+from stego.models import F5EmbedForm, F5ExtractForm
+from stego.models import LsbEmbedForm, LsbExtractForm
+from stego.models import GifShuffleEmbedForm, GifShuffleExtractForm
+from stego.models import BattlestegEmbedForm, BattlestegExtractForm
+from base_app.models import Algo, InfoPage, ManPage
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render_to_response
 from django.template import Context, loader

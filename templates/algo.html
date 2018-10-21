@@ -5,11 +5,11 @@
 
 {% block content %}
 <div class='leftspace' >
-<span class='infolink'><a href='{% url "base_app.views.info" algo.shortTitle "overview" %}/'>Was ist das?</a></span>
+<span class='infolink'><a href='{% url "info" algo.shortTitle "overview" %}/'>Was ist das?</a></span>
 </div>
 <p class='nav' >
-&gt; <a href='{% url "base_app.views.base" %}'>Kryptos</a> &gt; <a href='{% url "base_app.views.list" algo.type %}'>
-{{ algo_type }}</a> &gt; <a href='{% url "base_app.views.info" algo.shortTitle "overview" %}/'>{{ algo.name }}</a> &gt; Ausprobieren
+&gt; <a href='{% url "base" %}'>Kryptos</a> &gt; <a href='{% url "list" algo.type %}'>
+{{ algo_type }}</a> &gt; <a href='{% url "info" algo.shortTitle "overview" %}/'>{{ algo.name }}</a> &gt; Ausprobieren
 </p>
 
 

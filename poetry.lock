@@ -1,0 +1,65 @@
+[[package]]
+category = "main"
+description = "A high-level Python Web framework that encourages rapid development and clean, pragmatic design."
+name = "django"
+optional = false
+python-versions = "*"
+version = "1.11.16"
+
+[package.dependencies]
+pytz = "*"
+
+[[package]]
+category = "main"
+description = "M2Crypto: A Python crypto and SSL toolkit"
+name = "m2crypto"
+optional = false
+python-versions = "*"
+version = "0.30.1"
+
+[package.dependencies]
+typing = "*"
+
+[[package]]
+category = "main"
+description = "Cryptographic modules for Python."
+name = "pycrypto"
+optional = false
+python-versions = "*"
+version = "2.6.1"
+
+[[package]]
+category = "main"
+description = "World timezone definitions, modern and historical"
+name = "pytz"
+optional = false
+python-versions = "*"
+version = "2018.5"
+
+[[package]]
+category = "main"
+description = "Type Hints for Python"
+name = "typing"
+optional = false
+python-versions = "*"
+version = "3.6.6"
+
+[[package]]
+category = "main"
+description = "The uWSGI server"
+name = "uwsgi"
+optional = false
+python-versions = "*"
+version = "2.0.17.1"
+
+[metadata]
+content-hash = "f9375d1eab8ba98a78a3b14bd5bc9aba9bbad7feb389bcafbd18efece457dae8"
+python-versions = "^3.5"
+
+[metadata.hashes]
+django = ["29268cc47816a44f27308e60f71da635f549c47d8a1d003b28de55141df75791", "37f5876c1fbfd66085001f4c06fa0bf96ef05442c53daf8d4294b6f29e7fa6b8"]
+m2crypto = ["a1b2751cdadc6afac3df8a5799676b7b7c67a6ad144bb62d38563062e7cd3fc6"]
+pycrypto = ["f2ce1e989b272cfcb677616763e0a2e7ec659effa67a88aa92b3a65528f60a3c"]
+pytz = ["a061aa0a9e06881eb8b3b2b43f05b9439d6583c206d0a6c340ff72a7b6669053", "ffb9ef1de172603304d9d2819af6f5ece76f2e85ec10692a524dd876e72bf277"]
+typing = ["4027c5f6127a6267a435201981ba156de91ad0d1d98e9ddc2aa173453453492d", "57dcf675a99b74d64dacf6fba08fb17cf7e3d5fdff53d4a30ea2a5e7e52543d4", "a4c8473ce11a65999c8f59cb093e70686b6c84c98df58c1dae9b3b196089858a"]
+uwsgi = ["d2318235c74665a60021a4fc7770e9c2756f9fc07de7b8c22805efe85b5ab277"]

@@ -5,11 +5,13 @@ PROJ_DIR = os.path.dirname(os.path.abspath(__file__))
 
 print(('****'+PROJ_DIR))
 DEBUG = True
-TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
     # ('Your Name', 'your_email@domain.com'),
 )
+
+ALLOWED_HOSTS = ["0.0.0.0", "ganymed"]
+
 DEFAULT_CHARSET = 'utf-8'
 MANAGERS = ADMINS
 
@@ -67,27 +69,30 @@ ADMIN_MEDIA_PREFIX = '/media/'
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = 'b09v7_i9#k75m8-5az+-ym&6ptmg752dbco%258ns1m2tt=h8p'
 
-# List of callables that know how to import templates from various sources.
-TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.Loader',
-    'django.template.loaders.app_directories.Loader',
-#     'django.template.loaders.eggs',
-)
-
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
 )
 
-ROOT_URLCONF = 'crypt_app.urls'
+ROOT_URLCONF = 'urls'
 
-TEMPLATE_DIRS = [(
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
-     os.path.join(PROJ_DIR, 'templates/')
-)]
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(PROJ_DIR, 'templates')],
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ]
+
+        }
+    },
+]
+
 
 STATIC_DOC_ROOT =  os.path.join(PROJ_DIR, 'media/')
 
@@ -99,6 +104,6 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.admin',
-    'crypt_app.base_app',
-    'crypt_app.hash',
+    'base_app',
+    'hash',
 )

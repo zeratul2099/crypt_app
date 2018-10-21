@@ -9,12 +9,12 @@
 <br>
 </div>
 <p class='nav' >
-&gt; <a href='{% url "base_app.views.base" %}'>Kryptos</a> &gt; {{ title }}
+&gt; <a href='{% url "base" %}'>Kryptos</a> &gt; {{ title }}
 </p>
 <table width='100%' class='leftspace' cellpadding='10'>
 
     <tr>
-    <td width='250'><b>{{ title }}</b></td><td><span class='infolink'><a href='{% url "base_app.views.info" "algo_type" "overview" %}/'>Was ist das?</a></span></td>
+    <td width='250'><b>{{ title }}</b></td><td><span class='infolink'><a href='{% url "info" "algo_type" "overview" %}/'>Was ist das?</a></span></td>
     </tr>
     <tr>
         <td colspan='2' >
@@ -22,13 +22,13 @@
                     {% for a in algos %}
                 <tr>
                     <td width='50%'>{{ a.name }}:</td>
-                    <td width='25%'><span class='infolink'><a href='{% url "base_app.views.info" a.shortTitle "overview" %}/'>Was ist das?</a></span></td>
+                    <td width='25%'><span class='infolink'><a href='{% url "info" a.shortTitle "overview" %}/'>Was ist das?</a></span></td>
                     <td width='25%'><span class='trylink'>
                     {% ifequal algo_type "crypto" %}
-                    <a href='{% url "crypto.views.algo" a.shortTitle %}/'>Ausprobieren</a>
+                    <a href='{% url "crypto_algo" a.shortTitle %}/'>Ausprobieren</a>
                     {% else %}{% ifequal algo_type "stego" %}
                     {% else %}{% ifequal algo_type "hash" %}
-                    <a href='{% url "hash.views.algo" a.shortTitle %}/'>Ausprobieren</a>
+                    <a href='{% url "hash_algo" a.shortTitle %}/'>Ausprobieren</a>
                     {% endifequal %}{% endifequal %}{% endifequal %}
                     </span></td>
                 </tr>

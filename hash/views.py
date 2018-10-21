@@ -22,10 +22,10 @@ from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render_to_response
 from django.template import Context, loader
 
-from crypt_app.hash.models import HashForm, Sha2Form, KeccakForm
-from crypt_app.base_app.models import Algo, InfoPage, ManPage
+from hash.models import HashForm, Sha2Form, KeccakForm
+from base_app.models import Algo, InfoPage, ManPage
 #from KeccakHash import KeccakHash
-from crypt_app.hash.keccak import Keccak
+from hash.keccak import Keccak
 
 def algo(request, algo):
     salt = 0

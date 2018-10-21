@@ -15,12 +15,12 @@
 #
 #       Copyright 2009 2010 by Marko Krause <zeratul2099@googlemail.com>
 
-from crypt_app.crypto.models import AESEncryptForm, AESDecryptForm, SimpleEncryptForm, SimpleDecryptForm, RSAEncryptForm, RSADecryptForm, SimplestForm, CaesarEncryptForm, CaesarDecryptForm, AffineEncryptForm, AffineDecryptForm
-from crypt_app.base_app.models import Algo, ManPage
+from crypto.models import AESEncryptForm, AESDecryptForm, SimpleEncryptForm, SimpleDecryptForm, RSAEncryptForm, RSADecryptForm, SimplestForm, CaesarEncryptForm, CaesarDecryptForm, AffineEncryptForm, AffineDecryptForm
+from base_app.models import Algo, ManPage
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render_to_response
 from django.template import Context, loader
-from crypt_app.crypto.cryptointerface import *
+from crypto.cryptointerface import *
 
 def algo(request, algo):
     output = ""
