@@ -15,12 +15,12 @@ ALLOWED_HOSTS = []
 DEFAULT_CHARSET = 'utf-8'
 MANAGERS = ADMINS
 
-DATABASE_ENGINE = 'sqlite3'           # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-DATABASE_NAME = os.path.join(PROJ_DIR, 'db')             # Or path to database file if using sqlite3.
-DATABASE_USER = ''             # Not used with sqlite3.
-DATABASE_PASSWORD = ''         # Not used with sqlite3.
-DATABASE_HOST = ''             # Set to empty string for localhost. Not used with sqlite3.
-DATABASE_PORT = ''             # Set to empty string for default. Not used with sqlite3.
+DATABASE_ENGINE = 'sqlite3'
+DATABASE_NAME = os.path.join(PROJ_DIR, 'db')
+DATABASE_USER = ''
+DATABASE_PASSWORD = ''
+DATABASE_HOST = ''
+DATABASE_PORT = ''
 
 DATABASES = {
     'default': {
@@ -30,7 +30,7 @@ DATABASES = {
         'PASSWORD': '',
         'HOST': '',
         'PORT': '',
-    
+
     }
 
 }
@@ -94,7 +94,7 @@ TEMPLATES = [
 ]
 
 
-STATIC_DOC_ROOT =  os.path.join(PROJ_DIR, 'media/')
+STATIC_DOC_ROOT = os.path.join(PROJ_DIR, 'media/')
 
 FILE_UPLOAD_MAX_MEMORY_SIZE = 0
 

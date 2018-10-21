@@ -67,6 +67,7 @@ disable=missing-docstring,
         inconsistent-return-statements,
         invalid-name,
         no-member,
+        no-else-return,
 
 #        print-statement,
 #        parameter-unpacking,
