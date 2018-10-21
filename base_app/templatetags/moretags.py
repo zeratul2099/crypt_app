@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from django import template
 
 def umlauts(var):
@@ -40,23 +39,23 @@ def umlauts(var):
     return var
 
 def setIcon(var):
-  if var == "message" or var == "clear":
-    var = "<img width='16' height='16' border='0' src='/content/icons/txt.png' ></img>"
-  elif var == "key" or var == "keyA" or var == "keyB" or var == "pw":
-    var = "<img width='16' height='16' border='0' src='/content/icons/key.png' ></img>"
-  elif var == "cypher_text":
-    var = "<img width='16' height='16' border='0' src='/content/icons/encrypted.png' ></img>"
-  elif var == "block_mode" or var == "width" or var == "height":
-    var = "<img width='16' height='16' border='0' src='/content/icons/blocks.png' ></img>"    
-  elif var == "file":
-    var = "<img width='16' height='16' border='0' src='/content/icons/image.png' ></img>"
-  elif var == "fileH":
-    var = "<img width='16' height='16' border='0' src='/content/icons/file.png' ></img>"
-  elif var == "withSalt":
-    var = "<img width='16' height='16' border='0' src='/content/icons/add.png' ></img>"  
-  else:
-    var = "<img width='16' height='16' border='0' src='/content/icons/empty.png' ></img>"      
-  return(var)
+    if var in ["message", "clear"]:
+        var = "<img width='16' height='16' border='0' src='/content/icons/txt.png' ></img>"
+    elif var in ["key", "keyA", "keyB", "pw"]:
+        var = "<img width='16' height='16' border='0' src='/content/icons/key.png' ></img>"
+    elif var == "cypher_text":
+        var = "<img width='16' height='16' border='0' src='/content/icons/encrypted.png' ></img>"
+    elif var in ["block_mode", "width", "height"]:
+        var = "<img width='16' height='16' border='0' src='/content/icons/blocks.png' ></img>"
+    elif var == "file":
+        var = "<img width='16' height='16' border='0' src='/content/icons/image.png' ></img>"
+    elif var == "fileH":
+        var = "<img width='16' height='16' border='0' src='/content/icons/file.png' ></img>"
+    elif var == "withSalt":
+        var = "<img width='16' height='16' border='0' src='/content/icons/add.png' ></img>"
+    else:
+        var = "<img width='16' height='16' border='0' src='/content/icons/empty.png' ></img>"
+    return var
 
 
 umlauts.is_safe = True
