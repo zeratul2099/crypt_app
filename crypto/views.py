@@ -16,7 +16,7 @@
 
 from django.shortcuts import get_object_or_404, render_to_response
 
-from models import (
+from .models import (
     AESEncryptForm,
     AESDecryptForm,
     SimpleEncryptForm,
@@ -29,7 +29,7 @@ from models import (
     AffineEncryptForm,
     AffineDecryptForm,
 )
-from cryptointerface import (
+from .cryptointerface import (
     desEncrypt,
     desDecrypt,
     aesEncrypt,
@@ -45,7 +45,7 @@ from cryptointerface import (
     affineDecrypt,
     keygen,
 )
-from ..base_app.models import Algo, ManPage
+from base_app.models import Algo, ManPage
 
 
 def algo(request, algo_name):
@@ -91,13 +91,13 @@ def algo(request, algo_name):
                 "affine": affineEncrypt,
             }
 
-            cypherForm = cypherFormDict[algo](request.POST)
-            if decypherFormDict[algo]:
-                decypherForm = decypherFormDict[algo]()
+            cypherForm = cypherFormDict[algo_name](request.POST)
+            if decypherFormDict[algo_name]:
+                decypherForm = decypherFormDict[algo_name]()
             else:
                 decypherForm = None
             if cypherForm.is_valid():
-                output, cypher = algoDict[algo](request)
+                output, cypher = algoDict[algo_name](request)
 
         # decrypt
         elif "submit2" in request.POST:
@@ -110,15 +110,15 @@ def algo(request, algo_name):
                 "caesar": caesarDecrypt,
                 "affine": affineDecrypt,
             }
-            cypherForm = cypherFormDict[algo]()
-            decypherForm = decypherFormDict[algo](request.POST)
+            cypherForm = cypherFormDict[algo_name]()
+            decypherForm = decypherFormDict[algo_name](request.POST)
             if decypherForm.is_valid():
-                cypher = algoDict[algo](request)
+                cypher = algoDict[algo_name](request)
 
     else:
-        cypherForm = cypherFormDict[algo]()
-        if decypherFormDict[algo]:
-            decypherForm = decypherFormDict[algo]()
+        cypherForm = cypherFormDict[algo_name]()
+        if decypherFormDict[algo_name]:
+            decypherForm = decypherFormDict[algo_name]()
         else:
             decypherForm = None
 

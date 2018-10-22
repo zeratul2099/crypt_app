@@ -21,12 +21,12 @@ from multiprocessing import Process, Queue as Q
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, render_to_response
 from django.core.servers.basehttp import FileWrapper # pylint: disable=no-name-in-module
-from models import CPTEmbedForm, CPTExtractForm
-from models import F5EmbedForm, F5ExtractForm
-from models import LsbEmbedForm, LsbExtractForm
-from models import GifShuffleEmbedForm, GifShuffleExtractForm
-from models import BattlestegEmbedForm, BattlestegExtractForm
-from ..base_app.models import Algo, ManPage
+from .models import CPTEmbedForm, CPTExtractForm
+from .models import F5EmbedForm, F5ExtractForm
+from .models import LsbEmbedForm, LsbExtractForm
+from .models import GifShuffleEmbedForm, GifShuffleExtractForm
+from .models import BattlestegEmbedForm, BattlestegExtractForm
+from base_app.models import Algo, ManPage
 
 from .stegointerface import (
     cptEmbed,

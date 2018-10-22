@@ -17,7 +17,7 @@
 
 from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, get_list_or_404, render_to_response
-from models import Algo, InfoPage
+from .models import Algo, InfoPage
 
 
 def wrongUrl(_request):
@@ -51,10 +51,10 @@ def list(_request, algo_type): # pylint: disable=redefined-builtin
         "algo_type": algo_type
     })
 
-def info(request, algo, page):
+def info(request, algo_name, page):
     user_agent = request.META['HTTP_USER_AGENT']
     pictype = "svg"
-    algo_object = get_object_or_404(Algo, shortTitle=algo)
+    algo_object = get_object_or_404(Algo, shortTitle=algo_name)
     info_page = get_list_or_404(InfoPage, algo=algo_object, shortTitle=page)[0]
     main_page = get_list_or_404(InfoPage, masterPage=None, algo=algo_object)[0]
 

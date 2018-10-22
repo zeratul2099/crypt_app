@@ -21,8 +21,8 @@ import sys
 
 from django.shortcuts import get_object_or_404, render_to_response
 
-from models import HashForm, Sha23Form
-from ..base_app.models import Algo, ManPage
+from .models import HashForm, Sha23Form
+from base_app.models import Algo, ManPage
 
 # pylint: disable=too-many-locals,too-many-branches
 def algo(request, algo_name):

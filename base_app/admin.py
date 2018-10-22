@@ -16,7 +16,7 @@
 
 
 from django.contrib import admin
-from models import Algo, InfoPage, ManPage
+from .models import Algo, InfoPage, ManPage
 
 admin.site.register(Algo)
 admin.site.register(InfoPage)
