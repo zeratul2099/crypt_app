@@ -1,33 +1,28 @@
-# encoding: utf-8
 #
 #       This program is free software; you can redistribute it and/or modify
 #       it under the terms of the GNU General Public License as published by
 #       the Free Software Foundation; either version 3 of the License, or
 #       (at your option) any later version.
-#       
+#
 #       This program is distributed in the hope that it will be useful,
 #       but WITHOUT ANY WARRANTY; without even the implied warranty of
 #       MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #       GNU General Public License for more details.
-#       
+#
 #       You should have received a copy of the GNU General Public License
 #       along with libstego.  If not, see <http://www.gnu.org/licenses/>.
 #
 #       Copyright 2009 2010 by Marko Krause <zeratul2099@googlemail.com>
 
-try:
-    from processing import Process, Pipe, Queue
-except ImportError:
-    from multiprocessing import Process, Pipe, Queue
-import queue as Q
-import libstego, libstegofile
+import libstego # pylint: disable=import-error
+import libstegofile # pylint: disable=import-error
 
 def cptEmbed(q):
     post, filename = q.get()
     rgb_data = libstegofile.rgb_data_t()
     stego_data = libstegofile.rgb_data_t()
     png_struct = libstegofile.png_internal_data_t()
-    retcode = libstegofile.io_png_read(filename,rgb_data, png_struct)
+    retcode = libstegofile.io_png_read(filename, rgb_data, png_struct)
     if retcode == 0:
         pass
     else:
@@ -43,7 +38,7 @@ def cptEmbed(q):
     libstegofile.io_png_integrate(png_struct, stego_data)
     libstegofile.io_png_write(filename, png_struct)
     q.put(filename)
-                    
+
 
 
 
@@ -72,7 +67,7 @@ def f5Embed(q):
     jpeg_data = libstegofile.jpeg_data_t()
     stego_data = libstegofile.jpeg_data_t()
     jpeg_struct = libstegofile.jpeg_internal_data_t()
-    retcode = libstegofile.io_jpeg_read(filename,jpeg_data, jpeg_struct)
+    retcode = libstegofile.io_jpeg_read(filename, jpeg_data, jpeg_struct)
     if retcode == 0:
         pass
     else:
@@ -83,7 +78,7 @@ def f5Embed(q):
     para.pwlen = len(para.password)
     libstego.f5_embed(jpeg_data, stego_data, message, len(message), para)
     libstegofile.io_jpeg_integrate(jpeg_struct, stego_data)
-    libstegofile.io_jpeg_write(filename, jpeg_struct)                              
+    libstegofile.io_jpeg_write(filename, jpeg_struct)
     q.put(filename)
 
 def f5Extract(q):
@@ -106,7 +101,6 @@ def f5Extract(q):
 def lsbEmbed(q):
     post, filename = q.get()
     rgb_data = libstegofile.rgb_data_t()
-    stego_data = libstegofile.rgb_data_t()
     png_struct = libstegofile.png_internal_data_t()
     retcode = libstegofile.io_png_read(filename, rgb_data, png_struct)
     if retcode == 0:
@@ -122,12 +116,17 @@ def lsbEmbed(q):
     data = libstego.new_charpp()
     datalen = libstego.new_intp()
     libstego.lsb_convert_png(rgb_data, data, datalen)
-    libstego.lsb_embed_indirect(libstego.charpp_value(data),
-                        libstego.intp_value(datalen), message, len(message), para)
+    libstego.lsb_embed_indirect(
+        libstego.charpp_value(data),
+        libstego.intp_value(datalen),
+        message,
+        len(message),
+        para
+    )
     libstegofile.io_png_integrate(png_struct, rgb_data)
     libstegofile.io_png_write(filename, png_struct)
     q.put(filename)
-    
+
 def lsbExtract(q):
     post, filename = q.get()
     rgb_data = libstegofile.rgb_data_t()
@@ -144,12 +143,17 @@ def lsbExtract(q):
         pass
     else:
         return -1
-    bytes = libstego.new_charpp()
+    buf = libstego.new_charpp()
     num_bytes = libstego.new_intp()
-    libstego.lsb_convert_png(rgb_data, bytes, num_bytes)
+    libstego.lsb_convert_png(rgb_data, buf, num_bytes)
 
-    libstego.lsb_extract_indirect(libstego.charpp_value(bytes),
-                        libstego.intp_value(num_bytes), stegomsg, stegolen, para)
+    libstego.lsb_extract_indirect(
+        libstego.charpp_value(buf),
+        libstego.intp_value(num_bytes),
+        stegomsg,
+        stegolen,
+        para
+    )
     msglen = libstego.intp_value(stegolen)
     q.put((str(libstego.charp_value(stegomsg)))[0:msglen])
 
@@ -231,4 +235,3 @@ def bsExtract(q):
     libstego.battlesteg_extract(rgb_data, stegomsg, stegolen, para)
     msglen = libstego.intp_value(stegolen)
     q.put((str(libstego.charp_value(stegomsg)))[0:msglen])
-

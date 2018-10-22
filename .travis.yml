@@ -11,8 +11,8 @@ before_install:
 
 install:
     - "poetry install --no-dev"
-#    - "pip install pylint"
+    - "pip install pylint"
 
 script:
     - "poetry run python -m py_compile *.py"
-#    - "poetry run pylint *.py -f colorized"
+    - "poetry run pylint *.py -f colorized"
