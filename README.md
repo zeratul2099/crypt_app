@@ -31,6 +31,7 @@ Now you can start the testing development server with:
     PYTHONPATH=. DJANGO_SETTINGS_MODULE=settings poetry run django-admin runserver
 
 or
+
     poetry run ./testserver.sh
 
 Nginx configuration
