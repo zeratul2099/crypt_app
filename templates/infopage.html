@@ -104,7 +104,7 @@
         {% ifequal pictype "svg" %}
              <div id='hiddendiv'>
             <a onclick="$('#hiddendiv').toggle('drop', 'slow');" id='close'>[X]</a>
-            <img src='/content/{{ infopage.algo.type }}/{{ infopage.image }}.gif' 
+            <img data-src='/content/{{ infopage.algo.type }}/{{ infopage.image }}.gif'
              width="{{ infopage.i_width }}" height="{{ infopage.i_height }}" >
             </img>
             <div><small>Diese GIF-Animation hat eine niedrigere Qualit&auml;t und l&auml;ngere Ladezeit als
@@ -123,7 +123,7 @@
                     width="{{ infopage.i_width }}" height="{{ infopage.i_height }}">
             </object>
 
-        <a href='/content/{{ infopage.algo.type}}/{{ infopage.image}}.gif' target='_blank' onclick="$('#hiddendiv').toggle('drop', 'slow'); return false;" >GIF-Animation</a>
+        <a href='/content/{{ infopage.algo.type}}/{{ infopage.image}}.gif' target='_blank' onclick="var img = $('#hiddendiv img'); img.attr('src', img.attr('data-src')); $('#hiddendiv').toggle('drop', 'slow'); return false;" >GIF-Animation</a>
         {% else %} 
         <img src='/content/{{ infopage.algo.type }}/{{ infopage.image }}.{{ pictype }}' 
              width="{{ infopage.i_width }}" height="{{ infopage.i_height }}" >
