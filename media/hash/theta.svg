@@ -110,8 +110,8 @@
                 points="0.1 10, 10 0.1, 29.9 0.1, 20 10" />
             <polygon stroke="black" 
                 points="29.9 0.1, 29.9 20, 20 29.9, 20 10" />
-                <animateColor attributeName='fill' from='grey' to='#ff0000' begin='c31.end' dur='2' />
-                <animateColor attributeName='fill' from='#ff0000' to='grey' begin='c31.end+2' dur='2' fill='freeze' id='finish' />
+                <animate attributeName='fill' from='grey' to='#ff0000' begin='c31.end' dur='2' />
+                <animate attributeName='fill' from='#ff0000' to='grey' begin='c31.end+2' dur='2' fill='freeze' id='finish' />
        </svg>
 
   

@@ -55,8 +55,8 @@ textblock
 <!-- IP -->
 <svg width='25' height='100' x='200' y='60' >
 <rect x='1' y='1' width='23' height='98' rx='10' ry='10' stroke='black' fill='white' >
-<animateColor attributeName='fill' from='#ffffff' to='#ff0000' dur='1' begin='m01.end' fill='freeze' />
-<animateColor attributeName='fill' from='#ff0000' to='#ffffff' dur='1' begin='m01.end+1' fill='freeze' />
+<animate attributeName='fill' from='#ffffff' to='#ff0000' dur='1' begin='m01.end' fill='freeze' />
+<animate attributeName='fill' from='#ff0000' to='#ffffff' dur='1' begin='m01.end+1' fill='freeze' />
 
 </rect> 
 <text x='5' y='55' font-size='14' fill='black' >
@@ -66,8 +66,8 @@ IP
 <!-- IP^-1 -->
 <svg width='25' height='100' x='500' y='60' >
 <rect x='1' y='1' width='23' height='98' rx='10' ry='10' stroke='black' fill='white' >
-<animateColor attributeName='fill' from='#ffffff' to='#ff0000' dur='1' begin='m08.end' fill='freeze' />
-<animateColor attributeName='fill' from='#ff0000' to='#ffffff' dur='1' begin='m08.end+1' fill='freeze' />
+<animate attributeName='fill' from='#ffffff' to='#ff0000' dur='1' begin='m08.end' fill='freeze' />
+<animate attributeName='fill' from='#ff0000' to='#ffffff' dur='1' begin='m08.end+1' fill='freeze' />
 
 </rect> 
 <text x='2' y='55' font-size='14' fill='black' >
@@ -81,8 +81,8 @@ Feistel-Algorithmus
 <!-- f -->
 <svg width='25' height='100' x='350' y='60' >
 <rect x='1' y='1' width='23' height='98' rx='10' ry='10' stroke='black' fill='white' >
-<animateColor attributeName='fill' from='#ffffff' to='#ff0000' dur='1' begin='m03.end;m05.end;m07.end' fill='freeze' />
-<animateColor attributeName='fill' from='#ff0000' to='#ffffff' dur='1' begin='m03.end+1;m05.end+1;m07.end+1' fill='freeze' />
+<animate attributeName='fill' from='#ffffff' to='#ff0000' dur='1' begin='m03.end;m05.end;m07.end' fill='freeze' />
+<animate attributeName='fill' from='#ff0000' to='#ffffff' dur='1' begin='m03.end+1;m05.end+1;m07.end+1' fill='freeze' />
 
 </rect> 
 <text x='8' y='55' font-size='14' fill='black' >
@@ -97,8 +97,8 @@ f
 <!-- PC -->
 <svg width='25' height='100' x='200' y='200' >
 <rect x='1' y='1' width='23' height='98' rx='10' ry='10' stroke='black' fill='white' >
-<animateColor attributeName='fill' from='#ffffff' to='#ff0000' dur='1' begin='k01.end' fill='freeze' />
-<animateColor attributeName='fill' from='#ff0000' to='#ffffff' dur='1' begin='k01.end+1' fill='freeze' />
+<animate attributeName='fill' from='#ffffff' to='#ff0000' dur='1' begin='k01.end' fill='freeze' />
+<animate attributeName='fill' from='#ff0000' to='#ffffff' dur='1' begin='k01.end+1' fill='freeze' />
 
 </rect> 
 <text x='5' y='55' font-size='14' fill='black' >

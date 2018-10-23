@@ -37,8 +37,8 @@
 
 <svg width='25' height='100' x='230' y='60' >
 <rect x='1' y='1' width='23' height='98' rx='10' ry='10' stroke='black' fill='white' >
-<animateColor attributeName='fill' from='#ffffff' to='#ff0000' dur='1' begin='m12.end;m22.end;m32.end' fill='freeze' />
-<animateColor attributeName='fill' from='#ff0000' to='#ffffff' dur='1' begin='m12.end+1;m22.end+1;m32.end+1' fill='freeze' />
+<animate attributeName='fill' from='#ffffff' to='#ff0000' dur='1' begin='m12.end;m22.end;m32.end' fill='freeze' />
+<animate attributeName='fill' from='#ff0000' to='#ffffff' dur='1' begin='m12.end+1;m22.end+1;m32.end+1' fill='freeze' />
 
 </rect> 
 <text x='8' y='55' font-size='14' fill='black' >

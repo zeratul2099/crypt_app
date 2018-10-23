@@ -118,8 +118,8 @@
 <svg id='f' width="20" height="100" x='400' y='100' >
         <rect x='0.5' width="19" height="99" rx="10" ry="10"
         fill="white" stroke="black" >
-        <animateColor attributeName="fill" id='f_ani' begin='b02.end' dur='1' from='#ffffff' to='#ff0000' />
-        <animateColor attributeName="fill" id='f_ani2' begin='f_ani.end' dur='1' from='#ff0000' to='#ffffff' fill='freeze' />
+        <animate attributeName="fill" id='f_ani' begin='b02.end' dur='1' from='#ffffff' to='#ff0000' />
+        <animate attributeName="fill" id='f_ani2' begin='f_ani.end' dur='1' from='#ff0000' to='#ffffff' fill='freeze' />
         </rect>
         <text fill='black' x='3' y='50' opacity='0' style="font-size:12px;" >
         Ch

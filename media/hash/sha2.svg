@@ -138,8 +138,8 @@
 <svg id='ch' width="25" height="100" x='450' y='100' >
         <rect x='0.5' width="24" height="99" rx="10" ry="10"
         fill="white" stroke="black" >
-        <animateColor attributeName="fill" id='f_ani' begin='e02.end' dur='1' from='#ffffff' to='#ff0000' />
-        <animateColor attributeName="fill" id='f_ani2' begin='f_ani.end' dur='1' from='#ff0000' to='#ffffff' fill='freeze' />
+        <animate attributeName="fill" id='f_ani' begin='e02.end' dur='1' from='#ffffff' to='#ff0000' />
+        <animate attributeName="fill" id='f_ani2' begin='f_ani.end' dur='1' from='#ff0000' to='#ffffff' fill='freeze' />
         </rect>
         <text fill='black' x='5' y='50' >
         Ch
@@ -148,8 +148,8 @@
 <svg id='sigma1' width="25" height="50" x='450' y='210' >
         <rect x='0.5' width="24" height="49" rx="10" ry="10"
         fill="white" stroke="black" >
-        <animateColor attributeName="fill" id='f_ani3' begin='e05.end' dur='1' from='#ffffff' to='#ff0000' />
-        <animateColor attributeName="fill" id='f_ani4' begin='f_ani3.end' dur='1' from='#ff0000' to='#ffffff' fill='freeze' />
+        <animate attributeName="fill" id='f_ani3' begin='e05.end' dur='1' from='#ffffff' to='#ff0000' />
+        <animate attributeName="fill" id='f_ani4' begin='f_ani3.end' dur='1' from='#ff0000' to='#ffffff' fill='freeze' />
         </rect>
         <text fill='black' x='5' y='30' >
         &#931;1
@@ -158,8 +158,8 @@
 <svg id='ma' width="25" height="100" x='450' y='320' >
         <rect x='0.5' width="24" height="99" rx="10" ry="10"
         fill="white" stroke="black" >
-        <animateColor attributeName="fill" id='f_ani5' begin='a04.end' dur='1' from='#ffffff' to='#ff0000' />
-        <animateColor attributeName="fill" id='f_ani6' begin='f_ani5.end' dur='1' from='#ff0000' to='#ffffff' fill='freeze' />
+        <animate attributeName="fill" id='f_ani5' begin='a04.end' dur='1' from='#ffffff' to='#ff0000' />
+        <animate attributeName="fill" id='f_ani6' begin='f_ani5.end' dur='1' from='#ff0000' to='#ffffff' fill='freeze' />
         </rect>
         <text fill='black' x='2' y='50' style="font-size:12px;" >
         Maj
@@ -168,8 +168,8 @@
 <svg id='sigma0' width="25" height="50" x='450' y='430' >
         <rect x='0.5' width="24" height="49" rx="10" ry="10"
         fill="white" stroke="black" >
-        <animateColor attributeName="fill" id='f_ani7' begin='a07.end' dur='1' from='#ffffff' to='#ff0000' />
-        <animateColor attributeName="fill" id='f_ani8' begin='f_ani7.end' dur='1' from='#ff0000' to='#ffffff' fill='freeze' />
+        <animate attributeName="fill" id='f_ani7' begin='a07.end' dur='1' from='#ffffff' to='#ff0000' />
+        <animate attributeName="fill" id='f_ani8' begin='f_ani7.end' dur='1' from='#ff0000' to='#ffffff' fill='freeze' />
         </rect>
         <text fill='black' x='5' y='30' >
         &#931;0

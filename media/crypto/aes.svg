@@ -49,8 +49,8 @@
 <!-- PC -->
 <svg width='25' height='100' x='150' y='200' >
 <rect x='1' y='1' width='23' height='98' rx='10' ry='10' stroke='black' fill='white' >
-<animateColor attributeName='fill' from='#ffffff' to='#ff0000' dur='1' begin='k01.end' fill='freeze' />
-<animateColor attributeName='fill' from='#ff0000' to='#ffffff' dur='1' begin='k01.end+1' fill='freeze' />
+<animate attributeName='fill' from='#ffffff' to='#ff0000' dur='1' begin='k01.end' fill='freeze' />
+<animate attributeName='fill' from='#ff0000' to='#ffffff' dur='1' begin='k01.end+1' fill='freeze' />
 
 </rect> 
 <text x='5' y='55' font-size='14' fill='black' >
@@ -60,8 +60,8 @@ KE
 <!-- S-Box -->
 <svg width='25' height='100' x='150' y='60' >
 <rect x='1' y='1' width='23' height='98' rx='10' ry='10' stroke='black' fill='white' >
-<animateColor attributeName='fill' from='#ffffff' to='#ff0000' dur='1' begin='m01.end;m11.end;mr1.end' fill='freeze' />
-<animateColor attributeName='fill' from='#ff0000' to='#ffffff' dur='1' begin='m01.end+1;m11.end+1;mr1.end+1' fill='freeze' />
+<animate attributeName='fill' from='#ffffff' to='#ff0000' dur='1' begin='m01.end;m11.end;mr1.end' fill='freeze' />
+<animate attributeName='fill' from='#ff0000' to='#ffffff' dur='1' begin='m01.end+1;m11.end+1;mr1.end+1' fill='freeze' />
 </rect> 
 <text x='5' y='55' font-size='12' fill='black' >
 S
@@ -70,8 +70,8 @@ S
 <!-- Shift Row -->
 <svg width='25' height='100' x='250' y='60' >
 <rect x='1' y='1' width='23' height='98' rx='10' ry='10' stroke='black' fill='white' >
-<animateColor attributeName='fill' from='#ffffff' to='#ff0000' dur='1' begin='m02.end;m12.end;mr2.end' fill='freeze' />
-<animateColor attributeName='fill' from='#ff0000' to='#ffffff' dur='1' begin='m02.end+1;m12.end+1;mr2.end+1' fill='freeze' />
+<animate attributeName='fill' from='#ffffff' to='#ff0000' dur='1' begin='m02.end;m12.end;mr2.end' fill='freeze' />
+<animate attributeName='fill' from='#ff0000' to='#ffffff' dur='1' begin='m02.end+1;m12.end+1;mr2.end+1' fill='freeze' />
 </rect> 
 <text x='5' y='55' font-size='12' fill='black' >
 SR
@@ -81,8 +81,8 @@ SR
 <!-- Mix Coloum -->
 <svg width='25' height='100' x='350' y='60' >
 <rect x='1' y='1' width='23' height='98' rx='10' ry='10' stroke='black' fill='white' >
-<animateColor attributeName='fill' from='#ffffff' to='#ff0000' dur='1' begin='m03.end;m13.end' fill='freeze' />
-<animateColor attributeName='fill' from='#ff0000' to='#ffffff' dur='1' begin='m03.end+1;m13.end+1' fill='freeze' />
+<animate attributeName='fill' from='#ffffff' to='#ff0000' dur='1' begin='m03.end;m13.end' fill='freeze' />
+<animate attributeName='fill' from='#ff0000' to='#ffffff' dur='1' begin='m03.end+1;m13.end+1' fill='freeze' />
 </rect> 
 <text x='5' y='55' font-size='12' fill='black' >
 MC
