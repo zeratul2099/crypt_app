@@ -10,9 +10,9 @@ before_install:
     - "pip install poetry"
 
 install:
-    - "poetry install --no-dev"
-    - "pip install pylint"
+    - "poetry install"
 
 script:
     - "poetry run python -m py_compile *.py"
     - "poetry run pylint *.py -f colorized"
+    - "poetry run pytest"
