@@ -27,7 +27,7 @@ class Algo(models.Model):
 
 class InfoPage(models.Model):
 
-    algo = models.ForeignKey(Algo)
+    algo = models.ForeignKey(Algo, on_delete=models.DO_NOTHING)
     text = models.TextField()
     image = models.CharField(max_length=20)
     i_caption = models.CharField(max_length=100, blank=True, null=True)
@@ -35,14 +35,14 @@ class InfoPage(models.Model):
     i_height = models.IntegerField(blank=True, null=True)
     title = models.CharField(max_length=50)
     shortTitle = models.CharField(max_length=10)
-    masterPage = models.ForeignKey('self', blank=True, null=True)
+    masterPage = models.ForeignKey('self', blank=True, null=True, on_delete=models.DO_NOTHING)
     order = models.IntegerField()
     def __unicode__(self):
         return self.algo.name+": "+self.title
 
 class ManPage(models.Model):
 
-    algo = models.ForeignKey(Algo, unique=True)
+    algo = models.ForeignKey(Algo, unique=True, on_delete=models.DO_NOTHING)
     text = models.TextField()
     def __unicode__(self):
         return self.algo.name
